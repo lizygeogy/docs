@@ -44,6 +44,7 @@ pages:
         - HDHT: operators/hdht.md
         - Kafka Input: operators/kafkaInputOperator.md
         - Snapshot Server: operators/snapshot_server.md
+    - Partitioning: partition.md
     - App Data Framework: app_data_framework.md
     - REST API: dtgateway_api.md
 - App Templates:
