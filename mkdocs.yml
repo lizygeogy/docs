@@ -86,6 +86,7 @@ pages:
     - Alerts: dtgateway_systemalerts.md
     - Apache Apex: apex.md
     - Apache Apex-Malhar: apex_malhar.md
+    - Application Backplane: appbackplane.md
 - Deployment and Operations:
     - Licensing: Licensing.md
     - Installation: installation.md
