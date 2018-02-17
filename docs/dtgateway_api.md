@@ -25,7 +25,7 @@ Example:
         {
             "name": "{metrcName}",
             "type": "{metricType}",
-            "value": "{value}"
+            "values": "{value}"
         },
         ...
     ]
@@ -46,7 +46,7 @@ Example:
     "finalStatus": "{finalStatus}",
     "startedTime": "{applicationStartedTime}",
     "finishedTime": "{applicationFinishedTime}",
-    "diagnostics": "{disgnostics}",
+    "diagnostics": "{diagnostics}",
     "applicationType": "{applicationType}",
     "trackingUrl": "{trackingUrl}",
     "elapsedTime": "{elapsedTime}",
@@ -171,7 +171,7 @@ Example:
 
 ### GET /ws/v2/applications/{appid}/failureRootCause
 
-Function: Return the root cause of why an application is failed to run.
+Function: Return the root cause of why an application failed to run.
 
 Example:
 
@@ -179,7 +179,7 @@ Example:
 {
     "title": "FC_ERROROUTPUT",
     "type": "markdown",
-    "content": "{root cause of why the applicaiton {appId} is failed}"
+    "content": "{root cause of why the application {appid} failed}"
 }
 ```
 
@@ -211,7 +211,8 @@ Example:
             "containerLogsUrl": "{containerLogsUrl}",
             "startedTime": "{containerStartTime}",
             "finishedTime": "{containerFinishedTime}",
-            "rawContainerLogsUrl": "{rawContainerLogsUrl}"
+            "rawContainerLogsUrl": "{rawContainerLogsUrl}",
+            "containerType": "APP_MASTER|STREAMING"
         },
         ...
     ]
@@ -250,7 +251,8 @@ Example:
     "containerLogsUrl": "{containerLogsUrl}",
     "startedTime": "{containerStartTime}",
     "finishedTime": "{containerFinishedTime}",
-    "rawContainerLogsUrl": "{rawContainerLogsUrl}"
+    "rawContainerLogsUrl": "{rawContainerLogsUrl}",
+    "containerType": "APP_MASTER|STREAMING"
 }
 ```
 ### GET /ws/v2/applications/{appid}/physicalPlan/containers/{containerId}/logs
@@ -282,7 +284,25 @@ Function: Return the raw log, or the last N bytes of the log if lastNBytes is gi
 
 Return: if includeOffset=false or not provided, return raw log content (Content-Type: text/plain). Otherwise (Content-Type: application/json):
 
-### GET /ws/v2/applications/{appid}/physicalPlan/containers/logs/{logName}[?grep={regexp}&descendingOrder={true/false}&lastNBytes={numberOfBytes}]
+Example: 
+
+```json
+{
+    "lines": [
+        {
+            "byteOffset": "{byteOffsetFromStartOfTheLog}",
+            "line": "{one line from {logName}}"
+        },
+        {
+            "byteOffset": "{byteOffsetFromStartOfTheLog}",
+            "line": "{the next line from {logName}}}"
+        },
+        ...
+    ]
+}
+```
+
+### GET /ws/v2/applications/{appid}/physicalPlan/containers/logs/{logName}[?grep={regexp}&descendingOrder={true/false}&includeOffset={true/false}&lastNBytes={numberOfBytes}]
 
 Function: Return GC events for the application in sorted order.
 
@@ -311,7 +331,8 @@ Example:
 ```
 ### GET /ws/v2/applications/{appid}/logicalPlan/operators/{operatorName}/logs/{logName}[?grep={regexp}&descendingOrder={true/false}&lastNBytes={numberOfBytes}]
 
-Function: Return GC events for the an logical operator in sorted order.
+Function: Return GC events for the an logical operator in sorted order. A logical operator maps to one or more physical operator(s). 
+Each physical operator belongs to a container and all the GC events from all such containers are collected and returned.
 
 Example: 
 
@@ -351,7 +372,7 @@ Function: Return list of issues of the applicaiton.
     ]    
 }
 ```
-### GET /ws/v2/appPackages
+### GET /ws/v2/appPackages?hasServices={true/false}&hasUI={true/false}
 
 Function: 
 
@@ -452,7 +473,7 @@ Example:
 }
 ```
 
-### GET /ws/v2/appPackages/{owner}/{packageName}/{packageVersion}
+### GET /ws/v2/appPackages/{owner}/{packageName}/{packageVersion}?includeDescription={true/false}
 
 Function: Gets the meta information of the app package
                     
@@ -555,7 +576,7 @@ Example:
     ]
 }
 ```
-### GET /ws/v2/appPackagesGET /ws/v2/appPackages/{owner}/{packageName}/{packageVersion}/applications/{appName}[?includeDescription={true/false}]
+### GET /ws/v2/appPackages/{owner}/{packageName}/{packageVersion}/applications/{appName}[?includeDescription={true/false}]
 
 Function: Gets the meta data for that application
 
@@ -602,13 +623,13 @@ Example:
 
 ### GET /ws/v2/appPackages/{owner}/{packageName}/{packageVersion}/classSchemas
 
-Function:
+Function: This is deprecated.
 
 Return:
 
 ### GET /ws/v2/appPackages/{owner}/{packageName}/{packageVersion}/classSchemas/{classSchemasName}[?version={version}]
 
-Function:
+Function: This is deprecated.
 
 Return:
 	
@@ -644,7 +665,7 @@ Example:
 ```
 ### GET /ws/v2/config/properties
 
-Function: 
+Function: Returns the list of all configuration properties defined in the configuration files.
 
 Example: 
 ```json
@@ -668,8 +689,7 @@ Example:
   "isFound": "true/false", 
   “version”: “{version}”,
   "isCompatible": "true/false",
-  "dt.dockerHost": "{dockerHostAddress}",
-  "dt.dockerCertPath": "{pathToDockerCertificateFile}"
+  "dt.dockerHost": "{dockerHostAddress}"
 }
 ```
 ### PUT /ws/v2/config/docker
@@ -678,11 +698,12 @@ Function: Set docker configuration
 
 Payload:
 {
-    "dt.dockerHost": ""{dockerHostAddress}",
-    "dt.dockerCertPath": "{pathToDockerCertificateFile}"
+    "dt.dockerHost": ""{dockerHostAddress}"
 }
 
-### POST /ws/v2/licenses
+### POST /ws/v2/licenses?filename={license-name}
+
+Function: The request payload of the API is the content of the license.
 
 Example: 
 ```json
@@ -707,7 +728,7 @@ Returns:
 ```
 ### GET /ws/v2/licenses
 
-Function: Get licenses for this gateway
+Function: This is deprecated. Use the API `GET /v2/licenses/current` instead.
 
 Example: 
 ```json
@@ -733,7 +754,7 @@ Example:
 ```
 ### GET /ws/v2/licenses/{id}
 
-Function: Get the selected license
+Function: Get the selected license. The parameter 'id' can be the string "current" or the valid current license id.
 
 Example:
 ```json
@@ -755,13 +776,10 @@ Example:
     "licenseType": "{licenseType}"
 }
 ```
-### GET /ws/v2/licenses/{id}
-
-Function:Get the raw license content
 
 ### GET /ws/v2/phoneHome/report[?period={total/previous/current}]
 
-Function: Get a report which is in the same format of the usage report gateway is generating and sending back to DataTorrent. When the query parameter "period", by default it will return stats from the total period.
+Function: Get a report which is in the same format of the usage report gateway is generating and sending back to DataTorrent. When the query parameter "period" is omitted, by default it will return stats from the total period.
 
 Example:
 
@@ -828,21 +846,11 @@ Example:
 {
     "services": [
     {
-        // Sample docker service
         "name": "{serviceName}",
         "state": "{serviceState}",
-        "startedTime":
-        {
-            serviceStartTime
-        },
-        "installedTime":
-        {
-            serviceInstallTime
-        },
-        "enabled":
-        {
-            true / false
-        },
+        "startedTime": {serviceStartTime},
+        "installedTime": {serviceInstallTime},
+        "enabled": {true / false},
         "type": "{docker/apex}",
         "dependentApps": [
         {
@@ -851,10 +859,7 @@ Example:
             state: "{appState}",
             user: "{user}"
         }],
-        "memoryMB":
-        {
-            memoryMB
-        },
+        "memoryMB": {memoryMB},
         "requiredServices": [
             "{requiredService-1}",
             ...
@@ -862,20 +867,18 @@ Example:
         "srcUrl": "{srcUrl}",
         "docker":
         {
-            "run": "{options and arguments to run docker service}"
+            "run": "{options and arguments to run docker service}",
+            "exec": "{optional exec command to run after the container is started}"
         },
         "proxy":
         {
             "name": "{proxyName}",
-            "address": "{proxyAddress}"
+            "address": "{proxyAddress}",
+	    "followRedirect": {true/false}
         },
-        "containerId":
-        {
-            containerId
-        }
+        "containerId":{containerId}
     },
     {
-        // Sample Apex service
         "name": "{serviceName}",
         "type": "apex",
         "srcUrl": "{srcUrl}",
@@ -890,12 +893,12 @@ Example:
         "proxy":
         {
             "name": "{proxyName}",
-            "address": "{proxyAddress}"
+            "address": "{proxyAddress}",
+	    "followRedirect": {true/false}
         },
         "metadata":
         {
-            "QueryIP": "{queryIP}",
-            "QueryPort": "{queryPort}"
+            "var-name": "{value}"
         }
     }]
 }
@@ -907,53 +910,39 @@ Function: Get details for a specific service
 
 Example: 
 ```json
-{
-    // Sample docker service
-    "name": "{serviceName}",
-    "state": "{serviceState}",
-    "startedTime":
     {
-        serviceStartTime
-    },
-    "installedTime":
-    {
-        serviceInstallTime
-    },
-    "enabled":
-    {
-        true / false
-    },
-    "type": "{docker/apex}",
-    "dependentApps": [
-    {
-        appId: "{appId}",
-        appName: "{appName}",
-        state: "{appState}",
-        user: "{user}"
-    }],
-    "memoryMB":
-    {
-        memoryMB
-    },
-    "requiredServices": [
-        "{requiredService-1}",
-        ...
-    ],
-    "srcUrl": "{srcUrl}",
-    "docker":
-    {
-        "run": "{options and arguments to run docker service}"
-    },
-    "proxy":
-    {
-        "name": "{proxyName}",
-        "address": "{proxyAddress}"
-    },
-    "containerId":
-    {
-        containerId
+        "name": "{serviceName}",
+        "state": "{serviceState}",
+        "startedTime": {serviceStartTime},
+        "installedTime": {serviceInstallTime},
+        "enabled": {true / false},
+        "type": "{docker/apex}",
+        "dependentApps": [
+        {
+            appId: "{appId}",
+            appName: "{appName}",
+            state: "{appState}",
+            user: "{user}"
+        }],
+        "memoryMB": {memoryMB},
+        "requiredServices": [
+            "{requiredService-1}",
+            ...
+        ],
+        "srcUrl": "{srcUrl}",
+        "docker":
+        {
+            "run": "{options and arguments to run docker service}",
+            "exec": "{optional exec command to run after the container is started}"
+        },
+        "proxy":
+        {
+            "name": "{proxyName}",
+            "address": "{proxyAddress}",
+	    "followRedirect": {true/false}
+        },
+        "containerId":{containerId}
     }
-}
 ```
 ### PUT /ws/v2/services/{name}
 
@@ -962,33 +951,12 @@ Function: Install a new service with specified JSON params
 Payload:
 ```json
 {
-    // Sample docker service
     "name": "{serviceName}",
-    "state": "{serviceState}",
-    "startedTime":
-    {
-        serviceStartTime
-    },
-    "installedTime":
-    {
-        serviceInstallTime
-    },
     "enabled":
     {
         true / false
     },
     "type": "{docker/apex}",
-    "dependentApps": [
-    {
-        appId: "{appId}",
-        appName: "{appName}",
-        state: "{appState}",
-        user: "{user}"
-    }],
-    "memoryMB":
-    {
-        memoryMB
-    },
     "requiredServices": [
         "{requiredService-1}",
         ...
@@ -1002,10 +970,6 @@ Payload:
     {
         "name": "{proxyName}",
         "address": "{proxyAddress}"
-    },
-    "containerId":
-    {
-        containerId
     }
 }
 ```
@@ -1021,33 +985,12 @@ Payload:
 
 ```json
 {
-    // Sample docker service
     "name": "{serviceName}",
-    "state": "{serviceState}",
-    "startedTime":
-    {
-        serviceStartTime
-    },
-    "installedTime":
-    {
-        serviceInstallTime
-    },
     "enabled":
     {
         true / false
     },
     "type": "{docker/apex}",
-    "dependentApps": [
-    {
-        appId: "{appId}",
-        appName: "{appName}",
-        state: "{appState}",
-        user: "{user}"
-    }],
-    "memoryMB":
-    {
-        memoryMB
-    },
     "requiredServices": [
         "{requiredService-1}",
         ...
@@ -1061,10 +1004,6 @@ Payload:
     {
         "name": "{proxyName}",
         "address": "{proxyAddress}"
-    },
-    "containerId":
-    {
-        containerId
     }
 }
 ```
@@ -1076,7 +1015,7 @@ Function: Start the specified service.
 
 Function: Stop the specified service
 
-### POST /ws/v2/services/install[?hasAppDataSources={true/false}]
+### POST /ws/v2/services/install[?async={true/false}]
 
 Function: Installs multiple services based on JSON params array.  Services are launched after install. hasAppDataSources is an optional flag, if set to true will cause service to respond immediately with 200 or error without waiting for download, installation and launch to complete
 
