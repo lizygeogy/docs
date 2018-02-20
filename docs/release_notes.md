@@ -201,7 +201,7 @@ The following known issues are included in RTS 3.10:
 - Fraud App: Physical DAG is broken (SPOI-13388)
 - Launching the configuration when the services are not installed gives the following error:
 `An error occurred trying to launch configuration package. Server message: undefined` (SPOI-13317)
-- Security vulnerability with access to key tab. (SPOI-13366)
+- Security vulnerability is caused due to Key tab copy and incorrect permission issues. (SPOI-13366)
 - Application fails when both replay and archive properties are set to True. ( SPOI-13202)
 Release date: Feb 21, 2018
 
