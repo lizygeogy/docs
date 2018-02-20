@@ -33,7 +33,7 @@ The input module has the following operators:
 
 ## Sample of Application Backplane Setup
 
-The following image depicts how **Account Takeover** application(ATO) uses the output module as a connector to send the data outcome to a configured Kafka topic.
+The following image depicts how **Account Takeover** application (ATO) uses the output module as a connector to send the data outcome to a configured Kafka topic.
 ![](images/image1.png)
 This outcome can be used by **Omni Channel Fraud Prevention** application (**FP application**), to obtain enhanced insights.
 
