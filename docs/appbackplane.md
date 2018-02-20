@@ -1,6 +1,6 @@
 # Application Backplane
 
-Application backplane is a mechanism that enables communication between applications. Using this communication channel, the fraud detection outcomes can be shared across multiple applications so that fraud prevention in one application can signal fraud prevention in another application and further reduce the chance of fraud.
+Application backplane is a mechanism that enables communication between applications. Using this communication channel, the fraud prevention or detection outcomes can be shared across multiple applications so that fraud prevention in one application can signal fraud prevention in another application and further reduce the chance of fraud.
 
  The fraud applications can function independently and still benefit from a network-effect of fraud reduction.
 
@@ -9,7 +9,7 @@ Application backplane is a mechanism that enables communication between applicat
 Application backplane is created based on the following modules that are included in the DAG of the fraud applications.
 
 - **Output Module**
-This module is in the application that must be connected to the application backplane.
+This module is in the application that must send outcomes to the application backplane.
 - **Input Module**
 This module is in the application that must listen to an application backplane.
 
@@ -35,15 +35,15 @@ The input module has the following operators:
 
 The following image depicts how **Account Takeover** application(ATO) uses the output module as a connector to send the data outcome to a configured Kafka topic.
 ![](images/image1.png)
-This outcome can be used by **Omni Channel**** Fraud Prevention**application (**FP**), to obtain enhanced insights.
+This outcome can be used by **Omni Channel Fraud Prevention**application (**FP application**), to obtain enhanced insights.
 
 This is achieved with _AccountDataEnricher_ operator which is added in the DAG of the **FP application.** This operator has the following two input ports:
 ![](images/image2.png)
 
-- **ATO input** : The stream coming from the input module _AnalyzedActivity_ is connected to this port. The properties set on this module correspond to those used in output module in **ATO**
+- **ATO input** : The stream coming from the input module _AnalyzedActivity_ is connected to this port. The properties set on this module correspond to those used in output module in the **ATO** application. 
 - **FP input** : The resultant stream after product-based enrichment on the transactions, _Enriched Products_ is connected to this port.
 
-The enricher maintains a set of users whose accounts have been taken over. This data structure gets updated with fresh activities in _AnalyzedActivity_ stream. Upon receiving a product enriched payment card transaction on the fraud input port, the enricher checks if the customer's account is taken over, by querying on the membership of the customer&#39;s UserID. If it is true, an _isAccountFlagged_ variable of payment card transaction is set to _true_.
+The enricher maintains a set of users whose accounts have been taken over. This data structure gets updated with fresh activities in _AnalyzedActivity_ stream. Upon receiving a product enriched payment card transaction on the fraud input port, the enricher checks if the customer's account is taken over, by querying on the membership of the customer's UserID. If it is true, an _isAccountFlagged_ variable of payment card transaction is set to _true_.
 
 ## Configuring Application Backplane for FPA and ATO
 
