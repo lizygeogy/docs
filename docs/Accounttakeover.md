@@ -12,9 +12,9 @@ You can also integrate the application backplane, to share the fraud outcomes of
 
 ATO Prevention application is dependent on the following services. These services  are configured in RTS to be launched automatically along with the application. You can run these services for analytics, visualizing the analytic outcomes, and for creating customized rules.
 
-- Online Analytic Services (OAS) 
-- Online Analytic Services (OAS) Dashboards
-- Drools CEP Engine
+- [Online Analytic Services (OAS)](oas.md)
+- [OAS Dashboards](oas_dashboards.md)
+- [CEP Workbench](cep_workbench.md)
 
 ATO Prevention application is available with DT Premium license.
 
@@ -48,7 +48,7 @@ The following operators/modules are included for the ATO application.
 | User Activity Parser | This JSON parser operator parses the incoming messages and converts them into plain java objects hereafter referred as tuple for further processing. |
 | User Profile Enricher | This operator gets the relevant JAVA applicable user details corresponding to a unique ID and enriches the tuple. User details can be extracted from JDBC database store or json file on HDFS.  You can configure the operator based on the enrichment data source you choose.Using this operator is optional in an ATO application. |
 | Geo Data Enricher | The application identifies the geolocation of the transaction by performing a lookup of the transaction IP against the external database like Maxmind database.  Using this operator is optional in an ATO application. |
-| Rules Executor | This operator is the Drools Operator. It applies the pre-defined rules to the incoming tuples and takes a suitable action depending on the outcome of the rules applied to a tuple. Refer **Drools Workbench** for configuring rules) |
+| Rules Executor | This operator is the Drools Operator. It applies the pre-defined rules to the incoming tuples and takes a suitable action depending on the outcome of the rules applied to a tuple. Refer [CEP Workbench](cep_workbench.md) |
 | Output Module | Output module consists of two operators
 - **Avro Serializer**
 Avro Serializer serializes the output of the Rules Executor (Drools operator) to send to Kafka Output operator.
@@ -66,7 +66,7 @@ For the Rules Executor, you can configure the rules either from the CEP engine o
 
 ## CEP Engine
 
-To configure rules from CEP Engine,  refer to &lt;link to [Drools Workbench](https://docs.google.com/document/d/1wb7v4u0p2XdHpuL4YoFBFO5GWI2327KmA69rfCdrqzo/edit?usp=sharing)&gt;
+To configure rules from CEP Engine,  refer [CEP Workbench](cep_workbench.md)
 
 ## HDFS
 
@@ -113,7 +113,7 @@ Configure the kafka setup details in the application properties file.  The follo
 | value.serializer | Serializer class | String | org.apache.kafka.common.serialization.StringSerializer |   |
 | dt.operator.TransactionDataPublisher.prop.properties(key.serializer) | Serializer class | String | org.apache.kafka.common.serialization.StringSerializer |   |
 | dt.operator.TransactionDataPublisher.prop.properties(value.serializer) | Serializer class | String | org.apache.kafka.common.serialization.StringSerializer |   |
-| archivePath | Path of archive directory where you can store data for replaying with different rules.   [&lt; Refer to Store and Replay documentation&gt;](https://docs.google.com/document/d/1Vt6zU1Rdg9DVtXQQZIaFfJidTyIwm_WK68gtzOgWzj8/edit?usp=sharing) | String |  |   |
+| archivePath | Path of archive directory where you can store data for replaying with different rules.  Refer [Store and Replay](storeandreplay.md) | String |  |   |
 | archiveType | Archive information | Enum | ARCHIVE\_TYPE\_KAFKA |   |
 | enableArchive |  to enable / disable archiving for replaying data.   | Boolean |  |   |
 | enableReplay | Value to enable / disable replay. enableReplay is mutually exclusive with enableArchive, both can be false.   | Boolean | |   |
@@ -263,12 +263,12 @@ If rules are loaded from files on HDFS, you must configure the following propert
 | --- | --- | --- |
 | rulesDir | Path to HDFS from where to load the rules. If this path is set to null, then the operator loads the rules from the classpath. | string |
 
-**Note**: If rules are to be loaded from Drools Workbench, you must specify following properties &lt;refer drools workbench documentation&gt;:
+**Note**: If rules are to be loaded from CEP Workbench, you must specify following properties.
 
 | **Property** | **Description** | **Type** | **Example** |
 | --- | --- | --- | --- |
-| kieSessionName | If rules are to be loaded from application classpath, then specify the name of the session to use. This is created using Drools Worknbench. For more details &lt;Workbench documentation Link&gt; | string | UserActivity-rules-session |
-| kiebaseName | If rules are to be loaded from application classpath, then specify the name of the kie base (rule) to use . This is created using Drools Worknbench. For more details &lt;Workbench documentation Link&gt; | string | ato-rules |
+| kieSessionName | If rules are to be loaded from application classpath, then specify the name of the session to use. This is created using Drools Worknbench. For more details refer [CEP Workbench](cep_workbench.md) | string | UserActivity-rules-session |
+| kiebaseName | If rules are to be loaded from application classpath, then specify the name of the kie base (rule) to use . This is created using Drools Worknbench. | string | ato-rules |
 
 **Note:** If rules are to be loaded from application classpath, the knowledge jar (KJAR) should be in the classpath. Refer to &lt;link to config artifact workflow&gt; for detailed steps.
 
@@ -344,15 +344,13 @@ To generate sample data, do the following:
 
 # Dashboards
 
-DataTorrent Dashboards and Widgets are UI tools that allow you to visualize historical and real-time application data.
+DataTorrent Dashboards and Widgets are UI tools that allow you to visualize historical and real-time application data. For more details to create and view dashboards refer to [dtdashboard](dtdashboard.md).
 
-Packaged dashboards are the set of following dashboards in which various visualizations are built. Also refer to&lt;superset&gt;
+Packaged dashboards are the set of following dashboards in which various visualizations are built. Also refer [OAS Dashboards](oas_dashboards.md)
 
 For example,
 
 - Real-time Account Take-over Fraud Prevention Analysis
 - Real-time Account Take-over Fraud Operations
 
-&lt;Require Images of Dashboards&gt;
-Rendered
 
