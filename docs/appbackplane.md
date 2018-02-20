@@ -35,9 +35,9 @@ The input module has the following operators:
 
 The following image depicts how **Account Takeover** application(ATO) uses the output module as a connector to send the data outcome to a configured Kafka topic.
 ![](images/image1.png)
-This outcome can be used by **Omni Channel Fraud Prevention**application (**FP application**), to obtain enhanced insights.
+This outcome can be used by **Omni Channel Fraud Prevention** application (**FP application**), to obtain enhanced insights.
 
-This is achieved with _AccountDataEnricher_ operator which is added in the DAG of the **FP application.** This operator has the following two input ports:
+This is achieved with _AccountDataEnricher_ operator which is added in the DAG of the **FP application**. This operator has the following two input ports:
 ![](images/image2.png)
 
 - **ATO input** : The stream coming from the input module _AnalyzedActivity_ is connected to this port. The properties set on this module correspond to those used in output module in the **ATO** application. 
