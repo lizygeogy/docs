@@ -1,8 +1,7 @@
-DataTorrent RTS Release Notes
+DataTorrent Real-time Streaming (RTS) Release Notes
 ========================================================================================================================
 Version: 3.10
 ------------------------------------------------------------------------------------------------------------------------
-# DataTorrent Real-time Streaming (RTS) 3.10 Release Notes
 
 Companies want to gain quick insights and take action on impacting events at the speed of their businesses. DataTorrent's Real-time Streaming (RTS) platform makes it easy to deliver fast data analytics applications that drive business outcomes using the latest innovation in data science and machine learning. It integrates best-of-breed open source technology innovation to provide all the features that a business needs to develop and deliver best-in-class, fast data applications.
 
