@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <title>Services - DataTorrent Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../menu.css" rel="stylesheet">
+  <link href="../css/version-select.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Services";
+    var mkdocs_page_input_path = "services.md";
+    var mkdocs_page_url = "/services/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-44586211-2', 'docs.datatorrent.com');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> DataTorrent Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">DataTorrent RTS</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Demos</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../demos/">Running Apps</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../sandbox/">Sandbox</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Cloud Integration</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../aws_emr_manual/">AWS</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../azure_deployment/">Azure</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Development</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../create/">Creating Applications</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../beginner/">Beginner's Guide</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../demo_videos/">Videos</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Tutorials</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../tutorials/topnwords/">Top N Words</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../tutorials/salesdemo/">Sales Dimensions</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../apex_development_setup/">Apex Development Setup</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../configure_IDE/">Generate New Project in IDE</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../application_development/">Applications</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../application_packages/">Application Packages</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../configuration_packages/">Configuration Packages</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Operator Development</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operator_development/">Guide</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operator_development_ref/">Reference</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Operators</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../library_operators/">Operators List</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/drools_operator/">Drools Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/python_operator/">Python Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/PMML_operator/">PMML Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/tcpinputoperator/">TCP Input Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/eventhubinput/">Event Hub Input Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/eventhuboutput/">Event Hub Output Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/abstracthttpserver/">Abstract HTTP Server Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/azure_blob/">Azure Blob Storage Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/aoooperator/">Analytics Output Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/elasticsearch/">Elasticsearch Output Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/block_reader/">Block Reader</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/deduper/">Deduper</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/dimensions_computation/">Dimension Computation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/file_output/">File Output</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/file_splitter/">File Splitter</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/hdht/">HDHT</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/kafkaInputOperator/">Kafka Input</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/snapshot_server/">Snapshot Server</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app_data_framework/">App Data Framework</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtgateway_api/">REST API</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">App Templates</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/common/import-launch/">Import and Launch App-template</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/common/customize/">Customizing an app-template</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/database-to-database-sync/">Database-to-database-sync</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/hdfs-line-copy/">HDFS-line-copy</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/hdfs-part-file-copy/">HDFS-part-file-copy</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/hdfs-to-hdfs-filter-transform/">HDFS-to-HDFS-filter-transform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/kafka-to-cassandra-filter-transform/">Kafka-to-Cassandra-Filter-Transform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/kafka-to-database-sync/">Kafka-to-Database-sync</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/kafka-to-hdfs-filter-transform/">Kafka-to-HDFS-Filter-Transform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/kafka-to-kafka-filter-transform/">Kafka-to-Kafka-Filter-Transform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/kinesis-to-redshift/">Kinesis-to-Redshift</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/kinesis-to-s3/">Kinesis-to-S3</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/s3-to-hdfs-sync/">S3-to-HDFS-sync</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/s3-to-redshift/">S3-to-HDFS-Filter-Transform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/database-to-hdfs/">Database dump to HDFS App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/database-to-database-sync/">Database to Database Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/hdfs-sync/">HDFS Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/hdfs-line-copy/">HDFS to HDFS Line Copy App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/hdfs-to-kafka-sync/">HDFS to Kafka Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/hdfs-to-s3-sync/">HDFS to S3 Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/kafka-to-database-sync/">Kafka to Database Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/kafka-to-hdfs-filter/">Kafka to HDFS Filter App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/kafka-to-hdfs-sync/">Kafka to HDFS Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/kinesis-to-s3/">Kinesis to S3 App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/s3-to-hdfs-sync/">S3 to HDFS Sync App</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Applications</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../omni_channel_fraud_app/">Omni Channel Fraud Prevention Application</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Services</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../cep_workbench/">CEP Workbench</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../oas_dashboards/">OAS Dashboards</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Platform</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../rts/">RTS</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../application_configurations/">Application Configurations</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtmanage/">dtManage</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtdashboard/">dtDashboard</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtgateway/">dtGateway</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Services</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#overview">Overview</a></li>
+    
+
+    <li class="toctree-l3"><a href="#managing-services">Managing Services</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#creating-new-service">Creating New Service</a></li>
+        
+            <li><a class="toctree-l4" href="#importing-packaged-service">Importing Packaged Service</a></li>
+        
+            <li><a class="toctree-l4" href="#viewing-service-instance">Viewing Service Instance</a></li>
+        
+            <li><a class="toctree-l4" href="#starting-services">Starting Services</a></li>
+        
+            <li><a class="toctree-l4" href="#stopping-services">Stopping Services</a></li>
+        
+            <li><a class="toctree-l4" href="#cloning-a-service">Cloning a Service</a></li>
+        
+            <li><a class="toctree-l4" href="#deleting-services">Deleting Services</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l3"><a href="#configuring-docker">Configuring Docker</a></li>
+    
+
+    <li class="toctree-l3"><a href="#packaging-services">Packaging Services</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#sample-services-file">Sample Services File</a></li>
+        
+            <li><a class="toctree-l4" href="#services-property">Services Property</a></li>
+        
+            <li><a class="toctree-l4" href="#applications-property">Applications Property</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../jar_artifacts/">JAR Artifacts</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtgateway_systemalerts/">Alerts</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../apex/">Apache Apex</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../apex_malhar/">Apache Apex-Malhar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../appbackplane/">Application Backplane</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Deployment and Operations</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Licensing/">Licensing</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../installation/">Installation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../configuration/">Configuration</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtgateway_security/">Security</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtgateway_systemalerts/">System Alerts</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../apexcli/">Apex CLI</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../troubleshooting/">Troubleshooting</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../release_notes/">Release Notes</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../glossary/">Glossary</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../additional_docs/">Resources</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">DataTorrent Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Platform &raquo;</li>
+        
+      
+    
+    <li>Services</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="overview">Overview</h1>
+<p>Services represent global, shared, and automatically managed processes.  These processes are automatically installed, managed, and monitored by the Gateway, and can be an instance of an Apex application or a Docker container.  Applications can rely on any number of services as their dependencies, and all the required services will be automatically installed and launched as needed when the application starts.</p>
+<p>For example when you launch the <a href="http://docs.datatorrent.com/omni_channel_fraud_app/">Omni Channel Fraud Prevention</a> application for the first time, the following services are automatically installed and launched along with it:</p>
+<ul>
+<li>Online Analytics Service</li>
+<li>Drools Workbench</li>
+<li>OAS Dashboards</li>
+</ul>
+<p>Services required by the applications can be defined via JSON service descriptors placed in an application package during the application development.  Users can also add new services and manage existing services via the UI Console using the Services Management or Application Configuration pages.  </p>
+<p>Below are three services that are packaged with DT premium applications:</p>
+<ul>
+<li><a href="oas.md">Online Analytics Service</a> - This service provides analytic processing of event streams from various source applications in real-time. This is an Apex application backed by a custom Druid implementation which provides fast in-memory OLAP query support.</li>
+<li><a href="../cep_workbench/">CEP Workbench</a> - This service is a web application and repository which is used to manage Drools assets. It provides the capability to quickly create, edit, and version Drools rules via a web UI, which can in turn be deployed to applications which implement CEP Engine, such as <a href="http://docs.datatorrent.com/omni_channel_fraud_app/">Omni Channel Fraud Prevention</a> application.</li>
+<li><a href="../oas_dashboards/">OAS Dashboards</a> - This service, based on Apache Supersert, provides a rich set of data visualizations with an easy-to-use interface for exploring and visualizing data available via <a href="oas.md">OAS</a> or other data sources.</li>
+</ul>
+<h1 id="managing-services">Managing Services</h1>
+<p>You can view and manage installed services using the <strong>Services</strong> page. To navigate to the <strong>Services</strong> page, follow the steps below:</p>
+<ol>
+<li>Click the Settings <img alt="" src="../images/services/cog-wheel.png" /> icon located on the upper most right section of the DT RTS console.</li>
+<li>Select the <strong>Services</strong> menu item from the dropdown menu.  The <strong>Services</strong> page is displayed with the list of installed services.</li>
+</ol>
+<p>Sample services list:</p>
+<p><img alt="" src="../images/services/services-list.png" /></p>
+<p>Below are the descriptions of the services table columns:</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>The service name, which can be clicked to navigate to the service instance page.</td>
+</tr>
+<tr>
+<td>enabled</td>
+<td>The service status should be <code>RUNNING</code> if this field is <code>true</code> (checked).<br/>The status should be <code>STOPPED</code> if this field is <code>false</code>.<br/>The Gateway monitors all <strong>enabled</strong> services to make sure they are running.</td>
+</tr>
+<tr>
+<td>status</td>
+<td>The state of the service.</td>
+</tr>
+<tr>
+<td>started</td>
+<td>The duration since the service was started.</td>
+</tr>
+<tr>
+<td>uptime</td>
+<td>Number of hours the service has been running.</td>
+</tr>
+<tr>
+<td>type</td>
+<td>The service type. Possible values are <code>docker</code> and <code>apex</code>.</td>
+</tr>
+<tr>
+<td>active apps</td>
+<td>The active Apex applications that depend on the service.</td>
+</tr>
+<tr>
+<td>memory</td>
+<td>Memory allocated by the service.</td>
+</tr>
+</tbody>
+</table>
+<p><a name="all-service-status"></a>
+Below are possible service status:</p>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INSTALLING</td>
+<td>The service is being installed.  This status is typically shown during service download or installation.</td>
+</tr>
+<tr>
+<td>STOPPED</td>
+<td>The service is installed, but not running.</td>
+</tr>
+<tr>
+<td>STARTING</td>
+<td>The service is installed and is starting up.</td>
+</tr>
+<tr>
+<td>RUNNING</td>
+<td>The service is installed and running.</td>
+</tr>
+<tr>
+<td>STOPPING</td>
+<td>The service is being stopped.</td>
+</tr>
+<tr>
+<td>REMOVING</td>
+<td>The service is being deleted. Once deleted, it should disappear from the table on the <strong>Services</strong> page.</td>
+</tr>
+<tr>
+<td>FAILED</td>
+<td>The service is installed but failed to start or ended unexpectedly.</td>
+</tr>
+</tbody>
+</table>
+<p>The following actions can be performed on this page:</p>
+<ul>
+<li><a href="#creating-new-service">Creating new service</a></li>
+<li><a href="#importing-packaged-service">Importing packaged services</a></li>
+<li><a href="#viewing-service-instance">Viewing service instance</a></li>
+<li><a href="#starting-services">Starting services</a></li>
+<li><a href="#stopping-services">Stopping services</a></li>
+<li><a href="#cloning-a-service">Cloning a service</a></li>
+<li><a href="#deleting-services">Deleting services</a></li>
+</ul>
+<h2 id="creating-new-service">Creating New Service</h2>
+<p>To create a new service, follow the steps below:</p>
+<ol>
+<li>Navigate to the <strong>Services</strong> page.</li>
+<li>Click the <strong>create new</strong> button. The <strong>Create Service</strong> dialog is shown.</li>
+<li>Enter data in the applicable entries.  See sample screen captures below for reference.</li>
+</ol>
+<p>Sample Docker create service dialog.</p>
+<p><img alt="" src="../images/services/create-service-docker.png" /></p>
+<p>Sample Apex create service dialog.</p>
+<p><img alt="" src="../images/services/create-service-apex.png" /></p>
+<p><strong>Create Service Dialog Fields</strong></p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>Enter the name of the service. This must be a unique name.</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Enter a description about the service.<br/><em>(Optional)</em></td>
+</tr>
+<tr>
+<td>Type</td>
+<td>Select a service type.<br/><code>docker</code> - Docker container as a service.<br/><code>apex</code> - Apex application as a service.</td>
+</tr>
+<tr>
+<td>Source URL</td>
+<td>Specify the location of the Docker image or the Apex application image.</td>
+</tr>
+<tr>
+<td>Docker Run</td>
+<td>Enter the Docker command arguments to be used when the Docker service container starts.<br/><strong>Note</strong>: This entry will only be shown if the service type is <code>docker</code>.<br/><em>(Optional)</em></td>
+</tr>
+<tr>
+<td>Docker Exec</td>
+<td>Execute the shell command inside the docker container after it is launched.<br/><strong>Note</strong>: This entry will only be shown if the service type is <code>docker</code>.<br/><em>(Optional)</em></td>
+</tr>
+<tr>
+<td>Apex App Name</td>
+<td>Enter the application name that exists in the Apex APA image which will be launched when the service starts.<br/><strong>Note</strong>: This entry will only be shown if the service type is <code>apex</code>.</td>
+</tr>
+<tr>
+<td>Apex Launch Properties</td>
+<td>Enter Apex launch properties. Click the <strong>Add</strong> button to add additional properties. Enter the names and corresponding values.<br/><strong>Note</strong>: This entry will only be shown if the service type is <code>apex</code>.<br/><em>(Optional)</em></td>
+</tr>
+<tr>
+<td>Proxy Address</td>
+<td>Port or host:port to which the Gateway proxy path forwards requests.<br/><em>(Optional)</em></td>
+</tr>
+<tr>
+<td>Proxy Request Headers</td>
+<td>Enter headers to be added to the request made by the Gateway to the proxy destination. Click the <strong>Add</strong> button to add additional headers.<br/><em>(Optional)</em></td>
+</tr>
+<tr>
+<td>Proxy Response Replacements</td>
+<td>Enter the response replacement definitions which represents the text replacement processing to be performed on the response body by the Gateway proxy. Click the <strong>Add</strong> button to add additional replacement definitions.<br/><em>(Optional)</em></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Click the <strong>Create</strong> button to create the new service and install it.</li>
+</ol>
+<p>For more details and examples regarding the items in the table above, see the <a href="#services-property">Services Property</a> section below.</p>
+<h2 id="importing-packaged-service">Importing Packaged Service</h2>
+<p>Packaged services are pre-defined services included in application packages that are uploaded in the cluster.  These services can be installed as-is or with different settings.</p>
+<p>To install a packaged service, follow the steps below:</p>
+<ol>
+<li>Navigate to the <strong>Services</strong> page.</li>
+<li>Click the <strong>import</strong> button. The <strong>Import from Packaged Services</strong> page is displayed with the list of available packaged services in application packages.</li>
+<li>Click the <strong>import</strong> button of a service to be imported. An <strong>Import Packaged Service</strong> dialog is shown.</li>
+<li>Edit the applicable entries and click the <strong>Import</strong> button to install the service.</li>
+</ol>
+<h2 id="viewing-service-instance">Viewing Service Instance</h2>
+<ol>
+<li>Navigate to the <strong>Services</strong> page.</li>
+<li>Click the service name to navigate to the service instance page.</li>
+</ol>
+<p>Sample service instance page:</p>
+<p><img alt="" src="../images/services/service-instance-view.png" /></p>
+<p>The following sections can be found on the <strong>Service Instance</strong> page:</p>
+<p><strong>Service Status and Actions</strong></p>
+<p>This section shows the <strong>service name</strong>, <strong>type</strong>, <strong>status</strong>, <strong>uptime</strong> and <strong>currently allocated memory</strong> if the service is running.  It also contains the applicable actionable buttons such as <strong>view app</strong>, <strong>start</strong>, <strong>stop</strong>, <strong>edit</strong>, <strong>copy</strong> and <strong>delete</strong>.  Note that the <strong>view app</strong> button is only visible if the service type is <code>apex</code> and the service is running.</p>
+<p><strong>Service Details</strong></p>
+<p>This table shows the configuration of the service.  It may also contain the Apex application ID if the service type is <code>apex</code> and the service is running and some metadata keys/values if the service provides such data.  The sample service instance above shows <code>QueryIP</code> and <code>QueryPort</code> with values of <code>192.168.2.135</code> and <code>46620</code>, respectively.  These metadata keys/values are provided by the service at run time.  This section will also show explicit metadata variables defined in the service descriptor.</p>
+<p><strong>Proxy URL</strong></p>
+<p>This section shows the proxy URL that users can use to access data provided by the service through the Gateway proxy.  The Gateway applies proxy request headers and proxy replace string settings when processing this URL requests.</p>
+<p><strong>Dependent Active Apps</strong></p>
+<p>This section shows the Apex applications that depend on this service.  The table will show the application ID, application name, application status and the application running username.  Users can click on the application ID or name to navigate to the running Apex application instance page.</p>
+<h4 id="edit-service">Edit Service</h4>
+<p>Services are automatically installed when an associated application is launched. However, you can change the settings of the services based on your requirements and restart the services.</p>
+<p><strong>Note</strong>: Only <strong>STOPPED</strong> services can be edited.</p>
+<p>To edit a service, follow the steps below:</p>
+<ol>
+<li>Navigate to the <strong>Services</strong> page.</li>
+<li>Select a service from the services list and click the <strong>Edit</strong> button. The <strong>Edit Service</strong> dialog is shown.</li>
+<li>Edit the settings and click the <strong>Save</strong> button. The new settings are saved and will be applied when the service is restarted.</li>
+</ol>
+<p><strong>Note</strong>: You can also edit a service on the service instance page.</p>
+<h2 id="starting-services">Starting Services</h2>
+<p>To start a service, follow the steps below:</p>
+<ol>
+<li>Navigate to the <strong>Services</strong> page.</li>
+<li>Select a service from the services list and click the <strong>Start</strong> button.</li>
+</ol>
+<p><strong>Note</strong>: You can also start a service on the service instance page.</p>
+<h2 id="stopping-services">Stopping Services</h2>
+<p>To stop a service, follow the steps below:</p>
+<ol>
+<li>Navigate to the <strong>Services</strong> page.</li>
+<li>Select a service from the services list and click the <strong>Stop</strong> button. A <strong>Stop Service</strong> modal is shown.</li>
+<li>Click the <strong>Stop</strong> button to stop the service.</li>
+</ol>
+<p><strong>Note</strong>: You can also stop a service on the service instance page.</p>
+<h2 id="cloning-a-service">Cloning a Service</h2>
+<p>You can clone, edit, and save a service configuration as a new service.</p>
+<p>To clone a service, follow the steps below:</p>
+<ol>
+<li>Navigate to the <strong>Services</strong> page.</li>
+<li>Select a service to clone and click the <strong>copy</strong> button.  The <strong>Create Service</strong> dialog is shown with the selected service configurations pre-filled.</li>
+<li>Change the service name and applicable settings.<br/>Service name must be different from the original service name because it must be unique.</li>
+<li>Click the <strong>Create</strong> button to create the new service.<br/>If the original service is enabled, then the new service will be installed and started.<br/>If the original service isn't enabled, then the new service will be installed, but not started.</li>
+</ol>
+<p><strong>Note</strong>: You can also clone a service on the service instance page.</p>
+<h2 id="deleting-services">Deleting Services</h2>
+<p>Services can be deleted for an application from the Services management page.</p>
+<p>To stop or start the services, follow the steps below:</p>
+<ol>
+<li>Navigate to the <strong>Services</strong> page.</li>
+<li>Select a service from the services list and click the <strong>delete</strong> button.  The delete service confirmation modal is shown.</li>
+<li>Click the <strong>Delete</strong> button to confirm that you want to delete the service.</li>
+</ol>
+<p><strong>Note</strong>: You can also delete a service on the service instance page.</p>
+<h1 id="configuring-docker">Configuring Docker</h1>
+<p>Some applications require services which are run in the Docker containers. For such services, you must install Docker (Version 1.9.1 or greater) on your system. Services can run in Docker installed on a remote system if Docker isn't installed on the system where the Gateway is running.</p>
+<p>The Docker version is automatically detected during the DT RTS installation process. That Docker version is shown in the Docker section of the Installation Wizard - Configuration. You can optionally configure the services to run in Docker installed on a remote system.</p>
+<p><strong>Warning: If the system does not have a compatible version of Docker and the remote Docker host isn't configured, then Docker services will not work.</strong></p>
+<p>To configure the remote Docker host, follow the steps below:</p>
+<ol>
+<li>On the DT RTS console, click the settings icon located on the upper most right section of the page and select <strong>System Configuration</strong>. The <strong>System Configuration</strong> page is displayed.</li>
+<li>Click the <strong>Installation Wizard</strong> button.</li>
+<li>On the <strong>Welcome</strong> page, click the <strong>Continue</strong> button.</li>
+<li>
+<p>On the <strong>Configuration</strong> page, go to the <strong>Docker</strong> section and set the following:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Docker host</td>
+<td>Enter the remote Docker host URL.<br/>For example: <code>unix:///var/run/docker.sock</code> or <code>http://127.0.0.1:2376</code><br/><em>(Optional)</em></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Click <strong>Continue</strong> and complete the Installation wizard.</p>
+</li>
+</ol>
+<h1 id="packaging-services">Packaging Services</h1>
+<p>Services and dependent applications can be defined and included in the application package.  This service descriptor is defined in the <strong>services.json</strong> file.  This file is located in the <strong>/src/main/resources/resources</strong> directory of your Apex project.  When the project is built and packaged as an APA file, the <strong>services.json</strong> file is placed in the <strong>/resources</strong> directory inside the APA file.</p>
+<h4 id="sample-services-file">Sample Services File</h4>
+<p>The following is a sample <strong>services.json</strong> file:</p>
+<pre><code>{
+  "services": [
+    {
+      "name": "superset-service",
+      "description": "Superset application dashboard service.",
+      "type": "docker",
+      "srcUrl": "johnsmith/superset:1.0.0",
+      "docker": {
+        "run": "--add-host cluster:<CLUSTER_IP> -e PORT=9090 -p 28088:8088"
+      },
+      "proxy": {
+        "address": "localhost:28088",
+        "followRedirect": false,
+        "requestHeaders": {
+          "X_PROXY_REMOTE_USER": "admin"
+        },
+        "replaceStrings": [
+          {
+            "matchMime": ".*text/html.*",
+            "matchUrl": ".*",
+            "matchText": "href=\"/",
+            "replaceText": "href=\"/proxy/services/superset/"
+          },
+          {
+            "matchMime": ".*application/javascript.*",
+            "matchUrl": ".*.entry.js",
+            "matchText": "\"/superset/",
+            "replaceText": "\"/proxy/services/superset/superset/"
+          }
+        ]
+      }
+    },
+    {
+      "name": "drools-workbench",
+      "description": "Drools Workbench is the web application and repository to govern Drools assets.",
+      "type": "docker",
+      "srcUrl": "jshnsmith/drools-workbench:1.0.0",
+      "docker": {
+        "run": "-d -p 18080:8080 -p 18001:8001"
+      },
+      "proxy": {
+        "address": "localhost:18080/drools-wb",
+        "followRedirect": false
+      }
+    },
+    {
+      "name": "online-analytics-service",
+      "description": "Online Analytics Service.",
+      "type": "apex",
+      "proxy": {
+        "address": "${QueryIP}:${QueryPort}"
+      },
+      "srcUrl": "${dt.gateway.artifactHubLocation}/ws/v1/artifacts/dt-apoxi-oas/1.4.0/download",
+      "apex": {
+        "appName": "Online-Analytics-Service",
+        "launchArgs": {
+          "apex.app-param.kafkaBrokers": "localhost:9092",
+          "apex.app-param.kafkaTopic": "analytics"
+        }
+      }
+    }
+  ],
+  "applications": [
+    {
+      "name": "MyApexApplication",
+      "requiredServices": [
+        {
+          "name": "online-analytics-service",
+          "requiredBeforeLaunch": "true"
+        },
+        {
+          "name": "superset-fpa"
+        },
+        {
+          "name": "drools-workbench"
+        }
+      ]
+    }
+  ]
+}</code></pre>
+
+<p>The <strong>services.json</strong> file contains two root level properties:</p>
+<ul>
+<li><a href="#services-property">Services Property</a></li>
+<li><a href="#applications-property">Applications Property</a></li>
+</ul>
+<h2 id="services-property">Services Property</h2>
+<p>Service descriptors are defined in the <code>services</code> property.  The services property is an array of JSON objects where each object defines a service.</p>
+<h3 id="service-descriptor-parameters">Service Descriptor Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>Service name, which should be globally unique and only include characters that HDFS file name friendly.<br/>For example: <code>superset-fpa</code>, <code>druid_workbench</code>, etc.</td>
+</tr>
+<tr>
+<td>description</td>
+<td>string</td>
+<td>Short description about the service.<br/><em>(Optional)</em></td>
+</tr>
+<tr>
+<td>type</td>
+<td>string</td>
+<td>Services type must be one of the following values:<br/><code>docker</code> - service is a Docker container.<br/><code>apex</code> - service is an Apex application.</td>
+</tr>
+<tr>
+<td>srcUrl</td>
+<td>string</td>
+<td>Specify the name of the Docker image if the service is Docker based or specify the path of the Apex application package if the service is Apex based.<br/><br/>An example of a Docker srcUrl: <code>datatorrent/superset-fpa:1.4.0</code><br/><br/>An example of an Apex srcUrl:<br/><code>${.dt.gateway.artifactHubLocation}/ws/v1/artifacts/com.datatorrent/</code><br/><code>dt-apoxi-oas/1.4.0-SNAPSHOT/download</code><br/><br/>Another example of an Apex URL: <code>file:///path/to/apppackage.apa</code></td>
+</tr>
+<tr>
+<td>docker</td>
+<td>json object</td>
+<td>Specify the Docker details for he service.<br/>For example:<pre><code>{<br/>  "run": "-d -p 18080:8080",<br/>  "exec": "nginx -t -c ~/mynginx.conf"<br/>}</code></pre><strong>Note</strong>: This property is required if the service type is <code>docker</code>.<br/><em>(Optional)</em></td>
+</tr>
+<tr>
+<td>apex</td>
+<td>json object</td>
+<td>Specify the Apex details for the service.<br/>For example:<pre><code>{<br/>  "appName": "OAS",<br/>  "launchArgs": {<br/>    ...<br/>  }<br/>}</code></pre><strong>Note</strong>: This property is required if the service type is <code>apex</code>.<br/><em>(Optional)</em></td>
+</tr>
+<tr>
+<td>proxy</td>
+<td>json object</td>
+<td>Specify the proxy settings for the service.<br/>For example:<pre><code>{<br/>  "address": "localhost",<br/>  "followRedirect": false,<br/>  "requestHeaders": {<br/>   ...<br/>  },<br/>  "replaceString": [<br/>    ...<br/>  ]<br/>}</code></pre><em>(Optional)</em></td>
+</tr>
+<tr>
+<td>metadata</td>
+<td>json object</td>
+<td>Specify explicit metadata to use in the service.<br/>For example: <pre><code>{<br/>  "ipaddr" : "localhost",<br/>  "port" : 8080<br/>}</code></pre>With this metadata defined in the service, we can reference them in the service configuration as <code>${superset-fpa.ipaddr}</code> and <code>${superset-fpa.port}</code>, assuming the service name is <code>superset-fpa</code>.<br/><em>(Optional)</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="docker-details">Docker Details</h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>run</td>
+<td>string</td>
+<td>Specify the Docker run command details.<br/>For example: <code>--add-host druid_cluster:&lt;GATEWAY_IP&gt; -e OAS=fpa-online-analytics-service -e PORT=9090 -p 28088:8088</code></td>
+</tr>
+<tr>
+<td>exec</td>
+<td>string</td>
+<td>Specify the Docker shell command to execute after the Docker service is started.<br/>For example: <code>nginx -t -c ~/mynginx.conf</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="apex-details">Apex Details</h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>appName</td>
+<td>string</td>
+<td>Specify the Apex application in the APA to launch.<br/>For example: <code>OA</code></td>
+</tr>
+<tr>
+<td>launchArgs</td>
+<td>json object</td>
+<td>Arguments to use during the launching of the Apex service.<br/>For example:<pre><code>{</br>  "kafkaBrokers": "localhost:9092",</br>  "kafkaTopic": "analytics"<br/>}</code></pre><em>(Optional)</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="proxy-settings">Proxy Settings</h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>address</td>
+<td>string</td>
+<td>Host:port to which the proxy path forwards to.<br/>For example: <code>localhost:28088</code><br/><em>(Optional)</em></td>
+</tr>
+<tr>
+<td>followRedirect</td>
+<td>boolean</td>
+<td>If this property is true, then the Gateway proxy will perform redirect when it sees the HTTP status code 302 in the HTTP response header from the service.  Therefore, the browser surfing the service proxy URL will never encounter the hTTP status code 302.<br/><strong>Warning</strong>: Omitting this property or setting it to true may cause a maximum redirect error in the Gateway proxy.<br/><em>(Optional, default: true)</em></td>
+</tr>
+<tr>
+<td>requestHeaders</td>
+<td>json object</td>
+<td>Headers to be added to the request made by the Gateway to the proxy destination.<br/>For example:<pre><code>{<br/>  "X_PROXY_REMOTE_USER": "dtadmin"<br/>}</code></pre><em>(Optional)</em></td>
+</tr>
+<tr>
+<td>replaceStrings</td>
+<td>array of json object</td>
+<td>Definitions that represents text replacement processing to be performed on the response body by the Gateway proxy.  Regular expression is supported as described in the <a href="https://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html">Java Regex Pattern Class</a>, which includes capturing group and back references.<pre><code>[<br/>  {<br/>    "matchMime": "text/html",<br/>    "matchUrl": ".*.html",<br/>    "matchText": "\"/static/",<br/>    "replaceText": "\"/proxy/services/superset/static/"<br/>  }</br>  ...</br>]</code></pre><em>(Optional)</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="replace-strings-details">Replace Strings Details</h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>matchMime</td>
+<td>string</td>
+<td>Process only for this mime-type.<br/>For example: <code>text/html</code><br/><em>(Optional)</em></td>
+</tr>
+<tr>
+<td>matchUrl</td>
+<td>string</td>
+<td>Process only when the URL matches this regular expression pattern.<br/>For example: <code>acct*</code><br/><em>(Optional)</em></td>
+</tr>
+<tr>
+<td>matchText</td>
+<td>string</td>
+<td>Text to be matched in the response body.<br/>For example: <code>href=\"/static/</code></td>
+</tr>
+<tr>
+<td>replaceText</td>
+<td>string</td>
+<td>Text that replaces the matched-text.<br/>For example: <code>href=\"/proxy/services/superset-fraud-app/static/</code><br/><em>(Optional, default: '')</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note</strong>: Explicit metadata, implicit and global variables such as <code>${superset-fpa.ipaddr}</code>, <code>${superset-fpa._state}</code>, <code>${.GATEWAY_CONNECT_ADDRESS}</code>, etc. are not currently supported in the replace strings definitions.</p>
+<p>Example 1:</p>
+<pre><code>{
+  "matchMime": "text/html",
+  "matchUrl": ".*\.html",
+  "matchText": "href=\"/static/",
+  "replaceText": "href=\"/proxy/services/superset-fraud-app/static/"
+}</code></pre>
+
+<p>The above example tells the Gateway proxy to process request URLs ending with <code>.html</code> and the response header mime-type equals <code>text/html</code>.  Once the URL and mime-type are a match, then the response body is transformed by replacing every occurrence of <code>href="/static/</code> with <code>href="/proxy/services/superset-fraud-app/static/</code>.</p>
+<p>Example 2:</p>
+<pre><code>{
+  "matchMime": "text/html",
+  "matchUrl": ".*",
+  "matchText": "num=([0-9]*)",
+  "replaceText": "NUM=\"$1\""
+}</code></pre>
+
+<p>The above example tells the Gateway to process requests where the response header mime-type equals <code>text/html</code>.  Once the mime-type is a match, then the response body is transformed by replacing every occurrence of <code>num=one or more digits</code> with <code>NUM="same digits"</code>.  For example: <code>num=25</code> becomes <code>NUM="25"</code>, <code>num=100</code> becomes <code>NUM="100"</code>, etc.</p>
+<p><strong>Note</strong>: The matchUrl in this case will match any URL so it could have been omitted.</p>
+<p>In addition to the explicit metadata variables defined in the services, there are implicit and global variables that can be used in the service configuration also.  Implicit variables are specific to the service while global variables are specific to the Gateway.</p>
+<p><strong>Note</strong>: These variables are only applicable to the following properties: <em>srcUrl, proxy.address, docker.run, docker.exec and apex.launchArgs values (not names)</em></p>
+<p><strong>Implicit Variables</strong></p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_type</td>
+<td>This variable should resolve to the service type such as <code>docker</code> or <code>apex</code>.  The syntax to reference this variable is <code>${superset-fpa._type}</code>, assuming the service name is <code>superset-fpa</code>.</td>
+</tr>
+<tr>
+<td>_state</td>
+<td>This variable should resolve to the service status.  For a complete list of service status, see the <a href="#all-service-status">service status table</a> in the Manage section. The syntax to reference this variable is <code>${superset-fpa._state}</code>, assuming the service name is <code>superset-fpa</code>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Global Variables</strong></p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GATEWAY_CONNECT_ADDRESS</td>
+<td>This is the Gateway connection address.  The syntax to reference this variable is <code>${.GATEWAY_CONNECT_ADDRESS}</code>.</td>
+</tr>
+<tr>
+<td>GATEWAY_ADMIN_USER</td>
+<td>This is the Unix user that the Gateway runs as. The syntax to reference this variable is <code>${.GATEWAY_ADMIN_USER}</code>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="applications-property">Applications Property</h2>
+<p>Applications depending on services are defined in the <code>applications</code> property.  </p>
+<h3 id="applications-parameters">Applications Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>Apex application name, which exists in the current APA package.</td>
+</tr>
+<tr>
+<td>requiredServices</td>
+<td>array of json object</td>
+<td>List of services in which this application depends on.  If one of the services depends on other services, transitive service dependencies do not need to be specified explicitly.<br/>For example:<pre><code>[<br/>  {<br/>    "name": "superset-fpa",<br/>    "requiredBeforeLaunch": true,<br/>    "transient": true<br/>  }<br/>  ...<br/>]</code></pre></td>
+</tr>
+</tbody>
+</table>
+<p><code>requiredServices</code> is an array of JSON objects where each object defines a service the application depends on.</p>
+<h3 id="required-services-parameters">Required Services Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>The service name this application depends on.</td>
+</tr>
+<tr>
+<td>requiredBeforeLaunch</td>
+<td>boolean</td>
+<td>If this property is set to true, then the application cannot be launched until this service is started.<br/><em>(Optional, default: false)</em></td>
+</tr>
+<tr>
+<td>transient</td>
+<td>boolean</td>
+<td>If this property is set to true, then it is deleted when the application is killed or shutdown.<br/><em>(Optional, default: false)</em></td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../jar_artifacts/" class="btn btn-neutral float-right" title="JAR Artifacts">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../dtgateway/" class="btn btn-neutral" title="dtGateway"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../dtgateway/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../jar_artifacts/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+      <script src="../menu.js"></script>
+      <script src="../js/version-select.js"></script>
+
+</body>
+</html>

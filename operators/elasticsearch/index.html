@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../favicon.ico">
+  
+  <title>Elasticsearch Output Operator - DataTorrent Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../menu.css" rel="stylesheet">
+  <link href="../../css/version-select.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Elasticsearch Output Operator";
+    var mkdocs_page_input_path = "operators/elasticsearch.md";
+    var mkdocs_page_url = "/operators/elasticsearch/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-44586211-2', 'docs.datatorrent.com');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> DataTorrent Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">DataTorrent RTS</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Demos</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../demos/">Running Apps</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../sandbox/">Sandbox</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Cloud Integration</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../aws_emr_manual/">AWS</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../azure_deployment/">Azure</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Development</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../create/">Creating Applications</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../beginner/">Beginner's Guide</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../demo_videos/">Videos</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Tutorials</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../tutorials/topnwords/">Top N Words</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../tutorials/salesdemo/">Sales Dimensions</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../apex_development_setup/">Apex Development Setup</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../configure_IDE/">Generate New Project in IDE</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../application_development/">Applications</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../application_packages/">Application Packages</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../configuration_packages/">Configuration Packages</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Operator Development</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../operator_development/">Guide</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../operator_development_ref/">Reference</a>
+                </li>
+    </ul>
+                </li>
+                <li class=" current">
+                    
+    <span class="caption-text">Operators</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../library_operators/">Operators List</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../drools_operator/">Drools Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../python_operator/">Python Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../PMML_operator/">PMML Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../tcpinputoperator/">TCP Input Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../eventhubinput/">Event Hub Input Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../eventhuboutput/">Event Hub Output Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../abstracthttpserver/">Abstract HTTP Server Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../azure_blob/">Azure Blob Storage Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../aoooperator/">Analytics Output Operator</a>
+                </li>
+                <li class="toctree-l3 current">
+                    
+    <a class="current" href="./">Elasticsearch Output Operator</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l4"><a href="#about-elasticsearch-output-operator">About ElasticSearch Output Operator</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#testing">Testing</a></li>
+        
+            <li><a class="toctree-l5" href="#workflow-of-the-operator">Workflow of the Operator</a></li>
+        
+            <li><a class="toctree-l5" href="#ports">Ports</a></li>
+        
+            <li><a class="toctree-l5" href="#partitioning">Partitioning</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l4"><a href="#configuring-elasticsearch-output-operator">Configuring ElasticSearch Output Operator</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#mandatory-elasticsearch-cluster-properties">Mandatory Elasticsearch Cluster Properties </a></li>
+        
+            <li><a class="toctree-l5" href="#optional-properties-for-performance-tuning">Optional Properties for Performance Tuning </a></li>
+        
+            <li><a class="toctree-l5" href="#configuring-the-partitioning">Configuring the Partitioning</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l4"><a href="#sample-application">Sample Application</a></li>
+    
+
+    </ul>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../block_reader/">Block Reader</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../deduper/">Deduper</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../dimensions_computation/">Dimension Computation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../file_output/">File Output</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../file_splitter/">File Splitter</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../hdht/">HDHT</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../kafkaInputOperator/">Kafka Input</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../snapshot_server/">Snapshot Server</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app_data_framework/">App Data Framework</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dtgateway_api/">REST API</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">App Templates</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/common/import-launch/">Import and Launch App-template</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/common/customize/">Customizing an app-template</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/database-to-database-sync/">Database-to-database-sync</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/hdfs-line-copy/">HDFS-line-copy</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/hdfs-part-file-copy/">HDFS-part-file-copy</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/hdfs-to-hdfs-filter-transform/">HDFS-to-HDFS-filter-transform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/kafka-to-cassandra-filter-transform/">Kafka-to-Cassandra-Filter-Transform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/kafka-to-database-sync/">Kafka-to-Database-sync</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/kafka-to-hdfs-filter-transform/">Kafka-to-HDFS-Filter-Transform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/kafka-to-kafka-filter-transform/">Kafka-to-Kafka-Filter-Transform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/kinesis-to-redshift/">Kinesis-to-Redshift</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/kinesis-to-s3/">Kinesis-to-S3</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/s3-to-hdfs-sync/">S3-to-HDFS-sync</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/s3-to-redshift/">S3-to-HDFS-Filter-Transform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/database-to-hdfs/">Database dump to HDFS App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/database-to-database-sync/">Database to Database Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/hdfs-sync/">HDFS Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/hdfs-line-copy/">HDFS to HDFS Line Copy App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/hdfs-to-kafka-sync/">HDFS to Kafka Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/hdfs-to-s3-sync/">HDFS to S3 Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/kafka-to-database-sync/">Kafka to Database Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/kafka-to-hdfs-filter/">Kafka to HDFS Filter App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/kafka-to-hdfs-sync/">Kafka to HDFS Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/kinesis-to-s3/">Kinesis to S3 App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/s3-to-hdfs-sync/">S3 to HDFS Sync App</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Applications</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../omni_channel_fraud_app/">Omni Channel Fraud Prevention Application</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Services</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../cep_workbench/">CEP Workbench</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../oas_dashboards/">OAS Dashboards</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Platform</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../rts/">RTS</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../application_configurations/">Application Configurations</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dtmanage/">dtManage</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dtdashboard/">dtDashboard</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dtgateway/">dtGateway</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../services/">Services</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../jar_artifacts/">JAR Artifacts</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dtgateway_systemalerts/">Alerts</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../apex/">Apache Apex</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../apex_malhar/">Apache Apex-Malhar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appbackplane/">Application Backplane</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Deployment and Operations</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Licensing/">Licensing</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../installation/">Installation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../configuration/">Configuration</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dtgateway_security/">Security</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dtgateway_systemalerts/">System Alerts</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../apexcli/">Apex CLI</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../troubleshooting/">Troubleshooting</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../release_notes/">Release Notes</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../glossary/">Glossary</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../additional_docs/">Resources</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">DataTorrent Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Development &raquo;</li>
+        
+      
+        
+          <li>Operators &raquo;</li>
+        
+      
+    
+    <li>Elasticsearch Output Operator</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="about-elasticsearch-output-operator">About ElasticSearch Output Operator</h1>
+<p>Elasticsearch output operator along with Elastic Search engine provides data capability to store full-text search documents in real time.</p>
+<p>The Elasticsearch operator embeds the transport client to simplify the connectivity and stores the documents to Elasticsearch cluster for a text search analysis.</p>
+<p>You can configure the operator properties as per your business requirements and the execution aspect is handled by the Elasticsearch operator.</p>
+<p>The Elasticsearch output operator provides the following advantages:</p>
+<ul>
+<li>High performant and can process data in bulk operations.</li>
+<li>The application is also highly performant and can process as fast as the network allows.</li>
+<li>Ease to modify the configuration of Elasticsearch indexes through properties as most of the functionality is exported as tuning parameters as per requirements.</li>
+<li>Flexible and configurable sharding (that is, it allows you to distribute and parallelize operations across shard) for Elasticsearch indexes based on APIs provided in operator for user provided document ID and index name.</li>
+<li>Flexible in setting input source data type formats such as JSON.</li>
+<li>Built-in metrics related to Elasticsearch, such as number of events, bytes written, bad events etc., are available.</li>
+</ul>
+<p>This operator is available under <em>DT Plus</em> license.</p>
+<h2 id="testing">Testing</h2>
+<p>The Elasticsearch output operator is tested with the following components:</p>
+<ul>
+<li>Apache Hadoop version 2.7.0</li>
+<li>Java version 1.8.</li>
+<li>Elastic search version 5.4</li>
+</ul>
+<h2 id="workflow-of-the-operator">Workflow of the Operator</h2>
+<ul>
+<li>Configure the Elasticsearch cluster node and port in the Elasticsearch operator.</li>
+<li>Elasticsearch output operator receives enriched data from upstream operators which are stored on Elasticsearch cluster.</li>
+</ul>
+<h2 id="ports">Ports</h2>
+<p>The following ports are available on the Elasticsearch output operator:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Port Type</strong></th>
+<th><strong>Port Name</strong></th>
+<th><strong>Details</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input Port</td>
+<td>Input Port</td>
+<td>Receives incoming tuples from upstream operators.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="partitioning">Partitioning</h2>
+<p>The ElasticSearch operator can be partitioned using the default partitioner provided by Apex.</p>
+<p>Elasticsearch operator can be dynamically partitioned as stateless. For stateful, dynamic partitioning is not supported. Also see</p>
+<h1 id="configuring-elasticsearch-output-operator">Configuring ElasticSearch Output Operator</h1>
+<p>The following settings can be configured for Elasticsearch output operator:</p>
+<ul>
+<li><a href="#Reference1">Mandatory properties for connectivity </a></li>
+<li><a href="#Reference2">Optional properties for performance tuning</a></li>
+</ul>
+<h2 id="mandatory-elasticsearch-cluster-properties">Mandatory Elasticsearch Cluster Properties <a name="Reference1"></a></h2>
+<p>The following properties must be mandatorily updated in the <strong>properties.xml</strong> file for connectivity:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Property Name</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clusterName</td>
+<td>Name of Elasticsearch cluster.</td>
+</tr>
+<tr>
+<td>hostNames</td>
+<td>Name of hosts along with the port numbers where Elasticsearch cluster is configured. For e.g: localhost:9300</td>
+</tr>
+<tr>
+<td>indexName</td>
+<td>Name of the Elasticsearch index.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="optional-properties-for-performance-tuning">Optional Properties for Performance Tuning <a name="Reference2"></a></h2>
+<p>Operator can be optionally configured as per the performance and resources requirement. The following properties must be added to <strong>properties.xml</strong> file.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Property Name</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>batchSize</td>
+<td>This controls the amount of data that is grouped in a bulk for storing in the Elasticsearch store.</td>
+</tr>
+<tr>
+<td>concurrentRequests</td>
+<td>Sets the number of concurrent requests that are allowed to be executed parallelly.</td>
+</tr>
+<tr>
+<td>bulkRequestTimeoutInSecs</td>
+<td>Sets the timeout for bulk request in seconds. A value of zero indicates that only a single request can be executed. A value of one indicates that concurrent request can be executed while accumulating new bulk requests.</td>
+</tr>
+<tr>
+<td>bulkRequestBatchSizeInMb</td>
+<td>Sets the batch size in MB for bulk request.</td>
+</tr>
+<tr>
+<td>checkClusterStatus</td>
+<td>Checks the entire cluster status along with status for specified index.</td>
+</tr>
+<tr>
+<td>flushAfterWindowCompletion</td>
+<td>Pushes the bulk request to elastic store after every end window.</td>
+</tr>
+<tr>
+<td>backoffPolicyRetryCount</td>
+<td>Sets a retry count for back off policy in case of a failure.</td>
+</tr>
+<tr>
+<td>backoffPolicyRetryTimeInMSecs</td>
+<td>Sets the time interval for back off policy in case of a failure.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="configuring-the-partitioning">Configuring the Partitioning</h2>
+<p>For partitioning, you must add the following property in the <strong>properties.xml</strong> file. For example, if you add Elasticsearch operator with the name <em>ElasticOutputStore</em> in the DAG, then this property creates four partitions of the operator when the application starts.</p>
+<pre><code>&lt;property&gt;
+     &lt;name&gt;dt.operator.ElasticOutputStore.attr.PARTITIONER&lt;/name&gt;
+     &lt;value&gt;com.datatorrent.common.partitioner.StatelessPartitioner(4)&lt;/name&gt;
+&lt;/property&gt;
+</code></pre>
+
+<h1 id="sample-application">Sample Application</h1>
+<p>The following code illustrates how Elasticsearch output Operator can be used within an application.</p>
+<p>This application reads JSON data from Kafka and parses it. After some transformation, this data is sent to Elasticsearch output Operator which is then stored on an Elasticsearch cluster.</p>
+<pre><code>public class Application implements StreamingApplication
+{
+
+  public void populateDAG(DAG dag, Configuration conf)
+  {
+    // This kafka input operator takes input from specified Kafka brokers.
+    KafkaSinglePortInputOperator kafkaInputOperator = dag.addOperator(&quot;kafkaInput&quot;, KafkaSinglePortInputOperator.class);
+
+    // Parses a json string tuple against a specified json schema and emits JSONObject.
+    JsonParser jsonParser = dag.addOperator(&quot;JsonParser&quot;, JsonParser.class);
+
+    // Filters the tuple as per specified condition by user.
+    FilterOperator filterOperator = dag.addOperator(&quot;filter&quot;, new FilterOperator());
+
+    // Transforms the tuple value to user logic. Note logic may be modified.
+    TransformOperator transform = dag.addOperator(&quot;transform&quot;, new TransformOperator());
+
+    // Format the transformed logic into JSON format.
+    JsonFormatter jsonFormatter = dag.addOperator(&quot;JsonFormatter&quot;, JsonFormatter.class);
+
+    // Use elasticsearch as a store.
+    ElasticSearchOutputOperator elasticSearchOutput = dag.addOperator(&quot;ElasticStore&quot;, ElasticSearchOutputOperator.class);
+
+    // Now create the streams to complete the dag or application logic.
+    // Most of the operators are kept THREAD_LOCAL for optimizing the local resources. As latest elastic search supports java 1.8,
+    // so most of the clusters are not on java 1.8. If hadoop cluster is migrated to java 1.8, one can change the locality as
+    // per the requirement.
+    dag.addStream(&quot;KafkaToJsonParser&quot;, kafkaInputOperator.outputPort, jsonParser.in).setLocality(DAG.Locality.CONTAINER_LOCAL);
+    dag.addStream(&quot;JsonParserToFilter&quot;, jsonParser.out, filterOperator.input).setLocality(DAG.Locality.THREAD_LOCAL);
+    dag.addStream(&quot;FilterToTransform&quot;, filterOperator.truePort, transform.input).setLocality(DAG.Locality.THREAD_LOCAL);
+    dag.addStream(&quot;TransformToJsonFormatter&quot;, transform.output, jsonFormatter.in).setLocality(DAG.Locality.THREAD_LOCAL);
+    dag.addStream(&quot;JsonToElasticStore&quot;, jsonFormatter.out, elasticSearchOutput.input);
+    dag.setAttribute(Context.DAGContext.METRICS_TRANSPORT, null);
+  }
+}
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../block_reader/" class="btn btn-neutral float-right" title="Block Reader">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../aoooperator/" class="btn btn-neutral" title="Analytics Output Operator"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../aoooperator/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../block_reader/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+      <script src="../../menu.js"></script>
+      <script src="../../js/version-select.js"></script>
+
+</body>
+</html>

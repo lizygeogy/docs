@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../menu.css" rel="stylesheet">
+  <link href="../../css/version-select.css" rel="stylesheet">
   
   <script>
     // Current page data
@@ -87,6 +89,10 @@
                     
     <a class="" href="../../aws_emr_manual/">AWS</a>
                 </li>
+                <li class="">
+                    
+    <a class="" href="../../azure_deployment/">Azure</a>
+                </li>
     </ul>
 	    </li>
           
@@ -112,63 +118,11 @@
     <ul class="subnav">
                 <li class="toctree-l3">
                     
-    <span class="caption-text">Top N Words</span>
-    <ul class="subnav">
-                <li class="toctree-l4">
-                    
-    <a class="" href="../../tutorials/topnwords/">Introduction</a>
-                </li>
-                <li class="toctree-l4">
-                    
-    <a class="" href="../../tutorials/topnwords-c1/">Development Environment</a>
-                </li>
-                <li class="toctree-l4">
-                    
-    <a class="" href="../../tutorials/topnwords-c2/">Building in Java</a>
-                </li>
-                <li class="toctree-l4">
-                    
-    <a class="" href="../../tutorials/topnwords-c3/">Building with dtAssemble</a>
-                </li>
-                <li class="toctree-l4">
-                    
-    <a class="" href="../../tutorials/topnwords-c4/">Monitoring with dtManage</a>
-                </li>
-                <li class="toctree-l4">
-                    
-    <a class="" href="../../tutorials/topnwords-c5/">Visualizing with dtDashboard</a>
-                </li>
-                <li class="toctree-l4">
-                    
-    <a class="" href="../../tutorials/topnwords-c7/">Advanced Features</a>
-                </li>
-                <li class="toctree-l4">
-                    
-    <a class="" href="../../tutorials/topnwords-c6/">Appendix</a>
-                </li>
-    </ul>
+    <a class="" href="../../tutorials/topnwords/">Top N Words</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <span class="caption-text">Sales Dimensions</span>
-    <ul class="subnav">
-                <li class="toctree-l4">
-                    
-    <a class="" href="../../tutorials/salesdimensions/">Building in Java</a>
-                </li>
-                <li class="toctree-l4">
-                    
-    <a class="" href="../../tutorials/salesdimensions-c2/">Building with dtAssemble</a>
-                </li>
-                <li class="toctree-l4">
-                    
-    <a class="" href="../../tutorials/salesdimensions-c3/">Visualizing with dtDashboard</a>
-                </li>
-                <li class="toctree-l4">
-                    
-    <a class="" href="../../tutorials/salesdimensions-c4/">Monitoring with dtManage</a>
-                </li>
-    </ul>
+    <a class="" href="../../tutorials/salesdemo/">Sales Dimensions</a>
                 </li>
     </ul>
                 </li>
@@ -194,15 +148,65 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../../operator_development/">Operators</a>
-                </li>
-                <li class=" current">
-                    
-    <span class="caption-text">Library Operators</span>
+    <span class="caption-text">Operator Development</span>
     <ul class="subnav">
                 <li class="toctree-l3">
                     
-    <a class="" href="../../library_operators/">List of Operators</a>
+    <a class="" href="../../operator_development/">Guide</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../operator_development_ref/">Reference</a>
+                </li>
+    </ul>
+                </li>
+                <li class=" current">
+                    
+    <span class="caption-text">Operators</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../library_operators/">Operators List</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../drools_operator/">Drools Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../python_operator/">Python Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../PMML_operator/">PMML Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../tcpinputoperator/">TCP Input Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../eventhubinput/">Event Hub Input Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../eventhuboutput/">Event Hub Output Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../abstracthttpserver/">Abstract HTTP Server Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../azure_blob/">Azure Blob Storage Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../aoooperator/">Analytics Output Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../elasticsearch/">Elasticsearch Output Operator</a>
                 </li>
                 <li class="toctree-l3">
                     
@@ -260,6 +264,19 @@
         </ul>
     
 
+    <li class="toctree-l4"><a href="#using-kafkainput-operator-in-a-kerberised-environment">Using KafkaInput Operator in a Kerberised Environment</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#operator-properties-method">Operator Properties Method</a></li>
+        
+            <li><a class="toctree-l5" href="#application-package-method">Application Package Method</a></li>
+        
+            <li><a class="toctree-l5" href="#command-line-method">Command Line Method</a></li>
+        
+        </ul>
+    
+
     </ul>
                 </li>
                 <li class="toctree-l3">
@@ -285,109 +302,103 @@
     <ul class="subnav">
                 <li class="">
                     
-    <span class="caption-text">0.10.0</span>
-    <ul class="subnav">
-                <li class="toctree-l3">
-                    
     <a class="" href="../../app-templates/0.10.0/common/import-launch/">Import and Launch App-template</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/0.10.0/common/customize/">Customizing an app-template</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/0.10.0/database-to-database-sync/">Database-to-database-sync</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/0.10.0/hdfs-line-copy/">HDFS-line-copy</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/0.10.0/hdfs-part-file-copy/">HDFS-part-file-copy</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/0.10.0/hdfs-to-hdfs-filter-transform/">HDFS-to-HDFS-filter-transform</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/0.10.0/kafka-to-cassandra-filter-transform/">Kafka-to-Cassandra-Filter-Transform</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/0.10.0/kafka-to-database-sync/">Kafka-to-Database-sync</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/0.10.0/kafka-to-hdfs-filter-transform/">Kafka-to-HDFS-Filter-Transform</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/0.10.0/kafka-to-kafka-filter-transform/">Kafka-to-Kafka-Filter-Transform</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/0.10.0/kinesis-to-redshift/">Kinesis-to-Redshift</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/0.10.0/kinesis-to-s3/">Kinesis-to-S3</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/0.10.0/s3-to-hdfs-sync/">S3-to-HDFS-sync</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/0.10.0/s3-to-redshift/">S3-to-HDFS-Filter-Transform</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/database-to-hdfs/">Database dump to HDFS App</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/database-to-database-sync/">Database to Database Sync App</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/hdfs-sync/">HDFS Sync App</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/hdfs-line-copy/">HDFS to HDFS Line Copy App</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/hdfs-to-kafka-sync/">HDFS to Kafka Sync App</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/hdfs-to-s3-sync/">HDFS to S3 Sync App</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/kafka-to-database-sync/">Kafka to Database Sync App</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/kafka-to-hdfs-filter/">Kafka to HDFS Filter App</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/kafka-to-hdfs-sync/">Kafka to HDFS Sync App</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/kinesis-to-s3/">Kinesis to S3 App</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/s3-to-hdfs-sync/">S3 to HDFS Sync App</a>
-                </li>
-    </ul>
                 </li>
     </ul>
 	    </li>
@@ -399,6 +410,21 @@
                 <li class="">
                     
     <a class="" href="../../omni_channel_fraud_app/">Omni Channel Fraud Prevention Application</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Services</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../cep_workbench/">CEP Workbench</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../oas_dashboards/">OAS Dashboards</a>
                 </li>
     </ul>
 	    </li>
@@ -421,15 +447,19 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../../dtassemble/">dtAssemble</a>
-                </li>
-                <li class="">
-                    
     <a class="" href="../../dtdashboard/">dtDashboard</a>
                 </li>
                 <li class="">
                     
     <a class="" href="../../dtgateway/">dtGateway</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../services/">Services</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../jar_artifacts/">JAR Artifacts</a>
                 </li>
                 <li class="">
                     
@@ -442,6 +472,10 @@
                 <li class="">
                     
     <a class="" href="../../apex_malhar/">Apache Apex-Malhar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appbackplane/">Application Backplane</a>
                 </li>
     </ul>
 	    </li>
@@ -522,7 +556,7 @@
         
       
         
-          <li>Library Operators &raquo;</li>
+          <li>Operators &raquo;</li>
         
       
     
@@ -808,6 +842,117 @@ the application):</p>
   &lt;value&gt;node21:2181&lt;/value&gt;
 &lt;/property&gt;
 </code></pre>
+
+<h1 id="using-kafkainput-operator-in-a-kerberised-environment">Using KafkaInput Operator in a Kerberised Environment</h1>
+<p>You can use the KafkaInput operator in a Kerberised environment using one of the following methods: 
+<em> Operator Properties Method
+</em> Application Package Method
+* Command Line Method</p>
+<h2 id="operator-properties-method">Operator Properties Method</h2>
+<p>To use this method, do the following:</p>
+<ol>
+<li>Configure and use the current operator properties by copying the <strong>keytab</strong> and <strong>jaas</strong> file on all the kafka nodes. </li>
+<li>After the <strong>client_jaas</strong> file and <strong>keytab</strong> are available on all the nodes, add the operator properties as shown below and provide the corresponding environment properties:</li>
+</ol>
+<pre><code class="xml">&lt;property&gt;
+  &lt;name&gt;dt.operator.kafkaOutput.prop.properties(security.protocol)&lt;/name&gt;
+  &lt;value&gt;SASL_PLAINTEXT&lt;/value&gt;
+&lt;/property&gt;
+
+  &lt;property&gt;
+    &lt;name&gt;dt.operator.kafkaOutput.prop.properties(sasl.kerberos.service.name)&lt;/name&gt;
+    &lt;value&gt;kafka&lt;/value&gt;
+  &lt;/property&gt;
+
+   &lt;property&gt;
+    &lt;name&gt;dt.attr.CONTAINER_JVM_OPTIONS&lt;/name&gt;
+    &lt;value&gt;-Djava.security.auth.login.config=/path/to/kafka_client_jaas.con&lt;/value&gt;
+  &lt;/property&gt;
+
+  &lt;property&gt;
+    &lt;name&gt;dt.operator.kafkaOutput.prop.topic&lt;/name&gt;
+    &lt;value&gt;lat_long_lookup&lt;/value&gt;
+  &lt;/property&gt;
+  &lt;property&gt;
+    &lt;name&gt;dt.operator.kafkaOutput.prop.properties(bootstrap.servers)&lt;/name&gt;
+    &lt;value&gt;${apex.app-param.server-kafka-input-brokers}&lt;/value&gt;
+  &lt;/property&gt;
+  &lt;property&gt;
+    &lt;name&gt;dt.operator.kafkaOutput.prop.properties(key.serializer)&lt;/name&gt;
+    &lt;value&gt;org.apache.kafka.common.serialization.StringSerializer&lt;/value&gt;
+  &lt;/property&gt;
+</code></pre>
+
+<p>The <strong>Kafka_client_jaas.con</strong> file should have content similar to the following config:</p>
+<pre><code class="xml">KafkaClient {
+    com.sun.security.auth.module.Krb5LoginModule required
+    useKeyTab=true
+    storeKey=true
+    keyTab=&quot;/etc/security/keytabs/kafka_client.keytab&quot;
+    principal=&quot;kafka-client-1@EXAMPLE.COM&quot;;
+};
+</code></pre>
+
+<h2 id="application-package-method">Application Package Method</h2>
+<p>To use this method, do the following to ensure that the <strong>keytab</strong> and <strong>jaas</strong> files are available with the application package:</p>
+<ol>
+<li>Include the following property in <strong>apppackage.xml</strong> file:</li>
+</ol>
+<pre><code class="xml">&lt;fileSet&gt;
+ &lt;directory&gt;${basedir}/&lt;/directory&gt;
+ &lt;outputDirectory&gt;/lib&lt;/outputDirectory&gt;
+ &lt;includes&gt;
+   &lt;include&gt;kaf*.*&lt;/include&gt;
+ &lt;/includes&gt;
+&lt;/fileSet&gt;
+</code></pre>
+
+<ol>
+<li>Put the keytab and kafka_client_jaas file with <strong>.jar</strong> extension in the base directory, that is the directory parallel to <strong>pom.xml</strong> file.</li>
+<li>Use the following properties to load the <strong>jaas_conf</strong> file. This will ensure that the <strong>kafka_client_keytab.jar</strong> and <strong>kafka_client_jaas.jar</strong> are available in the classpath while the application is running.</li>
+</ol>
+<pre><code class="xml">&lt;property&gt;
+  &lt;name&gt;dt.operator.kafkaOutput.prop.properties(security.protocol)&lt;/name&gt;
+  &lt;value&gt;SASL_PLAINTEXT&lt;/value&gt;
+&lt;/property&gt;
+
+  &lt;property&gt;
+    &lt;name&gt;dt.operator.kafkaOutput.prop.properties(sasl.kerberos.service.name)&lt;/name&gt;
+    &lt;value&gt;kafka&lt;/value&gt;
+  &lt;/property&gt;
+
+  &lt;property&gt;
+    &lt;name&gt;dt.attr.CONTAINER_JVM_OPTIONS&lt;/name&gt;
+    &lt;value&gt;-Djava.security.auth.login.config=./kafka_client_jaas.jar&lt;/value&gt;
+  &lt;/property&gt;
+
+  &lt;property&gt;
+    &lt;name&gt;dt.operator.kafkaOutput.prop.topic&lt;/name&gt;
+    &lt;value&gt;lat_long_lookup&lt;/value&gt;
+  &lt;/property&gt;
+  &lt;property&gt;
+    &lt;name&gt;dt.operator.kafkaOutput.prop.properties(bootstrap.servers)&lt;/name&gt;
+    &lt;value&gt;${apex.app-param.server-kafka-input-brokers}&lt;/value&gt;
+  &lt;/property&gt;
+  &lt;property&gt;
+    &lt;name&gt;dt.operator.kafkaOutput.prop.properties(key.serializer)&lt;/name&gt;
+    &lt;value&gt;org.apache.kafka.common.serialization.StringSerializer&lt;/value&gt;
+  &lt;/property&gt;
+
+
+KafkaClient {
+    com.sun.security.auth.module.Krb5LoginModule required
+    useKeyTab=true
+    storeKey=true
+    keyTab=&quot;./kafka_client_keytab.jar&quot;
+    principal=&quot;kafka-client-1@EXAMPLE.COM&quot;;
+};
+</code></pre>
+
+<h2 id="command-line-method">Command Line Method</h2>
+<p>While launching through command line, add the 
+<strong>keytab</strong> and <strong>jaas</strong> files in the libjars command line option. These will copy to the classpath.<br />
+<strong>Note:</strong> This approach will work only through command line.</p>
               
             </div>
           </div>
@@ -852,6 +997,8 @@ the application):</p>
     </span>
 </div>
     <script src="../../js/theme.js"></script>
+      <script src="../../menu.js"></script>
+      <script src="../../js/version-select.js"></script>
 
 </body>
 </html>

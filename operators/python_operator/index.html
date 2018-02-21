@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../favicon.ico">
+  
+  <title>Python Operator - DataTorrent Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../menu.css" rel="stylesheet">
+  <link href="../../css/version-select.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Python Operator";
+    var mkdocs_page_input_path = "operators/python_operator.md";
+    var mkdocs_page_url = "/operators/python_operator/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-44586211-2', 'docs.datatorrent.com');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> DataTorrent Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">DataTorrent RTS</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Demos</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../demos/">Running Apps</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../sandbox/">Sandbox</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Cloud Integration</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../aws_emr_manual/">AWS</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../azure_deployment/">Azure</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Development</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../create/">Creating Applications</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../beginner/">Beginner's Guide</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../demo_videos/">Videos</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Tutorials</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../tutorials/topnwords/">Top N Words</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../tutorials/salesdemo/">Sales Dimensions</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../apex_development_setup/">Apex Development Setup</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../configure_IDE/">Generate New Project in IDE</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../application_development/">Applications</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../application_packages/">Application Packages</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../configuration_packages/">Configuration Packages</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Operator Development</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../operator_development/">Guide</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../operator_development_ref/">Reference</a>
+                </li>
+    </ul>
+                </li>
+                <li class=" current">
+                    
+    <span class="caption-text">Operators</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../library_operators/">Operators List</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../drools_operator/">Drools Operator</a>
+                </li>
+                <li class="toctree-l3 current">
+                    
+    <a class="current" href="./">Python Operator</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l4"><a href="#about-the-operator">About the Operator</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#testing">Testing</a></li>
+        
+            <li><a class="toctree-l5" href="#requirements">Requirements </a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l4"><a href="#workflow-of-the-operator">Workflow of the Operator</a></li>
+    
+
+    <li class="toctree-l4"><a href="#supplementary-classes">Supplementary Classes</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#pythonasyncstorageagent">PythonAsyncStorageAgent</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l4"><a href="#partitioning">Partitioning</a></li>
+    
+
+    <li class="toctree-l4"><a href="#using-the-operator">Using the Operator</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#application-example">Application Example</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l4"><a href="#compiling-dt-application-with-python-implementation">Compiling DT Application with Python Implementation</a></li>
+    
+
+    </ul>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../PMML_operator/">PMML Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../tcpinputoperator/">TCP Input Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../eventhubinput/">Event Hub Input Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../eventhuboutput/">Event Hub Output Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../abstracthttpserver/">Abstract HTTP Server Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../azure_blob/">Azure Blob Storage Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../aoooperator/">Analytics Output Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../elasticsearch/">Elasticsearch Output Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../block_reader/">Block Reader</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../deduper/">Deduper</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../dimensions_computation/">Dimension Computation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../file_output/">File Output</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../file_splitter/">File Splitter</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../hdht/">HDHT</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../kafkaInputOperator/">Kafka Input</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../snapshot_server/">Snapshot Server</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app_data_framework/">App Data Framework</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dtgateway_api/">REST API</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">App Templates</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/common/import-launch/">Import and Launch App-template</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/common/customize/">Customizing an app-template</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/database-to-database-sync/">Database-to-database-sync</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/hdfs-line-copy/">HDFS-line-copy</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/hdfs-part-file-copy/">HDFS-part-file-copy</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/hdfs-to-hdfs-filter-transform/">HDFS-to-HDFS-filter-transform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/kafka-to-cassandra-filter-transform/">Kafka-to-Cassandra-Filter-Transform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/kafka-to-database-sync/">Kafka-to-Database-sync</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/kafka-to-hdfs-filter-transform/">Kafka-to-HDFS-Filter-Transform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/kafka-to-kafka-filter-transform/">Kafka-to-Kafka-Filter-Transform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/kinesis-to-redshift/">Kinesis-to-Redshift</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/kinesis-to-s3/">Kinesis-to-S3</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/s3-to-hdfs-sync/">S3-to-HDFS-sync</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/s3-to-redshift/">S3-to-HDFS-Filter-Transform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/database-to-hdfs/">Database dump to HDFS App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/database-to-database-sync/">Database to Database Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/hdfs-sync/">HDFS Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/hdfs-line-copy/">HDFS to HDFS Line Copy App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/hdfs-to-kafka-sync/">HDFS to Kafka Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/hdfs-to-s3-sync/">HDFS to S3 Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/kafka-to-database-sync/">Kafka to Database Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/kafka-to-hdfs-filter/">Kafka to HDFS Filter App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/kafka-to-hdfs-sync/">Kafka to HDFS Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/kinesis-to-s3/">Kinesis to S3 App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/s3-to-hdfs-sync/">S3 to HDFS Sync App</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Applications</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../omni_channel_fraud_app/">Omni Channel Fraud Prevention Application</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Services</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../cep_workbench/">CEP Workbench</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../oas_dashboards/">OAS Dashboards</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Platform</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../rts/">RTS</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../application_configurations/">Application Configurations</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dtmanage/">dtManage</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dtdashboard/">dtDashboard</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dtgateway/">dtGateway</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../services/">Services</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../jar_artifacts/">JAR Artifacts</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dtgateway_systemalerts/">Alerts</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../apex/">Apache Apex</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../apex_malhar/">Apache Apex-Malhar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appbackplane/">Application Backplane</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Deployment and Operations</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Licensing/">Licensing</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../installation/">Installation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../configuration/">Configuration</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dtgateway_security/">Security</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dtgateway_systemalerts/">System Alerts</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../apexcli/">Apex CLI</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../troubleshooting/">Troubleshooting</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../release_notes/">Release Notes</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../glossary/">Glossary</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../additional_docs/">Resources</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">DataTorrent Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Development &raquo;</li>
+        
+      
+        
+          <li>Operators &raquo;</li>
+        
+      
+    
+    <li>Python Operator</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="about-the-operator">About the Operator</h1>
+<p>Python Operator support provides capability for Python developers to write DT Operators and use these operators in DT application. It ensures that developer can focus more on the actual business logic, just like the Java DT operators, and the execution aspect is handled by the framework with minimal configurations to the project.</p>
+<p>This implementation can be used under DT Plus license.</p>
+<p>Support includes tasks such as the follows:</p>
+<ul>
+<li>Generation of Java operator that is to be used in DT application.</li>
+<li>Dependency collection</li>
+<li>Transport and installation on Hadoop nodes</li>
+<li>Fault-tolerance support for Python operator etc.</li>
+</ul>
+<h2 id="testing">Testing</h2>
+<p>Python operator is tested with the following components:</p>
+<ul>
+<li>Cloudera Hadoop version 5.8.2 along with Apache Hadoop version 2.6.0</li>
+<li>Java version 1.7 and above</li>
+<li>Python 2.7</li>
+</ul>
+<h2 id="requirements">Requirements <a name="Reference1"></a></h2>
+<p>The following must be pre-installed before running the operator:</p>
+<ul>
+<li>
+<p><strong>dt-operators-python</strong></p>
+<p>To install dt-operators-python, do the following:</p>
+</li>
+<li>
+<p>Go to <strong>/saarang/plugins</strong>and run mvn install to create maven plugin required by Python implementation.</p>
+</li>
+<li>
+<p>Go to <strong>saarang/operators/python</strong> and run mvn install to install dt-operators-python and dt-operators-python jar file to .m2 directory.</p>
+</li>
+<li>
+<p><strong>Python 2.7</strong></p>
+</li>
+</ul>
+<h1 id="workflow-of-the-operator">Workflow of the Operator</h1>
+<p>The following image depicts the workflow of the operator:
+<img alt="pythonworkflow" src="../images/python_workflow.png" /></p>
+<ul>
+<li>Compile Python Operator Project</li>
+<li>Add dependency on actual application project.</li>
+<li>Add py-apa-package as goal to application project.</li>
+<li>Compile Project.</li>
+</ul>
+<p>The following image depicts the steps in the operator execution:
+<img alt="operatorexecution" src="../images/Python_operator_execution.png" /></p>
+<h1 id="supplementary-classes">Supplementary Classes</h1>
+<h3 id="pythonasyncstorageagent">PythonAsyncStorageAgent</h3>
+<p>Python Operator support also provides fault-tolerance as any other DT operator but as of now Python application developer will have to explicitly provide STORAGE_AGENT as DAG attribute. Please refer to the application example from Using Operator Section.</p>
+<h1 id="partitioning">Partitioning</h1>
+<p>The Python operator can be partitioned using the default partitioner provided by Apex.</p>
+<p>This operator can be dynamically partitioned, when rules are stateless.</p>
+<p>For partitioning, you must add the following property in the <strong>properties.xml</strong> file. For example, if you add Python operator with the name <em>PythonOperator</em> in the DAG, then this property creates four partitions of the operator when the application starts.</p>
+<pre><code>&lt;property&gt;
+     &lt;name&gt;dt.operator.PythonOperator.attr.PARTITIONER&lt;/name&gt;
+     &lt;value&gt;com.datatorrent.common.partitioner.StatelessPartitioner:2&lt;/name&gt;
+&lt;/property&gt;
+</code></pre>
+
+<h1 id="using-the-operator">Using the Operator</h1>
+<p>You can create a directory named   <strong>python</strong> under <strong>src/main</strong> at same level as Java in any DT application maven project directory.</p>
+<p>If you want to include any <strong>requirements.txt</strong> for python dependencies, add it at the top level in the project directory so maven plugins can find those and add to final *.apa file.</p>
+<p>The following code illustrates how the Python operator can be written for DT application:</p>
+<pre><code>from dtbase.operator.Operator import *
+import types
+@Properties(var1=types.IntType, var2=types.StringType, var3=types.FloatType)
+@OutputPort(&quot;outPort&quot;)
+@OutputPort(&quot;outPort1&quot;)
+class TestOperator(BaseOperator):
+
+   def __init__(self):
+       self.counter=0
+
+   @InputPort('inPort')
+   def process1(self, tuple):
+       if tuple['amount'] &gt;= 200000:
+           tuple['fraud'] = True
+           self.counter=self.counter+1
+       self.outPort.emit(tuple)
+       print &quot;Current Counter&quot;, self.counter
+
+   @InputPort('inPort1')
+   def process2(self, tuple):
+       print 'Do Nothing'
+       print &quot;Current Counter&quot;, self.counter
+
+   def setup(self, context):
+       print &quot;setup&quot;,context
+
+   def activate(self, context):
+       print &quot;activate&quot;,context
+
+   def deactivate(self):
+       print &quot;deactivate&quot;
+
+   def teardown(self):
+       print &quot;teardown&quot;
+
+   def beforeCheckpoint(self, windowId):
+       print &quot;Operator is checkpointing &quot;,windowId
+
+   def checkpointed(self, windowId):
+       print &quot;Operator is checkpointed &quot;,windowId
+
+   def committed(self, windowId):
+       print &quot;Operator is committed&quot;,windowId
+
+   def beginWindow(self, windowId):
+       print &quot;Begin Window&quot;,windowId
+
+   def endWindow(self):
+       print &quot;End Window&quot;
+</code></pre>
+
+<p>The above python operator examples after compilation generate equivalent Java operator with the same name TestOperator and input ports [inPort,inPort1] and output ports [outPort, outPort1].</p>
+<p>These generated Java operators can be used in the DT applications to create the hybrid DAG.</p>
+<h2 id="application-example">Application Example</h2>
+<p>The following code illustrates  how the generated Java operator can be used in a DAG:</p>
+<pre><code>@ApplicationAnnotation(name=&quot;PythonOperatorExample&quot;)
+public class Application implements StreamingApplication
+{
+ @Override
+ public void populateDAG(DAG dag, Configuration conf)
+ {
+   // Sample DAG with 2 operators
+   // Replace this code with the DAG you want to build
+   RandomTransactionGenerator randomGenerator = dag.addOperator(&quot;randomGenerator&quot;, RandomTransactionGenerator.class);
+   randomGenerator.setNumTuples(500);
+   TestOperator pyOp = dag.addOperator(&quot;testop&quot;,TestOperator.class);
+   ConsoleOutputOperator cons = dag.addOperator(&quot;console&quot;, new ConsoleOutputOperator());
+   dag.addStream(&quot;randomData&quot;, randomGenerator.out, pyOp.inPort);
+   dag.addStream(&quot;output&quot;, pyOp.outPort, cons.input);
+   dag.setAttribute(Context.DAGContext.HEARTBEAT_TIMEOUT_MILLIS,100000);
+   dag.setAttribute(Context.OperatorContext.STORAGE_AGENT, new PythonAsyncStorageAgent(&quot;.&quot;,conf));
+ }
+}
+</code></pre>
+
+<h1 id="compiling-dt-application-with-python-implementation">Compiling DT Application with Python Implementation</h1>
+<p>To compile DT application with Python, you must first add dt-operators-python as dependency to <strong>pom.xml</strong>. Refer <a href="#Reference1">Requirements</a>.</p>
+<pre><code>&lt;dependency&gt;
+ &lt;groupId&gt;com.datatorrent.operators&lt;/groupId&gt;
+ &lt;artifactId&gt;dt-operators-python&lt;/artifactId&gt;
+ &lt;version&gt;1.4.0-SNAPSHOT&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+
+<p>Later, you must add the following plugin to <strong>pom.xml</strong> for packaging the python code and required dependencies in *.apa.</p>
+<pre><code>&lt;plugin&gt;
+ &lt;groupId&gt;com.datatorrent.plugins&lt;/groupId&gt;
+ &lt;artifactId&gt;dt-plugins-maven-python&lt;/artifactId&gt;
+ &lt;version&gt;1.4.0-SNAPSHOT&lt;/version&gt;
+ &lt;executions&gt;
+   &lt;execution&gt;
+     &lt;id&gt;pyGenerate&lt;/id&gt;
+     &lt;goals&gt;
+       &lt;goal&gt;pydependency&lt;/goal&gt;
+       &lt;goal&gt;transform&lt;/goal&gt;
+     &lt;/goals&gt;
+   &lt;/execution&gt;
+   &lt;execution&gt;
+     &lt;id&gt;pyCompile&lt;/id&gt;
+     &lt;goals&gt;
+       &lt;goal&gt;whl-compile&lt;/goal&gt;
+     &lt;/goals&gt;
+   &lt;/execution&gt;
+   &lt;execution&gt;
+     &lt;id&gt;pyInstall&lt;/id&gt;
+     &lt;goals&gt;
+       &lt;goal&gt;whl-install&lt;/goal&gt;
+     &lt;/goals&gt;
+   &lt;/execution&gt;
+   &lt;execution&gt;
+     &lt;id&gt;build-python-apa&lt;/id&gt;
+     &lt;!--&lt;phase&gt;prepare-package&lt;/phase&gt;--&gt;
+     &lt;goals&gt;
+       &lt;goal&gt;py-apa-package&lt;/goal&gt;
+     &lt;/goals&gt;
+     &lt;configuration&gt;
+
+     &lt;/configuration&gt;
+   &lt;/execution&gt;
+ &lt;/executions&gt;
+&lt;/plugin&gt;
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../PMML_operator/" class="btn btn-neutral float-right" title="PMML Operator">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../drools_operator/" class="btn btn-neutral" title="Drools Operator"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../drools_operator/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../PMML_operator/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+      <script src="../../menu.js"></script>
+      <script src="../../js/version-select.js"></script>
+
+</body>
+</html>

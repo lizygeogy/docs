@@ -9,16 +9,18 @@
   
   <link rel="shortcut icon" href="../../favicon.ico">
   
-  <title>Introduction - DataTorrent Documentation</title>
+  <title>Top N Words - DataTorrent Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../menu.css" rel="stylesheet">
+  <link href="../../css/version-select.css" rel="stylesheet">
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Introduction";
+    var mkdocs_page_name = "Top N Words";
     var mkdocs_page_input_path = "tutorials/topnwords.md";
     var mkdocs_page_url = "/tutorials/topnwords/";
   </script>
@@ -87,6 +89,10 @@
                     
     <a class="" href="../../aws_emr_manual/">AWS</a>
                 </li>
+                <li class="">
+                    
+    <a class="" href="../../azure_deployment/">Azure</a>
+                </li>
     </ul>
 	    </li>
           
@@ -112,69 +118,33 @@
     <ul class="subnav">
                 <li class="toctree-l3 current">
                     
-    <span class="caption-text">Top N Words</span>
-    <ul class="subnav">
-                <li class="toctree-l4 current">
-                    
-    <a class="current" href="./">Introduction</a>
+    <a class="current" href="./">Top N Words</a>
     <ul class="subnav">
             
-    <li class="toctree-l5"><a href="#top-n-words-application">Top N Words Application</a></li>
+    <li class="toctree-l4"><a href="#top-n-words-application">Top N Words Application</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#setting-up-your-development-environment">Setting up your development environment</a></li>
+        
+            <li><a class="toctree-l5" href="#building-top-n-aords-application">Building Top N Aords Application</a></li>
+        
+            <li><a class="toctree-l5" href="#monitoring-the-application">Monitoring the Application</a></li>
+        
+            <li><a class="toctree-l5" href="#visualizing-the-application-output">Visualizing the Application Output</a></li>
+        
+            <li><a class="toctree-l5" href="#advanced-rts-features">Advanced RTS Features</a></li>
+        
+            <li><a class="toctree-l5" href="#appendix">Appendix</a></li>
+        
+        </ul>
     
 
     </ul>
                 </li>
-                <li class="toctree-l4">
-                    
-    <a class="" href="../topnwords-c1/">Development Environment</a>
-                </li>
-                <li class="toctree-l4">
-                    
-    <a class="" href="../topnwords-c2/">Building in Java</a>
-                </li>
-                <li class="toctree-l4">
-                    
-    <a class="" href="../topnwords-c3/">Building with dtAssemble</a>
-                </li>
-                <li class="toctree-l4">
-                    
-    <a class="" href="../topnwords-c4/">Monitoring with dtManage</a>
-                </li>
-                <li class="toctree-l4">
-                    
-    <a class="" href="../topnwords-c5/">Visualizing with dtDashboard</a>
-                </li>
-                <li class="toctree-l4">
-                    
-    <a class="" href="../topnwords-c7/">Advanced Features</a>
-                </li>
-                <li class="toctree-l4">
-                    
-    <a class="" href="../topnwords-c6/">Appendix</a>
-                </li>
-    </ul>
-                </li>
                 <li class="toctree-l3">
                     
-    <span class="caption-text">Sales Dimensions</span>
-    <ul class="subnav">
-                <li class="toctree-l4">
-                    
-    <a class="" href="../salesdimensions/">Building in Java</a>
-                </li>
-                <li class="toctree-l4">
-                    
-    <a class="" href="../salesdimensions-c2/">Building with dtAssemble</a>
-                </li>
-                <li class="toctree-l4">
-                    
-    <a class="" href="../salesdimensions-c3/">Visualizing with dtDashboard</a>
-                </li>
-                <li class="toctree-l4">
-                    
-    <a class="" href="../salesdimensions-c4/">Monitoring with dtManage</a>
-                </li>
-    </ul>
+    <a class="" href="../salesdemo/">Sales Dimensions</a>
                 </li>
     </ul>
                 </li>
@@ -200,15 +170,65 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../../operator_development/">Operators</a>
-                </li>
-                <li class="">
-                    
-    <span class="caption-text">Library Operators</span>
+    <span class="caption-text">Operator Development</span>
     <ul class="subnav">
                 <li class="toctree-l3">
                     
-    <a class="" href="../../library_operators/">List of Operators</a>
+    <a class="" href="../../operator_development/">Guide</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../operator_development_ref/">Reference</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Operators</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../library_operators/">Operators List</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../operators/drools_operator/">Drools Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../operators/python_operator/">Python Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../operators/PMML_operator/">PMML Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../operators/tcpinputoperator/">TCP Input Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../operators/eventhubinput/">Event Hub Input Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../operators/eventhuboutput/">Event Hub Output Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../operators/abstracthttpserver/">Abstract HTTP Server Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../operators/azure_blob/">Azure Blob Storage Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../operators/aoooperator/">Analytics Output Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../operators/elasticsearch/">Elasticsearch Output Operator</a>
                 </li>
                 <li class="toctree-l3">
                     
@@ -261,109 +281,103 @@
     <ul class="subnav">
                 <li class="">
                     
-    <span class="caption-text">0.10.0</span>
-    <ul class="subnav">
-                <li class="toctree-l3">
-                    
     <a class="" href="../../app-templates/0.10.0/common/import-launch/">Import and Launch App-template</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/0.10.0/common/customize/">Customizing an app-template</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/0.10.0/database-to-database-sync/">Database-to-database-sync</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/0.10.0/hdfs-line-copy/">HDFS-line-copy</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/0.10.0/hdfs-part-file-copy/">HDFS-part-file-copy</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/0.10.0/hdfs-to-hdfs-filter-transform/">HDFS-to-HDFS-filter-transform</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/0.10.0/kafka-to-cassandra-filter-transform/">Kafka-to-Cassandra-Filter-Transform</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/0.10.0/kafka-to-database-sync/">Kafka-to-Database-sync</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/0.10.0/kafka-to-hdfs-filter-transform/">Kafka-to-HDFS-Filter-Transform</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/0.10.0/kafka-to-kafka-filter-transform/">Kafka-to-Kafka-Filter-Transform</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/0.10.0/kinesis-to-redshift/">Kinesis-to-Redshift</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/0.10.0/kinesis-to-s3/">Kinesis-to-S3</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/0.10.0/s3-to-hdfs-sync/">S3-to-HDFS-sync</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/0.10.0/s3-to-redshift/">S3-to-HDFS-Filter-Transform</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/database-to-hdfs/">Database dump to HDFS App</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/database-to-database-sync/">Database to Database Sync App</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/hdfs-sync/">HDFS Sync App</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/hdfs-line-copy/">HDFS to HDFS Line Copy App</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/hdfs-to-kafka-sync/">HDFS to Kafka Sync App</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/hdfs-to-s3-sync/">HDFS to S3 Sync App</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/kafka-to-database-sync/">Kafka to Database Sync App</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/kafka-to-hdfs-filter/">Kafka to HDFS Filter App</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/kafka-to-hdfs-sync/">Kafka to HDFS Sync App</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/kinesis-to-s3/">Kinesis to S3 App</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="">
                     
     <a class="" href="../../app-templates/s3-to-hdfs-sync/">S3 to HDFS Sync App</a>
-                </li>
-    </ul>
                 </li>
     </ul>
 	    </li>
@@ -375,6 +389,21 @@
                 <li class="">
                     
     <a class="" href="../../omni_channel_fraud_app/">Omni Channel Fraud Prevention Application</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Services</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../cep_workbench/">CEP Workbench</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../oas_dashboards/">OAS Dashboards</a>
                 </li>
     </ul>
 	    </li>
@@ -397,15 +426,19 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../../dtassemble/">dtAssemble</a>
-                </li>
-                <li class="">
-                    
     <a class="" href="../../dtdashboard/">dtDashboard</a>
                 </li>
                 <li class="">
                     
     <a class="" href="../../dtgateway/">dtGateway</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../services/">Services</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../jar_artifacts/">JAR Artifacts</a>
                 </li>
                 <li class="">
                     
@@ -418,6 +451,10 @@
                 <li class="">
                     
     <a class="" href="../../apex_malhar/">Apache Apex-Malhar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appbackplane/">Application Backplane</a>
                 </li>
     </ul>
 	    </li>
@@ -494,15 +531,15 @@
     
       
         
+          <li>Development &raquo;</li>
+        
+      
+        
           <li>Tutorials &raquo;</li>
         
       
-        
-          <li>Top N Words &raquo;</li>
-        
-      
     
-    <li>Introduction</li>
+    <li>Top N Words</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -539,7 +576,6 @@ updated on <strong>dtDashboard</strong>, the browser-based dashboard of DataTorr
     application packages and the constituent applications</li>
 <li><strong>dtManage</strong> &ndash; for monitoring the applications</li>
 <li><strong>dtDashboard</strong> &ndash; for visualizing the output</li>
-<li><strong>dtAssemble</strong> &ndash; for  visual application assembly</li>
 </ul>
 <p>In the context of such an application, a number of questions arise:</p>
 <ul>
@@ -555,6 +591,1043 @@ updated on <strong>dtDashboard</strong>, the browser-based dashboard of DataTorr
 with Apache Hadoop and the latest version of DataTorrent RTS configured as a single-node
 cluster and includes a time-limited enterprise license. If you've already installed the licensed version of DataTorrent RTS, you
 can use that setup instead.</p>
+<h2 id="setting-up-your-development-environment">Setting up your development environment</h2>
+<p>To begin with, please follow the steps outlined in:
+<a href="../../apex_development_setup/">Apache Apex Development Environment Setup</a>
+to setup your development environment; you can skip the sandbox download
+and installation if you already have a Hadoop cluster with Datatorrent
+RTS installed where you can deploy applications.</p>
+<h3 id="sample-input-files">Sample input files</h3>
+<p>For this tutorial, you need some sample text files to use as input to the application.
+Binary files such as PDF or DOCX files are not suitable since they contain a
+lot of meaningless strings that look like words (for example,  &ldquo;Wqgi&rdquo;).
+Similarly, files using markup languages such as XML or HTML files are also not
+suitable since the tag names such as  <code>div</code>, <code>td</code> and <code>p</code> dominate the word
+counts. The RFC (Request for Comment) files that are used as de-facto
+specifications for internet standards are good candidates since they contain
+pure text; download a few of them as follows:</p>
+<p>Open a terminal and run the following commands to create a directory named
+<code>data</code> under your home directory and download 3 files there:</p>
+<pre><code>cd; mkdir data; cd data  
+wget http://tools.ietf.org/rfc/rfc1945.txt  
+wget https://www.ietf.org/rfc/rfc2616.txt  
+wget https://tools.ietf.org/rfc/rfc4844.txt
+</code></pre>
+<h2 id="building-top-n-aords-application">Building Top N Aords Application</h2>
+<p>This chapter describes the steps to build the application in Java using some
+source files from the Malhar repository, suitably modified and customized to
+run on a cluster (or sandbox). We will use the <strong>dtManage</strong> GUI tool to launch the
+application.</p>
+<h3 id="step-1-clone-the-apex-malhar-repository">Step 1: Clone the Apex Malhar repository</h3>
+<p>Clone the Malhar repository (we will use some of these source files in a later
+section):</p>
+<ol>
+<li>
+<p>Open a terminal window and create a new directory where you want the code
+    to reside, for example: <code>cd ~/src; mkdir dt; cd dt</code></p>
+</li>
+<li>
+<p>Download the code for Malhar:</p>
+<pre><code>git clone https://github.com/apache/incubator-apex-malhar
+</code></pre>
+<p>You should now see a directory named <code>incubator-apex-malhar</code>.</p>
+</li>
+</ol>
+<h3 id="step-2-create-a-new-application-project">Step 2: Create a new application project</h3>
+<p>Create a new application project as described in (you can use either an IDE
+or the command line):
+<a href="../../apex_development_setup/">Apache Apex Development Environment Setup</a></p>
+<h3 id="step-3-copy-application-files-to-the-new-project">Step 3: Copy application files to the new project</h3>
+<p>We will now copy over a few of the application files downloaded
+in Step I to the appropriate subdirectory of the new project.</p>
+<ol>
+<li>Delete files <code>Application.java</code> and <code>RandomNumberGenerator.java</code>
+   under <code>src/main/java/com/example/topnwordcount</code>.</li>
+<li>Delete file <code>ApplicationTest.java</code> file under
+   <code>src/test/java/com/example/topnwordcount</code>.</li>
+<li>
+<p>Copy the following files from:</p>
+<p><code>incubator-apex-malhar/demos/wordcount/src/main/java/com/datatorrent/demos/wordcount/</code></p>
+<p>to</p>
+<p><code>src/main/java/com/example/topnwordcount</code></p>
+<ul>
+<li>ApplicationWithQuerySupport.java</li>
+<li>FileWordCount.java</li>
+<li>LineReader.java</li>
+<li>WCPair.java</li>
+<li>WindowWordCount.java</li>
+<li>WordCountWriter.java</li>
+<li>WordReader.java</li>
+</ul>
+</li>
+<li>
+<p>Copy the file <code>WordDataSchema.json</code> from</p>
+<p><code>incubator-apex-malhar/demos/wordcount/src/main/resources/</code></p>
+<p>to</p>
+<p><code>src/main/resources/</code></p>
+<p>in the new project.</p>
+<p><em>Note</em>: This file defines the format of data sent to the visualization widgets within <strong>dtDashboard</strong>.</p>
+</li>
+</ol>
+<h3 id="step-4-configure-the-application-and-operators">Step 4: Configure the application and operators</h3>
+<p>Next, we need to configure application properties. These
+properties accomplish the following aims:</p>
+<ul>
+<li>Limit the amount of memory used by most operators so that more memory can
+  be allocated for <code>fileWordCount</code> which maintains the frequency counts.</li>
+<li>Set the locality of a couple of streams to <code>CONTAINER_LOCAL</code> to further
+  reduce memory pressure (necessary on the memory-limited environment of the
+  sandbox).</li>
+<li>Define the regular expression for matching the non-word string that
+  delimits words.</li>
+<li>Define number of top (word, frequency) pairs we want output.</li>
+<li>Define the path to the monitored input directory where input files are
+  dropped and the output directory (both HDFS) to which the per-file top N
+  (word, frequency) pairs are output.</li>
+<li>Define the topics for sending queries and retrieving data for visualization.</li>
+</ul>
+<p>To do this:</p>
+<p>Open the file <code>src/main/resources/META-INF/properties.xml</code>, and replace its
+content with the following:</p>
+<pre><code>&lt;configuration&gt;
+ &lt;property&gt;
+   &lt;name&gt;dt.attr.MASTER_MEMORY_MB&lt;/name&gt;
+   &lt;value&gt;500&lt;/value&gt;
+ &lt;/property&gt; &lt;property&gt;
+   &lt;name&gt;dt.application.*.operator.*.attr.MEMORY_MB&lt;/name&gt;
+   &lt;value&gt;200&lt;/value&gt;
+ &lt;/property&gt; &lt;property&gt;
+   &lt;name&gt;dt.application.TopNWordsWithQueries.operator.fileWordCount.attr.MEMORY_MB&lt;/name&gt;
+   &lt;value&gt;512&lt;/value&gt;
+ &lt;/property&gt; &lt;property&gt;
+   &lt;name&gt;dt.application.TopNWordsWithQueries.operator.lineReader.directory&lt;/name&gt;
+   &lt;value&gt;/tmp/test/input-dir&lt;/value&gt;
+ &lt;/property&gt; &lt;property&gt;
+   &lt;name&gt;dt.application.TopNWordsWithQueries.operator.wordReader.nonWordStr&lt;/name&gt;
+   &lt;value&gt;[\p{Punct}\s]+&lt;/value&gt;
+ &lt;/property&gt; &lt;property&gt;
+   &lt;name&gt;dt.application.TopNWordsWithQueries.operator.wcWriter.filePath&lt;/name&gt;
+   &lt;value&gt;/tmp/test/output-dir&lt;/value&gt;
+ &lt;/property&gt; &lt;property&gt;
+   &lt;name&gt;dt.application.TopNWordsWithQueries.operator.fileWordCount.topN&lt;/name&gt;
+   &lt;value&gt;10&lt;/value&gt;
+ &lt;/property&gt; &lt;property&gt;
+   &lt;name&gt;dt.application.TopNWordsWithQueries.stream.QueryFileStream.locality&lt;/name&gt;
+   &lt;value&gt;CONTAINER_LOCAL&lt;/value&gt;
+ &lt;/property&gt; &lt;property&gt;
+   &lt;name&gt;dt.application.TopNWordsWithQueries.stream.QueryGlobalStream.locality&lt;/name&gt;
+   &lt;value&gt;CONTAINER_LOCAL&lt;/value&gt;
+ &lt;/property&gt; &lt;property&gt;
+   &lt;name&gt;dt.application.TopNWordsWithQueries.operator.QueryFile.topic&lt;/name&gt;
+   &lt;value&gt;TopNWordsQueryFile&lt;/value&gt;
+ &lt;/property&gt; &lt;property&gt;
+   &lt;name&gt;dt.application.TopNWordsWithQueries.operator.wsResultFile.topic&lt;/name&gt;
+   &lt;value&gt;TopNWordsQueryFileResult&lt;/value&gt;
+ &lt;/property&gt; &lt;property&gt;
+   &lt;name&gt;dt.application.TopNWordsWithQueries.operator.QueryGlobal.topic&lt;/name&gt;
+   &lt;value&gt;TopNWordsQueryGlobal&lt;/value&gt;
+ &lt;/property&gt; &lt;property&gt;
+   &lt;name&gt;dt.application.TopNWordsWithQueries.operator.wsResultGlobal.topic&lt;/name&gt;
+   &lt;value&gt;TopNWordsQueryGlobalResult&lt;/value&gt;
+ &lt;/property&gt; &lt;property&gt;
+   &lt;name&gt;dt.application.TwitterDemo.operator.wsResult.numRetries&lt;/name&gt;
+   &lt;value&gt;2147483647&lt;/value&gt;
+ &lt;/property&gt;
+&lt;/configuration&gt;
+</code></pre>
+
+<p><em>Note</em>:
+The package name within the Java files we just copied currently reflects the
+package from which they were copied. This may be flagged as an error by your IDE
+but the application should build with no errors when built with maven on the
+command line. You can fix the errors in the IDE by changing the relevant line
+within each file from:</p>
+<pre><code>package com.datatorrent.demos.wordcount;
+</code></pre>
+<p>to reflect the current location of the file, for example:</p>
+<pre><code>package com.example.topnwordcount;
+</code></pre>
+<h3 id="step-5-build-the-top-n-words-count-application">Step 5: Build the top N words count application</h3>
+<p>From your IDE build the application in the usual way</p>
+<p>From the command line build it with:</p>
+<pre><code>cd topNwordcount; mvn clean package -DskipTests
+</code></pre>
+<p>In either case, if the build is successful, it should have created the
+application package file
+<code>topNwordcount/target/topNwordcount-1.0-SNAPSHOT.apa</code>.</p>
+<h3 id="step-6-upload-the-top-n-words-application-package">Step 6: Upload the top N words application package</h3>
+<p>To upload the top N words application package</p>
+<ol>
+<li>Log on to the DataTorrent Console using the default username and password
+   (both are <code>dtadmin</code>).</li>
+<li>On the top navigation bar, click <em>Develop</em>.</li>
+<li>Click <em>Application Packages</em>.</li>
+<li>Under <em>Applications</em>, click the <em>upload package</em> button.
+  <img alt="Upload" src="../images/topnwords//image35.png" title="Upload" /></li>
+<li>Navigate to the location of the <code>topNwordcount-1.0-SNAPSHOT.apa</code>
+   application package file is stored.</li>
+<li>Wait till the package is successfully uploaded.</li>
+</ol>
+<h3 id="step-7-launch-the-top-n-words-application">Step 7: Launch the top N words application</h3>
+<p><em>Note</em>: If you are launching the application on the sandbox, make sure that
+an IDE is not running on it at the same time; otherwise, the sandbox might
+hang due to resource exhaustion.</p>
+<ol>
+<li>Log on to the DataTorrent Console (the default username and password are
+   both <code>dtadmin</code>).</li>
+<li>In the top navigation bar, click <em>Launch</em>.</li>
+<li>
+<p>Under the <em>Applications</em> tab, locate the top N word count application, and click
+   the <em>launch</em> button.</p>
+<p><em>Note</em>: To configure the application using a configuration file, use the dropdown
+next to the <em>launch</em> button and select a file under the <em>launch with xml</em> section.</p>
+</li>
+</ol>
+<p>A message indicating success of the launch operation should appear along with
+the application ID.</p>
+<p><em>Note</em>: After a successful launch, monitor the top N words application following
+instructions in the chapter <em>Monitoring with dtManage</em>.</p>
+<h2 id="monitoring-the-application">Monitoring the Application</h2>
+<p><strong>dtManage</strong> is an invaluable tool for monitoring the state of a running
+application as well as for troubleshooting problems.</p>
+<h3 id="monitor-the-application">Monitor the Application</h3>
+<p>To monitor the top N words application</p>
+<ol>
+<li>Log on to the Datatorrent Console (the default username and password
+   are both <code>dtadmin</code>).</li>
+<li>On the top navigation bar, click <em>Monitor</em>.</li>
+<li>Under <em>Datatorrent Applications</em>, check if the application started.</li>
+<li>Wait till the state entry changes to <strong>RUNNING</strong>.</li>
+<li>Click <em>TopNWordsWithQueries</em> to see a page with four tabs: <em>logical</em>,
+   <em>physical</em>, <em>physical-dag-view</em>, and <em>metric-view</em>.</li>
+<li>Under <em>StramEvents</em>, ensure that all the operators have started.
+    <img alt="Stram Events" src="../images/topnwords/image14.png" title="Stram Events" /></li>
+</ol>
+<h3 id="dags-and-widgets">DAGs and widgets</h3>
+<p>When monitoring an application, the logical view is selected by default, with
+the following panels, also called widgets:  <em>Application
+Overview</em>, <em>Stram Events</em>, <em>Logical DAG</em>, <em>Logical Operators</em>, <em>Streams</em>, <em>Associated Services</em>, and <em>Metrics Chart</em>.
+These panels can be resized, moved around, configured (using the gear wheel
+icon in the top-right corner), or removed (using the delete button in the
+top-right corner).</p>
+<h3 id="logical-view-and-associated-widgets-panels">Logical view and associated widgets (panels)</h3>
+<p>This section describes the widgets that you see when you select the logical
+tab.</p>
+<p><strong>Application Overview</strong></p>
+<p>This panel displays application properties such as state, number of operators,
+allocated memory, and the number of tuples processed. You can use the kill
+button to terminate the application. The <em>visualize</em> button allows you to
+create one or more custom dashboards to visualize the application output.
+<img alt="Application Overview" src="../images/topnwords/image24.png" title="Application Overview" /></p>
+<p><strong>Stram Events</strong></p>
+<p>As shown in the screenshot above, this panel shows the lifecycle events of all
+the operators. If one of the operators fails, a white button labelled <em>details</em>
+appears next to the event; click on it for additional details about the
+failure.</p>
+<p><strong>Logical DAG</strong></p>
+<p>The logical DAG illustrates operators and their interconnections. You can
+customize the logical DAG view by selecting operator properties that are
+displayed above and below each operator.</p>
+<p>To customize these properties</p>
+<ol>
+<li>Click an operator for which you want to display additional details.</li>
+<li>To display a detail on the top of this operator, click the Top list and
+   select a metric.</li>
+<li>To display a detail at the bottom of this operator, click the Bottom list
+   and select a metric.</li>
+</ol>
+<p><img alt="DAG" src="../images/topnwords/image47.png" title="DAG" /></p>
+<p><strong>Logical Operators</strong></p>
+<p>This panel displays a table with detailed information about each operator such
+as its name, the associated JAVA class, the number of tuples processed, and
+the number of tuples emitted.</p>
+<p><img alt="Logical Operators" src="../images/topnwords/image48.png" title="Logical Operators" /></p>
+<p><strong>Streams</strong></p>
+<p>This panel displays details of each stream such as the name, locality, source,
+and sinks.</p>
+<p><img alt="Streams" src="../images/topnwords/image49.png" title="Streams" /></p>
+<p><strong>Associated Services</strong></p>
+<p>This panel displays the services associated with the applications and their running statuses. </p>
+<p><strong>Metrics Chart</strong></p>
+<p>This panel displays the number tuples processed and the number of bytes
+processed by some internal components. Since this application has not processed
+any tuples so far (no input file was provided), the green and blue lines
+coincide with the horizontal axis:</p>
+<p><img alt="Metrics" src="../images/topnwords/image20.png" title="Metrics" /></p>
+<h3 id="physical-view-and-associated-widgets">Physical view and associated widgets</h3>
+<p>The physical tab displays the <em>Application Overview</em> and <em>Metrics Chart</em>
+discussed above along with additional panels: <em>Physical Operators</em> and
+<em>Containers</em>. The <em>Physical Operators</em> table shows one row per physical
+operator. When partitioning is enabled, some operators can be replicated to
+achieve better resource utilization and hence better throughput so a single
+logical operator may correspond to multiple physical operators.</p>
+<p><strong>Physical Operators</strong></p>
+<p><img alt="Physical Operators" src="../images/topnwords/image21.png" title="Physical Operators" /></p>
+<p><strong>Containers</strong></p>
+<p>For each operator, a crucial piece of information is the process
+(the Java Virtual Machine) running that operator. It is also called a
+container, and shown in a column with that name. Additional information about
+the container (such as the host on which it is running) can be gleaned from the
+matching row in the <em>Containers</em> table.</p>
+<p><img alt="Containers" src="../images/topnwords/image22.png" title="Containers" /></p>
+<p>If the state of all the physical operators and containers is <strong>ACTIVE</strong>
+and green   this is a healthy state. If the memory requirements for all the
+operators in the application exceeds the available memory in the cluster,
+you'll see these status values changing continually from ACTIVE to PENDING.
+This is an unhealthy state and, if it does not stabilize, your only option is
+to kill the application and reduce the memory needs or acquire more cluster
+resources.</p>
+<h3 id="the-physical-dag-view">The physical-dag-view</h3>
+<p>The <em>physical-dag-view</em> tab displays the Physical DAG widget, which
+shows all the partitioned copies of operators and their interconnections.</p>
+<h3 id="the-metric-view">The metric-view</h3>
+<p>The metric-view tab displays only the <em>Metrics Chart</em> widget.</p>
+<h3 id="view-application-logs">View application logs</h3>
+<p>When debugging applications, we are often faced with the task of examining
+log files. This can be cumbersome, especially in a distributed environment
+where logs can be scattered across multiple machines. <strong>dtManage</strong> simplifies
+this task by making all relevant logs accessible from the console.</p>
+<p>For example, to examine logs for the <em>FileWordCount</em> operator, go to the physical
+tab of the application monitoring page and check the physical operator table to
+find the corresponding container. An example value might be 000010.</p>
+<p>The numeric values in the <em>container</em> column are links that open a page
+containing a table of all physical operators running in that container.
+In the <em>Container Overview</em> panel, you should see a blue <em>logs</em> dropdown
+button; click on it to see a menu containing three entries: <code>dt.log</code>, <code>stderr</code>,
+and <code>stdout</code>.</p>
+<p><img alt="logs" src="../images/topnwords/image23.png" title="logs" /></p>
+<p>All messages output using <strong>log4j</strong> classes will appear in <code>dt.log</code>
+whereas messages written directly to the standard error or standard
+output streams will appear in the other two entries. Choose the entry
+you want to view.</p>
+<h2 id="visualizing-the-application-output">Visualizing the Application Output</h2>
+<p>This chapter covers how to add input files to the monitored input directory and
+visualize the output.</p>
+<p>When adding files, it is important to add only one file at a time to the
+monitored input directory; the application, as it stands, cannot handle
+simultaneous addition of files at a time into the input directory. This
+issue is discussed in more detail in the Appendix entitled <em>Further Explorations</em>.</p>
+<blockquote>
+<p>Note: If you are have trouble with any of the following steps, or have not
+complete the preceding sections in this tutorial, you can import <em>Word Count Demo</em>
+from AppFactory. The <em>Word Count Demo</em> Application Package contains the
+TopNWordsWithQueries Application.</p>
+</blockquote>
+<h3 id="step-1-add-files-to-the-monitored-directory">Step 1: Add files to the monitored directory</h3>
+<p>To add the files to the monitored input directory</p>
+<ol>
+<li>Log on to the Datatorrent Console (the default username and password are
+   both <code>dtadmin</code>).</li>
+<li>On the top navigation bar, click <em>Monitor</em>.</li>
+<li>Click TopNWordsWithQueries to see a page with four tabs: <em>logical</em>,
+   <em>physical</em>, <em>physical-dag-view</em>, and  <em>metric-view</em>.</li>
+<li>Click the <em>logical</em> tab and make sure that the DAG is visible.</li>
+<li>Create the input and output directories in HDFS and drop a file into the
+   input directory by running the following commands:<pre><code>hdfs dfs -mkdir -p /tmp/test/input-dir
+hdfs dfs -mkdir -p /tmp/test/output-dir
+hdfs dfs -put ~/data/rfc4844.txt /tmp/test/input-dir
+</code></pre>
+</li>
+</ol>
+<p>You should now see some numbers above and below some of the operators as the
+lines of the file are read and tuples start flowing through the DAG.</p>
+<p>You can view the top 10 words and the frequencies for each input file by
+examining the corresponding output file in the output directory, for example:</p>
+<pre><code>hdfs dfs -cat /tmp/test/output-dir/rfc4844.txt
+</code></pre>
+<p>For operating on these input and output directories, you may find the following
+shell aliases and functions useful:</p>
+<pre><code>in=/tmp/test/input-dir
+out=/tmp/test/output-dir
+alias ls-input="hdfs dfs -ls $in"
+alias ls-output="hdfs dfs -ls $out"
+alias clean-input="hdfs dfs -rm $in/\*"
+alias clean-output="hdfs dfs -rm $out/\*"
+function put-file ( ) {
+    hdfs dfs -put "$1" "$in"
+}
+function get-file ( ) {
+    hdfs dfs -get "$out/$1" "$1".out
+}
+</code></pre>
+<p>Put them in a file called, say, <code>aliases</code> and read them into your shell with:
+<code>source aliases</code>.</p>
+<p>Thereafter, you can list contents of the input and output directories with
+<code>ls-input</code> and <code>ls-output</code>, remove all files from them with <code>clean-input</code> and
+<code>clean-output</code>, drop an input file <code>foo.txt</code> into the input directory with
+<code>put-file foo.txt</code> and finally, retrieve the corresponding output file with
+<code>get-file foo.txt</code>.</p>
+<p><em>Note</em>: When you list files in the output directory, their sizes might show as
+0 but if you retrieve them with get-file or catenate them, the expected output
+will be present.</p>
+<h3 id="step-2-visualize-the-results-by-generating-dashboards">Step 2: Visualize the results by generating dashboards</h3>
+<p>To generate dashboards</p>
+<ol>
+<li>Perform step I above.</li>
+<li>Make sure that the logical tab is selected and the <em>Application Overview</em>
+  panel is visible.<br />
+<img alt="Application Overview" src="../images/topnwords/image24.png" title="Application Overview" /></li>
+<li>Click <em>visualize</em> to see a dropdown containing previously created dashboards
+ (if any), as well as the <em>generate new dashboard</em> entry.<br />
+<img alt="new dashboard" src="../images/topnwords/image25.png" title="new dashboard" /></li>
+<li>
+<p>Select the <em>generate new dashboard</em> entry.</p>
+<p>You should now see panels with charts where one chart displays the data for
+the current file and a second chart displays the cumulative global data
+across all files processed so far.
+<img alt="charts" src="../images/topnwords/image26.png" title="charts" /></p>
+</li>
+<li>
+<p>Add more files, one at a time, to the input directory as described in
+  step I above.</p>
+</li>
+<li>Observe the charts changing to reflect the new data.</li>
+</ol>
+<p>You can create multiple dashboards in this manner for visualizing the output
+from different applications or from the same application in different ways.</p>
+<h3 id="step-3-add-widgets">Step 3: Add widgets</h3>
+<p>To derive more value out of application dashboards, you can add widgets to the
+dashboards. Widgets are charts in addition to the default charts that you can see on the dashboard. DataTorrent RTS Sandbox supports 5 widgets: <em>bar chart</em>,
+<em>pie chart</em>, <em>horizontal bar chart</em>, <em>table</em>, and <em>note</em>.</p>
+<p>To add a widget</p>
+<ol>
+<li>Generate a dashboard by following instructions of Step II above.</li>
+<li>Click the <em>add widget</em> button below the name of the dashboard.</li>
+<li>In the <em>Data Source</em> list, select a data source for your widget.</li>
+<li>
+<p>Select a widget type under <em>Available Widgets</em>.</p>
+<p><img alt="AddWidget.png" src="../images/topnwords/image27.png" /></p>
+</li>
+<li>
+<p>Click <em>add widget</em>.</p>
+</li>
+</ol>
+<p>The widget is added to your dashboard.</p>
+<h3 id="step-4-configure-a-widget">Step 4: Configure a widget</h3>
+<p>After you add a widget to your dashboard, you can configure it at any
+time. Each widget has a title that appears in gray. If you hover over
+the title, the pointer changes to a hand.</p>
+<p>To configure a widget</p>
+<ol>
+<li>To change the size of the widget, click the border of the widget, and
+  resize it.</li>
+<li>To move the widget around, click the widget, and drag it to the desired
+  position.</li>
+<li>To change the title and other properties, click the <em>edit</em> button in the
+  top-right corner of the widget.
+    <img alt="Widget options" src="../images/topnwords/image28.png" title="Widget options" />
+  You can now enter a new title in the <em>Title</em> box or configure the rest of the
+  options in any suitable way.</li>
+<li>Click <em>OK</em>.</li>
+<li>To remove a widget, click the delete (x) button in the top-right corner of
+  the widget.</li>
+</ol>
+<h3 id="perform-additional-tasks-on-dashboards">Perform additional tasks on dashboards</h3>
+<p>At any time, you can change the name and the description of a dashboard. You
+can also delete dashboards.</p>
+<p>To perform additional tasks</p>
+<ol>
+<li>Ensure that you generated a dashboard as described in Step II above and
+   select it.</li>
+<li>Click <em>settings</em> button (next to buttons named <em>add widget</em>,
+   <em>auto generate</em>, and <em>save settings</em>), below the name of the dashboard to see the <em>Dashboard Settings</em> dialog:
+    <img alt="Dashboard settings" src="../images/topnwords/image30.png" title="Dashboard settings" /></li>
+<li>Type a new name for the dashboard in the <em>Name of dashboard</em> box.</li>
+<li>Type a suitable description in the box below.</li>
+<li>Make sure that <em>TopNWordsWithQueries</em> is selected under <em>Choose apps to
+    visualize</em>.</li>
+<li>Click <em>Save</em>.</li>
+</ol>
+<h3 id="delete-a-dashboard">Delete a dashboard</h3>
+<p>You can delete a dashboard at any time.</p>
+<ol>
+<li>Log on to the DataTorrent Console (default username and password are both
+  <code>dtadmin</code>)</li>
+<li>On the top navigation bar, click <em>Visualize</em>.</li>
+<li>
+<p>Select a dashboard.</p>
+<p><img alt="visualize" src="../images/topnwords/image11.png" title="visualize" /></p>
+</li>
+<li>
+<p>Click delete.</p>
+<p><img alt="delete" src="../images/topnwords/image12.png" title="delete" /></p>
+</li>
+</ol>
+<p>Note: The delete button becomes visible only if one or more rows are selected.</p>
+<h2 id="advanced-rts-features">Advanced RTS Features</h2>
+<p>This section touches on some advanced features of the RTS platform in the context of the
+<em>Top N Words</em> application. Accordingly, readers are expected to be familiar with the material
+of the preceding sections.</p>
+<p>The first topic we'd like to discuss is partitioning of operators to increase performance.
+However, partitioning increases the memory footprint of the application, so it is important
+to know how to allocate available memory to containers especially in a limited environment
+like a sandbox. So we begin with a brief discussion of that topic.</p>
+<h3 id="managing-memory-allocation-for-containers">Managing Memory Allocation for Containers</h3>
+<p>In this chapter we describe how to monitor and manage the amount of memory allocated to the
+containers comprising the application. This is useful in an environment where the needs of
+the application begins to equal or exceed the memory resources of the cluster.</p>
+<p>Recall the following facts from the earlier sections:</p>
+<ul>
+<li>A container (JVM process) can host multiple operators.</li>
+<li>The memory requirements for an operator can be specified via a properties file.</li>
+</ul>
+<p>For reference, here is the application DAG:
+<img alt="DAG" src="../images/topnwords/image47.png" title="DAG" /></p>
+<p>If we look at the information displayed in the physical tab of <code>dtManage</code> for the memory
+allocated to each container, we see something like this (the actual container id will most
+likely be different each time the application is relaunched but the rest of the information
+should be the same):</p>
+<table>
+<colgroup>
+<col width="30%" />
+<col width="30%" />
+<col width="40%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><p><b>Container Id</b></p></td>
+<td align="left"><p><b>Allocated Memory</b></p></td>
+<td align="left"><p><b>Hosted Operators</b></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><tt>1</tt></p></td>
+<td align="left"><p>1 GB</p></td>
+<td align="left"><p>None (AppMaster)</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><tt>2</tt></p></td>
+<td align="left"><p>768 MB</p></td>
+<td align="left"><p>snapshotServerGlobal, QueryGlobal</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><tt>3</tt></p></td>
+<td align="left"><p>768 MB</p></td>
+<td align="left"><p>snapshotServerFile, QueryFile</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><tt>4</tt></p></td>
+<td align="left"><p>128 MB</p></td>
+<td align="left"><p>wsResultGlobal</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><tt>5</tt></p></td>
+<td align="left"><p>640 MB</p></td>
+<td align="left"><p>windowWordCount</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><tt>6</tt></p></td>
+<td align="left"><p>128 MB</p></td>
+<td align="left"><p>Console</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><tt>7</tt></p></td>
+<td align="left"><p>128 MB</p></td>
+<td align="left"><p>wsResultFile</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><tt>8</tt></p></td>
+<td align="left"><p>640 MB</p></td>
+<td align="left"><p>wordReader</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><tt>9</tt></p></td>
+<td align="left"><p>128 MB</p></td>
+<td align="left"><p>wcWriter</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><tt>10</tt></p></td>
+<td align="left"><p>1.4 GB</p></td>
+<td align="left"><p>lineReader</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><tt>11</tt></p></td>
+<td align="left"><p>1.9 GB</p></td>
+<td align="left"><p>fileWordCount</p></td>
+</tr>
+</tbody>
+</table>
+
+<p>If we now look closely at column 2 (Allocated Memory) we notice some
+unexpected values, for example, the value for the App Master container should have
+been 300 MB since we had 300 as the value in the <code>properties.xml</code> file for
+<code>dt.attr.MASTER_MEMORY_MB</code>. The discrepancy is due to the fact that the file
+<code>.dt/dt-site.xml</code> in the home directory of user <code>dtadmin</code> has a value of 1024 for
+this key which overrides the application specified value.</p>
+<p>Looking now at container 2, we notice that it hosts 2 operators: <code>snapshotServerGlobal</code>
+and <code>QueryGlobal</code> and each has a value of 128 MB specified in the application properties
+file; so why is the value 768 MB ? Turns out that each output port of an operator
+<em>connected to another operator outside the container</em>
+also has an associated <em>buffer-server</em> which buffers tuples exiting the output port
+to provide fault-tolerance. The buffer server is discussed in detail in
+<a href="https://docs.datatorrent.com/application_development.md">Application Development</a>.
+The space allocated to the buffer server is governed by properties of the form:</p>
+<pre><code>dt.application.app-name.operator.op-name.port.port-name.attr.BUFFER_MEMORY_MB
+</code></pre>
+<p>where <em>app-name</em>, <em>op-name</em> and <em>port-name</em> can be replaced by the appropriate
+application, operator and port name respectively or by a wildcard (<code>*</code>). The
+default value is 512 MB. Of the two operators, only one (<code>snapshotServerGlobal</code>)
+has an output port connected externally so there
+is only one buffer-server involved which then explains the value of
+768 (= 512 + 128 + 128).</p>
+<p>The values for <code>wsResultGlobal</code>, <code>Console</code>, <code>wsResultFile</code>, <code>wcWriter</code> are, as
+expected, 128 MB &ndash; since no output ports are involved, there is no buffer-server.
+The values for <code>windowWordCount</code> and <code>wordReader</code> are also the expected values
+since a single buffer-server is involved: 640 = 512 + 128. The value of 1.9 GB
+for <code>fileWordCount</code> is obtained as follows: it has 3 buffer-servers since there
+are 3 output ports connected externally; our properties file setting requests
+300 MB for this operator which gives us a total of 3 * 512 + 300 = 1836 MB which
+approximates the value shown. The value for <code>lineReader</code> can be computed
+similarly.</p>
+<p>The total amount of allocated space shown on the GUI is 6.5 GB. We can substantially
+reduce the memory footprint further by make a couple changes to attributes:
+Create a new file named, say, <code>low-mem.xml</code> at <code>src/site/conf/</code> with this content:</p>
+<pre><code>&lt;configuration&gt;
+  &lt;property&gt;
+    &lt;name&gt;dt.attr.MASTER_MEMORY_MB&lt;/name&gt;
+    &lt;value&gt;512&lt;/value&gt;
+  &lt;/property&gt; &lt;property&gt;
+    &lt;name&gt;dt.application.TopNWordsWithQueries.operator.*.port.*.attr.BUFFER_MEMORY_MB&lt;/name&gt;
+    &lt;value&gt;128&lt;/value&gt;
+  &lt;/property&gt;
+&lt;/configuration&gt;
+</code></pre>
+<p>We will use this file at launch time.</p>
+<p>The BUFFER_MEMORY_MB attribute changes the memory allocation per buffer server
+to 128 MB (from the default of 512 MB).</p>
+<p>The MASTER_MEMORY_MB attribute change sets the memory allocated to the Application Master
+to 512 MB and is required for a rather obscure
+reason: The existing value of 300 MB in <code>META-INF/properties.xml</code>
+is actually overridden by the setting of 1024 MB for this parameter in
+<code>~dtadmin/.dt/dt-site.xml</code>; however, if we use a launch-time configuration file,
+values in it override those in <code>dt-site.xml</code>. A value of 300 is too
+small even for simple applications; in normal use and we rarely see a case, even in production,
+where a value larger than 1024 MB is needed, though it is possible if the number of
+operators is large. If the App Master runs out of memory,
+you'll see messages like this in the corresponding log file (see <em>Debugging</em>
+section below):</p>
+<pre><code>java.lang.OutOfMemoryError: GC overhead limit exceeded.
+</code></pre>
+<p>Rebuild the application, upload the package and use this file at launch time:
+<img alt="Custom config file" src="../images/topnwords/image50.png" title="low-mem" /></p>
+<p>The allocated memory shown in the "Application Overview" panel should now drop
+to around 3.1GB.</p>
+<h3 id="debugging">Debugging</h3>
+<p>On the sandbox, various log files generated by YARN and Hadoop are located at
+<code>/sfw/hadoop/shared/logs</code>; the <code>nodemanager</code> directory has application specific
+directories with names like this: <code>application_1448033276100_0001</code> within
+which there are container specific directories with names like
+<code>container_1448033276100_0001_01_000001</code>. The App Master container has the <code>000001</code>
+suffix and the corresponding directory will have these files:</p>
+<pre><code>AppMaster.stderr  AppMaster.stdout  dt.log
+</code></pre>
+<p>The remaining container directories will have files:</p>
+<pre><code>dt.log  stderr  stdout
+</code></pre>
+<p>When problems occur, all these log files should be carefully examined. For example, the
+<code>dt.log</code> file contains the entire classpath used to launch each container; if an error
+occurs because a particular class is not found, you can check the classpath to ensure
+that the appropriate jar file is included. It also shows the command line used to
+launch each container with lines like this:</p>
+<p>2015-12-20 14:31:43,896 INFO com.datatorrent.stram.LaunchContainerRunnable: Launching on node: localhost:8052 command: $JAVA_HOME/bin/java  -Xmx234881024  -Ddt.attr.APPLICATION_PATH=hdfs://localhost:9000/user/dtadmin/datatorrent/apps/application_1450648156272_0001 -Djava.io.tmpdir=$PWD/tmp -Ddt.cid=container_1450648156272_0001_01_000002 -Dhadoop.root.logger=INFO,RFA -Dhadoop.log.dir=<LOG_DIR> com.datatorrent.stram.engine.StreamingContainer 1&gt;<LOG_DIR>/stdout 2&gt;<LOG_DIR>/stderr</p>
+<p>You can provide your own <code>log4j</code> configuration file called, say, <code>log4j.properties</code> and place
+it in the directory <code>src/main/resources</code> as described in the
+<a href="http://docs.datatorrent.com/configuration/#custom-log4j-properties-for-application-packages">configuration</a>
+page. Alternatively, if you want to change the log level of a particular class or package
+from, say <code>INFO</code> to <code>DEBUG</code> while the application is running, you can click on the blue
+<code>set logging level</code> button in the <code>Application Overview</code> panel of <code>dtManage</code>. It will then
+display a dialog window where you can enter the name of the class or package and the desired
+log level:</p>
+<p><img alt="Change log level" src="../images/topnwords/image51.png" title="log-level" /></p>
+<p>Normally, the GUI can be used to navigate to the appropriate container page
+and log files examined from the <code>logs</code> dropdown but sometimes using the commandline
+from a terminal window may be easier.</p>
+<h3 id="partitioning">Partitioning</h3>
+<p>Partitioning is a mechanism to eliminate bottlenecks in your application and increase
+throughput. If an operator is performing a resource intensive operation, it risks
+becoming a bottleneck as the rate of incoming tuples increases. One way to cope
+is to replicate the operator as many times as necessary so that the load is
+evenly distributed across the replicas, thus eliminating the bottleneck. Of course,
+this technique assumes that your cluster has adequate resources (CPU, memory and
+network bandwidth) to support all the replicas.</p>
+<p>Without partitioning, the DAG shown in the <code>logical</code> and <code>physical-dag-view</code> tabs
+will be the same.
+However, once partitioning is triggered, the latter will show multiple copies of the
+partitioned operator, as well as a new operator immediately
+downstream of all the copies, called a <em>unifier</em>. The job of the unifier is to join the
+results emitted by all the copies, collate them in some application-specific way and
+emit the result just as it would have been emitted if no partitioning were involved.
+The unifier can either be one that is custom-written for the needs of the application
+or a pass-through platform-generated one.</p>
+<p>For our word counting example, we illustrate the technique by partitioning the <code>wordReader</code>
+operator into 2 copies. For operators that do not maintain state, partitioning does
+not require additional code: We can simply set a couple of properties -- one to use
+the <strong>StatelessPartitioner</strong> which is part of Malhar and one to specify the number
+of desired partitions. To do this, copy over the <code>low-mem.xml</code> configuration file
+we created above
+to a new file named <code>simple-partition.xml</code> in the same directory and add this stanza to it:</p>
+<pre><code>&lt;property&gt;
+  &lt;name&gt;dt.application.TopNWordsWithQueries.operator.wordReader.attr.PARTITIONER&lt;/name&gt;
+  &lt;value&gt;com.datatorrent.common.partitioner.StatelessPartitioner:2&lt;/value&gt;
+&lt;/property&gt;
+</code></pre>
+<p>When you build, upload and run the application using this configuration file, the
+physical-dag-view tab should show the following DAG:</p>
+<p><img alt="DAG Simple Partition" src="../images/topnwords/image52.png" title="DAG Simple Partition" /></p>
+<p>Notice the two copies of <code>wordReader</code> and the generated unifier. The <code>physical</code> tab will
+also show the containers for these additional operators and their characteristics as well.</p>
+<p>A slight variation of the above theme occurs often in practice: We would like an entire
+linear sequence of operators (i.e. a fragment of the DAG) replicated in the same way.
+In our case, the sequence consists of two operators: <code>wordReader</code> and the next operator
+<code>windowWordCount</code>. To accomplish this, again no additional code is required: We can simply
+add this stanza to our properties file:</p>
+<pre><code>&lt;property&gt;
+  &lt;name&gt;dt.application.TopNWordsWithQueries.operator.windowWordCount.inputport.input.attr.PARTITION_PARALLEL&lt;/name&gt;
+  &lt;value&gt;true&lt;/value&gt;
+&lt;/property&gt;
+</code></pre>
+<p>It enables the PARTITION_PARALLEL attribute on the <em>input port</em> of the downstream operator,
+thus indicating to the platform that the downstream operator must be partitioned into just
+as many copies as the upstream operator so that they form parallel pipelines. Running the
+application with this configuration file shows the following physical DAG:</p>
+<p><img alt="DAG Parallel Partition" src="../images/topnwords/image53.png" title="DAG Parallel Partition" /></p>
+<p>Notice that both operators have been replicated and the unifier added.</p>
+<h3 id="streaming-windows-and-application-windows">Streaming Windows and Application Windows</h3>
+<p>Operators receive incoming tuples and emit outgoing tuples within a small temporal window
+called a <em>streaming window</em>. Its boundaries are marked by calls to <code>beginWindow</code> and
+<code>endWindow</code> within which the platform repeatedly invokes either <code>emitTuples</code> (for input
+adapters) or <code>process</code> on each input port for output adapters and generic operators.
+These concepts are discussed in greater detail in the
+<a href="http://docs.datatorrent.com/operator_development/">OperatorGuide</a>.</p>
+<p>For flexibility in operator and application development, the platform allows users to
+change the size of the streaming window which is defined as a number of milliseconds.
+It defaults to 500ms but can be changed by setting the
+value of an attribute named STREAMING_WINDOW_SIZE_MILLIS; for example, you can set it
+to 5s with:</p>
+<pre><code>&lt;property&gt;
+  &lt;name&gt;dt.attr.STREAMING_WINDOW_SIZE_MILLIS&lt;/name&gt;
+  &lt;value&gt;5000&lt;/value&gt;
+&lt;/property&gt;
+</code></pre>
+<p>This is not a very common change but one reason for doing it might be if the stream is
+very sparse, i.e. the number of incoming tuples in a 500ms window is very small; by
+increasing the streaming window size, we can substantially reduce the platform bookkeeping
+overhead such as checkpointing.</p>
+<p>A second attribute is APPLICATION_WINDOW_COUNT; this is a per-operator attribute and is
+a count of streaming windows that comprise a single application window. It
+can be changed with an entry like this (where, as before, <em>app-name</em> and <em>op-name</em> should be
+replaced by either wildcards or names of a specific application and/or operator):</p>
+<pre><code>&lt;property&gt;
+  &lt;name&gt;dt.application.app-name.operator.op-name.attr.APPLICATION_WINDOW_COUNT&lt;/name&gt;
+  &lt;value&gt;5&lt;/value&gt;
+&lt;/property&gt;
+</code></pre>
+<p>By default this value is set to 1 meaning each application window consists of a single
+streaming window. The the <code>beginWindow</code> and <code>endWindow</code> are invoked once per application
+window. A typical reason for increasing this value is when you have an
+operator that is computing aggregates (such as sum, average, maximum, minimum) of one or
+more fields of the incoming tuples: A larger application window may yield more
+meaningful aggregates.</p>
+<h2 id="appendix">Appendix</h2>
+<h3 id="operators-in-top-n-words-application">Operators in Top N words application</h3>
+<p>This section describes the operators used for building the top N
+words application. The operators, the implementing classes and a brief description of their
+functionalities are described in this table.</p>
+<table>
+<colgroup>
+<col width="25%" />
+<col width="35%" />
+<col width="40%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><p><b>Operator</b></p></td>
+<td align="left"><p><b>Implementing class</b></p></td>
+<td align="left"><p><b>Description</b></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p>lineReader</p></td>
+<td align="left"><p>LineReader</p></td>
+<td align="left"><p>Reads lines from input files.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p>wordReader</p></td>
+<td align="left"><p>WordReader</p></td>
+<td align="left"><p>Splits a line into words.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p>windowWordCount</p></td>
+<td align="left"><p>WindowWordCount</p></td>
+<td align="left"><p>Computes word frequencies for a single window.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p>fileWordCount</p></td>
+<td align="left"><p>FileWordCount</p></td>
+<td align="left"><p>Maintains per-file and global word frequencies.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p>wcWriter</p></td>
+<td align="left"><p>WcWriter</p></td>
+<td align="left"><p>Writes top N words and their frequencies to output files.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p>console</p></td>
+<td align="left"><p>ConsoleOutputOperator</p></td>
+<td align="left"><p>Writes received tuples to console.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p>snapshotServerFile</p></td>
+<td align="left"><p>AppDataSnapshotServerMap</p></td>
+<td align="left"><p>Caches the last data set for the current file, and returns it in response to queries.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p>snapshotServerGlobal</p></td>
+<td align="left"><p>AppDataSnapshotServerMap</p></td>
+<td align="left"><p>Caches the last global data set, and returns it in response to queries.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p>QueryFile</p></td>
+<td align="left"><p>PubSubWebSocketAppDataQuery</p></td>
+<td align="left"><p>Receives queries for per-file data.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p>QueryGlobal</p></td>
+<td align="left"><p>PubSubWebSocketAppDataQuery</p></td>
+<td align="left"><p>Receives queries for global data.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p>wsResultFile</p></td>
+<td align="left"><p>PubSubWebSocketAppDataResult</p></td>
+<td align="left"><p>Returns results for per-file queries.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p>wsResultGlobal</p></td>
+<td align="left"><p>PubSubWebSocketAppDataResult</p></td>
+<td align="left"><p>Returns results for global queries.</p></td>
+</tr>
+</tbody>
+</table>
+
+<p>We now describe the process of wiring these operators together in the
+<code>populateDAG()</code> method of the main application class
+<code>ApplicationWithQuerySupport</code>. First, the operators are created and added to
+the DAG via the <code>addOperator</code> method:</p>
+<pre><code>LineReader lineReader = dag.addOperator(&quot;lineReader&quot;,new LineReader());
+</code></pre>
+
+<p>The first argument is a string that names this instance of the
+operator; it is the same as the value in the first column of the above
+table and also the node name in the Logical DAG.</p>
+<p>Next, we connect each output port of an operator with all the input ports that
+should receive these tuples using the <code>addStream</code> function, for example:</p>
+<pre><code>dag.addStream(&quot;lines&quot;, lineReader.output, wordReader.input);
+...
+dag.addStream(&quot;WordCountsFile&quot;, fileWordCount.outputPerFile, snapshotServerFile.input, console.input);
+</code></pre>
+
+<p>Notice that the stream from <code>fileWordCount.outputPerFile</code> (which consists of
+the top N words for the current file as the file is being read) goes to
+<code>snapshotServerFile.input</code> (where it will be saved to respond to queries) and to
+<code>console.input</code> (which is used for debugging). Additional sinks can be provided
+in the same call as additional terminal arguments. You can examine the rest of
+these calls and ensure that they match the names and connections of the
+Logical DAG.</p>
+<p>This section provides detailed information about each operator.</p>
+<p><strong>LineReader</strong></p>
+<p>This class extends <code>AbstractFileInputOperator&lt;String&gt;</code> to open a file, read its
+lines, and emit them as tuples. It has two output ports, one for the normal
+output of tuples, and the other for the output of an EOF tuple indicating the
+end of the current input file. Ports should always be transient fields because
+they should not be serialized and saved to the disk during checkpointing.</p>
+<p>The base class keeps track of files already processed, files that
+should be ignored, and files that failed part-way. Derived classes need to
+override four methods: <code>openFile</code>, <code>closeFile</code>, <code>readEntity</code>, and <code>emit</code>. Of
+these, only the third is non-trivial: if a valid line is available, it is read
+and returned. Otherwise, the end of the file must have been reached. To
+indicate this, the file name is emitted on the control port where it
+will be read by the <code>FileWordCount</code> operator.</p>
+<p><strong>WordReader</strong></p>
+<p>This operator receives lines from <code>LineReader</code> on the input port and emits
+words on the output port. It has a configurable property called <code>nonWordStr</code>
+along with associated public getter and setter methods. Such properties can be
+customized in the appropriate properties file of the application. The values of
+the properties are automatically injected into the operator at run-time. In
+this scenario, this string is provided the value of the property
+<code>dt.application.TopNWordsWithQueries.operator.wordReader.nonWordStr</code>.
+For efficiency, this string is compiled into a pattern for repeated use.
+The <code>process</code> method of the input port splits each input line into words using
+this pattern as the separator, and emits non-empty words on the output port.</p>
+<p><strong>WindowWordCount</strong></p>
+<p>This operator receives words and emits a list of word-frequency pairs for each
+window. It maintains a word-frequency map for the current window, updates this
+map for each word received, emits the whole map (if non-empty) when
+<code>endWindow</code> is called, and clears the map in preparation for the next window.
+This design pattern is appropriate because for normal text files, the number of
+words received is far more than the size of the accumulated map. However, for
+situations where data is emitted for each tuple, you should not wait till the
+<code>endWindow</code> call, but rather emit output tuples as each input tuple is
+processed.</p>
+<p><strong>FileWordCount</strong></p>
+<p>This operator has two input ports, one for the per-window frequency maps it
+gets from the previous operator, and a control port to receive the file name
+when <code>LineReader</code> reaches the end of a file. When a file name is received on
+the control port, it is saved and the final results for the file appear as
+output at the next <code>endWindow</code>. The reason for waiting is subtle: there is no
+guarantee of the relative order in which tuples arrive at two input ports;
+additional input tuples from the same window can arrive at the input port
+even after the EOF was received on the control port. Note however that we <em>do</em>
+have a guarantee that tuples on the input port will arrive in exactly the same
+order in which they were emitted on the output port between the bracketing
+<code>beginWindow</code> and <code>endWindow</code> calls by the upstream operator.</p>
+<p>This operator also has three output ports: the <code>outputPerFile</code> port for the top
+N pairs for the current file as it is being read; the <code>outputGlobal</code> port for
+the global top N pairs, and the <code>fileOutput</code> port for the final top N pairs for
+the current file computed after receiving the EOF control tuple. The output
+from the first is sent to the per-file snapshot server, the output from
+the second is sent to the global snapshot server, and the output from the last
+is sent to the operator that writes results to the output file.</p>
+<p><em>FileWordCount</em> also maintains two maps for per-file and global frequency
+counts because they track frequencies of all words seen so far. These maps
+can get very large as more and more files are processed.</p>
+<p><em>FileWordCount</em> has a configurable property <code>topN</code> for the number of top pairs we
+are interested in. This was configured in our properties file with a value of
+10 and the property name: <code>dt.application.TopNWordsWithQueries.operator.fileWordCount.topN</code></p>
+<p>In the <code>endWindow</code> call, both maps are passed to the <code>getTopNList</code> function
+where they are flattened, sorted in descending order of frequency, stripped of
+all but the top N pairs, and returned for output. There are a couple of
+additional fields used to cast the output into the somewhat peculiar form
+required by the snapshot server.</p>
+<p><strong>WordCountWriter</strong></p>
+<p>This operator extends <code>AbstractFileOutputOperator&lt;Map&lt;String,Object&gt;&gt;</code>, and
+simply writes the final top N pairs to the output file. As with <em>LineReader</em>,
+most of the complexity of <em>WordCountWriter</em> is hidden in the base class. You must
+provide implementations for 3 methods: <code>endWindow</code>, <code>getFileName</code>, and
+<code>getBytesForTuple</code>. The first method calls the base class method <code>requestFinalize</code>.
+The output file is written periodically to temporary files
+with a synthetic file name that includes a timestamp. These files are removed
+and the actual desired file name is restored by this call. The <code>getFileName</code>
+method retrieves the file name from the tuple, and the <code>getBytesForTuple</code>
+method converts the list of pairs to a string in the desired format.</p>
+<p><strong>ConsoleOutputOperator</strong></p>
+<p>This is an output operator that is a part of the Malhar library. It simply
+writes incoming tuples to the console and is useful when debugging.</p>
+<p><strong>AppDataSnapshotServerMap</strong></p>
+<p>This operator is also part of the Malhar library and is used to store snapshots
+of data. These snapshots are used to respond to queries. For this application,
+we use two snapshots &mdash;  one for a per-file top N snapshot and one for a
+global snapshot.</p>
+<p><strong>PubSubWebSocketAppDataQuery</strong></p>
+<p>This is an input operator that is a part of the Malhar library. It is used to
+send queries to an operator via the Data Torrent Gateway, which can act as a
+message broker for limited amounts of data using a topic-based
+publish-subscribe model. The URL to connect is typically something like:</p>
+<pre><code>ws://gateway-host:port/pubsub
+</code></pre>
+
+<p>where <em>gateway-host</em> and <em>port</em> should be replaced by appropriate values.</p>
+<p>A publisher sends a JSON message to the URL where the value of the <code>data</code> key
+is the desired message content. The JSON might look like this:</p>
+<pre><code>{&quot;type&quot;:&quot;publish&quot;, &quot;topic&quot;:&quot;foobar&quot;, &quot;data&quot;: ...}
+</code></pre>
+
+<p>Correspondingly, subscribers send messages like this to retrieve published
+message data:</p>
+<pre><code>{&quot;type&quot;:&quot;subscribe&quot;, &quot;topic&quot;:&quot;foobar&quot;}
+</code></pre>
+
+<p>Topic names need not be pre-registered anywhere but the same topic
+name (for example, <em>foobar</em> in the example) must be used by both publisher and
+subscriber. Additionally, if there are no subscribers when a message is
+published, it is simply discarded.</p>
+<p>For this tutorial, two query operators are used: one for per-file queries and
+one for global queries. The topic names were configured in the properties file
+earlier with values <code>TopNWordsQueryFile</code> and <code>TopNWordsQueryGlobal</code> under the
+respective names:</p>
+<pre><code>dt.application.TopNWordsWithQueries.operator.QueryFile.topic
+dt.application.TopNWordsWithQueries.operator.QueryGlobal.topic
+</code></pre>
+
+<p><strong>PubSubWebSocketAppDataResult</strong></p>
+<p>Analogous to the previous operator, this is an output operator used to publish
+query results to a gateway topic. You must use two of these to match the query
+operators, and configure their topics in the properties file with values
+<code>TopNWordsQueryFileResult</code> and <code>TopNWordsQueryGlobalResult</code> corresponding to
+the respective names:</p>
+<pre><code>dt.application.TopNWordsWithQueries.operator.wsResultFile.topic
+dt.application.TopNWordsWithQueries.operator.wsResultGlobal.topic
+</code></pre>
+
+<h3 id="further-exploration">Further Exploration</h3>
+<p>In this tutorial, the property values in the <code>properties.xml</code> file were set to
+limit the amount of memory allocated to each operator. You can try varying
+these values and checking the impact of such an operation on the stability and
+performance of the application. You can also explore the largest text
+file that the application can handle.</p>
+<p>Another aspect to explore is fixing the current limitation of
+one-file-at-a-time processing; if multiple files are dropped into the
+input directory simultaneously, the file reader can switch from one file to the
+next in the same window. When the <code>FileWordCount</code> operator gets an EOF on the
+control port, it waits for an <code>endWindow</code> call to emit word counts so those
+counts will be incorrect if tuples from two different files arrive in the same
+window. Try fixing this issue.</p>
+<h3 id="datatorrent-terminology">DataTorrent terminology</h3>
+<p><strong>Operators</strong></p>
+<p>Operators are basic computation units that have properties and
+attributes, and are interconnected via streams to form an application.
+Properties customize the functional definition of the operator, while
+attributes customize the operational behavior. You can think of
+operators as classes for implementing the operator interface. They read
+from incoming streams of tuples and write to other streams.</p>
+<p><strong>Streams</strong></p>
+<p>A stream is a connector (edge) abstraction which is a fundamental building
+block of DataTorrent RTS. A stream consists of tuples that flow from one input
+port to one or more output ports.</p>
+<p><strong>Ports</strong></p>
+<p>Ports are transient objects declared in the operator class and act connection
+points for operators. Tuples flow in and out through ports. Input ports read
+from streams while output port write to streams.</p>
+<p><strong>Directed Acyclic Graph (DAG)</strong></p>
+<p>A DAG is a logical representation of real-time stream processing application.
+The computational units within a DAG are called operators and the data-flow
+edges are called data streams.</p>
+<p><strong>Logical Plan or DAG</strong></p>
+<p>Logical Plan is the Data Object Model (DOM) that is created as operators and
+streams are added to the DAG. It is identical to a DAG.</p>
+<p><strong>Physical Plan or DAG</strong></p>
+<p>A physical plan is the physical representation of the logical plan of the
+application, which depicts how applications run on physical containers and
+nodes of a DataTorrent cluster.</p>
+<p><strong>Data Tuples Processed</strong></p>
+<p>This is the number of data objects processed by real-time stream processing
+applications.</p>
+<p><strong>Data Tuples Emitted</strong></p>
+<p>This is the number of data objects emitted after real-time stream processing
+applications complete processing operations.</p>
+<p><strong>Streaming Application Manager (STRAM)</strong></p>
+<p>Streaming Application Manager (STRAM) is a YARN-native, lightweight controller
+process. It is the process that is activated first upon application launch to
+orchestrate the streaming application.</p>
+<p><strong>Streaming Window</strong></p>
+<p>A streaming window is a duration during which a set of tuples are emitted. The
+collection of these tuples constitutes a window data set, also called as an
+atomic micro-batch.</p>
+<p><strong>Sliding Application Window</strong></p>
+<p>Sliding window is computation that requires "n" streaming windows. After each
+streaming window, the nth window is dropped, and the new window is added to the
+computation.</p>
+<p><strong>Demo Applications</strong></p>
+<p>The real-time stream processing applications which are packaged with the
+DataTorrent RTS binaries, are called demo applications. A Demo application can
+be launched standalone, or on a Hadoop cluster.</p>
+<p><strong>Command-line Interface</strong></p>
+<p>Command line interface (CLI) is the access point for applications.
+This is a wrapper around the web services layer, which makes the web
+services user friendly.</p>
+<p><strong>Web services</strong></p>
+<p>DataTorrent RTS platform provides a robust webservices layer called
+DT Gateway. Currently, Hadoop provides detailed web services for
+map-reduce jobs. The DataTorrent RTS platform leverages the same
+framework to provide a web service interface for real-time streaming
+applications.</p>
               
             </div>
           </div>
@@ -562,7 +1635,7 @@ can use that setup instead.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../topnwords-c1/" class="btn btn-neutral float-right" title="Development Environment">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../salesdemo/" class="btn btn-neutral float-right" title="Sales Dimensions">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../../demo_videos/" class="btn btn-neutral" title="Videos"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -594,11 +1667,13 @@ can use that setup instead.</p>
         <span><a href="../../demo_videos/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../topnwords-c1/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../salesdemo/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
     <script src="../../js/theme.js"></script>
+      <script src="../../menu.js"></script>
+      <script src="../../js/version-select.js"></script>
 
 </body>
 </html>

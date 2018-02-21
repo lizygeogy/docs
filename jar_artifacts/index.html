@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <title>JAR Artifacts - DataTorrent Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../menu.css" rel="stylesheet">
+  <link href="../css/version-select.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "JAR Artifacts";
+    var mkdocs_page_input_path = "jar_artifacts.md";
+    var mkdocs_page_url = "/jar_artifacts/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-44586211-2', 'docs.datatorrent.com');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> DataTorrent Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">DataTorrent RTS</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Demos</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../demos/">Running Apps</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../sandbox/">Sandbox</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Cloud Integration</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../aws_emr_manual/">AWS</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../azure_deployment/">Azure</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Development</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../create/">Creating Applications</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../beginner/">Beginner's Guide</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../demo_videos/">Videos</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Tutorials</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../tutorials/topnwords/">Top N Words</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../tutorials/salesdemo/">Sales Dimensions</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../apex_development_setup/">Apex Development Setup</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../configure_IDE/">Generate New Project in IDE</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../application_development/">Applications</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../application_packages/">Application Packages</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../configuration_packages/">Configuration Packages</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Operator Development</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operator_development/">Guide</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operator_development_ref/">Reference</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Operators</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../library_operators/">Operators List</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/drools_operator/">Drools Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/python_operator/">Python Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/PMML_operator/">PMML Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/tcpinputoperator/">TCP Input Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/eventhubinput/">Event Hub Input Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/eventhuboutput/">Event Hub Output Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/abstracthttpserver/">Abstract HTTP Server Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/azure_blob/">Azure Blob Storage Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/aoooperator/">Analytics Output Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/elasticsearch/">Elasticsearch Output Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/block_reader/">Block Reader</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/deduper/">Deduper</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/dimensions_computation/">Dimension Computation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/file_output/">File Output</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/file_splitter/">File Splitter</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/hdht/">HDHT</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/kafkaInputOperator/">Kafka Input</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/snapshot_server/">Snapshot Server</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app_data_framework/">App Data Framework</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtgateway_api/">REST API</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">App Templates</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/common/import-launch/">Import and Launch App-template</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/common/customize/">Customizing an app-template</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/database-to-database-sync/">Database-to-database-sync</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/hdfs-line-copy/">HDFS-line-copy</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/hdfs-part-file-copy/">HDFS-part-file-copy</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/hdfs-to-hdfs-filter-transform/">HDFS-to-HDFS-filter-transform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/kafka-to-cassandra-filter-transform/">Kafka-to-Cassandra-Filter-Transform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/kafka-to-database-sync/">Kafka-to-Database-sync</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/kafka-to-hdfs-filter-transform/">Kafka-to-HDFS-Filter-Transform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/kafka-to-kafka-filter-transform/">Kafka-to-Kafka-Filter-Transform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/kinesis-to-redshift/">Kinesis-to-Redshift</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/kinesis-to-s3/">Kinesis-to-S3</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/s3-to-hdfs-sync/">S3-to-HDFS-sync</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/s3-to-redshift/">S3-to-HDFS-Filter-Transform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/database-to-hdfs/">Database dump to HDFS App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/database-to-database-sync/">Database to Database Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/hdfs-sync/">HDFS Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/hdfs-line-copy/">HDFS to HDFS Line Copy App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/hdfs-to-kafka-sync/">HDFS to Kafka Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/hdfs-to-s3-sync/">HDFS to S3 Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/kafka-to-database-sync/">Kafka to Database Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/kafka-to-hdfs-filter/">Kafka to HDFS Filter App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/kafka-to-hdfs-sync/">Kafka to HDFS Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/kinesis-to-s3/">Kinesis to S3 App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/s3-to-hdfs-sync/">S3 to HDFS Sync App</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Applications</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../omni_channel_fraud_app/">Omni Channel Fraud Prevention Application</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Services</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../cep_workbench/">CEP Workbench</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../oas_dashboards/">OAS Dashboards</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Platform</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../rts/">RTS</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../application_configurations/">Application Configurations</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtmanage/">dtManage</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtdashboard/">dtDashboard</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtgateway/">dtGateway</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../services/">Services</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">JAR Artifacts</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#jar-artifacts">JAR Artifacts</a></li>
+    
+
+    <li class="toctree-l3"><a href="#viewing-artifacts">Viewing Artifacts</a></li>
+    
+
+    <li class="toctree-l3"><a href="#searching-and-filtering">Searching and Filtering</a></li>
+    
+
+    <li class="toctree-l3"><a href="#setting-table-size-and-pagination">Setting Table Size and Pagination</a></li>
+    
+
+    <li class="toctree-l3"><a href="#adding-new-schemas">Adding New Schemas</a></li>
+    
+
+    <li class="toctree-l3"><a href="#uploading-jar-file">Uploading JAR File</a></li>
+    
+
+    <li class="toctree-l3"><a href="#synchronizing-jar-files">Synchronizing JAR Files</a></li>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtgateway_systemalerts/">Alerts</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../apex/">Apache Apex</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../apex_malhar/">Apache Apex-Malhar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../appbackplane/">Application Backplane</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Deployment and Operations</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Licensing/">Licensing</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../installation/">Installation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../configuration/">Configuration</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtgateway_security/">Security</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtgateway_systemalerts/">System Alerts</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../apexcli/">Apex CLI</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../troubleshooting/">Troubleshooting</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../release_notes/">Release Notes</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../glossary/">Glossary</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../additional_docs/">Resources</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">DataTorrent Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Platform &raquo;</li>
+        
+      
+    
+    <li>JAR Artifacts</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="jar-artifacts">JAR Artifacts</h1>
+<p>Artifacts can be used to provide libraries, rules, schemas, and custom code to applications.  JAR artifacts follow Apache Maven standards which require groupId, artifactId and version to be specified.  JAR files can be uploaded manually and synchronized automatically from a Maven artifacts directory accessible by the Gateway.  Users can also build new JAR files by creating new schemas using the <strong>New Schema</strong> dialog in the DT RTS Console.  Once the JAR artifacts are added to the DT RTS system, Apex applications can reference them in the <a href="../application_configurations/">Application Configuration</a> page.</p>
+<h1 id="viewing-artifacts">Viewing Artifacts</h1>
+<p>Artifacts can be view and managed on the <strong>JAR Artifacts</strong> page in the DT RTS Console.  There you can create new schemas and upload JAR files.</p>
+<p>To view the <strong>JAR Artifacts</strong> page, follow the steps below:</p>
+<ol>
+<li>Click the <strong>Develop</strong> link on the top navigation menu.  The Development page is displayed.</li>
+<li>Click the <strong>JAR Artifacts</strong> link on the Development page. The JAR Artifacts page is displayed.</li>
+</ol>
+<p>Sample JAR artifacts list:</p>
+<p><img alt="" src="../images/jar_artifacts/artifacts-list.png" /></p>
+<h1 id="searching-and-filtering">Searching and Filtering</h1>
+<p>The search field in the upper right side of the page performs a global search across all the fields shown in the table.  Additionally, each column has its own filtering options where filter is performed on that field in addition to the global search and any other active filters.  Hovering over the filter input field displays the tooltip with examples of filter expressions which can be used for the specific filter.  As you enter the search string and column filters, the values are added to the URL parameters, making it possible to bookmark or share the filtered URL with another user.</p>
+<h1 id="setting-table-size-and-pagination">Setting Table Size and Pagination</h1>
+<p>By default, the table displays 20 artifacts per page.  However, you can change this by clicking on the artifacts count and selecting a different size.<br />
+To the right of the artifact counts are the <strong>previous</strong> and <strong>next</strong> page buttons.  You can click on these buttons to navigate from page to page.  As the artifact offset value changes, the value is added to the URL parameters.  The parameter name for this value is <code>offset</code>.  If there are many artifacts in the system, you can type an offset number for the <code>offset</code> parameter to jump directly to that page.</p>
+<p>Artifacts per page dropdown menu:</p>
+<p><img alt="" src="../images/jar_artifacts/items-per-page-menu.png" /></p>
+<p>To change the artifacts per page, follow the steps below:</p>
+<ol>
+<li>On the <strong>JAR Artifacts</strong> page, click the artifacts count above the artifacts table.  The dropdown menu is shown.</li>
+<li>Select the desired <em>items per page</em> menu item.  The list is refreshed with the selected count of artifacts per page. The selected artifacts per page should also be added to the URL parameters. This parameter name for this value is <code>limit</code>.</li>
+</ol>
+<h1 id="adding-new-schemas">Adding New Schemas</h1>
+<p>Existing schemas stored in JAR files can be uploaded by clicking <strong>add</strong> button and selecting <strong>upload JAR</strong> option.  Additionally, new schemas can be created by clicking <strong>add</strong> and selecting <strong>new schema</strong> option.  When new schemas are created from the UI, the Gateway packages the schema as a JAR file, and then stores it in the shared artifacts space on the DFS used by DT RTS.  The file names and directory structures follow the Maven directory layout and file naming standards.  New schemas can also be added on the <a href="../application_configurations/">Application Configuration</a> page.</p>
+<p>To create a new schema, follow the steps below:</p>
+<ol>
+<li>On the <strong>JAR Artifacts</strong> page, click the <strong>add</strong> button.  A dropdown menu is shown.</li>
+<li>Click on the <strong>new schema</strong> menu item.  The <strong>New Schema</strong> dialog is shown.</li>
+</ol>
+<p>Sample of a new schema dialog:</p>
+<p><img alt="" src="../images/jar_artifacts/new-schema-dialog.png" /></p>
+<p>The following entries are shown on the <strong>New Schema</strong> dialog:</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Group ID</td>
+<td>This is typically the organization name preceded by <em>org</em> or <em>com</em>.  This value is also used as the top level directory where the JAR file is stored.<br/>For example: <code>org.apache.maven</code>, <code>com.datatorrent</code>, etc.</td>
+</tr>
+<tr>
+<td>Artifact ID</td>
+<td>A name representing this schema.  The schema is built and packaged as a JAR file and this value is used as part of the file name.<br/>For example: <code>netlet</code>, <code>java-xmlbuilder</code>, etc.</td>
+</tr>
+<tr>
+<td>Version</td>
+<td>The schema version.  The schema is built and packaged as a JAR file and this value is used as part of the file name.<br/>For example: <code>1.0.0</code>, <code>1.0.1</code>, etc.</td>
+</tr>
+<tr>
+<td>Schema Content</td>
+<td>A JSON object structure representing the schema definition.  This JSON structure must comply with the <a href="http://avro.apache.org/docs/current/spec.html#schemas">Apache Avro</a> specification.  You can click on the AVRO link on the dialog to open the Apache Avro schema documentation page in a new browser tab for reference. <code>{  "type": "enum",  "name": "states",  "symbols": ["CA", "MA", "NV", "NY", "TX"]}</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note</strong>: If you enter the Group ID, Artifact ID and Version that match an existing schema or JAR artifact, you will see an error message stating that an artifact with the entered Group ID, Artifact ID and Version already exists.  The <strong>Save</strong> button will be disabled until you change one of the fields.</p>
+<h1 id="uploading-jar-file">Uploading JAR File</h1>
+<p>JAR files can be uploaded into the shared artifacts space on the DFS used by DT RTS.  When uploading JAR files, the Gateway searches for a pom.xml file in the JAR file to determine the <code>groupId</code>, <code>artifactId</code>, and <code>version</code> (GAV) for the JAR file.  If the JAR file does not have a pom.xml file, then users can enter the group ID, artifact ID and version in the upload dialog and save the JAR file.  If users have to enter the group ID, artifact ID and version, then the Gateway will create an pom.xml file containing this information and store it in the uploaded JAR file.</p>
+<p>To upload a JAR file, follow the steps below:</p>
+<ol>
+<li>On the <strong>JAR Artifacts</strong> page, click the <strong>add</strong> button.  A dropdown menu is shown.</li>
+<li>Click on the <strong>upload JAR</strong> menu item.  The <strong>File Artifact Upload</strong> dialog is shown.</li>
+<li>Drag a valid JAR file into the dialog.  The file is uploaded into a temporary storage for the Gateway to process the it.</li>
+<li>
+<p>If a valid JAR file is uploaded, then a JAR file upload form is shown.</p>
+<p>Sample JAR file upload dialog:</p>
+<p><img alt="" src="../images/jar_artifacts/jar-upload-dialog.png" /></p>
+</li>
+<li>
+<p>Enter the Group ID, Artifact ID and Version if necessary.</p>
+</li>
+<li>Click the <strong>Save</strong> button to save the JAR file to the shared artifacts space.</li>
+</ol>
+<p>Below are the descriptions of the fields shown on the dialog:</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Group ID</td>
+<td>This value is found in the <code>pom.xml</code> file inside the JAR file by the Gateway. If the pom.xml file is missing, then the value is empty.  You must enter an appropriate group ID in order to save the JAR file. This is usually the JAR artifact organization name preceded by <em>org</em> or <em>com</em>.  This value is also used as the top level directory where the JAR file.<br/>For example: <code>org.apache.maven</code>, <code>com.datatorrent</code>, etc.</td>
+</tr>
+<tr>
+<td>Artifact ID</td>
+<td>This value is found in the <code>pom.xml</code> file inside the JAR file by the Gateway.  If the pom.xml file is missing, then the value is empty.  You must enter an appropriate artifact ID in order to save the JAR file.  This value is also used as part of the file name when saving the JAR file to the shared artifacts space.<br/>For example: <code>netlet</code>, <code>java-xmlbuilder</code>, etc.</td>
+</tr>
+<tr>
+<td>Version</td>
+<td>This value is found in the <code>pom.xml</code> file inside the JAR file by the Gateway.  If the pom.xml file is missing, then the value is empty.  You must enter an appropriate version in order to save the JAR file.  This value is also used as part of the file name when saving the JAR file to the shared artifacts space.<br/>For example: <code>1.0.0</code>, <code>1.0.1</code>, etc.</td>
+</tr>
+<tr>
+<td>Tags</td>
+<td>The Gateway analyzes the JAR file to determine the tags for the JAR file.  Possible tag values are: <code>rule</code> and <code>schema</code>.  If the Gateway cannot determine the tags for this JAR file, then an empty field is shown.  When saving the JAR file, the value <code>other</code> is saved with the JAR file. <em>This field is readonly</em>.</td>
+</tr>
+<tr>
+<td>Size</td>
+<td>The size of the JAR file. <em>This field is readonly</em>.</td>
+</tr>
+<tr>
+<td>Path</td>
+<td>The path and file name where the JAR file is temporary stored for processing. <em>This field is readonly</em>.</td>
+</tr>
+</tbody>
+</table>
+<p>After uploading a JAR file, the Gateway processes it and shows the information gathers from the JAR file.  You can process a different JAR file by dragging another JAR file into the top section of the dialog.  Alternatively, you can click on the down chevron button to expand that section and click on the <strong>Choose another file</strong> button.</p>
+<p>If you are loading a JAR file that already exists in the shared artifacts space, you can overwrite the existing JAR file by clicking on the <strong>Replace</strong> button on the dialog.</p>
+<h1 id="synchronizing-jar-files">Synchronizing JAR Files</h1>
+<p>In addition to uploading JAR files and creating new schemas manually, Gateway can synchronize the jars from a Maven type <code>.m2</code> directory available to it on a local file system and copy these jars to shared artifacts space on the DFS.  This can be useful when automating build and delivery processes, or working with a <a href="../cep_workbench/">CEP Workbench Service</a> where new artifacts are created and need to be made available to DT RTS automatically.  You must configure the <code>dt.gateway.maven.local.repo</code> property in the <code>dt-site.xml</code> file for this synchronization process to work.</p>
+<p>To configure the Gateway to synchronize JAR files on the local file system with shared artifacts on DFS, follow the steps below:</p>
+<ol>
+<li>Add the XML section below to the <strong>dt-site.xml</strong> file.</li>
+</ol>
+<pre><code class="xml">&lt;property&gt;
+  &lt;name&gt;dt.gateway.maven.local.repo&lt;/name&gt;  
+  &lt;value&gt;/path/of/artifacts/store/on/the/local/fs/.m2&lt;/value&gt;
+&lt;/property&gt;
+</code></pre>
+
+<ol>
+<li>Restart the Gateway.</li>
+</ol>
+<p>Sample XML to configure JAR files synchronization:</p>
+<pre><code>&lt;property&gt;
+  &lt;name&gt;dt.gateway.maven.local.repo&lt;/name&gt;
+  &lt;value&gt;/home/jenkins/.m2&lt;/value&gt;
+&lt;/property&gt;
+</code></pre>
+
+<p>The example above designates the directory named <code>/home/jenkins/.m2</code> on the file system local to Gateway as the directory where all the Maven JAR artifacts are stored, and which will be synchronized with shared artifacts space on DFS used by DT RTS.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../dtgateway_systemalerts/" class="btn btn-neutral float-right" title="Alerts">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../services/" class="btn btn-neutral" title="Services"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../services/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../dtgateway_systemalerts/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+      <script src="../menu.js"></script>
+      <script src="../js/version-select.js"></script>
+
+</body>
+</html>

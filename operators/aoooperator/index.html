@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../favicon.ico">
+  
+  <title>Analytics Output Operator - DataTorrent Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../menu.css" rel="stylesheet">
+  <link href="../../css/version-select.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Analytics Output Operator";
+    var mkdocs_page_input_path = "operators/aoooperator.md";
+    var mkdocs_page_url = "/operators/aoooperator/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-44586211-2', 'docs.datatorrent.com');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> DataTorrent Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">DataTorrent RTS</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Demos</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../demos/">Running Apps</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../sandbox/">Sandbox</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Cloud Integration</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../aws_emr_manual/">AWS</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../azure_deployment/">Azure</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Development</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../create/">Creating Applications</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../beginner/">Beginner's Guide</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../demo_videos/">Videos</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Tutorials</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../tutorials/topnwords/">Top N Words</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../tutorials/salesdemo/">Sales Dimensions</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../apex_development_setup/">Apex Development Setup</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../configure_IDE/">Generate New Project in IDE</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../application_development/">Applications</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../application_packages/">Application Packages</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../configuration_packages/">Configuration Packages</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Operator Development</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../operator_development/">Guide</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../operator_development_ref/">Reference</a>
+                </li>
+    </ul>
+                </li>
+                <li class=" current">
+                    
+    <span class="caption-text">Operators</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../library_operators/">Operators List</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../drools_operator/">Drools Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../python_operator/">Python Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../PMML_operator/">PMML Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../tcpinputoperator/">TCP Input Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../eventhubinput/">Event Hub Input Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../eventhuboutput/">Event Hub Output Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../abstracthttpserver/">Abstract HTTP Server Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../azure_blob/">Azure Blob Storage Operator</a>
+                </li>
+                <li class="toctree-l3 current">
+                    
+    <a class="current" href="./">Analytics Output Operator</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l4"><a href="#about-analytics-output-operator">About Analytics Output Operator</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#ports">Ports</a></li>
+        
+            <li><a class="toctree-l5" href="#partitioning">Partitioning</a></li>
+        
+            <li><a class="toctree-l5" href="#accessing-the-operator">Accessing the Operator</a></li>
+        
+            <li><a class="toctree-l5" href="#testing">Testing</a></li>
+        
+            <li><a class="toctree-l5" href="#requirements">Requirements</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l4"><a href="#workflow-of-the-operator">Workflow of the Operator</a></li>
+    
+
+    <li class="toctree-l4"><a href="#supported-data-types">Supported Data Types</a></li>
+    
+
+    <li class="toctree-l4"><a href="#properties-and-attributes">Properties and Attributes</a></li>
+    
+
+    <li class="toctree-l4"><a href="#supplementary-classes">Supplementary Classes</a></li>
+    
+
+    <li class="toctree-l4"><a href="#using-the-operator">Using the Operator</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#sample-properties">Sample properties</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../elasticsearch/">Elasticsearch Output Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../block_reader/">Block Reader</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../deduper/">Deduper</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../dimensions_computation/">Dimension Computation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../file_output/">File Output</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../file_splitter/">File Splitter</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../hdht/">HDHT</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../kafkaInputOperator/">Kafka Input</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../snapshot_server/">Snapshot Server</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app_data_framework/">App Data Framework</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dtgateway_api/">REST API</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">App Templates</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/common/import-launch/">Import and Launch App-template</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/common/customize/">Customizing an app-template</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/database-to-database-sync/">Database-to-database-sync</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/hdfs-line-copy/">HDFS-line-copy</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/hdfs-part-file-copy/">HDFS-part-file-copy</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/hdfs-to-hdfs-filter-transform/">HDFS-to-HDFS-filter-transform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/kafka-to-cassandra-filter-transform/">Kafka-to-Cassandra-Filter-Transform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/kafka-to-database-sync/">Kafka-to-Database-sync</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/kafka-to-hdfs-filter-transform/">Kafka-to-HDFS-Filter-Transform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/kafka-to-kafka-filter-transform/">Kafka-to-Kafka-Filter-Transform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/kinesis-to-redshift/">Kinesis-to-Redshift</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/kinesis-to-s3/">Kinesis-to-S3</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/s3-to-hdfs-sync/">S3-to-HDFS-sync</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/s3-to-redshift/">S3-to-HDFS-Filter-Transform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/database-to-hdfs/">Database dump to HDFS App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/database-to-database-sync/">Database to Database Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/hdfs-sync/">HDFS Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/hdfs-line-copy/">HDFS to HDFS Line Copy App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/hdfs-to-kafka-sync/">HDFS to Kafka Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/hdfs-to-s3-sync/">HDFS to S3 Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/kafka-to-database-sync/">Kafka to Database Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/kafka-to-hdfs-filter/">Kafka to HDFS Filter App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/kafka-to-hdfs-sync/">Kafka to HDFS Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/kinesis-to-s3/">Kinesis to S3 App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/s3-to-hdfs-sync/">S3 to HDFS Sync App</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Applications</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../omni_channel_fraud_app/">Omni Channel Fraud Prevention Application</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Services</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../cep_workbench/">CEP Workbench</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../oas_dashboards/">OAS Dashboards</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Platform</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../rts/">RTS</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../application_configurations/">Application Configurations</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dtmanage/">dtManage</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dtdashboard/">dtDashboard</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dtgateway/">dtGateway</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../services/">Services</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../jar_artifacts/">JAR Artifacts</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dtgateway_systemalerts/">Alerts</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../apex/">Apache Apex</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../apex_malhar/">Apache Apex-Malhar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appbackplane/">Application Backplane</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Deployment and Operations</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Licensing/">Licensing</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../installation/">Installation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../configuration/">Configuration</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dtgateway_security/">Security</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dtgateway_systemalerts/">System Alerts</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../apexcli/">Apex CLI</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../troubleshooting/">Troubleshooting</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../release_notes/">Release Notes</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../glossary/">Glossary</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../additional_docs/">Resources</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">DataTorrent Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Development &raquo;</li>
+        
+      
+        
+          <li>Operators &raquo;</li>
+        
+      
+    
+    <li>Analytics Output Operator</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="about-analytics-output-operator">About Analytics Output Operator</h1>
+<p>This operator can be used to send data from a source application for processing in Online Analytics Service. <strong>Analytics Output operator</strong> is essentially an extension to <strong>Kafka exactly once output</strong> operator which does some additional work for seamlessly integrating with Online Analytics Service (OAS). This operator is extended from <strong>Kafka Single Port Exactly Once Output operator</strong> from malhar-kafka library. The kafka client used in this operator is versioned at 0.9.</p>
+<p><strong>Analytics Output Operator</strong> (AOO for short) can be added to any pipeline for sending the data to OAS for OLAP processing. This operator can be referred as a thin client for OAS.</p>
+<p>AnalyticsOutputOperator receives a tuple of type Object from upstream Apex pipeline and sends it to a configured Kafka topic. The data sent to Kafka topic is in exactly once fashion. That means, if the AOO gets killed, after recovery it attempts for data deduplication.</p>
+<h2 id="ports">Ports</h2>
+<p>AnalyticsOutputOperator has a single input port and no output port. The input port is used to receive the tuple from upstream and sending to downstream kafka topic.</p>
+<h2 id="partitioning">Partitioning</h2>
+<p>This operator is partitionable in a stateless manner and all partitioning capabilities of <strong>Kafka Single Port Exactly Once Output</strong> operator are applicable to this operator.</p>
+<h2 id="accessing-the-operator">Accessing the Operator</h2>
+<p>Analytics Output Operator is present in <em>dt-apoxi-oas-operator</em> maven artifact. One can add following lines to project&#39;s maven <strong>pom.xml</strong> file for making the operator available in their project:</p>
+<pre><code>&lt;dependency&gt;
+            &lt;groupId&gt;com.datatorrent&lt;/groupId&gt;
+        &lt;artifactId&gt;dt-apoxi-oas-operator&lt;/artifactId&gt;
+         &lt;version&gt;1.4.0&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+
+<p>Current version for DT Apoxi OAS operator is 1.4.0.</p>
+<h2 id="testing">Testing</h2>
+<p>Analytics Output operator is tested with the following configuration:</p>
+<ul>
+<li>Java 7 runtime</li>
+<li>Kafka 0.9 and 0.10 clients</li>
+<li>Online Analytics Service 1.4.0</li>
+</ul>
+<h2 id="requirements">Requirements</h2>
+<p>Requirements for using this operator are as follows:</p>
+<ul>
+<li>Standard system requirements of Apex Application are applicable for this operator.</li>
+<li>Kafka version 0.9 or 0.10.</li>
+<li>DataTorrent RTS 3.10.0 platform</li>
+<li>Upstream pipeline should be idempotent. This is required for the purpose of maintaining exactly once semantics. You can choose to skip the exactly once semantics using a property <em>disablePartialWindowCheck</em> described in the properties section and setting it to <em>true</em>.</li>
+</ul>
+<h1 id="workflow-of-the-operator">Workflow of the Operator</h1>
+<p>The workflow of Analytics Output operator is as follows:</p>
+<ol>
+<li>At the beginning of every checkpoint window, it send a druid schema (configured as a string property) tuple to the configured kafka topic  which is consumed by the Online Analytics Service to register the new datasource. This is a general step irrespective of any tuples being received from upstream.</li>
+<li>The operator receives a tuple of type <em>Object</em> from upstream.</li>
+<li>It parses, validates and serializes the tuple and forwards it to base class of <strong>Kafka Single Port Exactly Once Output</strong> operator.</li>
+<li><strong>Kafka Single Port Exactly Once Output</strong> operator sends this tuple to the configured kafka topic in exactly once fashion.</li>
+<li>At the end of every window operator it keeps track of the kafka offset for exactly once purpose.</li>
+</ol>
+<p>The workflow of Analytics Output operator in case of recovery:</p>
+<ul>
+<li>As per the apex semantics, the recovery of this operator occurs at the last commited window. This means the data is reprocessed by this operator.</li>
+<li>If <em>disablePartialWindowCheck</em> is <em>false</em>, this means exactly once semantics are enabled. In this case, the operator skips all the reprocessing till the window for which kafka offset is present. There can be an incomplete window for which some of the data is already sent to kafka. For this purpose, the operator reads the data from the last offset and skips all the data received in this window which is already sent.</li>
+<li>If <em>disablePartialWindowCheck</em> is true, this means exactly once semantics are disabled. In this case, the operator still skips the data reprocessing for all those window for which the kafka offset is present. In case of incomplete or partial window, the data is resent. This means there is a possible data duplication in kafka for maximum of one window. If the upstream pipeline is not idempotent, this option is suggested.</li>
+</ul>
+<h1 id="supported-data-types">Supported Data Types</h1>
+<p>Analytics Output operator receives data as an <strong>Object</strong>. There is a default serializer provided for serializing the received tuple to a JSON object. One can choose to override the serializer using the property <em>serializerClass</em>.</p>
+<h1 id="properties-and-attributes">Properties and Attributes</h1>
+<p>You can set the following properties for Analytics Output operator:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Property</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Is required property?</strong></th>
+<th><strong>Default value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>properties</strong></td>
+<td>These are a map of kafka properties where key is a name of kafka property and value is property value. This can be used to specify the broker and other kafka consumer settings.Minimum kafka property that is required is: <strong>bootstrap.servers</strong></td>
+<td>Yes</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>topic</strong></td>
+<td>Name of the kafka topic to which the analytics data needs to be sent.</td>
+<td>Yes</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>schema</strong></td>
+<td>Druid schema (as a string) which defines the data present in the tuple as well as some druid specific properties for OLAP computation.For details on druid schema, refer <strong>DataSchema</strong> section of  following document: <a href="http://druid.io/docs/0.9.1/ingestion/index.html">http://druid.io/docs/0.9.1/ingestion/index.html</a></td>
+<td>Yes</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>serializerClass</strong></td>
+<td>Serializer class which is used to serialize the tuples of type <em>Object</em> received from upstream.This class essentially is implementation of interface: <strong>com.datatorrent.analytics.AnalyticsOutputOperator.AnalyticsPOJOSerializer</strong> Ensure that the given class is present in classpath.</td>
+<td>No</td>
+<td>com.datatorrent.analytics.AnalyticsOutputOperator.ObjectMapperPOJOSerializer</td>
+</tr>
+<tr>
+<td><strong>disablePartialWindowCheck</strong></td>
+<td>Use this property to disable the exactly once semantics. A value set to <em>true</em> disables the exactly once semantics. Value set to <em>false</em>, enables the exactly once semantics.</td>
+<td>No</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> Other than above mentioned properties, all the properties and attributes of <strong>Kafka Single Port Exactly Once Output</strong> operator are applicable to this operator.</p>
+<h1 id="supplementary-classes">Supplementary Classes</h1>
+<p><strong>Analytics Output Operator</strong>  can be supplied with a serializer class using <strong>serializerClass</strong> property to control how to serialize the tuples received from upstream before sending it to kafka. It is expected that the implementation of this class should provide a valid JSON string after serialization.</p>
+<p>This is an optional property and the default implementation uses a ObjectMapper to serialize a POJO to a JSON string.</p>
+<h1 id="using-the-operator">Using the Operator</h1>
+<p>The following is a sample Apex Application where the Analytics Output operator is used:</p>
+<pre><code>@ApplicationAnnotation(name = &quot;SampleApplication&quot;)
+public class SampleApplication implements StreamingApplication
+{
+  @Override
+  public void populateDAG(DAG dag, Configuration conf)
+  {
+    DataGenOperator input = dag.addOperator(&quot;Input&quot;, new DataGenOperator());
+    AnalyticsOutputOperator output = dag.addOperator(&quot;AOO&quot;, new AnalyticsOutputOperator());
+
+    dag.addStream(&quot;io&quot;, input.dataOutput, output.inputPort);
+  }
+}
+</code></pre>
+
+<h2 id="sample-properties">Sample properties</h2>
+<pre><code>&lt;property&gt;
+    &lt;name&gt;dt.operator.AOO.prop.topic&lt;/name&gt;
+    &lt;value&gt;analytics&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+&lt;name&gt;dt.operator.AOO.prop.properties(bootstrap.servers)&lt;/name&gt;
+    &lt;value&gt;localhost:9092&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+    &lt;name&gt;dt.operator.AOO.prop.schema&lt;/name&gt;
+    &lt;value&gt;
+{
+  &quot;dataSource&quot;: &quot;sample&quot;,
+  &quot;granularitySpec&quot;: {&quot;type&quot;: &quot;uniform&quot;, &quot;segmentGranularity&quot;: &quot;hour&quot;, &quot;queryGranularity&quot;: &quot;minute&quot;},
+  &quot;parser&quot;: {
+    &quot;type&quot;: &quot;string&quot;,
+    &quot;parseSpec&quot;: {
+      &quot;format&quot;: &quot;json&quot;,
+      &quot;dimensionsSpec&quot;: {
+        &quot;dimensions&quot;: [&quot;email&quot;, &quot;country&quot;, &quot;cctype&quot;, &quot;currency&quot;]
+      },
+      &quot;timestampSpec&quot;: {&quot;format&quot;: &quot;millis&quot;, &quot;column&quot;: &quot;timestamp&quot;}
+    }
+  },
+  &quot;metricsSpec&quot;: [
+    {&quot;name&quot;: &quot;COUNT&quot;, &quot;type&quot;: &quot;count&quot;},
+    {&quot;name&quot;: &quot;TRANSACTIONAMOUNT&quot;, &quot;type&quot;: &quot;longSum&quot;, &quot;fieldName&quot;: &quot;amount&quot;},
+    {&quot;name&quot;: &quot;email_unique&quot;, &quot;type&quot;: &quot;hyperUnique&quot;, &quot;fieldName&quot;: &quot;email&quot;},
+    {&quot;name&quot;: &quot;country_unique&quot;, &quot;type&quot;: &quot;hyperUnique&quot;, &quot;fieldName&quot;: &quot;country&quot;},
+    {&quot;name&quot;: &quot;cctype_unique&quot;, &quot;type&quot;: &quot;hyperUnique&quot;, &quot;fieldName&quot;: &quot;cctype&quot;},
+    {&quot;name&quot;: &quot;currency_unique&quot;, &quot;type&quot;: &quot;hyperUnique&quot;, &quot;fieldName&quot;: &quot;currency&quot;},
+    {&quot;name&quot;: &quot;amount_min&quot;, &quot;type&quot;: &quot;longMin&quot;, &quot;fieldName&quot;: &quot;amount&quot;},
+    {&quot;name&quot;: &quot;amount_max&quot;, &quot;type&quot;: &quot;longMax&quot;, &quot;fieldName&quot;: &quot;amount&quot;}
+  ]
+}
+&lt;/value&gt;
+&lt;/property
+
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../elasticsearch/" class="btn btn-neutral float-right" title="Elasticsearch Output Operator">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../azure_blob/" class="btn btn-neutral" title="Azure Blob Storage Operator"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../azure_blob/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../elasticsearch/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+      <script src="../../menu.js"></script>
+      <script src="../../js/version-select.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <title>CEP Workbench - DataTorrent Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../menu.css" rel="stylesheet">
+  <link href="../css/version-select.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "CEP Workbench";
+    var mkdocs_page_input_path = "cep_workbench.md";
+    var mkdocs_page_url = "/cep_workbench/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-44586211-2', 'docs.datatorrent.com');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> DataTorrent Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">DataTorrent RTS</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Demos</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../demos/">Running Apps</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../sandbox/">Sandbox</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Cloud Integration</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../aws_emr_manual/">AWS</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../azure_deployment/">Azure</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Development</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../create/">Creating Applications</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../beginner/">Beginner's Guide</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../demo_videos/">Videos</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Tutorials</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../tutorials/topnwords/">Top N Words</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../tutorials/salesdemo/">Sales Dimensions</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../apex_development_setup/">Apex Development Setup</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../configure_IDE/">Generate New Project in IDE</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../application_development/">Applications</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../application_packages/">Application Packages</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../configuration_packages/">Configuration Packages</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Operator Development</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operator_development/">Guide</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operator_development_ref/">Reference</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Operators</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../library_operators/">Operators List</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/drools_operator/">Drools Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/python_operator/">Python Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/PMML_operator/">PMML Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/tcpinputoperator/">TCP Input Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/eventhubinput/">Event Hub Input Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/eventhuboutput/">Event Hub Output Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/abstracthttpserver/">Abstract HTTP Server Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/azure_blob/">Azure Blob Storage Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/aoooperator/">Analytics Output Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/elasticsearch/">Elasticsearch Output Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/block_reader/">Block Reader</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/deduper/">Deduper</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/dimensions_computation/">Dimension Computation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/file_output/">File Output</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/file_splitter/">File Splitter</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/hdht/">HDHT</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/kafkaInputOperator/">Kafka Input</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/snapshot_server/">Snapshot Server</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app_data_framework/">App Data Framework</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtgateway_api/">REST API</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">App Templates</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/common/import-launch/">Import and Launch App-template</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/common/customize/">Customizing an app-template</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/database-to-database-sync/">Database-to-database-sync</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/hdfs-line-copy/">HDFS-line-copy</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/hdfs-part-file-copy/">HDFS-part-file-copy</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/hdfs-to-hdfs-filter-transform/">HDFS-to-HDFS-filter-transform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/kafka-to-cassandra-filter-transform/">Kafka-to-Cassandra-Filter-Transform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/kafka-to-database-sync/">Kafka-to-Database-sync</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/kafka-to-hdfs-filter-transform/">Kafka-to-HDFS-Filter-Transform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/kafka-to-kafka-filter-transform/">Kafka-to-Kafka-Filter-Transform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/kinesis-to-redshift/">Kinesis-to-Redshift</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/kinesis-to-s3/">Kinesis-to-S3</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/s3-to-hdfs-sync/">S3-to-HDFS-sync</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/s3-to-redshift/">S3-to-HDFS-Filter-Transform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/database-to-hdfs/">Database dump to HDFS App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/database-to-database-sync/">Database to Database Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/hdfs-sync/">HDFS Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/hdfs-line-copy/">HDFS to HDFS Line Copy App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/hdfs-to-kafka-sync/">HDFS to Kafka Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/hdfs-to-s3-sync/">HDFS to S3 Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/kafka-to-database-sync/">Kafka to Database Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/kafka-to-hdfs-filter/">Kafka to HDFS Filter App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/kafka-to-hdfs-sync/">Kafka to HDFS Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/kinesis-to-s3/">Kinesis to S3 App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/s3-to-hdfs-sync/">S3 to HDFS Sync App</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Applications</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../omni_channel_fraud_app/">Omni Channel Fraud Prevention Application</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Services</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="./">CEP Workbench</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#introduction">Introduction</a></li>
+    
+
+    <li class="toctree-l3"><a href="#pre-requisites">Pre-requisites</a></li>
+    
+
+    <li class="toctree-l3"><a href="#accessing-cep-workbench">Accessing CEP Workbench</a></li>
+    
+
+    <li class="toctree-l3"><a href="#configuring-rules-in-cep-workbench">Configuring Rules in CEP Workbench</a></li>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../oas_dashboards/">OAS Dashboards</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Platform</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../rts/">RTS</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../application_configurations/">Application Configurations</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtmanage/">dtManage</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtdashboard/">dtDashboard</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtgateway/">dtGateway</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../services/">Services</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../jar_artifacts/">JAR Artifacts</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtgateway_systemalerts/">Alerts</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../apex/">Apache Apex</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../apex_malhar/">Apache Apex-Malhar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../appbackplane/">Application Backplane</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Deployment and Operations</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Licensing/">Licensing</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../installation/">Installation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../configuration/">Configuration</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtgateway_security/">Security</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtgateway_systemalerts/">System Alerts</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../apexcli/">Apex CLI</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../troubleshooting/">Troubleshooting</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../release_notes/">Release Notes</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../glossary/">Glossary</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../additional_docs/">Resources</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">DataTorrent Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Services &raquo;</li>
+        
+      
+    
+    <li>CEP Workbench</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="introduction">Introduction</h1>
+<p>CEP Workbench is a <a href="../services/#overview">DataTorrent RTS Service</a> that is a customized Drools Workbench implementation. The service provides you with the capability to change the functionality of CEP applications using drools-based rules.</p>
+<p>The CEP Workbench service is pre-packaged with applications like Omni-channel Fraud Prevention and Account Takeover Prevention.  From the DT RTS console, you can access CEP Workbench service, create the customized rules, and then apply these rules to the application configuration to change the application behavior.</p>
+<h1 id="pre-requisites">Pre-requisites</h1>
+<p>Install Docker (Version 1.9.1 or greater) and provide the docker host setting by running the installation wizard in cases where Docker is installed on a machine other than the Gateway.  Please note that for automatic artifacts synchronization the Docker container with CEP Workbench and Gateway need to share the same physical host.  For more details, please refer to <a href="../services/#configuring-docker">Docker Configuration</a></p>
+<h1 id="accessing-cep-workbench">Accessing CEP Workbench</h1>
+<p>When the CEP Workbench service is imported and in a running state, you can access it via a proxy URL from either the application configuration page or from the Service Management page.</p>
+<p>Steps to access service via Application Configuration page:</p>
+<ol>
+<li>In an application configuration, from the Services section, select the 'drools-workbench' service. The Service Details page is displayed.</li>
+<li>Under Proxy URL, click the Web URL. The CEP Workbench service login page is displayed.</li>
+<li>To login into the service, use username <strong>admin</strong> and password <strong>admin</strong>.</li>
+</ol>
+<p>Steps to access service via the Service Management page:</p>
+<ol>
+<li>Click the Settings icon <img alt="" src="../images/services/cog-wheel.png" /> located on the upper most right section of the page.</li>
+<li>Select Services option. The Services page is displayed with the list of services.</li>
+<li>Click on the 'drools-workbench' service link. The Service Details page is displayed.</li>
+<li>Under Proxy URL, click the Web URL. The CEP Workbench service login page is displayed.</li>
+<li>To login into the service, use username <strong>admin</strong> and password <strong>admin</strong>.</li>
+</ol>
+<h1 id="configuring-rules-in-cep-workbench">Configuring Rules in CEP Workbench</h1>
+<p>To configure rules within the CEP Workbench, you must complete the following steps:</p>
+<ol>
+<li>
+<p><strong>Create a schema in the Application Configuration</strong>:</p>
+<ol>
+<li>Create an application configuration for an application.</li>
+<li>In the application configuration, create and save a schema. This adds schema in the configuration of the application that you want to launch with the customized rules. <a href="docs/jar_artifacts.md">Creating Schema</a></li>
+</ol>
+<p><img alt="" src="../images/cep_workbench/step1.png" /></p>
+</li>
+<li>
+<p><strong>Create a project in Drools</strong>:</p>
+<ol>
+<li>Access the Drools UI, through proxy URL on the <strong>drools-workbench</strong> service details page.</li>
+<li>Log in to Drools UI using the default login credentials.</li>
+<li>Click the <strong>Authoring</strong> tab and select <strong>Project Authoring</strong>.</li>
+<li>In the Welcome page, click <strong>New Project</strong>.</li>
+<li>In the New Project page, enter a project name and description and click <strong>Create</strong>. The new project gets listed under <strong>Project Authoring</strong>. For more details, see <a href="https://docs.jboss.org/drools/release/7.2.0.Final/drools-docs/html_single/#_wb.quickstartaddproject">Add Project</a>.</li>
+</ol>
+<p><img alt="" src="../images/cep_workbench/step2.png" /></p>
+</li>
+<li>
+<p><strong>Add Schema dependency</strong>:</p>
+<ol>
+<li>Inside Drools, go to <strong>Authoring &gt; Project Authoring</strong> and click the name link of the project.</li>
+<li>In the Project page, click <strong>Settings</strong>.</li>
+<li>Click the <strong>Project Settings</strong> button on the left and select <strong>Dependencies</strong>. The Dependencies page is displayed.</li>
+<li>Click <strong>Add from Repository button</strong>. The Artifacts page is displayed and the schema that was created in DT RTS for the application configuration is listed there. The schema is now added as a dependency for the project.</li>
+</ol>
+<p><img alt="" src="../images/cep_workbench/step3.png" /></p>
+<p><strong>Note</strong>: For automatic artifacts synchronization the Docker container with CEP Workbench and Gateway need to share the same physical host and file system.</p>
+</li>
+<li>
+<p><strong>Add Rules file</strong>:</p>
+<ol>
+<li>Go to your Drools project and click <strong>Create New Asset</strong>, select <strong>DRL file</strong> from dropdown . A file is created which gets listed in the project.</li>
+<li>Open this file, add the rules, and click <strong>Save</strong>. For more details, refer to <a href="https://docs.jboss.org/drools/release/7.2.0.Final/drools-docs/html_single/#_welcome">Creating Rules</a>.</li>
+</ol>
+<p><img alt="" src="../images/cep_workbench/step4.png" /></p>
+</li>
+<li>
+<p><strong>Add KieBase and KieSessionName to kmodule.xml</strong>:</p>
+<ol>
+<li>Inside Drools, go to <strong>Project page &gt; Settings</strong>.</li>
+<li>Click the <strong>Project Settings</strong> button on the left and select Knowledge Bases and Sessions.</li>
+<li>Add the KieBase and Kie Session name to kmodule.xml from here.</li>
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<p><img alt="" src="../images/cep_workbench/step5-a.png" /></p>
+<p><img alt="" src="../images/cep_workbench/step5-b.png" /></p>
+</li>
+<li>
+<p><strong>Build and Deploy Project</strong>:</p>
+<ol>
+<li>Inside Drools, go to <strong>Authoring &gt; Project Authoring</strong> and select your project.</li>
+<li>On the upper right side, click <strong>Build &amp; Deploy</strong> button. The Rules Jar is created which becomes automatically available in the application configuration in DT RTS.</li>
+</ol>
+<p><img alt="" src="../images/cep_workbench/step6.png" /></p>
+</li>
+<li>
+<p><strong>Add Rules Jar to Application Configuration</strong>:</p>
+<ol>
+<li>Go to DT RTS and open the corresponding application configuration wherein you want to add the Rules JAR artifact.</li>
+<li>Under <strong>JAR artifacts</strong>, click <strong>add from artifact library</strong>.</li>
+<li>Select the rule jar that was created in Drools Workbench. The Rules Jar that was created in Drools becomes automatically available in the application configuration in DT RTS.</li>
+</ol>
+<p><img alt="" src="../images/cep_workbench/step7.png" /></p>
+</li>
+<li>
+<p><strong>Specify Optional Properties</strong>:</p>
+<ol>
+<li>In the same application configuration, add the following properties in the <strong>Optional Properties</strong> section.</li>
+<li>Click <strong>Save</strong> and launch the application.</li>
+</ol>
+<p>| Property |
+| -- |
+| dt.operator.FraudRulesExecutor.prop.kieSessionName |
+| dt.operator.FraudRulesExecutor.prop.kiebaseName |
+| dt.operator.TransactionValidator.port.input.attr.TUPLE_CLASS |
+| dt.operator.TransactionTransformer.port.input.attr.TUPLE_CLASS |
+| dt.operator.TransactionTransformer.port.output.attr.TUPLE_CLASS |
+| dt.operator.TransactionParser.port.out.attr.TUPLE_CLASS |
+| dt.operator.AccountDataEnricher.port.fraudInput.attr.TUPLE_CLASS |
+| dt.operator.FraudDataAnalyser.port.factsInput.attr.TUPLE_CLASS |
+| dt.operator.FraudDataAnalyser.fieldExtractors(demo) |
+| dt.operator.FraudDataAnalyser.fieldExtractors(fraud) |
+| dt.fraudprevention.enrichments.configFilePath |</p>
+</li>
+</ol>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../oas_dashboards/" class="btn btn-neutral float-right" title="OAS Dashboards">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../omni_channel_fraud_app/" class="btn btn-neutral" title="Omni Channel Fraud Prevention Application"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../omni_channel_fraud_app/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../oas_dashboards/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+      <script src="../menu.js"></script>
+      <script src="../js/version-select.js"></script>
+
+</body>
+</html>

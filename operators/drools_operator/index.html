@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../favicon.ico">
+  
+  <title>Drools Operator - DataTorrent Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../menu.css" rel="stylesheet">
+  <link href="../../css/version-select.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Drools Operator";
+    var mkdocs_page_input_path = "operators/drools_operator.md";
+    var mkdocs_page_url = "/operators/drools_operator/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-44586211-2', 'docs.datatorrent.com');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> DataTorrent Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">DataTorrent RTS</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Demos</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../demos/">Running Apps</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../sandbox/">Sandbox</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Cloud Integration</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../aws_emr_manual/">AWS</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../azure_deployment/">Azure</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Development</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../create/">Creating Applications</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../beginner/">Beginner's Guide</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../demo_videos/">Videos</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Tutorials</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../tutorials/topnwords/">Top N Words</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../tutorials/salesdemo/">Sales Dimensions</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../apex_development_setup/">Apex Development Setup</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../configure_IDE/">Generate New Project in IDE</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../application_development/">Applications</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../application_packages/">Application Packages</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../configuration_packages/">Configuration Packages</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Operator Development</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../operator_development/">Guide</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../operator_development_ref/">Reference</a>
+                </li>
+    </ul>
+                </li>
+                <li class=" current">
+                    
+    <span class="caption-text">Operators</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../library_operators/">Operators List</a>
+                </li>
+                <li class="toctree-l3 current">
+                    
+    <a class="current" href="./">Drools Operator</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l4"><a href="#about-drools-operator">About Drools Operator</a></li>
+    
+
+    <li class="toctree-l4"><a href="#testing">Testing</a></li>
+    
+
+    <li class="toctree-l4"><a href="#workflow-of-the-operator">Workflow of the Operator</a></li>
+    
+
+    <li class="toctree-l4"><a href="#ports">Ports</a></li>
+    
+
+    <li class="toctree-l4"><a href="#partitioning">Partitioning</a></li>
+    
+
+    <li class="toctree-l4"><a href="#configuring-drools-operator">Configuring Drools Operator</a></li>
+    
+
+    <li class="toctree-l4"><a href="#configuring-rules">Configuring Rules</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#hdfs">HDFS</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l4"><a href="#setting-the-expiration-limit-for-events">Setting the Expiration Limit for Events</a></li>
+    
+
+    <li class="toctree-l4"><a href="#sample-application">Sample Application</a></li>
+    
+
+    <li class="toctree-l4"><a href="#performance-benchmarking">Performance Benchmarking</a></li>
+    
+
+    </ul>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../python_operator/">Python Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../PMML_operator/">PMML Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../tcpinputoperator/">TCP Input Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../eventhubinput/">Event Hub Input Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../eventhuboutput/">Event Hub Output Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../abstracthttpserver/">Abstract HTTP Server Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../azure_blob/">Azure Blob Storage Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../aoooperator/">Analytics Output Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../elasticsearch/">Elasticsearch Output Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../block_reader/">Block Reader</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../deduper/">Deduper</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../dimensions_computation/">Dimension Computation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../file_output/">File Output</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../file_splitter/">File Splitter</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../hdht/">HDHT</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../kafkaInputOperator/">Kafka Input</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../snapshot_server/">Snapshot Server</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app_data_framework/">App Data Framework</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dtgateway_api/">REST API</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">App Templates</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/common/import-launch/">Import and Launch App-template</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/common/customize/">Customizing an app-template</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/database-to-database-sync/">Database-to-database-sync</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/hdfs-line-copy/">HDFS-line-copy</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/hdfs-part-file-copy/">HDFS-part-file-copy</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/hdfs-to-hdfs-filter-transform/">HDFS-to-HDFS-filter-transform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/kafka-to-cassandra-filter-transform/">Kafka-to-Cassandra-Filter-Transform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/kafka-to-database-sync/">Kafka-to-Database-sync</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/kafka-to-hdfs-filter-transform/">Kafka-to-HDFS-Filter-Transform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/kafka-to-kafka-filter-transform/">Kafka-to-Kafka-Filter-Transform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/kinesis-to-redshift/">Kinesis-to-Redshift</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/kinesis-to-s3/">Kinesis-to-S3</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/s3-to-hdfs-sync/">S3-to-HDFS-sync</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/0.10.0/s3-to-redshift/">S3-to-HDFS-Filter-Transform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/database-to-hdfs/">Database dump to HDFS App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/database-to-database-sync/">Database to Database Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/hdfs-sync/">HDFS Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/hdfs-line-copy/">HDFS to HDFS Line Copy App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/hdfs-to-kafka-sync/">HDFS to Kafka Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/hdfs-to-s3-sync/">HDFS to S3 Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/kafka-to-database-sync/">Kafka to Database Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/kafka-to-hdfs-filter/">Kafka to HDFS Filter App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/kafka-to-hdfs-sync/">Kafka to HDFS Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/kinesis-to-s3/">Kinesis to S3 App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-templates/s3-to-hdfs-sync/">S3 to HDFS Sync App</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Applications</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../omni_channel_fraud_app/">Omni Channel Fraud Prevention Application</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Services</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../cep_workbench/">CEP Workbench</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../oas_dashboards/">OAS Dashboards</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Platform</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../rts/">RTS</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../application_configurations/">Application Configurations</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dtmanage/">dtManage</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dtdashboard/">dtDashboard</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dtgateway/">dtGateway</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../services/">Services</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../jar_artifacts/">JAR Artifacts</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dtgateway_systemalerts/">Alerts</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../apex/">Apache Apex</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../apex_malhar/">Apache Apex-Malhar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appbackplane/">Application Backplane</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Deployment and Operations</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Licensing/">Licensing</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../installation/">Installation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../configuration/">Configuration</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dtgateway_security/">Security</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dtgateway_systemalerts/">System Alerts</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../apexcli/">Apex CLI</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../troubleshooting/">Troubleshooting</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../release_notes/">Release Notes</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../glossary/">Glossary</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../additional_docs/">Resources</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">DataTorrent Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Development &raquo;</li>
+        
+      
+        
+          <li>Operators &raquo;</li>
+        
+      
+    
+    <li>Drools Operator</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="about-drools-operator">About Drools Operator</h2>
+<p>Drools operator provides real-time complex event processing capability with the help of Drools engine.</p>
+<p>The Drools operator embeds the Drools rule engine to simplify the rules configuration for a business apps such as the Fraud Prevention App.</p>
+<p>You can write rules as per your business requirements and the execution aspect is handled by the Drools operator.</p>
+<p>The Drools operator provides the following advantages:</p>
+<ul>
+<li>Facility to write rules in a rule file instead of programming them. This makes it easy for a domain expert (non-technical person) to configure rules.</li>
+<li>Centralization of knowledge-base in the form of rules. This results in easy maintenance.</li>
+<li>Pre-defined algorithms in Drools engine provide efficient ways to match rule patterns with data.</li>
+<li>Easily modify the existing rules instead of modifying a program.</li>
+<li>Supports rule configuration in various file formats such as <strong>.drl</strong> , <strong>.xls</strong> , <strong>.dsl</strong> etc.</li>
+</ul>
+<p>This operator is available under <em>DT Premium</em> license.</p>
+<h2 id="testing">Testing</h2>
+<p>The drools operator is tested with the following components:</p>
+<ul>
+<li>Cloudera Hadoop version 5.8.2 along with Apache Hadoop version 2.6.0</li>
+<li>Java version 1.7 and above</li>
+<li>Drools embedded version 6.5.0-final</li>
+</ul>
+<h2 id="workflow-of-the-operator">Workflow of the Operator</h2>
+<p><img alt="droolsworkflow" src="../images/drools_Workflow.png" /></p>
+<ul>
+<li>Write and save the rules in the drools format.</li>
+<li>Configure the location of this rule&#39;s file in the drools operator.</li>
+<li>Drools operator receives enriched data from upstream operators which is validated against the specified rules.</li>
+<li>Drools operator emits processed data with fields changed by applied rules data, details of rule name, and the number of times that the rule is applied.</li>
+</ul>
+<h2 id="ports">Ports</h2>
+<p>The following ports are available on the Drools operator:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Port Type</strong></th>
+<th><strong>Port Name</strong></th>
+<th><strong>Details</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input Port</td>
+<td>factsInput Port</td>
+<td>Receives incoming tuples from upstream operators.</td>
+</tr>
+<tr>
+<td>Output Port</td>
+<td>factsOutput Port</td>
+<td>Emits processed data with fields changed by applied rules.</td>
+</tr>
+<tr>
+<td></td>
+<td>ruleCountOutput Port</td>
+<td>Emits details of rule name and the number of times that the rule is applied.</td>
+</tr>
+<tr>
+<td></td>
+<td>firedRuleAndTransactionOutput Port</td>
+<td>Emits rules along with processed data matching a specific rule.</td>
+</tr>
+<tr>
+<td></td>
+<td>factAndFiredRulesOutput</td>
+<td>Emits processed data along with associated rules.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="partitioning">Partitioning</h2>
+<p>The Drools operator can be partitioned using default partitioner provided by Apex. In case of stateful rules, you must ensure that during partitioning the associated data goes to the single partition, that is, if all the rules are for a customer, the partitioning should be done on the customer field in the record.</p>
+<p>Drools operator can be dynamically partitioned when rules are stateless. For stateful rules dynamic partitioning is not supported.</p>
+<p>For partitioning, you must add the following property in the <strong>properties.xml</strong> file. For example, if you add Drools operator with the name <em>RuleExecutor</em> in the DAG, then this property creates four partitions of the operator when the application starts.</p>
+<pre><code>&lt;property&gt;
+     &lt;name&gt;dt.operator.RuleExecutor.attr.PARTITIONER&lt;/name&gt;
+     &lt;value&gt;com.datatorrent.common.partitioner.StatelessPartitioner:4&lt;/value&gt;
+&lt;/property&gt;
+</code></pre>
+
+<h2 id="configuring-drools-operator">Configuring Drools Operator</h2>
+<p>The following settings can be configured for Drools operator:</p>
+<ul>
+<li>Configuring rules</li>
+<li>Configuring Replay</li>
+<li>Setting the expiration of events</li>
+</ul>
+<h2 id="configuring-rules">Configuring Rules</h2>
+<p>For the Drools operator, you can configure the rules using any of the following methods:</p>
+<ul>
+<li>HDFS</li>
+<li>Drools Workbench</li>
+</ul>
+<h3 id="hdfs">HDFS</h3>
+<p>To configure rules from HDFS, do the following:</p>
+<ol>
+<li>Write the rules in the one the format that is supported by Drools.</li>
+<li>Add this rules file to a folder in HDFS.</li>
+<li>In an application configuration,set the folder path using the following operator property:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th><strong>Property Name</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dt.operator.FraudRulesExecutor.prop.rulesDir</td>
+<td>The path to HDFS from where to load the rules. If this path is set to null, then the operator loads the rules from the classpath.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Drools Workbench</strong></p>
+<p>Refer to &lt;Drools Workbench documentation&gt;</p>
+<h2 id="setting-the-expiration-limit-for-events">Setting the Expiration Limit for Events</h2>
+<p>If rules are loaded from HDFS, Drools operator configures the session in streaming mode. In this mode the rule file declares the input data type as event, using annotations.</p>
+<p>Every item that is added to the Drools operator is kept in the memory. Hence, you must set the expiration timeout of the events. The Drools operator, automatically removes those item from the Drools working memory.</p>
+<p>For example, if you want to evaluate the rules on <em>UserEventType</em> objects, you must add the following code on top of the rules file <strong>(.drl file)</strong>:</p>
+<pre><code>declare UserEventType
+  @role(event)
+  @expires(60m)
+end
+</code></pre>
+
+<p><strong>Note:</strong> For more details refer to the <a href="http://docs.jboss.org/drools/release/6.5.0.Final/drools-docs/html/">Drools documentation</a>.</p>
+<h2 id="sample-application">Sample Application</h2>
+<p>The following code illustrates how Drools Operator can be used within an application. The application reads JSON data from Kafka, parses it to Java object, and sends it to Drools Operator for evaluation of rules. The result of rule evaluation is then sent to another Kafka topic, which can be consumed by other applications.</p>
+<pre><code>public class Application implements StreamingApplication
+{
+  @Override
+  public void populateDAG(DAG, Configuration configuration)
+  {
+    KafkaSinglePortInputOperator kafkaInputOperator = dag.addOperator(&quot;Input&quot;, new KafkaSinglePortInputOperator());
+    JsonParser parser = dag.addOperator(&quot;TransactionParser&quot;, JsonParser.class);`
+
+    dag.setInputPortAttribute(parser.in, Context.PortContext.PARTITION_PARALLEL, true);
+    DroolsOperator ruleExecutor = dag.addOperator(&quot;RuleExecutor&quot;, new DroolsOperator());
+    KafkaSinglePortOutputOperator output = dag.addOperator(&quot;Output&quot;, new KafkaSinglePortOutputOperator());
+
+    dag.addStream(&quot;input&quot;, kafkaInputOperator.outputPort, parser.in);
+    dag.addStream(&quot;data&quot;, parser.out, ruleExecutor.factsInput);
+    dag.addStream(&quot;processed&quot;, ruleExecutor.factsOutput, output.inputPort);
+  }
+
+}
+</code></pre>
+
+<h2 id="performance-benchmarking">Performance Benchmarking</h2>
+<p>As the Drools operator is configured in streaming mode, it keeps the data in memory till the configured expiration in the rule file. Memory required by operator depends on the following parameters:</p>
+<ul>
+<li>Operator input rate</li>
+<li>Data tuple size in memory</li>
+<li>Expiration duration.</li>
+</ul>
+<p>Drools operator was tested with 1KB tuple size and various expiration rate, input rate, and memory configuration.</p>
+<p>The result is shown as a graph where <strong>Y-axis</strong> is the <strong>expiration interval</strong> and <strong>X-axis</strong> is the <strong>input rate</strong>.
+<img alt="" src="../images/drools_benchmarking.png" /></p>
+<p>If you want to process data at a specific input rate and expiration interval, you can choose a point on the plot with configured input rate and expiration interval and choose that line of memory configuration which is above that point.</p>
+<p>For example, if user wants to process 240 tuples per second with 4000 seconds expiry, then container size should be 12 GB.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../python_operator/" class="btn btn-neutral float-right" title="Python Operator">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../library_operators/" class="btn btn-neutral" title="Operators List"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../library_operators/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../python_operator/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+      <script src="../../menu.js"></script>
+      <script src="../../js/version-select.js"></script>
+
+</body>
+</html>
