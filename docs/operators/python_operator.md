@@ -62,7 +62,7 @@ For partitioning, you must add the following property in the **properties.xml** 
 ```
 <property>
      <name>dt.operator.PythonOperator.attr.PARTITIONER</name>
-     <value>com.datatorrent.common.partitioner.StatelessPartitioner(4)</name>
+     <value>com.datatorrent.common.partitioner.StatelessPartitioner:2</name>
 </property>
 ```
 

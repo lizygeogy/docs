@@ -1,5 +1,226 @@
 DataTorrent RTS Release Notes
 ========================================================================================================================
+Version: 3.10
+------------------------------------------------------------------------------------------------------------------------
+
+Companies want to gain quick insights and take action on impacting events at the speed of their businesses. DataTorrent's Real-time Streaming (RTS) platform makes it easy to deliver fast data analytics applications that drive business outcomes using the latest innovation in data science and machine learning. It integrates best-of-breed open source technology innovation to provide all the features that a business needs to develop and deliver best-in-class, fast data applications.
+
+DataTorrent RTS 3.10 version includes the following new features, resolved issues, and known issues.
+
+## Features
+
+The key features of DataTorrent RTS 3.10 release are as follows:
+
+- [New RTS Platform features](#RTSPlatform)
+- [DataTorrent's RTS Apoxi™ framework with added features](#apoxi)
+- [New and enhanced AppFactory applications](#appfactory)
+- [Miscellaneous features](#miscellaneous)
+
+
+<a name="RTSPlatform"></a>
+## RTS Platform
+
+The following RTS Platform features are included in this release:
+
+- [Support for OLAP with Druid](#olapwithdruid)
+- [Expanded Support for Machine Learning and AI](#machinelearning)
+
+<a name="olapwithdruid"></a>
+### Support for Real-time OLAP with Druid
+
+Provides customers with the ability to slice and dice data in real-time to get the information needed to compute and compare it to historical trends. This capability is delivered as a pre-built component that tightly integrates Apex, Druid, and Superset for real-time plus historical dashboards and visualizations.   Druid is an open-source project that is hardened and delivered as part of the RTS platform so that a separate, dedicated Druid cluster is not required.
+
+<a name="machinelearning"></a>
+### Expanded Support for Machine Learning and AI
+
+DataTorrent RTS 3.10 helps customers capitalize on the value from the latest innovations in machine learning, AI, and data science.
+
+#### Python Support
+
+RTS is extended to support the machine-scoring models that are written in Python.
+
+#### Support for PMML Based Machine Scoring Models
+
+RTS also provides support for machine scoring models based on PMML which is an emerging standard.
+
+<a name="apoxi"></a>
+## DataTorrent's RTS Apoxi™ Framework
+
+RTS Apoxi framework gives businesses operational readiness at any scale by providing the tooling required to assemble, manage, and operate fast data applications on any infrastructure. Apoxi is a framework that uniquely binds application building blocks or micro data services to create optimized, pre-built apps. It can also integrate independent applications to allow them to operate as one.
+
+With Apoxi, DataTorrent can combine multiple micro data services, each with its own capability and operability, while also preserving the independence of different services, i.e. ingest and enrich, train and prepare, archive and persist, analyze and act.
+
+For developers and data engineers, Apoxi saves time by providing facilities for streaming data visualization, lifecycle management, what-if data replay, and a built-in backplane for rapid integration.  Apoxi helps DevOps teams push applications to production with confidence by providing the management tooling, enterprise integrations, and operational metrics needed to meet production SLAs 24x7x365.
+
+The following features of RTS Apoxi framework are included in 3.10 release:
+
+- [Store and Replay](#storeandreplay)
+- [Drools Workbench](#drools)
+- [Application Backplane](#appbackplane)
+- [Azure HDI Deployment](#azure)
+- [New iFrame Widget](#iframe)
+- [Configuration Artifacts for Schemas and Rules](#configartifacts)
+- [Enhanced RTS UI for Launch and Application Configuration](#launchandappconfig)
+
+<a name="storeandreplay"></a>
+### Store and Replay
+
+Store and Replay helps customers push to production with confidence. Customers can record and replay data from a specific point in time to evaluate the effectiveness of builds, models, and scenarios before they are put into production thereby removing the guesswork about what outcomes can occur.
+
+<a name="drools"></a>
+### Drools Workbench
+
+Drools Workbench integration makes it easier to modify complex event processing (CEP) rules and push new rules to production. The workbench enables customers to import data schema and visually edit and manage complex rules, easily using an intuitive graphical user interface.
+
+<a name="appbackplane"></a>
+### Application Backplane
+
+Application Backplane enables multiple applications to be simply and consistently integrated to share insights and actions. Combining numerous applications in real-time can result in significantly better outcomes, while still enabling separately managed applications to remain independent and benefit from a network-effect.
+For example, you can integrate a fraud prevention application, such as Payment Card Fraud Prevention, with another fraud prevention application so that bothapplications see a net reduction in fraud by alerting each other whenever a fraud is detected in one.
+
+<a name="azure"></a>
+### Azure HDI Deployment
+
+RTS now supports deployment to an Azure HDInsights Hadoop Cluster thereby enabling you to deploy RTS on Microsoft cloud. You can build streaming analytics applications and reduce the time to value with support for Azure Event Hubs as a source of incoming stream data.
+
+<a name="iframe"></a>
+### New iFrame Widget
+
+Now you can create rich dashboards that include visualizations from 3rd sources so that all your insights can be displayed in one, easy-to-use interface for exploring and visualizing data.   You can see this new capability in action as part of the new Online Analytics Service that provides real-time and historical visualizations, drill-down, query, etc.
+
+<a name="configartifacts"></a>
+### Configuration Artifacts for Schemas and Rules
+
+DT RTS UI now allows you to include configuration artifacts which refers to schemas, libraries, rules and custom code that can be provided to an application through an application configuration. These artifacts can be uploaded manually and synchronized automatically from a Maven artifacts directory that is accessible by the Gateway. During the launch of an application, these artifacts are deployed as Application Configuration (\*.apc) files.
+
+<a name="launchandappconfig"></a>
+### Enhanced RTS UI for Launch and Application Configuration
+
+The RTS UI is enhanced to include user-friendly screens for creating application configurations that are composed of multiple, separate services - enabling them to function as one end-to-end application.
+
+## AppFactory <a name="appfactory"></a>
+
+The AppFactory includes an extensive library of popular open-source and proprietary operators for data input/output, enrichment, analytical functions, and more. These operators are further combined into pre-tested, streaming micro data services for common patterns such as data ingestion, real-time synchronization, anomaly detection, machine scoring, etc.
+
+The following features are included in AppFactory for 3.10 release:
+
+- [Omni-Channel Fraud Prevention Application V2](#fpa)
+- [Account Takeover Prevention Application](#ato)
+- [New Use Case: Retail Recommender PoC](#retail)
+- [Micro Data Service (MDS): Online Analytics Service](#oas)
+- [Enhanced Drools Operator](#droolsoperator)
+
+<a name="fpa"></a>
+### Omni-Channel Fraud Prevention Application V2
+
+The newest version of DataTorrent's Omni-channel Payment Fraud Prevention application integrates with the Druid OLAP component for real-time online analytical processing and enhanced historical trend analysis. This latest application also includes a reference architecture for integration with a variety of machine-trained analytical models for enhanced fraud prevention.
+
+The improvements in this version of the Fraud Prevention application include the following:
+
+- Support for stateful rules via Drools operator which allows storing and using a state across multiple transactions.
+- Integrated with OAS which enables real-time analytics.
+- Support for rule editing with CEP Workbench.
+- Integrated with Apache Superset UI which lets you visualize and analyze trends on real-time and historical dashboards.
+
+<a name="ato"></a>
+### Online Account Takeover Prevention
+
+RTS introduces **Account Takeover Prevention (ATO) application**, a reference application that enables customers to prevent online account takeover and fraud by processing, enriching, analyzing, and acting on multiple streams of account event information in real-time.
+
+Additional key features in this application include:
+
+- Integration with Online Analytics Service for OLAP trend analysis.
+- Support for rule editing with Drools Workbench.
+- Integration with Apache Superset UI for visualization.
+
+<a name="retail"></a>
+### New Use Case: Retail Recommender - Reference Architecture
+
+Real-time, personalized product and service recommendations drive additional revenue for retail and ecommerce companies. DataTorrent's Retail Recommender provides a reference architecture that produces product recommendations in real-time by operationalizing the latest innovations in machine-learning.
+
+Key features in this application include:
+
+- Integration with Online Analytics Service for OLAP trend analysis
+- Integration of Spark MLlib.
+- Integration with Apache Superset UI for visualization
+
+For more details, refer to Retail Recommender Reference Architecture in our [AppFactory](http://www.datatorrent.com/appfactory)
+
+<a name="oas"></a>
+### Online Analytics Service (OAS)
+
+Online Analytics Service (OAS) is delivered as a pre-built component that integrates Apex, Druid, and Superset for real-time BI dashboards and visualizations. OAS provides real-time as well as historical trend analysis, visualization, drill down, and query.
+
+RTS enables OAS to receive event data from multiple data sources into a single Kafka topic while making the data available for analysis. RTS also provides a seamless way for target applications to push the data into Kafka topics for consumption by OAS.
+
+<a name="droolsoperator"></a>
+### Enhanced Drools Operator
+
+The Drools operator is enhanced to provide support for stateful rules execution. The updated Drools operator is used in the latest version of Fraud Prevention application as well as in the Account Takeover Prevention application.
+
+<a name="miscellaneous"></a>
+## Miscellaneous Features
+
+The following miscellaneous features are included in this release:
+
+- [Encrypted StreamCodec](#streamcodec)
+- [Dynamic Usage Statistics Reporting via Phone Home](#phonehome)
+
+<a name="streamcodec"></a>
+### Encrypted StreamCodec
+
+Encrypted StreamCodec adds multiple implementations of StreamCodec and StatefulStreamCodec, which provides support for encryption of tuples before sending them downstream. All implementations are based on AES and secure RPC when launching operators in the cluster. The shared secret key is distributed to all the operators during deployment.
+
+<a name="phonehome"></a>
+### Dynamic Usage Statistics Reporting via Phone Home
+
+Dynamic usage statistics are reported to DataTorrent via the phone home feature. This aids DataTorrent to provide better support and to analyze when you are running out of data capacity. It also helps you to understand your RTS usage patterns over time.
+
+## Upgrade Information
+
+In case you want to use Services in DataTorrent RTS applications, you must install Docker on your system. However, this is not mandatory for upgrading to RTS 3.10 version.
+
+## Resolved Issues
+
+The following resolved issues are included in this release:
+
+- Added a new recovery mode REUSE\_INSTANCE to reuse operator instance across failures without reloading from checkpoint in certain cases. Now when the upstream operator is killed, the downstream operator does not reload the data from checkpoint from HDFS. Instead it uses the state in memory as-is. (SPOI-11219)
+- Support for option to use per user application directory in HDFS in secure mode. (SPOI-12134)
+- Out of order window ID was received in the begin window after recovery from a failure.  (SPOI-12633)
+- Support is provided for UI Active Directory. (SPOI-12663)
+- Container request is not sent, when the node report checks for the memory requested by the container. (SPOI-12708)
+- With anti-affinity STRAM, enough containers are not received from the resource manager to run all the operators. (SPOI-12791)
+- Files configured by the user were not available after RTS upgrade. (SPOI-12794)
+- Provide new permission that is VIEW\_LOGS which determines if user can view the log files of the application instances. (SPOI-12936)
+- Authentication for Active Directory failed for domain users. (SPOI-12998)
+- Option provided to run snapshot server in stand-alone mode. (SPOI-13031)
+- SMTP configuration does not work without SSL. ( SPOI-13256)
+
+## Known Issues
+
+The following known issues are included in RTS 3.10:
+
+- _KafkaExactlyOnceOutputOperator_ does not work with Kerberised cluster. (SPOI-13182)
+- Operator in fraud-prevention App dies while attempting to record a sample. (SPOI-13194)
+- The java script validation cannot terminate a java script, if it is running longer than the timeout period. (SPOI-12265)
+- Application does not shutdown even after consuming the end offset in Kafka. ( SPOI-12955)
+- OAS is unable to handle multiple intervals in select query. (SPOI-12865)
+- DT services with secure docker setup does not work. (SPOI-13104)
+>**Workaround:** Docker in SSL mode requires mutual TLS (MTLS) which is not supported. Make sure your docker daemon uses either UNIX sockets or plain TCP sockets
+>
+- Multiple redirections occur when logging into drools workbench through proxy URL. (SPOI-13254)
+>**Workaround** : Click the **Back** button on the browser to go to the Drools WorkBench login page. You can also close the current tab and click the Proxy URL once again to go to the login page.
+
+- Transient services are not deleted when the corresponding app is terminated. (SPOI-12983)
+- Schema Aware operators should not perform validations in setter methods. (SPOI-13095)
+- Proxy URL for newly created Superset service (from UI) does not work. (SPOI-13454)
+- GATEWAY\_CONNECT\_ADDRESS parameter is misspelt as GATEWAY\_CONNECT\_ADDRESSS. (SPOI-13449)
+- Fraud App: Physical DAG is broken (SPOI-13388)
+- Security vulnerability is caused due to Key tab copy and incorrect permission issues. (SPOI-13366)
+- Application fails when both replay and archive properties are set to True. ( SPOI-13202)
+Release date: Feb 21, 2018
+
+
 Version: 3.9.2
 ------------------------------------------------------------------------------------------------------------------------
 
