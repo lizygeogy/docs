@@ -12,9 +12,9 @@ The application dashboards are based on Apache SuperSet with enhanced ability to
 
 The following services come preinstalled with the application. You can run these services for analytics, visualizing the analytic outcomes, and for creating customized rules.
 
--  Online Analytic Services (OAS) &lt;links&gt;
--  OAS Dashboards
--  CEP Workbench
+- [Online Analytics Service](oas.md)
+- [OAS Dashboards](oas_dashboards.md)
+- [CEP Workbench](cep_workbench.md)
 
 You can also integrate the application backplane to share the fraud alerts with other fraud-based applications thereby reducing the chance of fraud.
 
@@ -31,9 +31,8 @@ The following table lists the various processing phases of the incoming data tup
 
 | **Phase** | **Process** | **Description** |
 | --- | --- | --- |
-| 1. | Transaction Ingestion | Data from all your input sources is pushed onto a message bus such as Apache kafka. The application leverages platform capabilities to ingest data from Kafka message bus to rest of its pipeline. Data tuples are filtered and transformed. The following operators are involved during Transaction ingestion: Kafka Input Operator,  Filter Operator and Transformation Operator
- |
-| 2 | Transaction Enrichment | Data is enriched with the lookup information such as user profile data, card data, geo data, store profile data etc.The following operators are involved in the transaction enrichment phase: Enricher, Geo Data, Customer Data, Card Data, and Product Data.  By default, these are the enrichment operators, you can modify, add, or remove these operators by launching the application with a different application configuration. &lt;link to enrichment configuration&gt; |
+| 1. | Transaction Ingestion | Data from all your input sources is pushed onto a message bus such as Apache kafka. The application leverages platform capabilities to ingest data from Kafka message bus to rest of its pipeline. Data tuples are filtered and transformed. The following operators are involved during Transaction ingestion: Kafka Input Operator, Filter Operator and Transformation Operator |
+| 2 | Transaction Enrichment | Data is enriched with the lookup information such as user profile data, card data, geo data, store profile data etc.The following operators are involved in the transaction enrichment phase: Enricher, Geo Data, Customer Data, Card Data, and Product Data.  By default, these are the enrichment operators, you can modify, add, or remove these operators by launching the application with a different application configuration. &lt;link to enrichment configuration's |
 | 3 | Fraud Rule Execution | Fraud detection rules can be applied to the enriched data using the CEP Workbench. The following operator are involved in the Fraud Rule Execution phase: Fraud Rule Executor  |
 | 4 | Analytics | OAS and Metrics |
 | 5 | Fraud Triggers and Alerts | Triggers are activated based on the output of the upstream processing. The processed transactions are written onto HDFS to run any historical analysis in future. Also, transactions are published on message bus such as kafka to take real time actions. The application is also integrated with alerting systems that send real time alerts to applicable users.  Email alerts are sent by default. The following operator is involved in the Fraud Triggers and Alerts phase: Alert Mail, Data Writer, and Kafka Output operator
@@ -474,32 +473,32 @@ The Omni-Channel Fraud Prevention application includes the following dashboards.
 
 The following analytic metrics are available within **Real-time Fraud Prevention Analysis** dashboard:
 
--  Fraud Prevention Analysis
--  Fraud Breakdown by Channel
+- Fraud Prevention Analysis
+- Fraud Breakdown by Channel
 - Percentage Fraud Among Caught
 - Fraud in the USA
--  Fraud Instances by Device
--  Fraud Rule Matches
--  Fraud Transactions Amount vs All Transactions Amount
--  Fraud transactions broken down by cardType x cardNetwork
--  Fraud Transactions Count vs All Transactions Count
--  Instances of Fraud Prevented in last minute
--  Top Cities in Number of Mobile Fraud Transactions
--  Top Cities in Number of POS Fraud Transactions
--  Top Cities in Number of Web Fraud Transactions
--  Total Fraud Amount Prevented in the last minute
+- Fraud Instances by Device
+- Fraud Rule Matches
+- Fraud Transactions Amount vs All Transactions Amount
+- Fraud transactions broken down by cardType x cardNetwork
+- Fraud Transactions Count vs All Transactions Count
+- Instances of Fraud Prevented in last minute
+- Top Cities in Number of Mobile Fraud Transactions
+- Top Cities in Number of POS Fraud Transactions
+- Top Cities in Number of Web Fraud Transactions
+- Total Fraud Amount Prevented in the last minute
 
 ### <a name="operationsdashboard"></a>Real-time Fraud Prevention Operations
 
 The following operational metrics are available within **Real-time Fraud Prevention Operations** dashboard:
 
--  Top rules
--  Transaction thoroughput
--  Transactions by device type
--  Application Latency
--  Rule Latency
--  Rule Executor Free Memory
--  Total Number of Process Failures
+- Top rules
+- Transaction thoroughput
+- Transactions by device type
+- Application Latency
+- Rule Latency
+- Rule Executor Free Memory
+- Total Number of Process Failures
 
 You can use the OAS dashboards service that is specific to FPA to visualize various metrics over the dashboards. [OAS Dashboards](oas_dashboards.md)
 
