@@ -73,7 +73,7 @@ The following settings can be configured for Drools operator:
 For the Drools operator, you can configure the rules using any of the following methods:
 
 - HDFS
-- Drools Workbench
+- CEP Workbench
 
 ### HDFS
 
@@ -87,9 +87,9 @@ To configure rules from HDFS, do the following:
 | --- | --- |
 | dt.operator.FraudRulesExecutor.prop.rulesDir | The path to HDFS from where to load the rules. If this path is set to null, then the operator loads the rules from the classpath. |
 
-**Drools Workbench**
+**CEP Workbench**
 
-Refer to &lt;Drools Workbench documentation&gt;
+Refer [CEP Workbench](cep_workbench.md) for more details. 
 
 ## Setting the Expiration Limit for Events
 
