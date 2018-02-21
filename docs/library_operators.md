@@ -47,4 +47,4 @@ The following operators, classified into four groups, are available:
       and [Java Doc](https://ci.apache.org/projects/apex-malhar/apex-malhar-javadoc-release-3.6/com/datatorrent/lib/io/jms/JMSMultiPortOutputOperator.html)
       
 - Input/Output
-    + AbstractHttpServer Operator Guide [Guide](operators/abstracthttpserver.md)
+    + AbstractHttpServer Operator [Guide](operators/abstracthttpserver.md)
