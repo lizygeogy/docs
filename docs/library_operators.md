@@ -1,9 +1,11 @@
 Operator Library
 ================
 
-The following operators, classified into three groups, are available:
+The following operators, classified into four groups, are available:
 
 - Input
+    + TCP Input Operator [Guide](operators/tcpinputoperator.md)
+    + Event Hub Input Operator [Guide](operators/eventhubinput.md)
     + Kafka Input [Guide](http://apex.apache.org/docs/malhar/operators/kafkaInputOperator/)
       and [Java Doc](https://ci.apache.org/projects/apex-malhar/apex-malhar-javadoc-release-3.6/com/datatorrent/contrib/kafka/KafkaSinglePortStringInputOperator.html)
     + HDFS Input [Guide](http://apex.apache.org/docs/malhar/operators/fsInputOperator/)
@@ -16,6 +18,8 @@ The following operators, classified into three groups, are available:
       and [Java Doc](https://ci.apache.org/projects/apex-malhar/apex-malhar-javadoc-release-3.6/com/datatorrent/lib/io/jms/JMSStringInputOperator.html)
 
 - Process
+    + PMML Operator [Guide](PMML_operator.md)
+    + Drools Operator [Guide](drools_operator.md)
     + Block Reader [Guide](http://apex.apache.org/docs/malhar/operators/block_reader/)
       and [Java Doc](https://ci.apache.org/projects/apex-malhar/apex-malhar-javadoc-release-3.6/com/datatorrent/contrib/parser/AbstractBlockReader.html)
     + CSV Parser [Guide](http://apex.apache.org/docs/malhar/operators/csvParserOperator/)
@@ -34,7 +38,13 @@ The following operators, classified into three groups, are available:
       and [Java Doc](https://ci.apache.org/projects/apex-malhar/apex-malhar-javadoc-release-3.6/com/datatorrent/lib/filter/TransformOperator.html)
 
 - Output
+    + Elasticsearch Output Operator [Guide](operators/elasticsearch.md)
+    + Event Hub Output Operator [Guide](operators/eventhuboutput.md)
+    + Azure Blob Output Operator [Guide](operators/azure_blob.md)
     + HDFS Output [Guide](http://apex.apache.org/docs/malhar/operators/file_output)
       and [Java Doc](https://ci.apache.org/projects/apex-malhar/apex-malhar-javadoc-release-3.6/com/datatorrent/lib/io/fs/AbstractFileOutputOperator.html)
     + JMS Output [Guide](http://apex.apache.org/docs/malhar/operators/jmsMultiPortOutputOperator/)
       and [Java Doc](https://ci.apache.org/projects/apex-malhar/apex-malhar-javadoc-release-3.6/com/datatorrent/lib/io/jms/JMSMultiPortOutputOperator.html)
+      
+- Input/Output
+    + AbstractHttpServer Operator Guide [Guide](operators/abstracthttpserver.md)
