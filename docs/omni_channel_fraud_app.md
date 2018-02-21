@@ -471,6 +471,8 @@ The Omni-Channel Fraud Prevention application includes the following dashboards.
 
 ### <a name="analysisdashboard"></a>Real-time Fraud Prevention Analysis
 
+![](images/applications/omni_channel_fraud_app/FPA-Analysis.png)
+
 The following analytic metrics are available within **Real-time Fraud Prevention Analysis** dashboard:
 
 - Fraud Prevention Analysis
@@ -489,6 +491,8 @@ The following analytic metrics are available within **Real-time Fraud Prevention
 - Total Fraud Amount Prevented in the last minute
 
 ### <a name="operationsdashboard"></a>Real-time Fraud Prevention Operations
+
+![](images/applications/omni_channel_fraud_app/FPA-Operations.png)
 
 The following operational metrics are available within **Real-time Fraud Prevention Operations** dashboard:
 
