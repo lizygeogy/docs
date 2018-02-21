@@ -43,12 +43,7 @@ The following operators/modules are included for the ATO application.
 | User Profile Enricher | This operator gets the relevant JAVA applicable user details corresponding to a unique ID and enriches the tuple. User details can be extracted from JDBC database store or json file on HDFS.  You can configure the operator based on the enrichment data source you choose.Using this operator is optional in an ATO application. |
 | Geo Data Enricher | The application identifies the geolocation of the transaction by performing a lookup of the transaction IP against the external database like Maxmind database.  Using this operator is optional in an ATO application. |
 | Rules Executor | This operator is the Drools Operator. It applies the pre-defined rules to the incoming tuples and takes a suitable action depending on the outcome of the rules applied to a tuple. 
-| Output Module | Output module consists of two operators
-- **Avro Serializer**
-Avro Serializer serializes the output of the Rules Executor (Drools operator) to send to Kafka Output operator.
-- **Kafka Output Operator**
-Kafka Output operator sends these events to the specified Kafka topic for consumption by other applications.
-This publishes the information which can be consumed by Omni-Channel Fraud prevention application. Refer to &lt;Application Backplane&gt; |
+| Output Module | Output module consists of two operators:**Avro Serializer** serializes the output of the Rules Executor (Drools operator) to send to Kafka Output operator. **Kafka Output Operator** sends these events to the specified Kafka topic for consumption by other applications. This publishes the information which can be consumed by Omni-Channel Fraud prevention application. 
 | HDFS Output Operator | This output operator writes messages coming from the Rules Executor to the specified HDFS file path. Using this operator is optional in an ATO application. |
 | OAS Operator | This operator writes messages to a Kafka topic that are consumed by Online Analytics Service (OAS). |
 
@@ -257,10 +252,11 @@ If rules are loaded from files on HDFS, you must configure the following propert
 | rulesDir | Path to HDFS from where to load the rules. If this path is set to null, then the operator loads the rules from the classpath. | string |
 
 If rules are to be loaded from CEP Workbench, you must specify following properties. Also Refer [CEP Workbench](cep_workbench.md)
+
 | **Property** | **Description** | **Type** | **Example** |
 | --- | --- | --- | --- |
-| kieSessionName | If rules are to be loaded from application classpath, then specify the name of the session to use. This is created using Drools Worknbench. For more details &lt;Workbench documentation Link&gt; | string | UserActivity-rules-session |
-| kiebaseName | If rules are to be loaded from application classpath, then specify the name of the kie base (rule) to use . This is created using Drools Workbench. | string | ato-rules |
+| kieSessionName | If rules are to be loaded from application classpath, then specify the name of the session to use. This is created using CEP Worknbench. | string | UserActivity-rules-session |
+| kiebaseName | If rules are to be loaded from application classpath, then specify the name of the kie base (rule) to use . This is created using CEP Workbench. | string | ato-rules |
 
 **Note:** If rules are to be loaded from application classpath, the knowledge jar (KJAR) should be in the classpath.  Refer to [Application Configurations](application_configurations.md)
 
@@ -315,15 +311,15 @@ Update the following properties as per your input load. The following properties
 | RulesExecutor.port.factsInput.attr.STREAM\_CODEC | Ensure that all related tuples should go to same partition so that tuples can be co-related across time to do complex event processing.
 Set STREAM\_CODEC property of factsInput port of RulesExecutor to make sure related tuples go to same partition | String | com.datatorrent.cep.common.codec.ConfigurableStreamCodec:userId |
 
-# Running the Application
+# Launching the Application
 
 The Account Takeover application can be launched from the DataTorrent RTS interface.
 
-To run the application, do the following:
+To launch the application, do the following:
 
 1. Go to the **Develop** page and upload the application package.
-2. Specify the configuration as per the **Application Configuration** section. &lt;Link to RTS documentation for Config Artifacts&gt;
-3. Launch the application. &lt;link how to launch the application&gt;
+2. Specify the configuration as per the **Application Configuration** section. [Application Configurations](application_configurations.md)
+3. Launch the application. 
 During the launch process, you can name the configuration and save it for future references. After you launch, you can track the details of the processed data in the application from the **Monitor** tab.
 
 ## Generate Sample Input
