@@ -1,4 +1,4 @@
-# Quick Start Guide for Launching DataTorrent RTS Applications
+# Quick Start Guide - Omni-Channel Fraud Prevention Application
 
 # Setup Docker and RTS
 
@@ -8,15 +8,14 @@
 
 # Launching Fraud Prevention Application
 
-1. Get the Geolite Maxmind Database (Use Hadoop user or user that has access to Hadoop). Using Bash '
+1. Navigate to the **AppFactory page** > **Financial Services** > **Omni-Channel Payment Fraud Prevention.**
+2. In the DataTorrent Omni Channel Fraud Prevention Application box, click **import**. ![](images/applications/quickstart_launch/import.png)
+3. Download the application after DataTorrent Omni Channel Fraud Prevention Application package is imported.
+3. Navigate to **Develop** > **Application Package** > **Data Torrent Omni Channel Fraud Prevention Application.** Click **launch** drop-down and select **download package**. ![](images/applications/quickstart_launch/downloadpackage.png)
+4. Get the Geolite Maxmind Database (Use Hadoop user or user that has access to Hadoop). Using Bash '
 `url http://geolite.maxmind.com/download/geoip/database/GeoLite2-City.tar.gz -o GeoLite2-City.tar.gz
 tar -zxvf GeoLite2-City.tar.gz 
 hdfs dfs put GeoLite2-City*/GeoLite2-City.mmdb city.mmdb`
-
-2. Navigate to the **AppFactory page** > **Financial Services** > **Omni-Channel Payment Fraud Prevention.**
-3. In the DataTorrent Omni Channel Fraud Prevention Application box, click **import**. ![](images/applications/quickstart_launch/import.png)
-3. Download the application after DataTorrent Omni Channel Fraud Prevention Application package is imported.
-4. Navigate to **Develop** > **Application Package** > **Data Torrent Omni Channel Fraud Prevention Application.** Click **launch** drop-down and select **download package**. ![](images/applications/quickstart_launch/downloadpackage.png)
 5. Generate lookup data which will be used by enrichment operators in the DAG.  (Use Hadoop user or any user that has access to Hadoop. Using Bash
 `mkdir fpa_package
 cd fpa_package
@@ -56,43 +55,3 @@ java -cp app/*:lib/*:`hadoop classpath` com.datatorrent.cep.transactionGenerator
    **Note:**   **Kafka** topic of the DataGenerator should be same as the **Transaction Receiver** topic of the Omni Channel Fraud Prevention Application.![](images/applications/quickstart_launch/launchgenerator.png)
 2. Click **save**.
 3. Click **launch** to launch the Data Generator. 
-
-# Launching Multi-App Integration Path - 1 (FPA > OAS > OAS Dashboards)
-
-1. Click the **launch** button of the completely configured fraud prevention application configuration. The launch does the following:
-   - Imports all the services.
-   - Launches the application.
-   - Imports the dashboards.
-2. Click **launch** button of the completely configured **OmniChannelFraudPreventionDataGenerator**. This will send transactions to the Fraud Prevention Application.
-
-# Launching Multi-App Integration Path - 1 (ATO > FPA > OAS > OAS Dashboards)
-
-Property **Facts Output** topic in the ATO and the **Ato Facts Output** topic in the Fraud Application is the bridge between the two applications. Hence, ensure that the same topic is maintained in ATO and Fraud Apps.
-
-1. Click the **launch** button of the completely configured fraud prevention application configuration. The launch does the following:
-   - Imports all the services.
-   - Launches the application.
-   - Imports the dashboards.
-2. Click the **launch** button of the completely configured **OmniChannelFraudPreventionDataGenerator**. This will send transactions to the Fraud Prevention Application.
-3. Click the **launch** button of the completely configured **Account Takeover Prevention** application configuration. The launch does the following:
-   - Imports all the services.
-   - Launches the application.
-   - Imports the dashboards.
-4. Click the **launch** button of the completely configured **Account TakeOver Prevention DataGenerator**. This will send transactions to the Account Takeover Prevention Application.
-
-# Multi – App Integration Path – 3 Store and Replay with Fraud Application
-
-1. Upload the Fraud Prevention application.
-2. Create the configuration with optional properties for archive using Fraud Prevention application.
-3. Launch the Fraud Prevention application with the properties required for archive.
-4. Create the configuration with optional properties for replay using fraud prevention application.
-
-**Configuration properties for the Fraud Prevention Application - Archive**
-
-![](images/applications/quickstart_launch/fpa_config_propertiesforarchive.png)
-
-**Configuration properties for the Fraud App – Replay**
-
-![](images/applications/quickstart_launch/fpa_config_properties_replay.png)
-
-**Note** : **Transaction Receiver** topic must be the same in archive and replay. Also, the name of the archive application will be used in the replay configuration.
