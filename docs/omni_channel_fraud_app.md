@@ -27,8 +27,9 @@ Omni Channel Fraud Prevention application is available only with **DT Premium li
 ## Workflow
 
 The following image presents the workflow of the application.
+![](images/applications/omni_channel_fraud_app/workflow.png)
 
- 
+
 The following table lists the various processing phases of the incoming data tuples/event in **Omni Channel Fraud Prevention** application:
 
 | **Phase** | **Process** | **Description** |
