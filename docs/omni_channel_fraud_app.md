@@ -19,10 +19,10 @@ The following services come preinstalled with the application. You can run these
 You can also integrate the application backplane to share the fraud alerts with other fraud-based applications thereby reducing the chance of fraud.
 
 In addition to this, you can evaluate what-if scenarios on the incoming data which can be stored and visualized over different rules and business logic.
-
-For details about launching the application, refer to [Quick Start Guide - Omni-Channel Fraud Prevention Application](quickstartlaunchfpa.md).  
-
 Omni Channel Fraud Prevention application is available only with **DT Premium license**.
+
+## Quick Launch Omni-Channel Fraud Prevention Application
+For details about quickly launching the application, refer to [Quick Start Guide - Omni-Channel Fraud Prevention Application](quickstartlaunchfpa.md).  
 
 ## Workflow
 
