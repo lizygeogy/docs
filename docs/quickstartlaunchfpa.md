@@ -2,7 +2,7 @@
 
 # Setup Docker and RTS
 
-1. Setup docker daemon host (preferably same as gateway machine). This supplies the docker images for superset, online analytics service, and drools workbench.
+1. Setup docker daemon host (preferably same as gateway machine). This supplies the docker images for **Online Analytics Service (OAS)**, **OAS Dashboards** which is a customized implementation of Apache Superset, and **CEP Workbench** that is a customized Drools Workbench implementation.
 2. Install rts 3.10 bin. In the installation wizard, specify the docker location.
 ![](images/applications/quickstart_launch/dockerlocation.png)
 
@@ -26,17 +26,17 @@ java -cp app/*:lib/*:`hadoop classpath` com.datatorrent.cep.transactionGenerator
    - Go to **Develop** > **Application Configurations** > **+ create new.**
    - Select a Source Application and enter the Configuration Name and then click **Create**. ![](images/applications/quickstart_launch/newappconfig.png)
 1. Enter the Required Properties. ![](images/applications/quickstart_launch/requiredpropertiesfpa.png)
-2. Configure the Drools-Workbench Service
+2. Configure the **CEP Workbench Service**
    - On the configuration page, scroll down.
-   - Select the Drools-Workbench and click **configure**.![](images/applications/quickstart_launch/configservicefpa1.png)
+   - Select the **Drools_Workbench** and click **configure**.![](images/applications/quickstart_launch/configservicefpa1.png)
    - Click **save** after specifying the configuration.
 **Note:** Ensure that the Proxy Address is set correctly.
-2. Configure the **fpa-online-analytics-service** service.
+2. Configure the **Online Analytics Service**.
    - Select the **fpa-online-analytics-service** and click **configure**.![](images/applications/quickstart_launch/configservicefpa2.png)
    - Click **save** after specifying the configuration.
 **Note** :Ensure that the **KafkaBrokers** and the **KafkaTopic** is set correctly.
-1. Configure the **superset-fpa** service.
-   - Select the **superset-fpa** and click **configure**![](images/applications/quickstart_launch/configservicefpa3.png)
+1. Configure the **OAS Dashboards** service.
+   - Select **superset-fpa** and click **configure**![](images/applications/quickstart_launch/configservicefpa3.png)
    - Click **save** after specifying the configuration.
   **Note** : Ensure to set correct druid\_cluster IP and the Proxy Address.
 1. Configure the Dashboards.
@@ -57,7 +57,7 @@ java -cp app/*:lib/*:`hadoop classpath` com.datatorrent.cep.transactionGenerator
 2. Click **save**.
 3. Click **launch** to launch the Data Generator. 
 
-# Launching Multi-App Integration Path - 1 (FPA > OAS > SuperSet)
+# Launching Multi-App Integration Path - 1 (FPA > OAS > OAS Dashboards)
 
 1. Click the **launch** button of the completely configured fraud prevention application configuration. The launch does the following:
    - Imports all the services.
@@ -65,7 +65,7 @@ java -cp app/*:lib/*:`hadoop classpath` com.datatorrent.cep.transactionGenerator
    - Imports the dashboards.
 2. Click **launch** button of the completely configured **OmniChannelFraudPreventionDataGenerator**. This will send transactions to the Fraud Prevention Application.
 
-# Launching Multi-App Integration Path - 1 (ATO > FPA > OAS > SuperSet)
+# Launching Multi-App Integration Path - 1 (ATO > FPA > OAS > OAS Dashboards)
 
 Property **Facts Output** topic in the ATO and the **Ato Facts Output** topic in the Fraud Application is the bridge between the two applications. Hence, ensure that the same topic is maintained in ATO and Fraud Apps.
 
