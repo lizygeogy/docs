@@ -18,7 +18,8 @@ ATO application is available with **DT Premium license**.
  
 # Workflow
 
-The following image depicts the workflow in the ATO application.
+The following image depicts the workflow in the ATO application:
+![](images/applications/ATOworkflow.png)
 
  
 # Setting the Application
