@@ -442,7 +442,8 @@ During the launch process, you can name the configuration and save it for future
 
 # Generating Sample Input
 
-For a test run, you may want to generate sample data. To generate sample data, run the **dt-cep-datagen-1.4.0.apa** application from the DataTorrent RTS interface. Specify kafka server details and topic name which must be the same as configured for Transaction Receiver.
+For a test run, you may want to generate sample data. To generate sample data, run the **OmniChannelFraudPreventionDataGenerator** application from **dt-cep-omni-fraud-prevention-app-1.4.0.apa**. Specify kafka server details and topic name which must be the same as configured for Transaction Receiver.
+
 
 # Running Services
 
