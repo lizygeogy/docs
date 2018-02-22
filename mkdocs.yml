@@ -76,6 +76,7 @@ pages:
     - S3 to HDFS Sync App: app-templates/s3-to-hdfs-sync.md
 - Applications:
     - Omni Channel Fraud Prevention Application: omni_channel_fraud_app.md
+    - Launching Applications - Quick Start Guide: quickstartlaunch.md
 - Services:
     - CEP Workbench: cep_workbench.md
     - OAS Dashboards: oas_dashboards.md
