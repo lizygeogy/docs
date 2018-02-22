@@ -11,8 +11,11 @@ The following services come preinstalled with an ATO application. You can run th
 - [OAS Dashboards](oas_dashboards.md)
 - [CEP Workbench](cep_workbench.md)
 
-ATO application is available with DT Premium license.
+ATO application is available with **DT Premium license**.
 
+## Quick Launch Account Takeover Application
+ For details about quickly launching the application, refer to [Quick Start Guide - Account Takeover Prevention Application](quickstartlaunchato.md).  
+ 
 # Workflow
 
 The following image depicts the workflow in the ATO application.
