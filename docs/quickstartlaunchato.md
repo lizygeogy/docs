@@ -39,15 +39,13 @@ java -cp app/*:lib/*:`hadoop classpath` com.datatorrent.ato.userActivityGenerato
    - Click **save** after the configuration is set correctly.
 **Note:** Make sure **KafkaBrokers** and the **KafkaTopic** are set correctly.
 10. Configure **OAS Dashboards**.
-   - Select **superset-ato** and click **configure**. ![](images/applications/quickstart_launch/atoconfigureservice2.png)
-   - Click **save** after the configuration is set correctly.
-
+    - Select **superset-ato** and click **configure**. ![](images/applications/quickstart_launch/atoconfigureservice2.png)
+    - Click **save** after the configuration is set correctly.
 **Note** : Make sure to set correct druid\_cluster IP and the Proxy Address. 
-
 11. Configure the Dashboards
-   - Click **configure**. ![](images/applications/quickstart_launch/atoconfigpackdashboard.png)
-   - From the **Select Replacement Applications** drop down, select the correct configuration name for both the Dashboards.
-   - Click **Save**. 
+    - Click **configure**. ![](images/applications/quickstart_launch/atoconfigpackdashboard.png)
+    - From the **Select Replacement Applications** drop down, select the correct configuration name for both the Dashboards.
+    - Click **Save**. 
 12. Save the complete configuration.
 
 ### Launch Test Data Generator Application
