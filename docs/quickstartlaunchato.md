@@ -50,7 +50,7 @@ java -cp app/*:lib/*:`hadoop classpath` com.datatorrent.ato.userActivityGenerato
    - Click **Save**. 
 12. Save the complete configuration.
 
-### Account Takeover Prevention Application's User Activity Generator
+### Launch Test Data Generator Application
 
 1. Create new configuration for the **UserActivityGenerator**.
    - Go to **Develop** > **Application Packages** > **+ new configuration**.
