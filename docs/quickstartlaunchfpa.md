@@ -46,7 +46,7 @@ java -cp app/*:lib/*:`hadoop classpath` com.datatorrent.cep.transactionGenerator
    - Click **Save.**
    - Click **launch** to launch the application.![](images/applications/quickstart_launch/launchfpa.png)
 
-## Fraud Prevention Application's Data Generator
+## Launch Test Data Generator Application
 
 1. Create **New Configuration** for the OmniChannelFraudPreventationDataGenerator.
 2. Go to **Develop** > **Application Packages > + new configuration.**
