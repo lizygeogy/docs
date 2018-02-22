@@ -33,14 +33,17 @@ java -cp app/*:lib/*:`hadoop classpath` com.datatorrent.ato.userActivityGenerato
    - On the configuration page, scroll down.
    - Select the **drools-workbench** and click **configure**.
    - Click **save** after specifying the configuration.
-   **Note:** Ensure that the Proxy Address is set correctly.
+  
+**Note:** Ensure that the Proxy Address is set correctly.
 9. Configure **Online Analytics Services**.
    - Select the **ato-online-analytics-service** and click **configure**. ![](images/applications/quickstart_launch/atoconfigureservice1.png)
    - Click **save** after the configuration is set correctly.
+
 **Note:** Make sure **KafkaBrokers** and the **KafkaTopic** are set correctly.
 10. Configure **OAS Dashboards**.
     - Select **superset-ato** and click **configure**. ![](images/applications/quickstart_launch/atoconfigureservice2.png)
     - Click **save** after the configuration is set correctly.
+
 **Note** : Make sure to set correct druid\_cluster IP and the Proxy Address. 
 11. Configure the Dashboards
     - Click **configure**. ![](images/applications/quickstart_launch/atoconfigpackdashboard.png)
@@ -51,13 +54,12 @@ java -cp app/*:lib/*:`hadoop classpath` com.datatorrent.ato.userActivityGenerato
 ### Launch Test Data Generator Application
 
 1. Create new configuration for the **UserActivityGenerator**.
-   - Go to **Develop** > **Application Packages** > **+ new configuration**.
-
+   - Go to **Develop** > **Application Packages** > **+ new configuration**.![](images/applications/quickstart_launch/atouseractivitynewconfig.png) ![](images/applications/quickstart_launch/atouseractivitynewconfig1.png)
 2. Add Optional Properties.
    - In **Optional Properties** , click **+add** to add Optional Properties.
+
 **Note:**   **Kafka** topic of the DataGenerator should be same as the **Transaction Receiver** topic of the Omni Channel Fraud Prevention Application.
    - Click **save**.
    - Click **launch** to launch the Data Generator.
 
-![](images/applications/quickstart_launch/atouseractivitynewconfig.png)
-![](images/applications/quickstart_launch/atouseractivitynewconfig1.png)
+
