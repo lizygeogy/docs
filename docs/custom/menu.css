@@ -8,6 +8,11 @@
 }
 
 /* selected - second level */
-ul.subnav li a.toctree-l4 {
+.wy-menu-vertical .subnav li.current > ul li.toctree-l4 a,
+.wy-menu-vertical .subnav li.current > ul li a.toctree-l5 {
   padding-left: 3.42em !important;
+}
+
+.wy-menu-vertical .subnav li.current span.caption-text {
+  background-color: #eee;
 }

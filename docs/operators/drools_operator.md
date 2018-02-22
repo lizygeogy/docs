@@ -70,26 +70,26 @@ The following settings can be configured for Drools operator:
 
 ## Configuring Rules
 
-For the Drools operator, you can configure the rules using any of the following methods:
+For the Drools operator, you can configure the rules using one of the following methods:
 
-- HDFS
-- Drools Workbench
+- HDFS Direct Deploy
+- CEP Workbench & Configuration Artifacts
 
-### HDFS
+### HDFS Direct Deploy
 
 To configure rules from HDFS, do the following:
 
 1. Write the rules in the one the format that is supported by Drools.
 2. Add this rules file to a folder in HDFS.
-3. In an application configuration,set the folder path using the following operator property:
+3. In an application configuration, set the folder path using the following operator property:
 
 | **Property Name** | **Description** |
 | --- | --- |
 | dt.operator.FraudRulesExecutor.prop.rulesDir | The path to HDFS from where to load the rules. If this path is set to null, then the operator loads the rules from the classpath. |
 
-**Drools Workbench**
+### CEP Workbench & JAR Artifacts
 
-Refer to &lt;Drools Workbench documentation&gt;
+Refer to [CEP Workbench](../cep_workbench.md) and [JAR Artifacts](../jar_artifacts.md) for more details. 
 
 ## Setting the Expiration Limit for Events
 

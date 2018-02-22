@@ -20,7 +20,7 @@ Event Hub input operator receives events from Azure Event Hub in the form of raw
 
 Event Hub Output operator receives events from upstream operator(s) in the form of byte array or string tuples. It converts them into raw byte array format. These tuples are then emitted to Event Hub in Azure cloud.
 
-For more details about including these operators in an application, refer to [Azure Blob Output Storage Operator Guide](azure_blob.md) , [Event Hub Input Operator Guide](eventhubinput.md), and [Event Hub Output Operator Guide](eventhuboutput.md).
+For more details about including these operators in an application, refer to [Azure Blob Output Storage Operator Guide](operators/azure_blob.md), [Event Hub Input Operator Guide](operators/eventhubinput.md), and [Event Hub Output Operator Guide](operators/eventhuboutput.md).
 
 # Deploying DT RTS on Azure
 

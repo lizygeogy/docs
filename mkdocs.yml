@@ -2,8 +2,7 @@ site_name: DataTorrent Documentation
 google_analytics: ['UA-44586211-2', 'docs.datatorrent.com']
 site_favicon: favicon.ico
 theme: readthedocs
-extra_css: ['menu.css', 'css/version-select.css']
-extra_javascript: ['menu.js', 'js/version-select.js']
+extra_javascript: ['custom/custom-loader.js']
 pages:
 - DataTorrent RTS: index.md
 - Demos:
@@ -78,9 +77,12 @@ pages:
 - Applications:
     - Omni Channel Fraud Prevention Application: omni_channel_fraud_app.md
     - Account Takeover Prevention Application: Accounttakeover.md
+    - Quick Start Guide - Omni-Channel Fraud Prevention Application: quickstartlaunchfpa.md
+    - Quick Start Guide - Account Takeover Prevention Application: quickstartlaunchato.md
 - Services:
     - CEP Workbench: cep_workbench.md
     - OAS Dashboards: oas_dashboards.md
+    - Online Analytics Service (OAS): oas.md
 - Platform:
     - RTS: rts.md
     - Application Configurations: application_configurations.md

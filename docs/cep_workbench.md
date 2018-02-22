@@ -34,7 +34,7 @@ To configure rules within the CEP Workbench, you must complete the following ste
 1. **Create a schema in the Application Configuration**:
 	
 	1. Create an application configuration for an application.
-	2. In the application configuration, create and save a schema. This adds schema in the configuration of the application that you want to launch with the customized rules. [Creating Schema](docs/jar_artifacts.md)
+	2. In the application configuration, create and save a schema. This adds schema in the configuration of the application that you want to launch with the customized rules. [Creating Schema](jar_artifacts.md)
 	
 	![](images/cep_workbench/step1.png)
 	
