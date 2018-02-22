@@ -57,6 +57,7 @@ java -cp app/*:lib/*:`hadoop classpath` com.datatorrent.ato.userActivityGenerato
    - Go to **Develop** > **Application Packages** > **+ new configuration**.![](images/applications/quickstart_launch/atouseractivitynewconfig.png) ![](images/applications/quickstart_launch/atouseractivitynewconfig1.png)
 2. Add Optional Properties.
    - In **Optional Properties** , click **+add** to add Optional Properties.
+  ![](images/applications/quickstart_launch/atouseractivitynewconfig2.png) 
 
 **Note:**   **Kafka** topic of the DataGenerator should be same as the **Transaction Receiver** topic of the Omni Channel Fraud Prevention Application.
    - Click **save**.
