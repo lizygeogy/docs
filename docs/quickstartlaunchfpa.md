@@ -1,12 +1,12 @@
 # Quick Start Guide - Omni-Channel Fraud Prevention Application
 
-# Setup Docker and RTS
+## Setup Docker and RTS
 
 1. Setup docker daemon host (preferably same as gateway machine). This supplies the docker images for **Online Analytics Service (OAS)**, **OAS Dashboards** which is a customized implementation of Apache Superset, and **CEP Workbench** that is a customized Drools Workbench implementation.
 2. Install rts 3.10 bin. In the installation wizard, specify the docker location.
 ![](images/applications/quickstart_launch/dockerlocation.png)
 
-# Launching Fraud Prevention Application
+## Launching Fraud Prevention Application
 
 1. Navigate to the **AppFactory page** > **Financial Services** > **Omni-Channel Payment Fraud Prevention.**
 2. In the DataTorrent Omni Channel Fraud Prevention Application box, click **import**. ![](images/applications/quickstart_launch/import.png)
