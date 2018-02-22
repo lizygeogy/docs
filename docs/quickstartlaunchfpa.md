@@ -3,7 +3,8 @@
 # Setup Docker and RTS
 
 1. Setup docker daemon host (preferably same as gateway machine). This supplies the docker images for superset, online analytics service, and drools workbench.
-2. Install rts 3.10 bin. In the installation wizard, specify the docker location. <dockerlocation>
+2. Install rts 3.10 bin. In the installation wizard, specify the docker location.
+![](images/applications/quickstart_launch/dockerlocation.png)
 
 # Launching Fraud Prevention Application
 
@@ -13,9 +14,9 @@ tar -zxvf GeoLite2-City.tar.gz
 hdfs dfs put GeoLite2-City*/GeoLite2-City.mmdb city.mmdb`
 
 2. Navigate to the **AppFactory page** > **Financial Services** > **Omni-Channel Payment Fraud Prevention.**
-3. In the DataTorrent Omni Channel Fraud Prevention Application box, click **import**.
+3. In the DataTorrent Omni Channel Fraud Prevention Application box, click **import**. ![](images/applications/quickstart_launch/import.png)
 3. Download the application after DataTorrent Omni Channel Fraud Prevention Application package is imported.
-4. Navigate to **Develop** > **Application Package** > **Data Torrent Omni Channel Fraud Prevention Application.** Click **launch** drop-down and select **download package**. <downloadpackage>
+4. Navigate to **Develop** > **Application Package** > **Data Torrent Omni Channel Fraud Prevention Application.** Click **launch** drop-down and select **download package**. ![](images/applications/quickstart_launch/downloadpackage.png)
 5. Generate lookup data which will be used by enrichment operators in the DAG.  (Use Hadoop user or any user that has access to Hadoop. Using Bash
 `mkdir fpa_package
 cd fpa_package
@@ -23,38 +24,38 @@ unzip ../dt-cep-omni-fraud-prevention-app-1.4.0.apa
 java -cp app/*:lib/*:`hadoop classpath` com.datatorrent.cep.transactionGenerator.DumpLookupData lookupdata`
 1. Create a New Configuration for the OmniChannelFraudPreventationApp.
    - Go to **Develop** > **Application Configurations** > **+ create new.**
-   - Select a Source Application and enter the Configuration Name and then click **Create**. <newappconfigfpa>
-1. Enter the Required Properties. <requiredpropertiesfpa>
+   - Select a Source Application and enter the Configuration Name and then click **Create**. ![](images/applications/quickstart_launch/newappconfig.png)
+1. Enter the Required Properties. ![](images/applications/quickstart_launch/requiredpropertiesfpa.png)
 2. Configure the Drools-Workbench Service
    - On the configuration page, scroll down.
-   - Select the Drools-Workbench and click **configure**.
+   - Select the Drools-Workbench and click **configure**.![](images/applications/quickstart_launch/configservicefpa1.png)
    - Click **save** after specifying the configuration.
-**Note:** Ensure that the Proxy Address is set correctly._<configure servicefpa1>_
+**Note:** Ensure that the Proxy Address is set correctly.
 2. Configure the **fpa-online-analytics-service** service.
-   - Select the **fpa-online-analytics-service** and click **configure**.
+   - Select the **fpa-online-analytics-service** and click **configure**.![](images/applications/quickstart_launch/configservicefpa2.png)
    - Click **save** after specifying the configuration.
 **Note** :Ensure that the **KafkaBrokers** and the **KafkaTopic** is set correctly.
 1. Configure the **superset-fpa** service.
-   - Select the **superset-fpa** and click **configure**
+   - Select the **superset-fpa** and click **configure**![](images/applications/quickstart_launch/configservicefpa3.png)
    - Click **save** after specifying the configuration.
-  **Note** : Ensure to set correct druid\_cluster IP and the Proxy Address._<configure servicefpa2>_
+  **Note** : Ensure to set correct druid\_cluster IP and the Proxy Address.
 1. Configure the Dashboards.
-   - Click **configure**.
+   - Click **configure**.![](images/applications/quickstart_launch/configpackagedashboardfpa.png)
    - From the **Select Replacement Applications** drop down, select the corresponding configuration name for both the dashboards.
-   - Click **Save**.<configurepackagedashboardfpa>
+   - Click **Save**.
 1. Save the configuration.
    - Click **Save.**
-   - Click **launch** to launch the application.<saveandlaunchfpa>
+   - Click **launch** to launch the application.![](images/applications/quickstart_launch/launchfpa.png)
 
 ## Fraud Prevention Application's Data Generator
 
 1. Create **New Configuration** for the OmniChannelFraudPreventationDataGenerator.
-2. Go to **Develop** > **Application Packages > + new configuration.**<apppackagelaunchfpa1>
+2. Go to **Develop** > **Application Packages > + new configuration.**
 1. Add **Optional Properties**.
    - Under **Optional Properties** , click + **add** and add the required optional properties.
-   **Note:**   **Kafka** topic of the DataGenerator should be same as the **Transaction Receiver** topic of the Omni Channel Fraud Prevention Application.
+   **Note:**   **Kafka** topic of the DataGenerator should be same as the **Transaction Receiver** topic of the Omni Channel Fraud Prevention Application.![](images/applications/quickstart_launch/launchgenerator.png)
 2. Click **save**.
-3. Click **launch** to launch the Data Generator. <optionalpropertiesfpa>
+3. Click **launch** to launch the Data Generator. 
 
 # Launching Multi-App Integration Path - 1 (FPA > OAS > SuperSet)
 
@@ -88,10 +89,10 @@ Property **Facts Output** topic in the ATO and the **Ato Facts Output** topic in
 
 **Configuration properties for the Fraud Prevention Application - Archive**
 
-<configpropertiesarchivefpa>
+![](images/applications/quickstart_launch/fpa_config_propertiesforarchive.png)
 
 **Configuration properties for the Fraud App – Replay**
 
-**Note** : **Transaction Receiver** topic must be the same in archive and replay. Also, the name of the archive application will be used in the replay configuration.
+![](images/applications/quickstart_launch/fpa_config_properties_replay.png)
 
-<configpropertiesreplayfpa>
+**Note** : **Transaction Receiver** topic must be the same in archive and replay. Also, the name of the archive application will be used in the replay configuration.
