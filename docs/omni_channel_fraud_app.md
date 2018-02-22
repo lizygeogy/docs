@@ -38,8 +38,7 @@ The following table lists the various processing phases of the incoming data tup
 | 2 | Transaction Enrichment | Data is enriched with the lookup information such as user profile data, card data, geo data, store profile data etc.The following operators are involved in the transaction enrichment phase: Enricher, Geo Data, Customer Data, Card Data, and Product Data.  By default, these are the enrichment operators, you can modify, add, or remove these operators by launching the application with a different application configuration. &lt;link to enrichment configuration's |
 | 3 | Fraud Rule Execution | Fraud detection rules can be applied to the enriched data using the CEP Workbench. The following operator are involved in the Fraud Rule Execution phase: Fraud Rule Executor  |
 | 4 | Analytics | OAS and Metrics |
-| 5 | Fraud Triggers and Alerts | Triggers are activated based on the output of the upstream processing. The processed transactions are written onto HDFS to run any historical analysis in future. Also, transactions are published on message bus such as kafka to take real time actions. The application is also integrated with alerting systems that send real time alerts to applicable users.  Email alerts are sent by default. The following operator is involved in the Fraud Triggers and Alerts phase: Alert Mail, Data Writer, and Kafka Output operator
- |
+| 5 | Fraud Triggers and Alerts | Triggers are activated based on the output of the upstream processing. The processed transactions are written onto HDFS to run any historical analysis in future. Also, transactions are published on message bus such as kafka to take real time actions. The application is also integrated with alerting systems that send real time alerts to applicable users.  Email alerts are sent by default. The following operator is involved in the Fraud Triggers and Alerts phase: Alert Mail, Data Writer, and Kafka Output operator|
 
 ## Operators / Modules
 
