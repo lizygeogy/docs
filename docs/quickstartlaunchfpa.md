@@ -28,7 +28,7 @@ java -cp app/*:lib/*:`hadoop classpath` com.datatorrent.cep.transactionGenerator
 1. Enter the Required Properties. ![](images/applications/quickstart_launch/requiredpropertiesfpa.png)
 2. Configure the **CEP Workbench Service**
    - On the configuration page, scroll down.
-   - Select the **Drools_Workbench** and click **configure**.![](images/applications/quickstart_launch/configservicefpa1.png)
+   - Select the **drools-workbench** and click **configure**.![](images/applications/quickstart_launch/configservicefpa1.png)
    - Click **save** after specifying the configuration.
 **Note:** Ensure that the Proxy Address is set correctly.
 2. Configure the **Online Analytics Service**.
