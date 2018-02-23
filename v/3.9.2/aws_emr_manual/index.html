@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <title>AWS - DataTorrent Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../custom/menu.css" rel="stylesheet">
+  <link href="../custom/version-select.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "AWS";
+    var mkdocs_page_input_path = "aws_emr_manual.md";
+    var mkdocs_page_url = "/aws_emr_manual/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-44586211-2', 'docs.datatorrent.com');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> DataTorrent Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">DataTorrent RTS</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Demos</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../demos/">Running Apps</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../sandbox/">Sandbox</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Cloud Integration</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="./">AWS</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#overview">Overview</a></li>
+    
+
+    <li class="toctree-l3"><a href="#setup">Setup</a></li>
+    
+
+    <li class="toctree-l3"><a href="#package-contents">Package contents</a></li>
+    
+
+    <li class="toctree-l3"><a href="#end-to-end-workflow">End to End workflow</a></li>
+    
+
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Development</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../create/">Creating Applications</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../beginner/">Beginner's Guide</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../demo_videos/">Videos</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Tutorials</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <span class="caption-text">Top N Words</span>
+    <ul class="subnav">
+                <li class="toctree-l4">
+                    
+    <a class="" href="../tutorials/topnwords/">Introduction</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../tutorials/topnwords-c1/">Development Environment</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../tutorials/topnwords-c2/">Building in Java</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../tutorials/topnwords-c3/">Building with dtAssemble</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../tutorials/topnwords-c4/">Monitoring with dtManage</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../tutorials/topnwords-c5/">Visualizing with dtDashboard</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../tutorials/topnwords-c7/">Advanced Features</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../tutorials/topnwords-c6/">Appendix</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l3">
+                    
+    <span class="caption-text">Sales Dimensions</span>
+    <ul class="subnav">
+                <li class="toctree-l4">
+                    
+    <a class="" href="../tutorials/salesdimensions/">Building in Java</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../tutorials/salesdimensions-c2/">Building with dtAssemble</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../tutorials/salesdimensions-c3/">Visualizing with dtDashboard</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../tutorials/salesdimensions-c4/">Monitoring with dtManage</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../apex_development_setup/">Apex Development Setup</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../configure_IDE/">Generate New Project in IDE</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../application_development/">Applications</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../application_packages/">Application Packages</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../configuration_packages/">Configuration Packages</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../operator_development/">Operators</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Library Operators</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../library_operators/">List of Operators</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/block_reader/">Block Reader</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/deduper/">Deduper</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/dimensions_computation/">Dimension Computation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/file_output/">File Output</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/file_splitter/">File Splitter</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/hdht/">HDHT</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/kafkaInputOperator/">Kafka Input</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/snapshot_server/">Snapshot Server</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app_data_framework/">App Data Framework</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtgateway_api/">REST API</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">App Templates</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <span class="caption-text">0.10.0</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../app-templates/0.10.0/common/import-launch/">Import and Launch App-template</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../app-templates/0.10.0/common/customize/">Customizing an app-template</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../app-templates/0.10.0/database-to-database-sync/">Database-to-database-sync</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../app-templates/0.10.0/hdfs-line-copy/">HDFS-line-copy</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../app-templates/0.10.0/hdfs-part-file-copy/">HDFS-part-file-copy</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../app-templates/0.10.0/hdfs-to-hdfs-filter-transform/">HDFS-to-HDFS-filter-transform</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../app-templates/0.10.0/kafka-to-cassandra-filter-transform/">Kafka-to-Cassandra-Filter-Transform</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../app-templates/0.10.0/kafka-to-database-sync/">Kafka-to-Database-sync</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../app-templates/0.10.0/kafka-to-hdfs-filter-transform/">Kafka-to-HDFS-Filter-Transform</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../app-templates/0.10.0/kafka-to-kafka-filter-transform/">Kafka-to-Kafka-Filter-Transform</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../app-templates/0.10.0/kinesis-to-redshift/">Kinesis-to-Redshift</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../app-templates/0.10.0/kinesis-to-s3/">Kinesis-to-S3</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../app-templates/0.10.0/s3-to-hdfs-sync/">S3-to-HDFS-sync</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../app-templates/0.10.0/s3-to-redshift/">S3-to-HDFS-Filter-Transform</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/database-to-hdfs/">Database dump to HDFS App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/database-to-database-sync/">Database to Database Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/hdfs-sync/">HDFS Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/hdfs-line-copy/">HDFS to HDFS Line Copy App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/hdfs-to-kafka-sync/">HDFS to Kafka Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/hdfs-to-s3-sync/">HDFS to S3 Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/kafka-to-database-sync/">Kafka to Database Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/kafka-to-hdfs-filter/">Kafka to HDFS Filter App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/kafka-to-hdfs-sync/">Kafka to HDFS Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/kinesis-to-s3/">Kinesis to S3 App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/s3-to-hdfs-sync/">S3 to HDFS Sync App</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Applications</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../omni_channel_fraud_app/">Omni Channel Fraud Prevention Application</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Platform</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../rts/">RTS</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../application_configurations/">Application Configurations</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtmanage/">dtManage</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtassemble/">dtAssemble</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtdashboard/">dtDashboard</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtgateway/">dtGateway</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtgateway_systemalerts/">Alerts</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../apex/">Apache Apex</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../apex_malhar/">Apache Apex-Malhar</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Deployment and Operations</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Licensing/">Licensing</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../installation/">Installation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../configuration/">Configuration</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtgateway_security/">Security</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtgateway_systemalerts/">System Alerts</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../apexcli/">Apex CLI</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../troubleshooting/">Troubleshooting</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../release_notes/">Release Notes</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../glossary/">Glossary</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../additional_docs/">Resources</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">DataTorrent Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Cloud Integration &raquo;</li>
+        
+      
+    
+    <li>AWS</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="overview">Overview</h2>
+<p>This document describes steps to run DT apps on AWS cluster. Users can easily try out apps from the <a href="https://www.datatorrent.com/apphub/#/">AppFactory</a> by downloading the app installers from the DataTorrent website. A zip package containing <code>bash</code> scripts will be downloaded on user’s machine and user needs to follow the instructions below to deploy apps.</p>
+<h2 id="setup">Setup</h2>
+<ul>
+<li>Install the AWS Command Line Interface<ul>
+<li>Refer to the <a href="http://docs.aws.amazon.com/cli/latest/userguide/installing.html">link</a> for instructions</li>
+</ul>
+</li>
+<li>Configure the AWS Command Line Interface<ul>
+<li>
+<pre><code>  $ aws configure
+  AWS Access Key ID [None]: MENTION ACCESS_KEY_ID
+  AWS Secret Access Key [None]: MENTION SECRET_ACCESS_KEY
+  Default region name [None]: MENTION REGION
+  Default output format [None]: _Press ENTER_
+</code></pre>
+</li>
+<li>For detailed instructions, refer to the <a href="http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html#cli-quick-configuration">link</a></li>
+</ul>
+</li>
+<li>Verify that AWS Command Line Interface is configured by ensuring the following returns correct values<ul>
+<li>
+<pre><code>$ aws configure get aws_access_key_id
+$ aws configure get aws_secret_access_key
+$ aws configure get region
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="package-contents">Package contents</h2>
+<p>The zip file (see <a href="#end-to-end-workflow">end-to-end steps</a> below) will contain following files:</p>
+<ul>
+<li>
+<p><strong>DTapp-EMR-Deploy.sh</strong> - Script that user needs to execute to set up AWS EMR Cluster. The cluster will be created and DT-RTS installed along with the app.</p>
+</li>
+<li>
+<p><strong>config.properties</strong> - This file contains properties used by the script. File has sample values for the properties as mentioned below.
+<br>(<strong>Note:</strong> <em>Sample values for the properties should be sufficient unless it needs to be changed.</em>)</p>
+</li>
+</ul>
+<table>
+    <colgroup>
+        <col width="33%" />
+        <col width="33%" />
+        <col width="33%" />
+    </colgroup>
+    <tbody>
+        <tr class="even">
+            <th>Property</th>
+            <th>Sample Value</th>
+            <th>Description</th>
+        </tr>
+        <tr class="odd">
+            <td align="left">SECURITY_GROUP_NAME</td>
+            <td align="left">DTapp-security-group</td>
+            <td align="left">Security Group with this name will be created and inbound rule with user machine’s external IP address will be added to it.</td>
+        </tr>
+        <tr class="even">
+            <td align="left">BUCKET_NAME</td>
+            <td align="left">dtapp-emr</td>
+            <td align="left">S3 bucket name. A bucket with this name will be created and script that installs DT-RTS will be placed into it. This script is used as a bootstrap script during cluster launch.</td>
+        </tr>
+        <tr class="odd">
+            <td align="left">S3_REGION</td>
+            <td align="left">us-east-1</td>
+            <td align="left">Region where S3 bucket is created</td>
+        </tr>
+        <tr class="even">
+            <td align="left">LOG_URI</td>
+            <td align="left">s3n://dtapp-logs</td>
+            <td align="left">S3 URI where log files would be stored</td>
+        </tr>
+        <tr class="odd">
+            <td align="left">CLUSTER_NAME</td>
+            <td align="left">DTapp</td>
+            <td align="left">Name of the EMR cluster</td>
+        </tr>
+        <tr class="even">
+            <td align="left">CORE_INSTANCE_TYPE</td>
+            <td align="left">m1.large</td>
+            <td align="left">Type of machine for core instance</td>
+        </tr>
+        <tr class="odd">
+            <td align="left">CORE_INSTANCE_COUNT</td>
+            <td align="left">1</td>
+            <td align="left">Number of core instances to be created</td>
+        </tr>
+        <tr class="even">
+            <td align="left">MASTER_INSTANCE_TYPE</td>
+            <td align="left">m1.medium</td>
+            <td align="left">Type of machine for master instance</td>
+        </tr>
+        <tr class="odd">
+            <td align="left">MASTER_INSTANCE_COUNT</td>
+            <td align="left">1</td>
+            <td align="left">Number of Master instances to be created</td>
+        </tr>
+    </tbody>
+</table>
+
+<ul>
+<li>
+<p><strong>configuration.json</strong> - This file contains hdfs block size,replication factor and virtual to physical memory ratio.</p>
+</li>
+<li>
+<p><strong>DTapp-EMR-Terminate.sh</strong> - Script to terminate the cluster</p>
+</li>
+<li>
+<p><strong>README</strong> - Readme file with instructions</p>
+</li>
+</ul>
+<h2 id="end-to-end-workflow">End to End workflow</h2>
+<p>The steps below describe the end to end flow to run any app provided in the AppFactory. Let's consider that we want to run Kinesis to S3 app on the AWS cluster.</p>
+<ol>
+<li>
+<p>Download the zip file for the app.
+<a href="https://www.datatorrent.com/downloads/aws-apps/app-kinesis-to-s3.zip">https://www.datatorrent.com/downloads/aws-apps/app-kinesis-to-s3.zip</a></p>
+</li>
+<li>
+<p>Extract the zip</p>
+<p><code>unzip app-kinesis-to-s3.zip</code></p>
+</li>
+<li>
+<p>Verify the files. The directory structure should be as follows:</p>
+<pre><code>user@localhost:~/Downloads/app-kinesis-to-s3$ ls
+config.properties  DTapp-EMR-Deploy.sh  DTapp-EMR-Terminate.sh README configuration.json
+</code></pre>
+</li>
+<li>
+<p>Edit <code>config.properties</code> file. Modify the properties as described in the <a href="#package-contents">Package Contents</a> section.</p>
+</li>
+<li>
+<p>Check the <code>configuration.json</code> file which contains properties like blocksize, replication factor etc. User can change this  configuration, if required.</p>
+</li>
+<li>
+<p>Assign Execute permissions.</p>
+<pre><code> user@localhost:~/Downloads/app-kinesis-to-s3$ chmod u+x /path/to/app-kinesis-to-s3/DTapp-EMR-*
+</code></pre>
+</li>
+<li>
+<p>Execute the shell script.</p>
+<pre><code> user@localhost:~/Downloads/app-kinesis-to-s3$ ./DTapp-EMR-Deploy.sh
+</code></pre>
+</li>
+<li>
+<p>Wait till the EMR cluster is up. Once the cluster is up, a link to configure the DT-RTS will be provided. Click on the link. E.g  <code>http://ec2-54-91-43-25.compute-1.amazonaws.com:9090</code></p>
+</li>
+<li>
+<p>DT-RTS Welcome Screen will appear. Click <code>continue</code>
+  <img alt="aws-emr-1" src="../images/aws_emr/aws-emr-1.png" /></p>
+</li>
+<li>
+<p>Default paths for Hadoop and the DFS root will be automatically populated, e.g. <code>/usr/bin/hadoop</code> and <code>/user/dtadmin/datatorrent</code>. You can leave these values alone unless you have some specific reason to change them. Click <code>continue</code>
+  <img alt="aws-emr-2" src="../images/aws_emr/aws-emr-2.png" /></p>
+</li>
+<li>
+<p>A valid license would be needed to continue further. Click on <code>Request License</code>.
+    <img alt="aws-emr-3" src="../images/aws_emr/aws-emr-3.png" /></p>
+</li>
+<li>
+<p>Download the appropriate license.
+    <img alt="aws-emr-4" src="../images/aws_emr/aws-emr-4.png" /></p>
+</li>
+<li>
+<p>Upload the license. Once the license is successfully uploaded, Click Continue
+    <img alt="aws-emr-5" src="../images/aws_emr/aws-emr-5.png" />
+    <img alt="aws-emr-6" src="../images/aws_emr/aws-emr-6.png" /></p>
+</li>
+<li>
+<p>Once the configuration is complete, Click Continue
+  <img alt="aws-emr-7" src="../images/aws_emr/aws-emr-7.png" /></p>
+</li>
+<li>
+<p>The app is imported and is ready to launch
+  <img alt="aws-emr-8" src="../images/aws_emr/aws-emr-8.png" />
+  To know more about how to configure a particular app, visit the <code>App Templates</code> section of our <a href="http://docs.datatorrent.com">documentation</a></p>
+</li>
+<li>
+<p>To terminate the AWS cluster, execute the termination script:</p>
+<pre><code> user@localhost:~/Downloads/app-kinesis-to-s3$ ./DTapp-EMR-Terminate.sh
+</code></pre>
+</li>
+</ol>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../create/" class="btn btn-neutral float-right" title="Creating Applications">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../sandbox/" class="btn btn-neutral" title="Sandbox"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../sandbox/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../create/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+      <script src="../custom/custom-loader.js"></script>
+
+</body>
+</html>

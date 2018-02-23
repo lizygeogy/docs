@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <title>System Alerts - DataTorrent Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../custom/menu.css" rel="stylesheet">
+  <link href="../custom/version-select.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "System Alerts";
+    var mkdocs_page_input_path = "dtgateway_systemalerts.md";
+    var mkdocs_page_url = "/dtgateway_systemalerts/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-44586211-2', 'docs.datatorrent.com');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> DataTorrent Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">DataTorrent RTS</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Demos</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../demos/">Running Apps</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../sandbox/">Sandbox</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Cloud Integration</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../aws_emr_manual/">AWS</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Development</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../create/">Creating Applications</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../beginner/">Beginner's Guide</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../demo_videos/">Videos</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Tutorials</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <span class="caption-text">Top N Words</span>
+    <ul class="subnav">
+                <li class="toctree-l4">
+                    
+    <a class="" href="../tutorials/topnwords/">Introduction</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../tutorials/topnwords-c1/">Development Environment</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../tutorials/topnwords-c2/">Building in Java</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../tutorials/topnwords-c3/">Building with dtAssemble</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../tutorials/topnwords-c4/">Monitoring with dtManage</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../tutorials/topnwords-c5/">Visualizing with dtDashboard</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../tutorials/topnwords-c7/">Advanced Features</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../tutorials/topnwords-c6/">Appendix</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l3">
+                    
+    <span class="caption-text">Sales Dimensions</span>
+    <ul class="subnav">
+                <li class="toctree-l4">
+                    
+    <a class="" href="../tutorials/salesdimensions/">Building in Java</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../tutorials/salesdimensions-c2/">Building with dtAssemble</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../tutorials/salesdimensions-c3/">Visualizing with dtDashboard</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../tutorials/salesdimensions-c4/">Monitoring with dtManage</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../apex_development_setup/">Apex Development Setup</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../configure_IDE/">Generate New Project in IDE</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../application_development/">Applications</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../application_packages/">Application Packages</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../configuration_packages/">Configuration Packages</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../operator_development/">Operators</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Library Operators</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../library_operators/">List of Operators</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/block_reader/">Block Reader</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/deduper/">Deduper</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/dimensions_computation/">Dimension Computation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/file_output/">File Output</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/file_splitter/">File Splitter</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/hdht/">HDHT</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/kafkaInputOperator/">Kafka Input</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/snapshot_server/">Snapshot Server</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app_data_framework/">App Data Framework</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtgateway_api/">REST API</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">App Templates</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <span class="caption-text">0.10.0</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../app-templates/0.10.0/common/import-launch/">Import and Launch App-template</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../app-templates/0.10.0/common/customize/">Customizing an app-template</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../app-templates/0.10.0/database-to-database-sync/">Database-to-database-sync</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../app-templates/0.10.0/hdfs-line-copy/">HDFS-line-copy</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../app-templates/0.10.0/hdfs-part-file-copy/">HDFS-part-file-copy</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../app-templates/0.10.0/hdfs-to-hdfs-filter-transform/">HDFS-to-HDFS-filter-transform</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../app-templates/0.10.0/kafka-to-cassandra-filter-transform/">Kafka-to-Cassandra-Filter-Transform</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../app-templates/0.10.0/kafka-to-database-sync/">Kafka-to-Database-sync</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../app-templates/0.10.0/kafka-to-hdfs-filter-transform/">Kafka-to-HDFS-Filter-Transform</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../app-templates/0.10.0/kafka-to-kafka-filter-transform/">Kafka-to-Kafka-Filter-Transform</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../app-templates/0.10.0/kinesis-to-redshift/">Kinesis-to-Redshift</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../app-templates/0.10.0/kinesis-to-s3/">Kinesis-to-S3</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../app-templates/0.10.0/s3-to-hdfs-sync/">S3-to-HDFS-sync</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../app-templates/0.10.0/s3-to-redshift/">S3-to-HDFS-Filter-Transform</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/database-to-hdfs/">Database dump to HDFS App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/database-to-database-sync/">Database to Database Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/hdfs-sync/">HDFS Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/hdfs-line-copy/">HDFS to HDFS Line Copy App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/hdfs-to-kafka-sync/">HDFS to Kafka Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/hdfs-to-s3-sync/">HDFS to S3 Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/kafka-to-database-sync/">Kafka to Database Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/kafka-to-hdfs-filter/">Kafka to HDFS Filter App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/kafka-to-hdfs-sync/">Kafka to HDFS Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/kinesis-to-s3/">Kinesis to S3 App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/s3-to-hdfs-sync/">S3 to HDFS Sync App</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Applications</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../omni_channel_fraud_app/">Omni Channel Fraud Prevention Application</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Platform</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../rts/">RTS</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../application_configurations/">Application Configurations</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtmanage/">dtManage</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtassemble/">dtAssemble</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtdashboard/">dtDashboard</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtgateway/">dtGateway</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="./">Alerts</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../apex/">Apache Apex</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../apex_malhar/">Apache Apex-Malhar</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Deployment and Operations</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Licensing/">Licensing</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../installation/">Installation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../configuration/">Configuration</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtgateway_security/">Security</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">System Alerts</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#dt-gateway-system-alerts">DT Gateway System Alerts</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#alerts-and-topics">Alerts and Topics</a></li>
+        
+            <li><a class="toctree-l4" href="#configuring-smtp-for-email">Configuring SMTP for Email</a></li>
+        
+            <li><a class="toctree-l4" href="#managing-and-viewing-alerts">Managing and viewing alerts</a></li>
+        
+            <li><a class="toctree-l4" href="#creating-an-alert">Creating an alert</a></li>
+        
+            <li><a class="toctree-l4" href="#deleting-an-alert">Deleting an alert</a></li>
+        
+            <li><a class="toctree-l4" href="#alerts-history">Alerts history</a></li>
+        
+            <li><a class="toctree-l4" href="#viewing-the-content-and-the-status-of-alerts">Viewing the content and the status of alerts</a></li>
+        
+            <li><a class="toctree-l4" href="#viewing-all-the-current-data-in-the-_topic-array">Viewing all the current data in the _topic array</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../apexcli/">Apex CLI</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../troubleshooting/">Troubleshooting</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../release_notes/">Release Notes</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../glossary/">Glossary</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../additional_docs/">Resources</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">DataTorrent Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Deployment and Operations &raquo;</li>
+        
+      
+    
+    <li>System Alerts</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="dt-gateway-system-alerts">DT Gateway System Alerts</h1>
+<p>The DT Gateway allows the user to create system alerts using JavaScript expressions.
+Values in the expressions can come from PubSub websocket topics and include values
+like system metrics, application metrics, and custom application counters.
+Alert configurations are stored in the Hadoop cluster and therefore persist across
+gateway restarts; however, some state information about the alert (such as: whether
+it is active or not and a historical record of when it was triggered in the past)
+will be lost when the gateway is restarted, since it is stored in memory.</p>
+<h2 id="alerts-and-topics">Alerts and Topics</h2>
+<p>As described above the trigger for an alert is a JavaScript expression potentially
+involving a variety of metrics. When the expression evaluates to true and remains so
+for a configured duration, the alert becomes active and email is sent to a configured
+list of addresses. Likewise, when the condition turns false, the alert becomes inactive
+and another email about the state change is sent.</p>
+<p>Here is an example for simple JavaScript condition; we can make a REST call to create an
+alert named <code>xyz</code> which emails to <code>someone@company.com</code> when the number of running
+applications is greater than 5 for at least 60 seconds; the JSON object is the payload:</p>
+<h3 id="put-wsv2systemalertsalertsxyz">PUT /ws/v2/systemAlerts/alerts/xyz</h3>
+<pre><code class="json">{
+  &quot;condition&quot;:&quot;_topic['cluster.metrics'].numAppsRunning &gt; 5&quot;,
+  &quot;email&quot;:&quot;someone@company.com&quot;,
+  &quot;description&quot;: &quot;No.of apps running is more than 5&quot;,
+  &quot;timeThresholdMillis&quot;:&quot;60000&quot;
+}
+</code></pre>
+
+<p>When the number of running applications is greater than 5 for more than 60 seconds, a simple
+email will be sent to <code>someone@company.com</code>, stating that the alert is in effect, and when
+the number of running applications drops below 6, another email will be sent, stating that
+the alert is no longer in effect.</p>
+<p>The condition is a simple JavaScript expression which the user can build
+from various system or application-specific values. These values are available as fields
+of JavaScript objects representing WebSocket topics obtained with expressions of the
+form <code>_topic[&lt;topic_name&gt;]</code>.
+The topic names can be looked up using the <strong><code>GET /ws/v2/systemAlerts/topicData</code></strong> REST API
+call shown below (please note that alert names may contain special characters such as
+spaces, slashes and percents but they must be URL-encoded before making REST API calls
+such as <code>Get</code>, <code>Put</code>, and <code>Delete</code>):</p>
+<h3 id="get-wsv2systemalertstopicdata">GET /ws/v2/systemAlerts/topicData</h3>
+<pre><code>{
+  &quot;applications.&lt;applicationId&gt;.logicalOperators&quot;: {...},
+  &quot;applications.&lt;applicationId&gt;.physicalOperators&quot;: {...},
+  &quot;applications.&lt;applicationId&gt;.containers&quot;: {...},
+  &quot;applications.&lt;applicationId&gt;&quot;: {...}
+  &quot;cluster.metrics&quot;: {...},
+  &quot;applications&quot;: {...}
+}
+</code></pre>
+
+<p>where <strong><code>&lt;applicationId&gt;</code></strong> refers to the application id of a running application
+(which typically has the form <em>application_1482319446115_4314</em>). These topics
+exist for every running application. The alert condition can refer to multiple such topic values and
+can be any valid JavaScript expressions that return a boolean. A comma separated list of
+email addresses can be specified.</p>
+<h2 id="configuring-smtp-for-email">Configuring SMTP for Email</h2>
+<p>SMTP needs to be configured for the gateway to be able to send alert emails via an 
+<a href="https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol#Outgoing_mail_SMTP_server">SMTP server</a>. Make
+a note of the following steps before attempting to configure SMTP in the gateway.</p>
+<ul>
+<li>make sure there is an SMTP server in the network the gateway will have access to. Note down the
+SMTP server's hostname and port number (please see the note below regarding encryption-type).</li>
+<li>if the SMTP server supports or requires <a href="https://www.fastmail.com/help/technical/ssltlsstarttls.html">TLS or SSL encryption</a>,
+determine the encryption-type for the communication between the gateway and the SMTP server. The values for
+encryption-type are "tls", "ssl" or "none" (i.e. no encryption). In case "tls" or "ssl" is used,
+ensure appropriate certificates are installed to establish <a href="https://en.wikipedia.org/wiki/Public_key_certificate">trust</a>.</li>
+<li>determine the authentication-type for your SMTP server. The only supported values are "password" (i.e. authentication using
+username and password) or "none" (i.e. no authentication).</li>
+<li>if you choose the "password" authentication-type, you will need the SMTP-username and SMTP-password to be used
+by the gateway to authenticate with the SMTP server.</li>
+<li>determine the "fromAddr" and the "fromName" for the emails sent by the gateway which the email recipient
+will see as the sender of the emails. Note that for certain SMTP servers the "fromAddr" and the SMTP-username
+may need to match or else the latter overrides the former.</li>
+<li>determine a "test-address" where you can receive emails to verify validity of the SMTP configuration.</li>
+<li>in case you choose the "password" authentication-type, you will need to set up an SSL keystore as described
+<a href="../dtgateway_security/#setting-up-ssl-keystore-in-gateway">here</a>. The gateway uses the keystore to encrypt and
+decrypt your SMTP-password.</li>
+</ul>
+<p>You can use the following APIs to set or retrieve the SMTP configuration. Note that the JSON sample following the
+PUT request is the payload of the request. </p>
+<h3 id="put-wsv2configsmtp">PUT /ws/v2/config/smtp</h3>
+<pre><code class="json">{
+&quot;host&quot;: &quot;smtp.gmail.com&quot;,
+&quot;port&quot;: &quot;587&quot;,
+&quot;fromAddr&quot;: &quot;no-reply@mydomain.com&quot;,
+&quot;fromName&quot;: &quot;Do Not Reply&quot;,
+&quot;encryptionType&quot;: &quot;tls&quot;,
+&quot;authType&quot;: &quot;password&quot;,
+&quot;username&quot;: &quot;smtp-user@mydomain.com&quot;,
+&quot;password&quot;: &quot;secret_password&quot;,
+&quot;testAddr&quot;: &quot;testuser@yourdomain.com&quot;
+}
+</code></pre>
+
+<p>Contents of the JSON Object:</p>
+<table>
+<thead>
+<tr>
+<th>JSON Key</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>host</td>
+<td>the SMTP hostname</td>
+</tr>
+<tr>
+<td>port</td>
+<td>the SMTP port on the SMTP server</td>
+</tr>
+<tr>
+<td>fromAddr</td>
+<td>the "from-address" described above i.e. the address from which the alert email is sent</td>
+</tr>
+<tr>
+<td>fromName</td>
+<td>the "from-name" described above i.e. the user friendly string for the "from-address"</td>
+</tr>
+<tr>
+<td>encryptionType</td>
+<td>the "encryption-type" value described above i.e. "tls", "ssl" or "none"</td>
+</tr>
+<tr>
+<td>authType</td>
+<td>the "authentication-type" value described above i.e. "password" or "none"</td>
+</tr>
+<tr>
+<td>username</td>
+<td>the "SMTP-username" value described above</td>
+</tr>
+<tr>
+<td>password</td>
+<td>the "SMTP-password" value described above</td>
+</tr>
+<tr>
+<td>testAddr</td>
+<td>the "test-address" value described above. The gateway sends a test email to this address when you use this API to set the SMTP configuration.</td>
+</tr>
+</tbody>
+</table>
+<p>A note about password: if you omit the "password" value in your JSON object in the API, the gateway will use the existing saved password
+so the client does not need to include the password in subsequent API calls. Note that the GET API (described below) never returns the
+password of the SMTP configuration, hence the DataTorrent console is able to use this feature without either displaying or requiring the 
+user to re-enter the previous password. Note that the JSON sample following the GET request is the value returned from the GET request.</p>
+<h3 id="get-wsv2configsmtp">GET /ws/v2/config/smtp</h3>
+<pre><code class="json">{
+&quot;host&quot;: &quot;smtp.gmail.com&quot;,
+&quot;port&quot;: &quot;587&quot;,
+&quot;fromAddr&quot;: &quot;no-reply@mydomain.com&quot;,
+&quot;fromName&quot;: &quot;Do Not Reply&quot;,
+&quot;encryptionType&quot;: &quot;tls&quot;,
+&quot;authType&quot;: &quot;password&quot;,
+&quot;username&quot;: &quot;smtp-user@mydomain.com&quot;,
+&quot;testAddr&quot;: &quot;testuser@yourdomain.com&quot;
+}
+</code></pre>
+
+<p>The GET API returns the existing SMTP configuration in the gateway. As mentioned above, the SMTP-password
+value is never returned for security reasons.</p>
+<h2 id="managing-and-viewing-alerts">Managing and viewing alerts</h2>
+<p>The following operations are available in the Gateway REST API:</p>
+<ul>
+<li>
+<p>Create an alert</p>
+</li>
+<li>
+<p>Delete an alert</p>
+</li>
+<li>
+<p>Get alert history</p>
+</li>
+<li>
+<p>View content and status of alerts</p>
+</li>
+<li>
+<p>View all the current data in the <code>_topic</code> array</p>
+</li>
+</ul>
+<h2 id="creating-an-alert">Creating an alert</h2>
+<p>To create an alert, the user needs to specify the alert name, condition,
+email address and duration in milliseconds. As explained above, the condition
+can refer to values in various topic objects including system metrics,
+application metrics, and custom application counters and must yield a Boolean
+value.</p>
+<p><strong>Complex JavaScript Expressions :</strong></p>
+<p>The following example shows how to issue a REST request to create an alert named
+<code>WordCountAppNotRunning</code> which emails to <code>phil@company.com</code> and <code>mike@company.com</code>
+when the <code>WordCount</code> app is not in the <code>RUNNING</code> state for at least 60 seconds.</p>
+<h3 id="put-wsv2systemalertsalertswordcountappnotrunning">PUT /ws/v2/systemAlerts/alerts/WordCountAppNotRunning</h3>
+<pre><code class="json">{
+  &quot;condition&quot;: &quot;_topic['applications.application_1480063135007_0543']['state'] != 'RUNNING'&quot;,
+  &quot;email&quot;:&quot;phil@company.com, mike@company.com&quot;,
+  &quot;description&quot;: &quot;WordCount Application is not running&quot;,
+  &quot;timeThresholdMillis&quot;:&quot;60000&quot;
+}
+</code></pre>
+
+<p>The above alert works for the current invocation of the <code>WordCount</code> application; however,
+when the application is restarted, a new application <em>id</em> is generated for which this alert
+will no longer work. To avoid having to update the application <em>id</em> in the condition each
+time the application restarts, we can write a more complex JavaScript expression to find
+the application <em>id</em> for the given application as shown below:</p>
+<pre><code class="javascript">var alert = false;
+var appId = undefined;
+var appsInfo = _topic['applications'].apps;
+
+for(i = 0; i &lt; appsInfo.length; i++)
+{
+    if (appsInfo[i].name == 'WordCount')
+    {
+        appId = appsInfo[i].id;
+        break;
+    }
+}
+if (appId != undefined)
+{
+    alert  = _topic['applications.' + appId]['state']  !=  'RUNNING' ;
+}
+alert;
+</code></pre>
+
+<p>The JavaScript expression must however be written as a single line; tools such as
+<a href="http://javascriptcompressor.com/">javascriptcompressor</a> are useful for this purpose.
+Any HTML in the expression also needs to be escaped. Here is new alert
+with the revised complex expression compressed to a single line:</p>
+<h3 id="put-wsv2systemalertsalertswordcountappnotrunning_1">PUT /ws/v2/systemAlerts/alerts/WordCountAppNotRunning</h3>
+<pre><code class="json">{
+  &quot;condition&quot;: &quot;var alert=false;var appId=undefined;var appsInfo=_topic['applications'].apps;for(i=0;i&lt;appsInfo.length;i++){if(appsInfo[i].name=='WordCount'){appId=appsInfo[i].id;break}}if(appId!=undefined){alert=_topic['applications.'+appId]['state']!='RUNNING'}alert;&quot;,
+   &quot;email&quot;:&quot;phil@company.com, mike@company.com&quot;,
+   &quot;description&quot;: &quot;WordCount Application is not running&quot;,
+   &quot;timeThresholdMillis&quot;:&quot;60000&quot;
+}
+</code></pre>
+
+<h2 id="deleting-an-alert">Deleting an alert</h2>
+<p>We can delete an alert with the DELETE REST API request:</p>
+<p><strong>DELETE /ws/v2/systemAlerts/alerts/{name}</strong></p>
+<h2 id="alerts-history">Alerts history</h2>
+<p>We can get the alerts history with the GET REST API request:</p>
+<p><strong>GET /ws/v2/systemAlerts/history</strong></p>
+<p>It returns a result of the following form:</p>
+<pre><code class="json">{
+&quot;history&quot;: [{
+    &quot;name&quot;: &quot;xyz&quot;,
+    &quot;inTime&quot;: &quot;1481235199598&quot;,
+    &quot;outTime&quot;: &quot;1481235251088&quot;,
+    &quot;message&quot;: &quot;No.of apps running is more than 5&quot;
+},{
+    &quot;name&quot;: &quot;checkCsvParserNotRunning&quot;,
+    &quot;inTime&quot;: &quot;1481235251087&quot;,
+    &quot;outTime&quot;: &quot;1481235549648&quot;,
+    &quot;message&quot;: &quot;Application is not running&quot;
+}],
+}
+</code></pre>
+
+<p>The alert history comprises the alert name, time it became active (<code>inTime</code>), time it
+became inactive (<code>outTime</code>) and message. The alert history is obtained through the gateway,
+so whenever gateway is restarted the alerts history gets cleared.</p>
+<h2 id="viewing-the-content-and-the-status-of-alerts">Viewing the content and the status of alerts</h2>
+<p>We can get the content and status of alerts with the GET REST API web request:</p>
+<p><strong>GET /ws/v2/systemAlerts/alerts/{name}</strong></p>
+<p>It returns a result of the following form:</p>
+<pre><code class="json">{
+ &quot;name&quot;: &quot;checkLatencyApp&quot;,
+ &quot;condition&quot;: &quot;var alert=false;var appId=undefined;var appsInfo=_topic['applications'].apps;for(i=0;i&lt;appsInfo.length;i++){if(appsInfo[i].name=='xyzApp'){appId=appsInfo[i].id;break}}if(appId!=undefined){var expTopic='applications.'+appId+'.physicalOperators';var operators=_topic[expTopic].operators;for(i=0;(i&lt;operators.length);++i){if(operators[i].latencyMA&gt;50){alert=true;break}}}alert;&quot;,
+ &quot;email&quot;: &quot;phil@company.com, mike@company.com&quot;,
+ &quot;description&quot;: &quot;checking latency &gt; 50&quot;,
+ &quot;timeThresholdMillis&quot;: &quot;10000&quot;,
+ &quot;alertStatus&quot;: {
+   &quot;isInAlert&quot;: true,
+   &quot;inTime&quot;: &quot;1481264665450&quot;,
+   &quot;emailSent&quot;: true,
+   &quot;message&quot;: &quot;checking latency &gt; 50&quot;
+  }
+}
+</code></pre>
+
+<p>The result includes the alert name, condition, email addresses, description and duration.
+It also alert status info such as <code>isInAlert</code> which indicates whether it is still active
+or not, <code>inTime</code> which represents the time the alert became active, <code>emailSent</code> which,
+as the name suggests, indicates if email was sent, and <code>message</code> which is similar to the
+description.</p>
+<h2 id="viewing-all-the-current-data-in-the-_topic-array">Viewing all the current data in the <code>_topic</code> array</h2>
+<p>This section is already covered under <strong>Alerts and Topics</strong> .</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../apexcli/" class="btn btn-neutral float-right" title="Apex CLI">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../dtgateway_security/" class="btn btn-neutral" title="Security"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../dtgateway_security/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../apexcli/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+      <script src="../custom/custom-loader.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <title>Quick Start Guide - Account Takeover Prevention Application - DataTorrent Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../custom/menu.css" rel="stylesheet">
+  <link href="../custom/version-select.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Quick Start Guide - Account Takeover Prevention Application";
+    var mkdocs_page_input_path = "quickstartlaunchato.md";
+    var mkdocs_page_url = "/quickstartlaunchato/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-44586211-2', 'docs.datatorrent.com');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> DataTorrent Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">DataTorrent RTS</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Demos</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../demos/">Running Apps</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../sandbox/">Sandbox</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Cloud Integration</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../aws_emr_manual/">AWS</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../azure_deployment/">Azure</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Development</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../create/">Creating Applications</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../beginner/">Beginner's Guide</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../demo_videos/">Videos</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Tutorials</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../tutorials/topnwords/">Top N Words</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../tutorials/salesdemo/">Sales Dimensions</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../apex_development_setup/">Apex Development Setup</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../configure_IDE/">Generate New Project in IDE</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../application_development/">Applications</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../application_packages/">Application Packages</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../configuration_packages/">Configuration Packages</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Operator Development</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operator_development/">Guide</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operator_development_ref/">Reference</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Operators</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../library_operators/">Operators List</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/drools_operator/">Drools Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/python_operator/">Python Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/PMML_operator/">PMML Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/tcpinputoperator/">TCP Input Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/eventhubinput/">Event Hub Input Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/eventhuboutput/">Event Hub Output Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/abstracthttpserver/">Abstract HTTP Server Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/azure_blob/">Azure Blob Storage Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/aoooperator/">Analytics Output Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/elasticsearch/">Elasticsearch Output Operator</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/block_reader/">Block Reader</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/deduper/">Deduper</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/dimensions_computation/">Dimension Computation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/file_output/">File Output</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/file_splitter/">File Splitter</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/hdht/">HDHT</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/kafkaInputOperator/">Kafka Input</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../operators/snapshot_server/">Snapshot Server</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app_data_framework/">App Data Framework</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtgateway_api/">REST API</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">App Templates</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/common/import-launch/">Import and Launch App-template</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/common/customize/">Customizing an app-template</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/database-to-database-sync/">Database-to-database-sync</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/hdfs-line-copy/">HDFS-line-copy</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/hdfs-part-file-copy/">HDFS-part-file-copy</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/hdfs-to-hdfs-filter-transform/">HDFS-to-HDFS-filter-transform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/kafka-to-cassandra-filter-transform/">Kafka-to-Cassandra-Filter-Transform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/kafka-to-database-sync/">Kafka-to-Database-sync</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/kafka-to-hdfs-filter-transform/">Kafka-to-HDFS-Filter-Transform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/kafka-to-kafka-filter-transform/">Kafka-to-Kafka-Filter-Transform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/kinesis-to-redshift/">Kinesis-to-Redshift</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/kinesis-to-s3/">Kinesis-to-S3</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/s3-to-hdfs-sync/">S3-to-HDFS-sync</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/0.10.0/s3-to-redshift/">S3-to-HDFS-Filter-Transform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/database-to-hdfs/">Database dump to HDFS App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/database-to-database-sync/">Database to Database Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/hdfs-sync/">HDFS Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/hdfs-line-copy/">HDFS to HDFS Line Copy App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/hdfs-to-kafka-sync/">HDFS to Kafka Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/hdfs-to-s3-sync/">HDFS to S3 Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/kafka-to-database-sync/">Kafka to Database Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/kafka-to-hdfs-filter/">Kafka to HDFS Filter App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/kafka-to-hdfs-sync/">Kafka to HDFS Sync App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/kinesis-to-s3/">Kinesis to S3 App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../app-templates/s3-to-hdfs-sync/">S3 to HDFS Sync App</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Applications</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../omni_channel_fraud_app/">Omni Channel Fraud Prevention Application</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Accounttakeover/">Account Takeover Prevention Application</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../quickstartlaunchfpa/">Quick Start Guide - Omni-Channel Fraud Prevention Application</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Quick Start Guide - Account Takeover Prevention Application</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#quick-start-guide-account-takeover-prevention-application">Quick Start Guide - Account Takeover Prevention Application</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#setup-docker-and-rts">Setup Docker and RTS</a></li>
+        
+            <li><a class="toctree-l4" href="#launching-account-takeover-prevention-application">Launching Account Takeover Prevention Application</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Services</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../cep_workbench/">CEP Workbench</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../oas_dashboards/">OAS Dashboards</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../oas/">Online Analytics Service (OAS)</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Platform</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../rts/">RTS</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../application_configurations/">Application Configurations</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtmanage/">dtManage</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtdashboard/">dtDashboard</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtgateway/">dtGateway</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../services/">Services</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../jar_artifacts/">JAR Artifacts</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtgateway_systemalerts/">Alerts</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../apex/">Apache Apex</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../apex_malhar/">Apache Apex-Malhar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../appbackplane/">Application Backplane</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../storeandreplay/">Store and Replay Feature</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Deployment and Operations</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Licensing/">Licensing</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../installation/">Installation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../configuration/">Configuration</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtgateway_security/">Security</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dtgateway_systemalerts/">System Alerts</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../apexcli/">Apex CLI</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../troubleshooting/">Troubleshooting</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../release_notes/">Release Notes</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../glossary/">Glossary</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../additional_docs/">Resources</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">DataTorrent Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Applications &raquo;</li>
+        
+      
+    
+    <li>Quick Start Guide - Account Takeover Prevention Application</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="quick-start-guide-account-takeover-prevention-application">Quick Start Guide - Account Takeover Prevention Application</h1>
+<h2 id="setup-docker-and-rts">Setup Docker and RTS</h2>
+<ol>
+<li>Setup docker daemon host (preferably same as gateway machine). This supplies the docker images for <strong>Online Analytics Service</strong>, <strong>OAS Dashboards Service</strong> that is a customized implementation of Apache Superset and <strong>CEP Workbench</strong> that is a customized Drools Workbench implementation.<img alt="" src="../images/applications/quickstart_launch/dockerlocation.png" /></li>
+<li>Install rts 3.10 bin. In the installation wizard, specify the docker location.</li>
+</ol>
+<h2 id="launching-account-takeover-prevention-application">Launching Account Takeover Prevention Application</h2>
+<ol>
+<li>Import the Account Takeover Prevention Application from the AppFactory.</li>
+<li>In the DataTorrent Account Takeover Prevention Application box, click <strong>import</strong>. <img alt="" src="../images/applications/quickstart_launch/importato.png" /></li>
+<li>Download the package, after DataTorrent Account Take Over Prevention Application package is imported.</li>
+<li>Navigate to <strong>Develop</strong> &gt; <strong>Application Package</strong> &gt; <strong>DataTorrent Account TakeOver Prevention Application</strong>.</li>
+<li>Click <strong>launch</strong> drop-down and select <strong>download package</strong>.<img alt="" src="../images/applications/quickstart_launch/atoapppackage.png" /></li>
+<li>Get the Geolite Maxmind Database (Use Hadoop user or user that has access to Hadoop). Using Bash '
+<code>url http://geolite.maxmind.com/download/geoip/database/GeoLite2-City.tar.gz -o GeoLite2-City.tar.gz
+tar -zxvf GeoLite2-City.tar.gz 
+hdfs dfs put GeoLite2-City*/GeoLite2-City.mmdb city.mmdb</code>.</li>
+<li>Generate test lookup data which will be used by the enrichment operators in the DAG. Use Hadoop user or user that has access to Hadoop to run following commands:</li>
+</ol>
+<pre><code>Bash
+mkdir ato_package
+cd ato_package
+unzip ../dt-ato-prevention-application-1.4.0.apa 
+java -cp app/*:lib/*:`hadoop classpath` com.datatorrent.ato.userActivityGenerator.DumpLookupData ato_lookupdata
+</code></pre>
+
+<ol>
+<li>Create configuration for ATO</li>
+<li>Navigate to <strong>Develop</strong> &gt; <strong>ApplicationPackages</strong> &gt; <strong>+ new configuration</strong> <img alt="" src="../images/applications/quickstart_launch/atoapppacknewconfig.png" /></li>
+<li>Click <strong>create</strong>. <img alt="" src="../images/applications/quickstart_launch/atonewconfig1.png" /></li>
+<li>Enter the Required Properties. </li>
+<li>Configure the <strong>CEP Workbench Service</strong></li>
+<li>On the configuration page, scroll down.
+   - Select the <strong>drools-workbench</strong> and click <strong>configure</strong>.</li>
+<li>Click <strong>save</strong> after specifying the configuration.</li>
+</ol>
+<p><strong>Note:</strong> Ensure that the Proxy Address is set correctly.
+9. Configure <strong>Online Analytics Services</strong>.
+   - Select the <strong>ato-online-analytics-service</strong> and click <strong>configure</strong>. <img alt="" src="../images/applications/quickstart_launch/atoconfigureservice1.png" />
+   - Click <strong>save</strong> after the configuration is set correctly.</p>
+<p><strong>Note:</strong> Make sure <strong>KafkaBrokers</strong> and the <strong>KafkaTopic</strong> are set correctly.
+10. Configure <strong>OAS Dashboards</strong>.
+    - Select <strong>superset-ato</strong> and click <strong>configure</strong>. <img alt="" src="../images/applications/quickstart_launch/atoconfigureservice2.png" />
+    - Click <strong>save</strong> after the configuration is set correctly.</p>
+<p><strong>Note</strong> : Make sure to set correct druid_cluster IP and the Proxy Address. 
+11. Configure the Dashboards
+    - Click <strong>configure</strong>. <img alt="" src="../images/applications/quickstart_launch/atoconfigpackdashboard.png" />
+    - From the <strong>Select Replacement Applications</strong> drop down, select the correct configuration name for both the Dashboards.
+    - Click <strong>Save</strong>. 
+12. Save the complete configuration.</p>
+<h3 id="launch-test-data-generator-application">Launch Test Data Generator Application</h3>
+<ol>
+<li>Create new configuration for the <strong>UserActivityGenerator</strong>.</li>
+<li>Go to <strong>Develop</strong> &gt; <strong>Application Packages</strong> &gt; <strong>+ new configuration</strong>.<img alt="" src="../images/applications/quickstart_launch/atouseractivitynewconfig.png" /> <img alt="" src="../images/applications/quickstart_launch/atouseractivitynewconfig1.png" /></li>
+<li>Add Optional Properties.</li>
+<li>In <strong>Optional Properties</strong> , click <strong>+add</strong> to add Optional Properties.
+  <img alt="" src="../images/applications/quickstart_launch/atouseractivitynewconfig2.png" /> </li>
+</ol>
+<p><strong>Note:</strong>   <strong>Kafka</strong> topic of the DataGenerator should be same as the <strong>Transaction Receiver</strong> topic of the Omni Channel Fraud Prevention Application.
+   - Click <strong>save</strong>.
+   - Click <strong>launch</strong> to launch the Data Generator.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../cep_workbench/" class="btn btn-neutral float-right" title="CEP Workbench">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../quickstartlaunchfpa/" class="btn btn-neutral" title="Quick Start Guide - Omni-Channel Fraud Prevention Application"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../quickstartlaunchfpa/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../cep_workbench/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+      <script src="../custom/custom-loader.js"></script>
+
+</body>
+</html>
