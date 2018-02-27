@@ -1,6 +1,6 @@
 # Partitioning
 
-Partitioning is a mechanism for load balancing. When the volume of tuples
+Partitioning is a mechanism for load balancing and scaling. When the volume of tuples
 entering the input port(s) of an operator is very high, the operator may
 not be be able to cope, resulting in increased latencies and reduced
 throughput. In such situations, the platform provides multiple mechanisms to
@@ -16,10 +16,13 @@ These terms will be explained in the sections that follow. We begin with a brief
 conceptual description of the various terms and then get into the specific
 mechanisms that developers can use to enable, configure and trigger partitioning.
 
+## No Partitioning
+
 On rare occasions, we may want to prevent an operator from being partitioned (for
 example, if the operator creates a connection to an external system, and multiple
-such connections are undesirable). This is done by explicitly adding the annotation
-`@OperatorAnnotation(partitionable = false)` to the operator.
+such connections are undesirable). This is done by explicitly adding the
+[annotation](beginner.md#annotations) `@OperatorAnnotation(partitionable = false)`
+to the operator.
 
 ## Static Partitioning
 
@@ -78,8 +81,8 @@ _parallel partitioning_ and is typically done to avoid the shuffling of data tha
 with MxN partitioning.  The streams of each partition are then kept segregated for the
 duration of that linear segment.  In such cases, if the stream volume substantially
 reduces at the end of the linear segment, network bandwidth consumption can also be
-significantly reduced by using CONTAINER_LOCAL or NODE_LOCAL locality for the streams
-within that segment.
+significantly reduced by using CONTAINER_LOCAL or NODE_LOCAL
+[locality](configuration.md#stream-modes) for the streams within that segment.
 
 Parallel partitioning is accomplished by setting an attribute of the input port of each
 operator that is part of the linear segment. Doing this for operators 2 and 3 and
