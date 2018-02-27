@@ -2,7 +2,7 @@
 
 CEP Workbench is a [DataTorrent RTS Service](services/#overview) that is a customized Drools Workbench implementation. The service provides you with the capability to change the functionality of CEP applications using drools-based rules.
 
-The CEP Workbench service is pre-packaged with applications like Omni-channel Fraud Prevention and Account Takeover Prevention.  From the DT RTS console, you can access CEP Workbench service, create the customized rules, and then apply these rules to the application configuration to change the application behavior.
+The CEP Workbench service is pre-packaged with applications such as Omni-channel Fraud Prevention and Account Takeover Prevention.  From the DT RTS console, you can access the CEP Workbench service, create customized rules, and then apply these rules to the application configuration to change the application behavior.
 
 # Pre-requisites
 
@@ -95,18 +95,19 @@ To configure rules within the CEP Workbench, you must complete the following ste
 8.  **Specify Optional Properties**:
 
 	1. In the same application configuration, add the following properties in the **Optional Properties** section.
+	
+	| **Property** |**Description** |**Example**|
+	| --- | --- | --- |
+	| dt.operator.FraudRulesExecutor.prop.kieSessionName |If rules are to be loaded from application classpath, then specify the name of the session to use. This is created using CEP Worknbench. |UserActivity-rules-session|
+	| dt.operator.FraudRulesExecutor.prop.kiebaseName |If rules are to be loaded from application classpath, then specify the name of the kie base (rule) to use . This is created using CEP Workbench. |ato-rules|
+	| dt.operator.TransactionValidator.port.input.attr.TUPLE_CLASS |Fully qualified class name for the tuple class POJO (Plain old java objects) input by Validator |com.datatorrent.cep.schema.Transaction|
+	| dt.operator.TransactionTransformer.port.input.attr.TUPLE_CLASS |Fully qualified class name for the tuple class POJO (Plain old java objects) input by transformer. |com.datatorrent.cep.schema.Transaction|
+	| dt.operator.TransactionTransformer.port.output.attr.TUPLE_CLASS |Fully qualified class name for the tuple class POJO(Plain old java objects) output by transformer. |com.datatorrent.cep.schema.Transaction|
+	| dt.operator.TransactionParser.port.out.attr.TUPLE_CLASS |Fully qualified class name for the tuple class POJO (Plain old java objects) output to generate by parser |com.datatorrent.cep.schema.Transaction|
+	| dt.operator.AccountDataEnricher.port.fraudInput.attr.TUPLE_CLASS | ||
+	| dt.operator.FraudDataAnalyser.port.factsInput.attr.TUPLE_CLASS | ||
+	| dt.operator.FraudDataAnalyser.fieldExtractors(demo) | ||
+	| dt.operator.FraudDataAnalyser.fieldExtractors(fraud) | ||
+	| dt.fraudprevention.enrichments.configFilePath | ||
 	2. Click **Save** and launch the application.
 
-	| Property |
-	| -- |
-	| dt.operator.FraudRulesExecutor.prop.kieSessionName |
-	| dt.operator.FraudRulesExecutor.prop.kiebaseName |
-	| dt.operator.TransactionValidator.port.input.attr.TUPLE_CLASS |
-	| dt.operator.TransactionTransformer.port.input.attr.TUPLE_CLASS |
-	| dt.operator.TransactionTransformer.port.output.attr.TUPLE_CLASS |
-	| dt.operator.TransactionParser.port.out.attr.TUPLE_CLASS |
-	| dt.operator.AccountDataEnricher.port.fraudInput.attr.TUPLE_CLASS |
-	| dt.operator.FraudDataAnalyser.port.factsInput.attr.TUPLE_CLASS |
-	| dt.operator.FraudDataAnalyser.fieldExtractors(demo) |
-	| dt.operator.FraudDataAnalyser.fieldExtractors(fraud) |
-	| dt.fraudprevention.enrichments.configFilePath |
