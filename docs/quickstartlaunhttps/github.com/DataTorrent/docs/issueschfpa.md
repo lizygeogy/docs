@@ -27,7 +27,7 @@ java -cp app/*:lib/*:`hadoop classpath` com.datatorrent.cep.transactionGenerator
    2. Select a Source Application and enter the Configuration Name and then click **Create**. ![]  (images/applications/quickstart_launch/newappconfig.png)
    
 8. Enter the Required Properties. ![](images/applications/quickstart_launch/requiredpropertiesfpa.png)
-9. Configure the **CEP Workbench Service**
+9. Configure the **CEP Workbench Service**.
 
    1. On the configuration page, scroll down.
    2. Select the **drools-workbench** and click **configure**.![](images/applications/quickstart_launch/configservicefpa1.png)
@@ -36,29 +36,25 @@ java -cp app/*:lib/*:`hadoop classpath` com.datatorrent.cep.transactionGenerator
    **Note:** Ensure that the Proxy Address is set correctly.
 
 10. Configure the **Online Analytics Service**.
-  
-   1. Select the **fpa-online-analytics-service** and click **configure**.![](images/applications/quickstart_launch/configservicefpa2.png)
-   2. Click **save** after specifying the configuration.
-  
+    1. Select the **fpa-online-analytics-service** and click **configure**.![](images/applications/quickstart_launch/configservicefpa2.png)
+    2. Click **save** after specifying the configuration.
+   
    **Note** :Ensure that the **KafkaBrokers** and the **KafkaTopic** is set correctly.
    
 11. Configure the **OAS Dashboards** service.
-  
-   1. Select **superset-fpa** and click **configure**![](images/applications/quickstart_launch/configservicefpa3.png)
-   2. Click **save** after specifying the configuration.
+    1. Select **superset-fpa** and click **configure**![](images/applications/quickstart_launch/configservicefpa3.png)
+    2. Click **save** after specifying the configuration.
    
    **Note** : Ensure to set correct druid\_cluster IP and the Proxy Address.
    
 12. Configure the Dashboards.
-
-   1. Click **configure**.![](images/applications/quickstart_launch/configpackagedashboardfpa.png)
-   2. From the **Select Replacement Applications** drop down, select the corresponding configuration name for both the dashboards.
-   3. Click **Save**.
+    1. Click **configure**.![](images/applications/quickstart_launch/configpackagedashboardfpa.png)
+    2. From the **Select Replacement Applications** drop down, select the corresponding configuration name for both the dashboards.
+    3. Click **Save**.
    
 13. Save the configuration.
-   
-   1. Click **Save.**
-   2. Click **launch** to launch the application.![](images/applications/quickstart_launch/launchfpa.png)
+    1. Click **Save.**
+    2. Click **launch** to launch the application.![](images/applications/quickstart_launch/launchfpa.png)
 
 ## Launch Test Data Generator Application
 
