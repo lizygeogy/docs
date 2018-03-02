@@ -54,7 +54,7 @@
     **Note** : Make sure to set correct druid\_cluster IP and the Proxy Address. 
 11. Configure the Dashboards.
     1. Click **configure**. ![](images/applications/quickstart_launch/atoconfigpackdashboard.png)
-    2.From the **Select Replacement Applications** drop down, select the correct configuration name for both the Dashboards. 
+    2. From the **Select Replacement Applications** drop down, select the correct configuration name for both the Dashboards.
     3. Click **Save**. 
 12. Save the complete configuration.
 
@@ -63,11 +63,10 @@
 1. Create new configuration for the **UserActivityGenerator**.
    - Go to **Develop** > **Application Packages** > **+ new configuration**.![](images/applications/quickstart_launch/atouseractivitynewconfig.png) ![](images/applications/quickstart_launch/atouseractivitynewconfig1.png)
 2. Add Optional Properties.
-   - In **Optional Properties** , click **+add** to add Optional Properties.
-  ![](images/applications/quickstart_launch/atouseractivitynewconfig2.png) 
+   1. In **Optional Properties** , click **+add** to add Optional Properties. ![](images/applications/quickstart_launch/atouseractivitynewconfig2.png) 
 
-**Note:**   **Kafka** topic of the DataGenerator should be same as the **Transaction Receiver** topic of the Omni Channel Fraud Prevention Application.
-   - Click **save**.
-   - Click **launch** to launch the Data Generator.
+   **Note:**   **Kafka** topic of the DataGenerator should be same as the **Transaction Receiver** topic of the Omni Channel Fraud Prevention Application.
+   2. Click **save**.
+   3. Click **launch** to launch the Data Generator.
 
 
