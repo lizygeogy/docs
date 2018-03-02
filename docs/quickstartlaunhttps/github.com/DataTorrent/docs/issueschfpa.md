@@ -38,14 +38,14 @@ java -cp app/*:lib/*:`hadoop classpath` com.datatorrent.cep.transactionGenerator
 10. Configure the **Online Analytics Service**.
     1. Select the **fpa-online-analytics-service** and click **configure**.![](images/applications/quickstart_launch/configservicefpa2.png)
     2. Click **save** after specifying the configuration.
-   
-   **Note** :Ensure that the **KafkaBrokers** and the **KafkaTopic** is set correctly.
+    
+    **Note** :Ensure that the **KafkaBrokers** and the **KafkaTopic** is set correctly.
    
 11. Configure the **OAS Dashboards** service.
     1. Select **superset-fpa** and click **configure**![](images/applications/quickstart_launch/configservicefpa3.png)
     2. Click **save** after specifying the configuration.
-   
-   **Note** : Ensure to set correct druid\_cluster IP and the Proxy Address.
+    
+    **Note** : Ensure to set correct druid\_cluster IP and the Proxy Address.
    
 12. Configure the Dashboards.
     1. Click **configure**.![](images/applications/quickstart_launch/configpackagedashboardfpa.png)
