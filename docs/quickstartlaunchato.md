@@ -16,22 +16,22 @@
    2. Click **launch** drop-down and select **download package**.![](images/applications/quickstart_launch/atoapppackage.png)
 4. Get the Geolite Maxmind Database (Use Hadoop user or user that has access to Hadoop). 
 
-  Getting the Geolite Maxmind Database using Bash:
-  ```
-  url http://geolite.maxmind.com/download/geoip/database/GeoLite2-City.tar.gz -o GeoLite2-City.tar.gz
-  tar -zxvf GeoLite2-City.tar.gz 
-  hdfs dfs put GeoLite2-City*/GeoLite2-City.mmdb city.mmdb
-  ```
+   Getting the Geolite Maxmind Database using Bash:
+   ```
+   url http://geolite.maxmind.com/download/geoip/database/GeoLite2-City.tar.gz -o GeoLite2-City.tar.gz
+   tar -zxvf GeoLite2-City.tar.gz 
+   hdfs dfs put GeoLite2-City*/GeoLite2-City.mmdb city.mmdb
+   ```
 5. Generate test lookup data which will be used by the enrichment operators in the DAG. Use Hadoop user or user that has access to Hadoop to run following commands:
    
-  Generating sample lookup data using Bash:
-  ```
-  Bash
-  mkdir ato_package
-  cd ato_package
-  unzip ../dt-ato-prevention-application-1.4.0.apa 
-  java -cp app/*:lib/*:`hadoop classpath` com.datatorrent.ato.userActivityGenerator.DumpLookupData ato_lookupdata
-  ```
+   Generating sample lookup data using Bash:
+   ```
+   Bash
+   mkdir ato_package
+   cd ato_package
+   unzip ../dt-ato-prevention-application-1.4.0.apa 
+   java -cp app/*:lib/*:`hadoop classpath` com.datatorrent.ato.userActivityGenerator.DumpLookupData ato_lookupdata
+   ```
 6. Create configuration for ATO.
    1. Navigate to **Develop** > **ApplicationPackages** > **+ new configuration** ![](images/applications/quickstart_launch/atoapppacknewconfig.png)
    2. Click **create**. ![](images/applications/quickstart_launch/atonewconfig1.png)
