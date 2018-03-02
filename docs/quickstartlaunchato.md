@@ -66,6 +66,7 @@
    1. In **Optional Properties** , click **+add** to add Optional Properties. ![](images/applications/quickstart_launch/atouseractivitynewconfig2.png) 
 
    **Note:**   **Kafka** topic of the DataGenerator should be same as the **Transaction Receiver** topic of the Omni Channel Fraud Prevention Application.
+   
    2. Click **save**.
    3. Click **launch** to launch the Data Generator.
 
