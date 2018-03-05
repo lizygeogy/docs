@@ -566,82 +566,65 @@
 <li>In the DataTorrent Omni Channel Fraud Prevention Application box, click <strong>import</strong>. <img alt="" src="../images/applications/quickstart_launch/import.png" /></li>
 <li>Download the application after DataTorrent Omni Channel Fraud Prevention Application package is imported.</li>
 <li>Navigate to <strong>Develop</strong> &gt; <strong>Application Package</strong> &gt; <strong>Data Torrent Omni Channel Fraud Prevention Application.</strong> Click <strong>launch</strong> drop-down and select <strong>download package</strong>. <img alt="" src="../images/applications/quickstart_launch/downloadpackage.png" /></li>
-<li>Get the Geolite Maxmind Database (Use Hadoop user or user that has access to Hadoop). </li>
-</ol>
-<p>Getting Geolite Maxmind Database using Bash: 
-   <code>url http://geolite.maxmind.com/download/geoip/database/GeoLite2-City.tar.gz -o GeoLite2-City.tar.gz
-   tar -zxvf GeoLite2-City.tar.gz 
-   hdfs dfs put GeoLite2-City*/GeoLite2-City.mmdb city.mmdb</code></p>
-<ol>
-<li>Generate lookup data which will be used by enrichment operators in the DAG. Use Hadoop user or any user that has access to Hadoop.</li>
-</ol>
-<p>Generating sample lookup data using Bash: 
-   <code>mkdir fpa_package
-   cd fpa_package
-   unzip ../dt-cep-omni-fraud-prevention-app-1.4.0.apa 
-   java -cp app/*:lib/*:`hadoop classpath` com.datatorrent.cep.transactionGenerator.DumpLookupData lookupdata</code>
-7. Create a New Configuration for the OmniChannelFraudPreventationApp.</p>
-<ol>
-<li>Go to <strong>Develop</strong> &gt; <strong>Application Configurations</strong> &gt; <strong>+ create new.</strong></li>
 <li>
-<p>Select a Source Application and enter the Configuration Name and then click <strong>Create</strong>. <img alt="" src="../images/applications/quickstart_launch/newappconfig.png" /></p>
+<p>Get the Geolite Maxmind Database (Use Hadoop user or user that has access to Hadoop). Getting Geolite Maxmind Database using Bash:</p>
+<pre><code>    url http://geolite.maxmind.com/download/geoip/database/GeoLite2-City.tar.gz -o GeoLite2-City.tar.gz
+    tar -zxvf GeoLite2-City.tar.gz 
+    hdfs dfs put GeoLite2-City*/GeoLite2-City.mmdb city.mmdb
+</code></pre>
+</li>
+<li>
+<p>Generate lookup data which will be used by enrichment operators in the DAG. Use Hadoop user or any user that has access to Hadoop. Generating sample lookup data using Bash:</p>
+<pre><code>    mkdir fpa_package
+    cd fpa_package
+    unzip ../dt-cep-omni-fraud-prevention-app-1.4.0.apa 
+    java -cp app/*:lib/*:`hadoop classpath` com.datatorrent.cep.transactionGenerator.DumpLookupData lookupdata
+</code></pre>
+</li>
+<li>
+<p>Create a New Configuration for the OmniChannelFrudPreventationApp.</p>
+<p>i. Go to <strong>Develop</strong> &gt; <strong>Application Configurations</strong> &gt; <strong>+ create new.</strong></p>
+<p>ii. Select a Source Application and enter the Configuration Name and then click <strong>Create</strong>. <img alt="" src="../images/applications/quickstart_launch/newappconfig.png" />  </p>
 </li>
 <li>
 <p>Enter the Required Properties. <img alt="" src="../images/applications/quickstart_launch/requiredpropertiesfpa.png" /></p>
 </li>
 <li>
-<p>Configure the <strong>CEP Workbench Service</strong>.</p>
+<p>Configure the <strong>CEP Workbench Service</strong>.    </p>
+<p>i. On the configuration page, scroll down.</p>
+<p>ii. Select the <strong>drools-workbench</strong> and click <strong>configure</strong>.<img alt="" src="../images/applications/quickstart_launch/configservicefpa1.png" /></p>
+<p>iii. Click <strong>save</strong> after specifying the configuration. <strong>Note:</strong> Ensure that the Proxy Address is set correctly.</p>
 </li>
-<li>
-<p>On the configuration page, scroll down.</p>
-</li>
-<li>Select the <strong>drools-workbench</strong> and click <strong>configure</strong>.<img alt="" src="../images/applications/quickstart_launch/configservicefpa1.png" /></li>
-<li>Click <strong>save</strong> after specifying the configuration.</li>
-</ol>
-<p><strong>Note:</strong> Ensure that the Proxy Address is set correctly.</p>
-<ol>
 <li>
 <p>Configure the <strong>Online Analytics Service</strong>.</p>
-<ol>
-<li>Select the <strong>fpa-online-analytics-service</strong> and click <strong>configure</strong>.<img alt="" src="../images/applications/quickstart_launch/configservicefpa2.png" /></li>
-<li>Click <strong>save</strong> after specifying the configuration.</li>
-</ol>
-<p><strong>Note</strong> :Ensure that the <strong>KafkaBrokers</strong> and the <strong>KafkaTopic</strong> is set correctly.</p>
+<p>i. Select the <strong>fpa-online-analytics-service</strong> and click <strong>configure</strong>.<img alt="" src="../images/applications/quickstart_launch/configservicefpa2.png" /></p>
+<p>ii. Click <strong>save</strong> after specifying the configuration. <strong>Note</strong> :Ensure that the <strong>KafkaBrokers</strong> and the <strong>KafkaTopic</strong> is set correctly.</p>
 </li>
 <li>
 <p>Configure the <strong>OAS Dashboards</strong> service.</p>
-<ol>
-<li>Select <strong>superset-fpa</strong> and click <strong>configure</strong><img alt="" src="../images/applications/quickstart_launch/configservicefpa3.png" /></li>
-<li>Click <strong>save</strong> after specifying the configuration.</li>
-</ol>
-<p><strong>Note</strong> : Ensure to set correct druid_cluster IP and the Proxy Address.</p>
+<p>i. Select <strong>superset-fpa</strong> and click <strong>configure</strong><img alt="" src="../images/applications/quickstart_launch/configservicefpa3.png" /></p>
+<p>ii. Click <strong>save</strong> after specifying the configuration. <strong>Note</strong> : Ensure to set correct druid_cluster IP and the Proxy Address.</p>
 </li>
 <li>
 <p>Configure the Dashboards.</p>
-<ol>
-<li>Click <strong>configure</strong>.<img alt="" src="../images/applications/quickstart_launch/configpackagedashboardfpa.png" /></li>
-<li>From the <strong>Select Replacement Applications</strong> drop down, select the corresponding configuration name for both the dashboards.</li>
-<li>Click <strong>Save</strong>.</li>
-</ol>
+<p>i. Click <strong>configure</strong>.<img alt="" src="../images/applications/quickstart_launch/configpackagedashboardfpa.png" /></p>
+<p>ii. From the <strong>Select Replacement Applications</strong> drop down, select the corresponding configuration name for both the dashboards.</p>
+<p>iii. Click <strong>Save</strong>.</p>
 </li>
 <li>
 <p>Save the configuration.</p>
-<ol>
-<li>Click <strong>Save.</strong></li>
-<li>Click <strong>launch</strong> to launch the application.<img alt="" src="../images/applications/quickstart_launch/launchfpa.png" /></li>
-</ol>
+<p>i. Click <strong>Save.</strong></p>
+<p>ii. Click <strong>launch</strong> to launch the application.<img alt="" src="../images/applications/quickstart_launch/launchfpa.png" /></p>
 </li>
 </ol>
 <h2 id="launch-test-data-generator-application">Launch Test Data Generator Application</h2>
 <ol>
 <li>Create <strong>New Configuration</strong> for the OmniChannelFraudPreventationDataGenerator.</li>
 <li>Go to <strong>Develop</strong> &gt; <strong>Application Packages &gt; + new configuration.</strong></li>
-<li>Add <strong>Optional Properties</strong>.</li>
-<li>Under <strong>Optional Properties</strong> , click + <strong>add</strong> and add the required optional properties.</li>
+<li>Add <strong>Optional Properties</strong>. Under <strong>Optional Properties</strong>, click <strong>+ add</strong> and add the required optional properties. <strong>Note:</strong> <strong>Kafka</strong> topic of the DataGenerator should be same as the <strong>Transaction Receiver</strong> topic of the Omni Channel Fraud Prevention Application.<img alt="" src="../images/applications/quickstart_launch/launchgenerator.png" /></li>
+<li>Click <strong>save</strong>.</li>
+<li>Click <strong>launch</strong> to launch the Data Generator. </li>
 </ol>
-<p><strong>Note:</strong>   <strong>Kafka</strong> topic of the DataGenerator should be same as the <strong>Transaction Receiver</strong> topic of the Omni Channel Fraud Prevention Application.<img alt="" src="../images/applications/quickstart_launch/launchgenerator.png" />
-4. Click <strong>save</strong>.
-5. Click <strong>launch</strong> to launch the Data Generator. </p>
               
             </div>
           </div>

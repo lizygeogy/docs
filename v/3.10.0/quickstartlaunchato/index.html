@@ -554,71 +554,96 @@
                 <h1 id="quick-start-guide-account-takeover-prevention-application">Quick Start Guide - Account Takeover Prevention Application</h1>
 <h2 id="setup-docker-and-rts">Setup Docker and RTS</h2>
 <ol>
-<li>Setup docker daemon host (preferably same as gateway machine). This supplies the docker images for <strong>Online Analytics Service</strong>, <strong>OAS Dashboards Service</strong> that is a customized implementation of Apache Superset and <strong>CEP Workbench</strong> that is a customized Drools Workbench implementation.<img alt="" src="../images/applications/quickstart_launch/dockerlocation.png" /></li>
-<li>Install rts 3.10 bin. In the installation wizard, specify the docker location.</li>
+<li>
+<p>Setup docker daemon host (preferably same as gateway machine). This supplies the docker images for <strong>Online Analytics Service</strong>, <strong>OAS Dashboards Service</strong> that is a customized implementation of Apache Superset and <strong>CEP Workbench</strong> that is a customized Drools Workbench implementation.<img alt="" src="../images/applications/quickstart_launch/dockerlocation.png" /></p>
+</li>
+<li>
+<p>Install rts 3.10 bin. In the installation wizard, specify the docker location.</p>
+</li>
 </ol>
 <h2 id="launching-account-takeover-prevention-application">Launching Account Takeover Prevention Application</h2>
 <ol>
-<li>Import the Account Takeover Prevention Application from the AppFactory.</li>
-<li>In the DataTorrent Account Takeover Prevention Application box, click <strong>import</strong>. <img alt="" src="../images/applications/quickstart_launch/importato.png" /></li>
+<li>
+<p>Import the Account Takeover Prevention Application from the AppFactory.</p>
+</li>
+<li>
+<p>In the DataTorrent Account Takeover Prevention Application box, click <strong>import</strong>. <img alt="" src="../images/applications/quickstart_launch/importato.png" /></p>
+</li>
 <li>
 <p>Download the package, after DataTorrent Account Take Over Prevention Application package is imported.</p>
+<p>i. Navigate to <strong>Develop</strong> &gt; <strong>Application Package</strong> &gt; <strong>DataTorrent Account TakeOver Prevention Application</strong>.</p>
+<p>ii. Click <strong>launch</strong> drop-down and select <strong>download package</strong>.<img alt="" src="../images/applications/quickstart_launch/atoapppackage.png" /></p>
 </li>
 <li>
-<p>Navigate to <strong>Develop</strong> &gt; <strong>Application Package</strong> &gt; <strong>DataTorrent Account TakeOver Prevention Application</strong>.</p>
-</li>
-<li>Click <strong>launch</strong> drop-down and select <strong>download package</strong>.<img alt="" src="../images/applications/quickstart_launch/atoapppackage.png" /></li>
-<li>Get the Geolite Maxmind Database (Use Hadoop user or user that has access to Hadoop). </li>
-</ol>
-<p>Getting the Geolite Maxmind Database using Bash:
-   <code>url http://geolite.maxmind.com/download/geoip/database/GeoLite2-City.tar.gz -o GeoLite2-City.tar.gz
-   tar -zxvf GeoLite2-City.tar.gz 
-   hdfs dfs put GeoLite2-City*/GeoLite2-City.mmdb city.mmdb</code>
-5. Generate test lookup data which will be used by the enrichment operators in the DAG. Use Hadoop user or user that has access to Hadoop to run following commands:</p>
-<p>Generating sample lookup data using Bash:
-   <code>Bash
-   mkdir ato_package
-   cd ato_package
-   unzip ../dt-ato-prevention-application-1.4.0.apa 
-   java -cp app/*:lib/*:`hadoop classpath` com.datatorrent.ato.userActivityGenerator.DumpLookupData ato_lookupdata</code>
-6. Create configuration for ATO.
-   1. Navigate to <strong>Develop</strong> &gt; <strong>ApplicationPackages</strong> &gt; <strong>+ new configuration</strong> <img alt="" src="../images/applications/quickstart_launch/atoapppacknewconfig.png" />
-   2. Click <strong>create</strong>. <img alt="" src="../images/applications/quickstart_launch/atonewconfig1.png" />
-7. Enter the Required Properties. 
-8. Configure the <strong>CEP Workbench Service</strong>.
-   1. On the configuration page, scroll down.
-   2. Select the <strong>drools-workbench</strong> and click <strong>configure</strong>.
-   3. Click <strong>save</strong> after specifying the configuration.</p>
-<p><strong>Note:</strong> Ensure that the Proxy Address is set correctly.
-9. Configure <strong>Online Analytics Services</strong>.
-   1. Select the <strong>ato-online-analytics-service</strong> and click <strong>configure</strong>. <img alt="" src="../images/applications/quickstart_launch/atoconfigureservice1.png" />
-   2. Click <strong>save</strong> after the configuration is set correctly.</p>
-<p><strong>Note:</strong> Make sure <strong>KafkaBrokers</strong> and the <strong>KafkaTopic</strong> are set correctly.
-10. Configure <strong>OAS Dashboards</strong>.
-    1. Select <strong>superset-ato</strong> and click <strong>configure</strong>. <img alt="" src="../images/applications/quickstart_launch/atoconfigureservice2.png" />
-    2. Click <strong>save</strong> after the configuration is set correctly.</p>
-<pre><code>**Note** : Make sure to set correct druid\_cluster IP and the Proxy Address.
+<p>Get the Geolite Maxmind Database (Use Hadoop user or user that has access to Hadoop). Getting the Geolite Maxmind Database using Bash:</p>
+<pre><code> url http://geolite.maxmind.com/download/geoip/database/GeoLite2-City.tar.gz -o GeoLite2-City.tar.gz
+ tar -zxvf GeoLite2-City.tar.gz 
+ hdfs dfs put GeoLite2-City*/GeoLite2-City.mmdb city.mmdb
 </code></pre>
-<ol>
-<li>Configure the Dashboards.<ol>
-<li>Click <strong>configure</strong>. <img alt="" src="../images/applications/quickstart_launch/atoconfigpackdashboard.png" /></li>
-<li>From the <strong>Select Replacement Applications</strong> drop down, select the correct configuration name for both the Dashboards.</li>
-<li>Click <strong>Save</strong>. </li>
-</ol>
 </li>
-<li>Save the complete configuration.</li>
+<li>
+<p>Generate test lookup data which will be used by the enrichment operators in the DAG. Use Hadoop user or user that has access to Hadoop to run following commands. Generating sample lookup data using Bash:</p>
+<pre><code> Bash
+ mkdir ato_package
+ cd ato_package
+ unzip ../dt-ato-prevention-application-1.4.0.apa 
+ java -cp app/*:lib/*:`hadoop classpath` com.datatorrent.ato.userActivityGenerator.DumpLookupData ato_lookupdata
+</code></pre>
+</li>
+<li>
+<p>Create configuration for ATO.</p>
+<p>i. Navigate to <strong>Develop</strong> &gt; <strong>ApplicationPackages</strong> &gt; <strong>+ new configuration</strong> <img alt="" src="../images/applications/quickstart_launch/atoapppacknewconfig.png" /></p>
+<p>ii. Click <strong>create</strong>. <img alt="" src="../images/applications/quickstart_launch/atonewconfig1.png" /></p>
+</li>
+<li>
+<p>Enter the Required Properties. </p>
+</li>
+<li>
+<p>Configure the <strong>CEP Workbench Service</strong>.</p>
+<p>i. On the configuration page, scroll down.</p>
+<p>ii. Select the <strong>drools-workbench</strong> and click <strong>configure</strong>.</p>
+<p>iii. Click <strong>save</strong> after specifying the configuration.
+<strong>Note:</strong> Ensure that the Proxy Address is set correctly.</p>
+</li>
+<li>
+<p>Configure <strong>Online Analytics Services</strong>.</p>
+<p>i. Select the <strong>ato-online-analytics-service</strong> and click <strong>configure</strong>. <img alt="" src="../images/applications/quickstart_launch/atoconfigureservice1.png" /></p>
+<p>ii. Click <strong>save</strong> after the configuration is set correctly.</p>
+</li>
+</ol>
+<p><strong>Note:</strong> Make sure <strong>KafkaBrokers</strong> and the <strong>KafkaTopic</strong> are set correctly.</p>
+<ol>
+<li>
+<p>Configure <strong>OAS Dashboards</strong>.</p>
+<p>i. Select <strong>superset-ato</strong> and click <strong>configure</strong>. <img alt="" src="../images/applications/quickstart_launch/atoconfigureservice2.png" /></p>
+<p>ii. Click <strong>save</strong> after the configuration is set correctly.
+<strong>Note</strong> : Make sure to set correct druid_cluster IP and the Proxy Address. </p>
+</li>
+<li>
+<p>Configure the Dashboards.</p>
+<p>i. Click <strong>configure</strong>. <img alt="" src="../images/applications/quickstart_launch/atoconfigpackdashboard.png" /></p>
+<p>ii. From the <strong>Select Replacement Applications</strong> drop down, select the correct configuration name for both the Dashboards.</p>
+<p>iii. Click <strong>Save</strong>. </p>
+</li>
+<li>
+<p>Save the complete configuration.</p>
+</li>
 </ol>
 <h3 id="launch-test-data-generator-application">Launch Test Data Generator Application</h3>
 <ol>
-<li>Create new configuration for the <strong>UserActivityGenerator</strong>.</li>
-<li>Go to <strong>Develop</strong> &gt; <strong>Application Packages</strong> &gt; <strong>+ new configuration</strong>.<img alt="" src="../images/applications/quickstart_launch/atouseractivitynewconfig.png" /> <img alt="" src="../images/applications/quickstart_launch/atouseractivitynewconfig1.png" /></li>
-<li>Add Optional Properties.</li>
-<li>In <strong>Optional Properties</strong> , click <strong>+add</strong> to add Optional Properties. <img alt="" src="../images/applications/quickstart_launch/atouseractivitynewconfig2.png" /> </li>
-</ol>
-<p><strong>Note:</strong>   <strong>Kafka</strong> topic of the DataGenerator should be same as the <strong>Transaction Receiver</strong> topic of the Omni Channel Fraud Prevention Application.</p>
-<ol>
-<li>Click <strong>save</strong>.</li>
-<li>Click <strong>launch</strong> to launch the Data Generator.</li>
+<li>
+<p>Create new configuration for the <strong>UserActivityGenerator</strong>.</p>
+</li>
+<li>
+<p>Go to <strong>Develop</strong> &gt; <strong>Application Packages</strong> &gt; <strong>+ new configuration</strong>.<img alt="" src="../images/applications/quickstart_launch/atouseractivitynewconfig.png" /> <img alt="" src="../images/applications/quickstart_launch/atouseractivitynewconfig1.png" /></p>
+</li>
+<li>
+<p>Add Optional Properties.</p>
+<p>i. In <strong>Optional Properties</strong>, click <strong>+add</strong> to add Optional Properties. <img alt="" src="../images/applications/quickstart_launch/atouseractivitynewconfig2.png" /> 
+<strong>Note:</strong>   <strong>Kafka</strong> topic of the DataGenerator should be same as the <strong>Transaction Receiver</strong> topic of the Omni Channel Fraud Prevention Application.</p>
+<p>ii. Click <strong>save</strong>.</p>
+<p>iii. Click <strong>launch</strong> to launch the Data Generator.</p>
+</li>
 </ol>
               
             </div>
