@@ -554,7 +554,7 @@
               
                 <h1 id="introduction">Introduction</h1>
 <p>CEP Workbench is a <a href="../services/#overview">DataTorrent RTS Service</a> that is a customized Drools Workbench implementation. The service provides you with the capability to change the functionality of CEP applications using drools-based rules.</p>
-<p>The CEP Workbench service is pre-packaged with applications like Omni-channel Fraud Prevention and Account Takeover Prevention.  From the DT RTS console, you can access CEP Workbench service, create the customized rules, and then apply these rules to the application configuration to change the application behavior.</p>
+<p>The CEP Workbench service is pre-packaged with applications such as Omni-channel Fraud Prevention and Account Takeover Prevention.  From the DT RTS console, you can access the CEP Workbench service, create customized rules, and then apply these rules to the application configuration to change the application behavior.</p>
 <h1 id="pre-requisites">Pre-requisites</h1>
 <p>Install Docker (Version 1.9.1 or greater) and provide the docker host setting by running the installation wizard in cases where Docker is installed on a machine other than the Gateway.  Please note that for automatic artifacts synchronization the Docker container with CEP Workbench and Gateway need to share the same physical host.  For more details, please refer to <a href="../services/#configuring-docker">Docker Configuration</a></p>
 <h1 id="accessing-cep-workbench">Accessing CEP Workbench</h1>
@@ -646,50 +646,31 @@
 <p><strong>Specify Optional Properties</strong>:</p>
 <ol>
 <li>In the same application configuration, add the following properties in the <strong>Optional Properties</strong> section.</li>
-<li>Click <strong>Save</strong> and launch the application.</li>
 </ol>
 <table>
 <thead>
 <tr>
-<th>Property</th>
+<th><strong>Property</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Example</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>dt.operator.FraudRulesExecutor.prop.kieSessionName</td>
+<td>If rules are to be loaded from application classpath, then specify the name of the session to use. This is created using CEP Worknbench.</td>
+<td>UserActivity-rules-session</td>
 </tr>
 <tr>
 <td>dt.operator.FraudRulesExecutor.prop.kiebaseName</td>
-</tr>
-<tr>
-<td>dt.operator.TransactionValidator.port.input.attr.TUPLE_CLASS</td>
-</tr>
-<tr>
-<td>dt.operator.TransactionTransformer.port.input.attr.TUPLE_CLASS</td>
-</tr>
-<tr>
-<td>dt.operator.TransactionTransformer.port.output.attr.TUPLE_CLASS</td>
-</tr>
-<tr>
-<td>dt.operator.TransactionParser.port.out.attr.TUPLE_CLASS</td>
-</tr>
-<tr>
-<td>dt.operator.AccountDataEnricher.port.fraudInput.attr.TUPLE_CLASS</td>
-</tr>
-<tr>
-<td>dt.operator.FraudDataAnalyser.port.factsInput.attr.TUPLE_CLASS</td>
-</tr>
-<tr>
-<td>dt.operator.FraudDataAnalyser.fieldExtractors(demo)</td>
-</tr>
-<tr>
-<td>dt.operator.FraudDataAnalyser.fieldExtractors(fraud)</td>
-</tr>
-<tr>
-<td>dt.fraudprevention.enrichments.configFilePath</td>
+<td>If rules are to be loaded from application classpath, then specify the name of the kie base (rule) to use . This is created using CEP Workbench.</td>
+<td>ato-rules</td>
 </tr>
 </tbody>
 </table>
+<ol>
+<li>Click <strong>Save</strong> and launch the application.</li>
+</ol>
 </li>
 </ol>
               
