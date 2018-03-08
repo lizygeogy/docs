@@ -1,9 +1,15 @@
 Welcome to DataTorrent RTS!
 ================================================================================
 
-DataTorrent RTS, built on Apache Apex, provides a high-performing, fault-tolerant, scalable, easy to use data processing platform for both batch and streaming workloads. DataTorrent RTS includes advanced management, monitoring, development, visualization, data ingestion and distribution features.  
+DataTorrent RTS, enables customers to launch big data products using open source software with quick time to value, and be able to operate these products within a viable total cost of ownership. Using RTS, customers are able to achieve critical business outcomes successfully. RTS consists of the following
 
+- Fast Big Data Stack: We harness open source creativity and innovation by integrating, and hardening the best-of-breed technologies that enable customers to quickly develop enterprise quality applications.
+- Apoxi: A framweork that helps develop and operate big data proucts by stitching together data services. Apoxi includes includes all the glue logic, registries, metrics platform, and application backplane required to get to production quickly.
+- AppFactory: RTS customers have access to applications factory that consists of certified, hardened, and reusable applications, data services, and components for quick development and easy operations of big data products.
+- Tools: These include Easy-to-use and configure real-time and historical dashboards, management and monitoring UI, automated fault-tolerance, linear scale, security, deployment scripts etc.
+- Cloud Agnostic: All artifacts available in DataTorrent are hardened and certified for both Amazon and Azure. Your application will work seamlessly on-prem as well as cloud with minimal or no changes. Software includes connectors to all major Amazon and Azure technologies.
 
+RTS enables enterprises to de-risk your journey to be a data-driven enterprise.
 
 <style>
   #docs-jumbotron {
