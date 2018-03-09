@@ -14,6 +14,10 @@ pages:
     - System Alerts: dtgateway_systemalerts.md
     - Apex CLI: apexcli.md
     - Troubleshooting: troubleshooting.md
+- Tutorials:
+   - Top N Words: tutorials/topnwords.md
+   - Sales Dimensions: tutorials/salesdemo.md
+- APOXI: apoxi.md
 - Cloud Integration:
     - AWS: aws_emr_manual.md
     - Azure: azure_deployment.md
@@ -21,9 +25,6 @@ pages:
     - Creating Applications: create.md
     - "Beginner's Guide": beginner.md
     - Videos: demo_videos.md
-    - Tutorials:
-        - Top N Words: tutorials/topnwords.md
-        - Sales Dimensions: tutorials/salesdemo.md
     - Apex Development Setup: apex_development_setup.md
     - Generate New Project in IDE: configure_IDE.md
     - Applications: application_development.md
