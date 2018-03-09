@@ -2,10 +2,18 @@ site_name: DataTorrent Documentation
 google_analytics: ['UA-44586211-2', 'docs.datatorrent.com']
 site_favicon: favicon.ico
 pages:
-- DataTorrent RTS: index.md
-- Demos:
-    - Running Apps: demos.md
-- Sandbox: sandbox.md
+- DataTorrent RTS:
+    - About DataTorrent RTS: index.md
+    - Demo Applications: demos.md
+    - Sandbox: sandbox.md
+- Deployment and Operations:
+    - Licensing: Licensing.md
+    - Installation: installation.md
+    - Configuration: configuration.md
+    - Security: dtgateway_security.md
+    - System Alerts: dtgateway_systemalerts.md
+    - Apex CLI: apexcli.md
+    - Troubleshooting: troubleshooting.md
 - Cloud Integration:
     - AWS: aws_emr_manual.md
     - Azure: azure_deployment.md
@@ -24,7 +32,7 @@ pages:
     - Operator Development:
         - Guide: operator_development.md
         - Reference: operator_development_ref.md
-    - Operators: 
+    - Operators:
         - Operators List: library_operators.md
         - Drools Operator: operators/drools_operator.md
         - Python Operator: operators/python_operator.md
@@ -93,14 +101,6 @@ pages:
     - Apache Apex-Malhar: apex_malhar.md
     - Application Backplane: appbackplane.md
     - Store and Replay Feature: storeandreplay.md
-- Deployment and Operations:
-    - Licensing: Licensing.md
-    - Installation: installation.md
-    - Configuration: configuration.md
-    - Security: dtgateway_security.md
-    - System Alerts: dtgateway_systemalerts.md
-    - Apex CLI: apexcli.md
-    - Troubleshooting: troubleshooting.md
 - Release Notes: release_notes.md
 - Glossary: glossary.md
 - Resources: additional_docs.md
