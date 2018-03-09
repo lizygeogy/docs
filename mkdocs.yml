@@ -35,6 +35,8 @@ pages:
     - Configuration Packages: configuration_packages.md
 - APOXI: apoxi.md
     - RTS: rts.md
+    - Application Backplane: appbackplane.md
+    - Store and Replay Feature: storeandreplay.md
 - Fast Big Data Stack: fast_big_data_stack.md
     - Apex: apex.md
       - Beginner's Guide: beginner.md
@@ -43,8 +45,6 @@ pages:
     - Apache Spark: apache_spark.md
     - Drools: drools.md
     - Druid: druid.md
-    - Application Backplane: appbackplane.md
-    - Store and Replay Feature: storeandreplay.md
     - App Data Framework: app_data_framework.md
     - Videos: demo_videos.md
 - AppFactory: app_factory.md
