@@ -10,6 +10,7 @@ pages:
     - Licensing: Licensing.md
     - Installation:
         - On Prem: installation.md
+        - Amazon: amazon_deployment.md
         - Azure: azure_deployment.md
     - Configuration: configuration.md
     - Security: dtgateway_security.md
@@ -28,6 +29,8 @@ pages:
 - Fast Big Data Stack: fast_big_data_stack.md
 - AppFactory: app_factory.md
 - Cloud Agnostics: cloud_agnostics.md
+    - Amazon: amazon.md
+    - Azure: azure.md
 - Applications:
     - Creating Applications: create.md
     - Omni Channel Fraud Prevention Application: omni_channel_fraud_app.md
