@@ -4,6 +4,12 @@ site_favicon: favicon.ico
 pages:
 - DataTorrent RTS:
     - About DataTorrent RTS: index.md
+    - RTS Tools and Configuration:
+        - Operating: dtgateway.md
+        - Monitoring: dtmanage.md
+        - Dashboarding: dtdashboard.md
+        - Application Configurations: application_configurations.md
+        - JAR Artifacts: jar_artifacts.md
     - Demo Applications: demos.md
     - Sandbox: sandbox.md
 - Deployment and Operations:
@@ -15,6 +21,8 @@ pages:
     - Configuration: configuration.md
     - Security: dtgateway_security.md
     - System Alerts: dtgateway_systemalerts.md
+    - Docker: docker.md
+    - Integration with Log Aggregation: log_integration.md
     - DT CLI: apexcli.md
     - Troubleshooting: troubleshooting.md
 - Tutorials:
@@ -26,13 +34,25 @@ pages:
     - Application Packages: application_packages.md
     - Configuration Packages: configuration_packages.md
 - APOXI: apoxi.md
+    - RTS: rts.md
 - Fast Big Data Stack: fast_big_data_stack.md
+    - Apex: apex.md
+      - Beginner's Guide: beginner.md
+      - Malhar: apex_malhar.md
+    - Apache Kafka: apache_kafka.md
+    - Apache Spark: apache_spark.md
+    - Drools: drools.md
+    - Druid: druid.md
+    - Application Backplane: appbackplane.md
+    - Store and Replay Feature: storeandreplay.md
+    - App Data Framework: app_data_framework.md
+    - Videos: demo_videos.md
 - AppFactory: app_factory.md
 - Cloud Agnostics: cloud_agnostics.md
     - Amazon: amazon.md
     - Azure: azure.md
 - Applications:
-    - Creating Applications: create.md
+    - Building APOXI Compliant Applications: create.md
     - Omni Channel Fraud Prevention Application: omni_channel_fraud_app.md
     - Account Takeover Prevention Application: Accounttakeover.md
     - Quick Start Guide - Omni-Channel Fraud Prevention Application: quickstartlaunchfpa.md
@@ -43,33 +63,28 @@ pages:
     - Online Analytics Service (OAS): oas.md
 - Components: components.md
 - Operators: library_operators.md
-- Operator Development: operator_development.md
-- List of Operators:
-    - Drools Operator: operators/drools_operator.md
-    - Python Operator: operators/python_operator.md
-    - PMML Operator: operators/PMML_operator.md
-    - TCP Input Operator: operators/tcpinputoperator.md
-    - Event Hub Input Operator: operators/eventhubinput.md
-    - Event Hub Output Operator: operators/eventhuboutput.md
-    - Abstract HTTP Server Operator: operators/abstracthttpserver.md
-    - Azure Blob Storage Operator: operators/azure_blob.md
-    - Analytics Output Operator: operators/aoooperator.md
-    - Elasticsearch Output Operator: operators/elasticsearch.md
-    - Block Reader: operators/block_reader.md
-    - Deduper: operators/deduper.md
-    - Dimension Computation: operators/dimensions_computation.md
-    - File Output: operators/file_output.md
-    - File Splitter: operators/file_splitter.md
-    - HDHT: operators/hdht.md
-    - Kafka Input: operators/kafkaInputOperator.md
-    - Snapshot Server: operators/snapshot_server.md
-    - Reference: operator_development_ref.md
-- Development:
-    - "Beginner's Guide": beginner.md
-    - Videos: demo_videos.md
-    - App Data Framework: app_data_framework.md
-    - REST API: dtgateway_api.md
-- App Templates:
+    - Operator Development: operator_development.md
+    - List of Operators:
+        - Drools Operator: operators/drools_operator.md
+        - Python Operator: operators/python_operator.md
+        - PMML Operator: operators/PMML_operator.md
+        - TCP Input Operator: operators/tcpinputoperator.md
+        - Event Hub Input Operator: operators/eventhubinput.md
+        - Event Hub Output Operator: operators/eventhuboutput.md
+        - Abstract HTTP Server Operator: operators/abstracthttpserver.md
+        - Azure Blob Storage Operator: operators/azure_blob.md
+        - Analytics Output Operator: operators/aoooperator.md
+        - Elasticsearch Output Operator: operators/elasticsearch.md
+        - Block Reader: operators/block_reader.md
+        - Deduper: operators/deduper.md
+        - Dimension Computation: operators/dimensions_computation.md
+        - File Output: operators/file_output.md
+        - File Splitter: operators/file_splitter.md
+        - HDHT: operators/hdht.md
+        - Kafka Input: operators/kafkaInputOperator.md
+        - Snapshot Server: operators/snapshot_server.md
+        - Reference: operator_development_ref.md
+- Templates:
     - Import and Launch App-template: app-templates/0.10.0/common/import-launch.md
     - Customizing an app-template: app-templates/0.10.0/common/customize.md
     - Database-to-database-sync: app-templates/0.10.0/database-to-database-sync.md
@@ -95,18 +110,6 @@ pages:
     - Kafka to HDFS Sync App: app-templates/kafka-to-hdfs-sync.md
     - Kinesis to S3 App: app-templates/kinesis-to-s3.md
     - S3 to HDFS Sync App: app-templates/s3-to-hdfs-sync.md
-- Platform:
-    - RTS: rts.md
-    - Application Configurations: application_configurations.md
-    - dtManage: dtmanage.md
-    - dtDashboard: dtdashboard.md
-    - dtGateway: dtgateway.md
-    - Services: services.md
-    - JAR Artifacts: jar_artifacts.md
-    - Apache Apex: apex.md
-    - Apache Apex-Malhar: apex_malhar.md
-    - Application Backplane: appbackplane.md
-    - Store and Replay Feature: storeandreplay.md
 - Release Notes: release_notes.md
 - Glossary: glossary.md
 - Frequently Asked Questions: faq.md
