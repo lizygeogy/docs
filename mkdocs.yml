@@ -5,9 +5,9 @@ pages:
 - DataTorrent RTS:
     - About DataTorrent RTS: index.md
     - RTS Tools and Configuration:
-          - Operating RTS: dtgateway.md
-          - Monitoring RTS : dtmanage.md
-          - Dashboarding: dtdashboard.md
+          - Management & Operationsng: dtmanage.md
+          - Visualization & Dashboarding: dtdashboard.md
+          - Webserver (platform): dtgateway.md
           - Application Configurations: application_configurations.md
           - JAR Artifacts: jar_artifacts.md
     - Demo Applications: demos.md
@@ -22,7 +22,7 @@ pages:
     - Security: dtgateway_security.md
     - System Alerts: dtgateway_systemalerts.md
     - Docker: docker.md
-    - Integration with Log Aggregation: log_integration.md
+    - Log Aggregation: log_integration.md
     - DT CLI: apexcli.md
     - Troubleshooting: troubleshooting.md
 - Tutorials:
@@ -66,6 +66,31 @@ pages:
     - OAS Dashboards: oas_dashboards.md
     - Online Analytics Service (OAS): oas.md
 - Components: components.md
+    - Import and Launch App-template: app-templates/0.10.0/common/import-launch.md
+    - Customizing an app-template: app-templates/0.10.0/common/customize.md
+    - Database-to-database-sync 0.10.0: app-templates/0.10.0/database-to-database-sync.md
+    - Database to Database Sync App: app-templates/database-to-database-sync.md
+    - Database dump to HDFS App: app-templates/database-to-hdfs.md   
+    - HDFS-line-copy: app-templates/0.10.0/hdfs-line-copy.md
+    - HDFS-part-file-copy: app-templates/0.10.0/hdfs-part-file-copy.md
+    - HDFS-to-HDFS-filter-transform: app-templates/0.10.0/hdfs-to-hdfs-filter-transform.md
+    - HDFS Sync App: app-templates/hdfs-sync.md
+    - HDFS to HDFS Line Copy App: app-templates/hdfs-line-copy.md
+    - HDFS to Kafka Sync App: app-templates/hdfs-to-kafka-sync.md
+    - HDFS to S3 Sync App:  app-templates/hdfs-to-s3-sync.md
+    - Kafka-to-Cassandra-Filter-Transform: app-templates/0.10.0/kafka-to-cassandra-filter-transform.md
+    - Kafka-to-Database-sync: app-templates/0.10.0/kafka-to-database-sync.md
+    - Kafka-to-HDFS-Filter-Transform: app-templates/0.10.0/kafka-to-hdfs-filter-transform.md
+    - Kafka-to-Kafka-Filter-Transform: app-templates/0.10.0/kafka-to-kafka-filter-transform.md
+    - Kafka to HDFS Sync App: app-templates/kafka-to-hdfs-sync.md
+    - Kafka to HDFS Filter App: app-templates/kafka-to-hdfs-filter.md
+    - Kafka to Database Sync App: app-templates/kafka-to-database-sync.md
+    - Kinesis-to-Redshift: app-templates/0.10.0/kinesis-to-redshift.md
+    - Kinesis-to-S3 0.10.0: app-templates/0.10.0/kinesis-to-s3.md
+    - Kinesis to S3 App: app-templates/kinesis-to-s3.md
+    - S3-to-HDFS-sync: app-templates/0.10.0/s3-to-hdfs-sync.md
+    - S3-to-HDFS-Filter-Transform: app-templates/0.10.0/s3-to-redshift.md
+    - S3 to HDFS Sync App: app-templates/s3-to-hdfs-sync.md
 - Operators:
     - List of Operators: library_operators.md
     - Operator Development: operator_development.md
@@ -89,32 +114,6 @@ pages:
           - Kafka Input: operators/kafkaInputOperator.md
           - Snapshot Server: operators/snapshot_server.md
           - Reference: operator_development_ref.md
-- Templates:
-    - Import and Launch App-template: app-templates/0.10.0/common/import-launch.md
-    - Customizing an app-template: app-templates/0.10.0/common/customize.md
-    - Database-to-database-sync: app-templates/0.10.0/database-to-database-sync.md
-    - HDFS-line-copy: app-templates/0.10.0/hdfs-line-copy.md
-    - HDFS-part-file-copy: app-templates/0.10.0/hdfs-part-file-copy.md
-    - HDFS-to-HDFS-filter-transform: app-templates/0.10.0/hdfs-to-hdfs-filter-transform.md
-    - Kafka-to-Cassandra-Filter-Transform: app-templates/0.10.0/kafka-to-cassandra-filter-transform.md
-    - Kafka-to-Database-sync: app-templates/0.10.0/kafka-to-database-sync.md
-    - Kafka-to-HDFS-Filter-Transform: app-templates/0.10.0/kafka-to-hdfs-filter-transform.md
-    - Kafka-to-Kafka-Filter-Transform: app-templates/0.10.0/kafka-to-kafka-filter-transform.md
-    - Kinesis-to-Redshift: app-templates/0.10.0/kinesis-to-redshift.md
-    - Kinesis-to-S3: app-templates/0.10.0/kinesis-to-s3.md
-    - S3-to-HDFS-sync: app-templates/0.10.0/s3-to-hdfs-sync.md
-    - S3-to-HDFS-Filter-Transform: app-templates/0.10.0/s3-to-redshift.md
-    - Database dump to HDFS App: app-templates/database-to-hdfs.md
-    - Database to Database Sync App: app-templates/database-to-database-sync.md
-    - HDFS Sync App: app-templates/hdfs-sync.md
-    - HDFS to HDFS Line Copy App: app-templates/hdfs-line-copy.md
-    - HDFS to Kafka Sync App: app-templates/hdfs-to-kafka-sync.md
-    - HDFS to S3 Sync App:  app-templates/hdfs-to-s3-sync.md
-    - Kafka to Database Sync App: app-templates/kafka-to-database-sync.md
-    - Kafka to HDFS Filter App: app-templates/kafka-to-hdfs-filter.md
-    - Kafka to HDFS Sync App: app-templates/kafka-to-hdfs-sync.md
-    - Kinesis to S3 App: app-templates/kinesis-to-s3.md
-    - S3 to HDFS Sync App: app-templates/s3-to-hdfs-sync.md
 - Release Notes: release_notes.md
 - Glossary: glossary.md
 - Frequently Asked Questions: faq.md
