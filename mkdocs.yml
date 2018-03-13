@@ -33,7 +33,8 @@ pages:
     - Applications: application_development.md
     - Application Packages: application_packages.md
     - Configuration Packages: configuration_packages.md
-- APOXI: apoxi.md
+- APOXI:
+    - About Apoxi: apoxi.md
     - RTS: rts.md
     - Application Backplane: appbackplane.md
     - Store and Replay Feature: storeandreplay.md
