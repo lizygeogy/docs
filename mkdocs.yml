@@ -52,7 +52,7 @@ pages:
     - Videos: demo_videos.md
 - AppFactory: app_factory.md
 - Cloud Agnostics:
-    -About Cloud Agnostics: cloud_agnostics.md
+    - About Cloud Agnostics: cloud_agnostics.md
     - Amazon: amazon.md
     - Azure: azure.md
 - Applications:
