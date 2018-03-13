@@ -5,8 +5,8 @@ pages:
 - DataTorrent RTS:
     - About DataTorrent RTS: index.md
     - RTS Tools and Configuration:
-          - Operating: dtgateway.md
-          - Monitoring: dtmanage.md
+          - Operating RTS: dtgateway.md
+          - Monitoring RTS : dtmanage.md
           - Dashboarding: dtdashboard.md
           - Application Configurations: application_configurations.md
           - JAR Artifacts: jar_artifacts.md
