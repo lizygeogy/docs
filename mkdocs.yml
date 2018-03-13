@@ -5,19 +5,19 @@ pages:
 - DataTorrent RTS:
     - About DataTorrent RTS: index.md
     - RTS Tools and Configuration:
-        - Operating: dtgateway.md
-        - Monitoring: dtmanage.md
-        - Dashboarding: dtdashboard.md
-        - Application Configurations: application_configurations.md
-        - JAR Artifacts: jar_artifacts.md
+          - Operating: dtgateway.md
+          - Monitoring: dtmanage.md
+          - Dashboarding: dtdashboard.md
+          - Application Configurations: application_configurations.md
+          - JAR Artifacts: jar_artifacts.md
     - Demo Applications: demos.md
     - Sandbox: sandbox.md
 - Deployment and Operations:
     - Licensing: Licensing.md
     - Installation:
-        - On Prem: installation.md
-        - Amazon: amazon_deployment.md
-        - Azure: azure_deployment.md
+          - On Prem: installation.md
+          - Amazon: amazon_deployment.md
+          - Azure: azure_deployment.md
     - Configuration: configuration.md
     - Security: dtgateway_security.md
     - System Alerts: dtgateway_systemalerts.md
@@ -41,9 +41,9 @@ pages:
 - Fast Big Data Stack:
     - About Fast Big Data Stack: fast_big_data_stack.md
     - Apex:
-      - About Apex: apex.md
-      - Beginner's Guide: beginner.md
-      - Malhar: apex_malhar.md
+          - About Apex: apex.md
+          - Beginner's Guide: beginner.md
+          - Malhar: apex_malhar.md
     - Apache Kafka: apache_kafka.md
     - Apache Spark: apache_spark.md
     - Drools: drools.md
@@ -70,25 +70,25 @@ pages:
     - List of Operators: library_operators.md
     - Operator Development: operator_development.md
     - Operators:
-        - Drools Operator: operators/drools_operator.md
-        - Python Operator: operators/python_operator.md
-        - PMML Operator: operators/PMML_operator.md
-        - TCP Input Operator: operators/tcpinputoperator.md
-        - Event Hub Input Operator: operators/eventhubinput.md
-        - Event Hub Output Operator: operators/eventhuboutput.md
-        - Abstract HTTP Server Operator: operators/abstracthttpserver.md
-        - Azure Blob Storage Operator: operators/azure_blob.md
-        - Analytics Output Operator: operators/aoooperator.md
-        - Elasticsearch Output Operator: operators/elasticsearch.md
-        - Block Reader: operators/block_reader.md
-        - Deduper: operators/deduper.md
-        - Dimension Computation: operators/dimensions_computation.md
-        - File Output: operators/file_output.md
-        - File Splitter: operators/file_splitter.md
-        - HDHT: operators/hdht.md
-        - Kafka Input: operators/kafkaInputOperator.md
-        - Snapshot Server: operators/snapshot_server.md
-        - Reference: operator_development_ref.md
+          - Drools Operator: operators/drools_operator.md
+          - Python Operator: operators/python_operator.md
+          - PMML Operator: operators/PMML_operator.md
+          - TCP Input Operator: operators/tcpinputoperator.md
+          - Event Hub Input Operator: operators/eventhubinput.md
+          - Event Hub Output Operator: operators/eventhuboutput.md
+          - Abstract HTTP Server Operator: operators/abstracthttpserver.md
+          - Azure Blob Storage Operator: operators/azure_blob.md
+          - Analytics Output Operator: operators/aoooperator.md
+          - Elasticsearch Output Operator: operators/elasticsearch.md
+          - Block Reader: operators/block_reader.md
+          - Deduper: operators/deduper.md
+          - Dimension Computation: operators/dimensions_computation.md
+          - File Output: operators/file_output.md
+          - File Splitter: operators/file_splitter.md
+          - HDHT: operators/hdht.md
+          - Kafka Input: operators/kafkaInputOperator.md
+          - Snapshot Server: operators/snapshot_server.md
+          - Reference: operator_development_ref.md
 - Templates:
     - Import and Launch App-template: app-templates/0.10.0/common/import-launch.md
     - Customizing an app-template: app-templates/0.10.0/common/customize.md
