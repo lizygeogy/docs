@@ -38,8 +38,10 @@ pages:
     - RTS: rts.md
     - Application Backplane: appbackplane.md
     - Store and Replay Feature: storeandreplay.md
-- Fast Big Data Stack: fast_big_data_stack.md
-    - Apex: apex.md
+- Fast Big Data Stack:
+    - About Fast Big Data Stack: fast_big_data_stack.md
+    - Apex:
+      - About Apex: apex.md
       - Beginner's Guide: beginner.md
       - Malhar: apex_malhar.md
     - Apache Kafka: apache_kafka.md
@@ -49,7 +51,8 @@ pages:
     - App Data Framework: app_data_framework.md
     - Videos: demo_videos.md
 - AppFactory: app_factory.md
-- Cloud Agnostics: cloud_agnostics.md
+- Cloud Agnostics:
+    -About Cloud Agnostics: cloud_agnostics.md
     - Amazon: amazon.md
     - Azure: azure.md
 - Applications:
@@ -63,9 +66,10 @@ pages:
     - OAS Dashboards: oas_dashboards.md
     - Online Analytics Service (OAS): oas.md
 - Components: components.md
-- Operators: library_operators.md
+- Operators:
+    - List of Operators: library_operators.md
     - Operator Development: operator_development.md
-    - List of Operators:
+    - Operators:
         - Drools Operator: operators/drools_operator.md
         - Python Operator: operators/python_operator.md
         - PMML Operator: operators/PMML_operator.md
