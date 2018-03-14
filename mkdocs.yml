@@ -5,8 +5,8 @@ pages:
 - DataTorrent RTS:
     - About DataTorrent RTS: index.md
     - RTS Tools and Configuration:
-          - Management & Operationsng: dtmanage.md
-          - Visualization & Dashboarding: dtdashboard.md
+          - Management and Operations: dtmanage.md
+          - Visualization and Dashboarding: dtdashboard.md
           - Webserver (platform): dtgateway.md
           - Application Configurations: application_configurations.md
           - JAR Artifacts: jar_artifacts.md
@@ -20,10 +20,10 @@ pages:
           - Azure: azure_deployment.md
     - Configuration: configuration.md
     - Security: dtgateway_security.md
+    - DT CLI: apexcli.md
     - System Alerts: dtgateway_systemalerts.md
     - Docker: docker.md
     - Log Aggregation: log_integration.md
-    - DT CLI: apexcli.md
     - Troubleshooting: troubleshooting.md
 - Tutorials:
     - Top N Words: tutorials/topnwords.md
@@ -35,9 +35,13 @@ pages:
     - Configuration Packages: configuration_packages.md
 - APOXI:
     - About Apoxi: apoxi.md
-    - RTS (nneds new md file): rts.md
     - Application Backplane: appbackplane.md
+    - Endpoint Connectors: endpoint_connectors.md
+    - Registries: registries.md
+    - Schema: schema.md
+    - Versioning: versioning.md
     - Store and Replay Feature: storeandreplay.md
+    - Apoxi Compliance: apoxi_compliance.md
 - Fast Big Data Stack:
     - About Fast Big Data Stack: fast_big_data_stack.md
     - Apex:
@@ -50,51 +54,60 @@ pages:
     - Druid: druid.md
     - App Data Framework: app_data_framework.md
     - Videos: demo_videos.md
-- AppFactory: app_factory.md
+- AppFactory:
+    - About AppFactory: app_factory.md
+    - Videos: videos_appfactory.md
 - Cloud Agnostics:
     - About Cloud Agnostics: cloud_agnostics.md
     - Amazon: amazon.md
     - Azure: azure.md
 - Applications:
     - Building APOXI Compliant Applications: create.md
+    - QSG - Launching Omni-Channel Fraud Prevention Application: quickstartlaunchfpa.md
+    - QSG - Launching Account Takeover Prevention Application: quickstartlaunchato.md
     - Omni Channel Fraud Prevention Application: omni_channel_fraud_app.md
     - Account Takeover Prevention Application: Accounttakeover.md
-    - Quick Start Guide - Omni-Channel Fraud Prevention Application: quickstartlaunchfpa.md
-    - Quick Start Guide - Account Takeover Prevention Application: quickstartlaunchato.md
 - Services:
-    - CEP Workbench: cep_workbench.md
-    - OAS Dashboards: oas_dashboards.md
+    - Creating APOXI Compliant Services: services.md
+    - Launching Services: launch_services.md
     - Online Analytics Service (OAS): oas.md
+    - OAS Dashboards: oas_dashboards.md
+    - CEP Workbench: cep_workbench.md
 - Components: components.md
-    - Import and Launch App-template: app-templates/0.10.0/common/import-launch.md
+    - List of Components: components_list.md
+    - Creating APOXI Compliant Components: create_component.md
+    - Importing and Launching Components: app-templates/0.10.0/common/import-launch.md
     - Customizing an app-template: app-templates/0.10.0/common/customize.md
-    - Database-to-database-sync 0.10.0: app-templates/0.10.0/database-to-database-sync.md
-    - Database to Database Sync App: app-templates/database-to-database-sync.md
-    - Database dump to HDFS App: app-templates/database-to-hdfs.md   
-    - HDFS-line-copy: app-templates/0.10.0/hdfs-line-copy.md
-    - HDFS-part-file-copy: app-templates/0.10.0/hdfs-part-file-copy.md
-    - HDFS-to-HDFS-filter-transform: app-templates/0.10.0/hdfs-to-hdfs-filter-transform.md
-    - HDFS Sync App: app-templates/hdfs-sync.md
-    - HDFS to HDFS Line Copy App: app-templates/hdfs-line-copy.md
-    - HDFS to Kafka Sync App: app-templates/hdfs-to-kafka-sync.md
-    - HDFS to S3 Sync App:  app-templates/hdfs-to-s3-sync.md
-    - Kafka-to-Cassandra-Filter-Transform: app-templates/0.10.0/kafka-to-cassandra-filter-transform.md
-    - Kafka-to-Database-sync: app-templates/0.10.0/kafka-to-database-sync.md
-    - Kafka-to-HDFS-Filter-Transform: app-templates/0.10.0/kafka-to-hdfs-filter-transform.md
-    - Kafka-to-Kafka-Filter-Transform: app-templates/0.10.0/kafka-to-kafka-filter-transform.md
-    - Kafka to HDFS Sync App: app-templates/kafka-to-hdfs-sync.md
-    - Kafka to HDFS Filter App: app-templates/kafka-to-hdfs-filter.md
-    - Kafka to Database Sync App: app-templates/kafka-to-database-sync.md
-    - Kinesis-to-Redshift: app-templates/0.10.0/kinesis-to-redshift.md
-    - Kinesis-to-S3 0.10.0: app-templates/0.10.0/kinesis-to-s3.md
-    - Kinesis to S3 App: app-templates/kinesis-to-s3.md
-    - S3-to-HDFS-sync: app-templates/0.10.0/s3-to-hdfs-sync.md
-    - S3-to-HDFS-Filter-Transform: app-templates/0.10.0/s3-to-redshift.md
-    - S3 to HDFS Sync App: app-templates/s3-to-hdfs-sync.md
+    - Component Guides:
+          - Database-to-database-sync 0.10.0: app-templates/0.10.0/database-to-database-sync.md
+          - Database to Database Sync App: app-templates/database-to-database-sync.md
+          - Database dump to HDFS App: app-templates/database-to-hdfs.md
+          - HDFS-line-copy: app-templates/0.10.0/hdfs-line-copy.md
+          - HDFS-part-file-copy: app-templates/0.10.0/hdfs-part-file-copy.md
+          - HDFS-to-HDFS-filter-transform: app-templates/0.10.0/hdfs-to-hdfs-filter-transform.md
+          - HDFS Sync App: app-templates/hdfs-sync.md
+          - HDFS to HDFS Line Copy App: app-templates/hdfs-line-copy.md
+          - HDFS to Kafka Sync App: app-templates/hdfs-to-kafka-sync.md
+          - HDFS to S3 Sync App:  app-templates/hdfs-to-s3-sync.md
+          - Kafka-to-Cassandra-Filter-Transform: app-templates/0.10.0/kafka-to-cassandra-filter-transform.md
+          - Kafka-to-Database-sync: app-templates/0.10.0/kafka-to-database-sync.md
+          - Kafka-to-HDFS-Filter-Transform: app-templates/0.10.0/kafka-to-hdfs-filter-transform.md
+          - Kafka-to-Kafka-Filter-Transform: app-templates/0.10.0/kafka-to-kafka-filter-transform.md
+          - Kafka to HDFS Sync App: app-templates/kafka-to-hdfs-sync.md
+          - Kafka to HDFS Filter App: app-templates/kafka-to-hdfs-filter.md
+          - Kafka to Database Sync App: app-templates/kafka-to-database-sync.md
+          - Kinesis-to-Redshift: app-templates/0.10.0/kinesis-to-redshift.md
+          - Kinesis-to-S3 0.10.0: app-templates/0.10.0/kinesis-to-s3.md
+          - Kinesis to S3 App: app-templates/kinesis-to-s3.md
+          - S3-to-HDFS-sync: app-templates/0.10.0/s3-to-hdfs-sync.md
+          - S3-to-HDFS-Filter-Transform: app-templates/0.10.0/s3-to-redshift.md
+          - S3 to HDFS Sync App: app-templates/s3-to-hdfs-sync.md
 - Operators:
     - List of Operators: library_operators.md
-    - Operator Development: operator_development.md
-    - Operators:
+    - Developing an Operator:
+          - Developing an Operator: operator_development.md
+          - Reference: operator_development_ref.md
+    - Operator Guides:
           - Drools Operator: operators/drools_operator.md
           - Python Operator: operators/python_operator.md
           - PMML Operator: operators/PMML_operator.md
@@ -105,15 +118,14 @@ pages:
           - Azure Blob Storage Operator: operators/azure_blob.md
           - Analytics Output Operator: operators/aoooperator.md
           - Elasticsearch Output Operator: operators/elasticsearch.md
-          - Block Reader: operators/block_reader.md
-          - Deduper: operators/deduper.md
-          - Dimension Computation: operators/dimensions_computation.md
-          - File Output: operators/file_output.md
-          - File Splitter: operators/file_splitter.md
-          - HDHT: operators/hdht.md
-          - Kafka Input: operators/kafkaInputOperator.md
+          - Block Reader Operator: operators/block_reader.md
+          - Deduper Operator: operators/deduper.md
+          - Dimension Computation Operator: operators/dimensions_computation.md
+          - File Output Operator: operators/file_output.md
+          - File Splitter Operator: operators/file_splitter.md
+          - HDHT Operator: operators/hdht.md
+          - Kafka Input Operator: operators/kafkaInputOperator.md
           - Snapshot Server: operators/snapshot_server.md
-          - Reference: operator_development_ref.md
 - Release Notes: release_notes.md
 - Glossary: glossary.md
 - Frequently Asked Questions: faq.md
