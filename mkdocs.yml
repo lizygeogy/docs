@@ -10,8 +10,8 @@ pages:
             - Webserver (platform): dtgateway.md
             - Application Configurations: application_configurations.md
             - JAR Artifacts: jar_artifacts.md
-     - Demo Applications: demos.md
-     - Sandbox: sandbox.md
+    - Demo Applications: demos.md
+    - Sandbox: sandbox.md
 - Deployment and Operations:
     - Licensing: Licensing.md
     - Installation: installation.md
