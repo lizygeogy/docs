@@ -22,7 +22,7 @@ pages:
     - CLI: apexcli.md
     - System Alerts: dtgateway_systemalerts.md
     - Log Aggregation: log_integration.md
-    - Troubleshooting: troubleshooting.md                   # To only cover troubleshooting for deployment
+    - Troubleshooting: deployment_troubleshooting.md
 - Tutorials:
     - Top N Words: tutorials/topnwords.md
     - Sales Dimensions: tutorials/salesdemo.md
@@ -126,7 +126,7 @@ pages:
 - Release Notes: release_notes.md
 - Glossary: glossary.md
 - Frequently Asked Questions: faq.md
-- Troubleshooting: overall_troubleshooting.md
+- Troubleshooting: troubleshooting.md
 - Resources: additional_docs.md
 
 theme:
