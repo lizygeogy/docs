@@ -5,19 +5,19 @@ pages:
 - DataTorrent RTS:
     - About DataTorrent RTS: index.md
     - RTS Tools and Configuration:
-          - Management and Operations: dtmanage.md
-          - Visualization and Dashboarding: dtdashboard.md
-          - Webserver (platform): dtgateway.md
-          - Application Configurations: application_configurations.md
-          - JAR Artifacts: jar_artifacts.md
-    - Demo Applications: demos.md
-    - Sandbox: sandbox.md
+            - Management and Operations: dtmanage.md
+            - Visualization and Dashboarding: dtdashboard.md
+            - Webserver (platform): dtgateway.md
+            - Application Configurations: application_configurations.md
+            - JAR Artifacts: jar_artifacts.md
+     - Demo Applications: demos.md
+     - Sandbox: sandbox.md
 - Deployment and Operations:
     - Licensing: Licensing.md
-    - Installation:
-          - On Prem: installation.md
-          - Amazon: amazon_deployment.md
-          - Azure: azure_deployment.md
+      - Installation:
+            - On Prem: installation.md
+            - Amazon: amazon_deployment.md
+            - Azure: azure_deployment.md
     - Configuration: configuration.md
     - Security: dtgateway_security.md
     - DT CLI: apexcli.md
@@ -44,10 +44,10 @@ pages:
     - Apoxi Compliance: apoxi_compliance.md
 - Fast Big Data Stack:
     - About Fast Big Data Stack: fast_big_data_stack.md
-    - Apex:
-          - About Apex: apex.md
-          - Beginner's Guide: beginner.md
-          - Malhar: apex_malhar.md
+      - Apex:
+            - About Apex: apex.md
+            - Beginner's Guide: beginner.md
+            - Malhar: apex_malhar.md
     - Apache Kafka: apache_kafka.md
     - Apache Spark: apache_spark.md
     - Drools: drools.md
@@ -79,54 +79,54 @@ pages:
     - Creating APOXI Compliant Components: create_components.md
     - Importing and Launching Components: app-templates/0.10.0/common/import-launch.md
     - Customizing an app-template: app-templates/0.10.0/common/customize.md
-    - Component Guides:
-          - Database-to-database-sync 0.10.0: app-templates/0.10.0/database-to-database-sync.md
-          - Database to Database Sync App: app-templates/database-to-database-sync.md
-          - Database dump to HDFS App: app-templates/database-to-hdfs.md
-          - HDFS-line-copy: app-templates/0.10.0/hdfs-line-copy.md
-          - HDFS-part-file-copy: app-templates/0.10.0/hdfs-part-file-copy.md
-          - HDFS-to-HDFS-filter-transform: app-templates/0.10.0/hdfs-to-hdfs-filter-transform.md
-          - HDFS Sync App: app-templates/hdfs-sync.md
-          - HDFS to HDFS Line Copy App: app-templates/hdfs-line-copy.md
-          - HDFS to Kafka Sync App: app-templates/hdfs-to-kafka-sync.md
-          - HDFS to S3 Sync App:  app-templates/hdfs-to-s3-sync.md
-          - Kafka-to-Cassandra-Filter-Transform: app-templates/0.10.0/kafka-to-cassandra-filter-transform.md
-          - Kafka-to-Database-sync: app-templates/0.10.0/kafka-to-database-sync.md
-          - Kafka-to-HDFS-Filter-Transform: app-templates/0.10.0/kafka-to-hdfs-filter-transform.md
-          - Kafka-to-Kafka-Filter-Transform: app-templates/0.10.0/kafka-to-kafka-filter-transform.md
-          - Kafka to HDFS Sync App: app-templates/kafka-to-hdfs-sync.md
-          - Kafka to HDFS Filter App: app-templates/kafka-to-hdfs-filter.md
-          - Kafka to Database Sync App: app-templates/kafka-to-database-sync.md
-          - Kinesis-to-Redshift: app-templates/0.10.0/kinesis-to-redshift.md
-          - Kinesis-to-S3 0.10.0: app-templates/0.10.0/kinesis-to-s3.md
-          - Kinesis to S3 App: app-templates/kinesis-to-s3.md
-          - S3-to-HDFS-sync: app-templates/0.10.0/s3-to-hdfs-sync.md
-          - S3-to-HDFS-Filter-Transform: app-templates/0.10.0/s3-to-redshift.md
-          - S3 to HDFS Sync App: app-templates/s3-to-hdfs-sync.md
+      - Component Guides:
+              - Database-to-database-sync App: app-templates/0.10.0/database-to-database-sync.md
+              - Database to Database Sync App: app-templates/database-to-database-sync.md
+              - Database dump to HDFS App: app-templates/database-to-hdfs.md
+              - HDFS-line-copy: app-templates/0.10.0/hdfs-line-copy.md
+              - HDFS-part-file-copy: app-templates/0.10.0/hdfs-part-file-copy.md
+              - HDFS-to-HDFS-filter-transform: app-templates/0.10.0/hdfs-to-hdfs-filter-transform.md
+              - HDFS Sync App: app-templates/hdfs-sync.md
+              - HDFS to HDFS Line Copy App: app-templates/hdfs-line-copy.md
+              - HDFS to Kafka Sync App: app-templates/hdfs-to-kafka-sync.md
+              - HDFS to S3 Sync App:  app-templates/hdfs-to-s3-sync.md
+              - Kafka-to-Cassandra-Filter-Transform: app-templates/0.10.0/kafka-to-cassandra-filter-transform.md
+              - Kafka-to-Database-sync: app-templates/0.10.0/kafka-to-database-sync.md
+              - Kafka-to-HDFS-Filter-Transform: app-templates/0.10.0/kafka-to-hdfs-filter-transform.md
+              - Kafka-to-Kafka-Filter-Transform: app-templates/0.10.0/kafka-to-kafka-filter-transform.md
+              - Kafka to HDFS Sync App: app-templates/kafka-to-hdfs-sync.md
+              - Kafka to HDFS Filter App: app-templates/kafka-to-hdfs-filter.md
+              - Kafka to Database Sync App: app-templates/kafka-to-database-sync.md
+              - Kinesis-to-Redshift: app-templates/0.10.0/kinesis-to-redshift.md
+              - Kinesis-to-S3 0.10.0: app-templates/0.10.0/kinesis-to-s3.md
+              - Kinesis to S3 App: app-templates/kinesis-to-s3.md
+              - S3-to-HDFS-sync: app-templates/0.10.0/s3-to-hdfs-sync.md
+              - S3-to-HDFS-Filter-Transform: app-templates/0.10.0/s3-to-redshift.md
+              - S3 to HDFS Sync App: app-templates/s3-to-hdfs-sync.md
 - Operators:
     - List of Operators: library_operators.md
     - Developing an Operator:
           - Developing an Operator: operator_development.md
           - Reference: operator_development_ref.md
-    - Operator Guides:
-          - Drools Operator: operators/drools_operator.md
-          - Python Operator: operators/python_operator.md
-          - PMML Operator: operators/PMML_operator.md
-          - TCP Input Operator: operators/tcpinputoperator.md
-          - Event Hub Input Operator: operators/eventhubinput.md
-          - Event Hub Output Operator: operators/eventhuboutput.md
-          - Abstract HTTP Server Operator: operators/abstracthttpserver.md
-          - Azure Blob Storage Operator: operators/azure_blob.md
-          - Analytics Output Operator: operators/aoooperator.md
-          - Elasticsearch Output Operator: operators/elasticsearch.md
-          - Block Reader Operator: operators/block_reader.md
-          - Deduper Operator: operators/deduper.md
-          - Dimension Computation Operator: operators/dimensions_computation.md
-          - File Output Operator: operators/file_output.md
-          - File Splitter Operator: operators/file_splitter.md
-          - HDHT Operator: operators/hdht.md
-          - Kafka Input Operator: operators/kafkaInputOperator.md
-          - Snapshot Server: operators/snapshot_server.md
+      - Operator Guides:
+            - Drools Operator: operators/drools_operator.md
+            - Python Operator: operators/python_operator.md
+            - PMML Operator: operators/PMML_operator.md
+            - TCP Input Operator: operators/tcpinputoperator.md
+            - Event Hub Input Operator: operators/eventhubinput.md
+            - Event Hub Output Operator: operators/eventhuboutput.md
+            - Abstract HTTP Server Operator: operators/abstracthttpserver.md
+            - Azure Blob Storage Operator: operators/azure_blob.md
+            - Analytics Output Operator: operators/aoooperator.md
+            - Elasticsearch Output Operator: operators/elasticsearch.md
+            - Block Reader Operator: operators/block_reader.md
+            - Deduper Operator: operators/deduper.md
+            - Dimension Computation Operator: operators/dimensions_computation.md
+            - File Output Operator: operators/file_output.md
+            - File Splitter Operator: operators/file_splitter.md
+            - HDHT Operator: operators/hdht.md
+            - Kafka Input Operator: operators/kafkaInputOperator.md
+            - Snapshot Server: operators/snapshot_server.md
     - Troubleshooting: operator_troubleshooting.md
 - Release Notes: release_notes.md
 - Glossary: glossary.md
