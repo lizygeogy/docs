@@ -95,6 +95,9 @@ following services: you can do that with a shell script like this:
 If any of these services are not running, you can start them by running a similar
 script but with `status` replaced by `start`.
 
+Docker
+--------------------------------------------------------------------------------
+
 Support
 --------------------------------------------------------------------------------
 
