@@ -7,7 +7,7 @@ pages:
     - Getting Started:
         - Demo Applications: demos.md
         - Sandbox: sandbox.md 
-        - Tutorial:                                          # a new tutorial that shows RTS 3.10 onwards
+        - Tutorial: getting_started_tutorial.md  # new tutorial that shows RTS 3.10 onwards
 - RTS Tools and Configuration:
     - Management and Operations: dtmanage.md
     - Visualization and Dashboarding: dtdashboard.md
