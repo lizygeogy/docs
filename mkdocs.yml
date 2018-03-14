@@ -8,7 +8,6 @@ pages:
         - Demo Applications: demos.md
         - Sandbox: sandbox.md 
         - Tutorial:                                          # a new tutorial that shows RTS 3.10 onwards
-        - Docker: docker.md                                  # to be moved to inside sandbox.md
 - RTS Tools and Configuration:
     - Management and Operations: dtmanage.md
     - Visualization and Dashboarding: dtdashboard.md
@@ -47,7 +46,7 @@ pages:
     - About Apoxi: apoxi.md
     - Application Backplane: appbackplane.md
     - Endpoint Connectors: endpoint_connectors.md
-    - Metrics Platform:                                         #need to create a new .md file for metrics
+    - Metrics Platform: metrics_platform.md
     - Registries: registries.md
     - Schema: schema.md
     - Versioning: versioning.md
@@ -56,10 +55,7 @@ pages:
 - AppFactory:
     - About AppFactory: app_factory.md
 - Heterogeneous Environments:
-    - About heterogeneous environments:                        # need a new .md file, describe, why, how, value of Apoxi and services
-    - About Cloud Agnostic: cloud_agnostics.md                 # write about pros and cons of using cloud specific tech
-    - Amazon: amazon.md                                        # write about various Amazon tech and how it is part of our QA, EMR
-    - Azure: azure.md                                          # write about various AWS tech and how it is part of our QA, HDInsights
+    - heterogeneous_env.md
 - Applications:
     - Building APOXI Compliant Applications: create.md
     - QSG - Launching Omni-Channel Fraud Prevention Application: quickstartlaunchfpa.md
@@ -130,7 +126,7 @@ pages:
 - Release Notes: release_notes.md
 - Glossary: glossary.md
 - Frequently Asked Questions: faq.md
-- Troubleshooting: troubleshooting.md                          # To create a new md file for troubleshooting code and operations
+- Troubleshooting: overall_troubleshooting.md
 - Resources: additional_docs.md
 
 theme:
