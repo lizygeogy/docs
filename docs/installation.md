@@ -1,4 +1,4 @@
-On Prem
+On Premise
 ================================================================================
 
 This guide covers installation of the DataTorrent RTS platform.
@@ -184,8 +184,8 @@ If you have multiple Hadoop clusters for handling the disasters, then you can in
 **Note :** If you are installing the gateway as a root user, the gateway gets installed globally (or as a service). Hence if you install the second instance after you installing the first,  the command ```service dtgateway stop ``` is used, instead of local script, to stop any previously installed gateways.
 Since gateway services are global, the installer cannot distinguish if the previous gateway service is installed at a different location, even if you have provided a new set of directories in the second install, and thus stops the previous service.
 
-Amazon
+On Amazon
 ================================================================================
 
-Azure
+ON Azure
 ================================================================================
