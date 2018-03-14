@@ -126,6 +126,7 @@ pages:
           - HDHT Operator: operators/hdht.md
           - Kafka Input Operator: operators/kafkaInputOperator.md
           - Snapshot Server: operators/snapshot_server.md
+    - Troubleshooting: operator_troubleshooting.md
 - Release Notes: release_notes.md
 - Glossary: glossary.md
 - Frequently Asked Questions: faq.md
