@@ -76,7 +76,7 @@ pages:
 - Components:
     - About Components: components.md
     - List of Components: components_list.md
-    - Creating APOXI Compliant Components: create_component.md
+    - Creating APOXI Compliant Components: create_components.md
     - Importing and Launching Components: app-templates/0.10.0/common/import-launch.md
     - Customizing an app-template: app-templates/0.10.0/common/customize.md
     - Component Guides:
