@@ -1,4 +1,4 @@
-DataTorrent RTS Installation Guide
+On Prem
 ================================================================================
 
 This guide covers installation of the DataTorrent RTS platform.
@@ -154,8 +154,8 @@ If you have multiple Hadoop clusters for handling the disasters, then you can in
 3. Copy the hadoop **conf** dir from both the hadoop clusters to the home of dtadmin user. Name them such that you can differentiate between them (For example, $HOME/hadoop_conf1 and $HOME/hadoop_conf2).
 4. Download the latest version of the DT RTS installable binary file (datatorrent-rts-<version>.bin).
 5. Export JAVA_HOME, HADOOP_HOME and add in PATH. For example:
-   * export HADOOP_HOME=/opt/hadoop-2.6.5 
-   * export JAVA_HOME=/usr 
+   * export HADOOP_HOME=/opt/hadoop-2.6.5
+   * export JAVA_HOME=/usr
    * export PATH=$HADOOP_HOME/bin:$JAVA_HOME/bin:$PATH
 6. Install the first gateway instance using the following command:
 ```
@@ -170,7 +170,7 @@ If you have multiple Hadoop clusters for handling the disasters, then you can in
 1. Copy the hadoop **conf** dir from both the hadoop clusters to the home of dtadmin user. Name them such that you can differentiate between them (For example, /opt/hadoop_conf1 and /opt/hadoop_conf2).
 2. Download the latest version of the DT RTS installable binary file (datatorrent-rts-<version>.bin).
 3. Export JAVA_HOME, HADOOP_HOME and add in PATH. For example:
-   * export HADOOP_HOME=/opt/hadoop-2.6.5 
+   * export HADOOP_HOME=/opt/hadoop-2.6.5
    * export JAVA_HOME=/usr 
    * export PATH=$HADOOP_HOME/bin:$JAVA_HOME/bin:$PATH
 4. Install the first gateway instance using the following command:
@@ -181,5 +181,11 @@ If you have multiple Hadoop clusters for handling the disasters, then you can in
 ```
 ./datatorrent-rts-<version>.bin -E DT_LOG_DIR=/opt/datatorrent2 -E DT_RUN_DIR=/opt/datatorrent2 -E HADOOP_CONF_DIR=/opt/hadoop_conf2 -B /opt/datatorrent2 -g 9091
 ```
-**Note :** If you are installing the gateway as a root user, the gateway gets installed globally (or as a service). Hence if you install the second instance after you installing the first,  the command ```service dtgateway stop ``` is used, instead of local script, to stop any previously installed gateways. 
+**Note :** If you are installing the gateway as a root user, the gateway gets installed globally (or as a service). Hence if you install the second instance after you installing the first,  the command ```service dtgateway stop ``` is used, instead of local script, to stop any previously installed gateways.
 Since gateway services are global, the installer cannot distinguish if the previous gateway service is installed at a different location, even if you have provided a new set of directories in the second install, and thus stops the previous service.
+
+Amazon
+================================================================================
+
+Azure
+================================================================================
