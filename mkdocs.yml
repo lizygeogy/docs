@@ -73,7 +73,8 @@ pages:
     - Online Analytics Service (OAS): oas.md
     - OAS Dashboards: oas_dashboards.md
     - CEP Workbench: cep_workbench.md
-- Components: components.md
+- Components:
+    - About Components: components.md
     - List of Components: components_list.md
     - Creating APOXI Compliant Components: create_component.md
     - Importing and Launching Components: app-templates/0.10.0/common/import-launch.md
