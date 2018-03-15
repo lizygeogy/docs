@@ -6,14 +6,14 @@ pages:
     - About DataTorrent RTS: index.md
     - Getting Started:
         - Demo Applications: demos.md
-        - Sandbox: sandbox.md 
+        - Sandbox: sandbox.md
         - Tutorial: getting_started_tutorial.md  # new tutorial that shows RTS 3.10 onwards
 - RTS Tools and Configuration:
     - Management and Operations: dtmanage.md
     - Visualization and Dashboarding: dtdashboard.md
     - Gateway (platform): dtgateway.md
-     - Application Configurations: application_configurations.md
-     - JAR Artifacts: jar_artifacts.md
+        - Application Configurations: application_configurations.md
+        - JAR Artifacts: jar_artifacts.md
 - Deployment and Operations:
     - Licensing: Licensing.md
     - Installation: installation.md
@@ -41,7 +41,6 @@ pages:
     - Apache Spark: apache_spark.md
     - Drools: drools.md
     - Druid: druid.md
-    - App Data Framework: app_data_framework.md
 - APOXI:
     - About Apoxi: apoxi.md
     - Application Backplane: appbackplane.md
@@ -54,8 +53,7 @@ pages:
     - Apoxi Compliance: apoxi_compliance.md
 - AppFactory:
     - About AppFactory: app_factory.md
-- Heterogeneous Environments:
-    - heterogeneous_env.md
+- Heterogeneous Environments: heterogeneous_env.md
 - Applications:
     - Building APOXI Compliant Applications: create.md
     - QSG - Launching Omni-Channel Fraud Prevention Application: quickstartlaunchfpa.md
