@@ -273,3 +273,8 @@ td, th {
 .wy-menu-vertical .subnav li.current span.caption-text {
   background-color: #eee;
 }
+
+div.footer {
+  font-size: 0.9em;
+  color: #999;
+}
