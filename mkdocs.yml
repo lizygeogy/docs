@@ -11,7 +11,8 @@ pages:
 - RTS Tools and Configuration:
     - Management and Operations: dtmanage.md
     - Visualization and Dashboarding: dtdashboard.md
-    - Gateway (platform): dtgateway.md
+    - Gateway (platform): 
+        - Gateway (platform): dtgateway.md
         - Application Configurations: application_configurations.md
         - JAR Artifacts: jar_artifacts.md
 - Deployment and Operations:
