@@ -100,8 +100,7 @@ pages:
 - Operators:
     - About Operators: operator_development_ref.md
     - List of Operators: library_operators.md
-    - Developing an Operator:
-          - Developing an Operator: operator_development.md
+    - Developing an Operator: operator_development.md
     - Operator Guides:
             - Drools Operator: operators/drools_operator.md
             - Python Operator: operators/python_operator.md
@@ -121,7 +120,7 @@ pages:
             - HDHT Operator: operators/hdht.md
             - Kafka Input Operator: operators/kafkaInputOperator.md
             - Snapshot Server: operators/snapshot_server.md
-    - Troubleshooting: operator_troubleshooting.md
+    - Operator Troubleshooting: operator_troubleshooting.md
 - Release Notes: release_notes.md
 - Glossary: glossary.md
 - Frequently Asked Questions: faq.md
