@@ -1,4 +1,4 @@
-Welcome to DataTorrent RTS!
+DataTorrent RTS
 ================================================================================
 
 DataTorrent RTS enables customers to launch big data products using open source software with quick time to value, and be able to operate these products within a viable total cost of ownership. Using RTS, customers are able to achieve critical business outcomes successfully. RTS consists of the following:
@@ -118,12 +118,12 @@ RTS enables enterprises to de-risk your journey to be a data-driven enterprise.
 
 #### Apoxi
 #### Fast Big Data Stack
-#### ApFactory
+#### AppFactory
 #### Cloud Agnostics
 #### Management (dtGateway)
 #### Monitoring (dtManage)
 #### Visualization (dtVisualize)
-#### A#pplication Con#figuration
+#### Application Configuration
 #### JAR artifacts
 #### Demo Applications
 ##### Running Demo Applications

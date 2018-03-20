@@ -11,7 +11,7 @@ pages:
 - RTS Tools and Configuration:
     - Management and Operations: dtmanage.md
     - Visualization and Dashboarding: dtdashboard.md
-    - Gateway (platform): 
+    - Gateway (platform):
         - Gateway (platform): dtgateway.md
         - Application Configurations: application_configurations.md
         - JAR Artifacts: jar_artifacts.md
@@ -52,9 +52,9 @@ pages:
     - Versioning: versioning.md
     - Store and Replay Feature: storeandreplay.md
     - Apoxi Compliance: apoxi_compliance.md
+- Heterogeneous Environments: heterogeneous_env.md
 - AppFactory:
     - About AppFactory: app_factory.md
-- Heterogeneous Environments: heterogeneous_env.md
 - Applications:
     - Building APOXI Compliant Applications: create.md
     - QSG - Launching Omni-Channel Fraud Prevention Application: quickstartlaunchfpa.md
