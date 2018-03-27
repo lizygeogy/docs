@@ -2,11 +2,13 @@ Operator Library
 ================
 
 The following operators, classified into four groups, are available:
-
+| Operator                   | Guide                     | Java Docs             |
+| :-------------             | :-------------            |:-------------         |
+| Item One                   | Item Two       | item 3       |
 - Input
     + TCP Input Operator [Guide](operators/tcpinputoperator.md)
     + Event Hub Input Operator [Guide](operators/eventhubinput.md)
-    + Kafka Input [Guide](http://apex.apache.org/docs/malhar/operators/kafkaInputOperator/)
+    + Kafka Input [Guide](operators/kafkaInputOperator.md)
       and [Java Doc](https://ci.apache.org/projects/apex-malhar/apex-malhar-javadoc-release-3.6/com/datatorrent/contrib/kafka/KafkaSinglePortStringInputOperator.html)
     + HDFS Input [Guide](http://apex.apache.org/docs/malhar/operators/fsInputOperator/)
       and [Java Doc](https://ci.apache.org/projects/apex-malhar/apex-malhar-javadoc-release-3.6/com/datatorrent/demos/wordcount/LineReader.html)
@@ -45,6 +47,6 @@ The following operators, classified into four groups, are available:
       and [Java Doc](https://ci.apache.org/projects/apex-malhar/apex-malhar-javadoc-release-3.6/com/datatorrent/lib/io/fs/AbstractFileOutputOperator.html)
     + JMS Output [Guide](http://apex.apache.org/docs/malhar/operators/jmsMultiPortOutputOperator/)
       and [Java Doc](https://ci.apache.org/projects/apex-malhar/apex-malhar-javadoc-release-3.6/com/datatorrent/lib/io/jms/JMSMultiPortOutputOperator.html)
-      
+
 - Input/Output
     + AbstractHttpServer Operator [Guide](operators/abstracthttpserver.md)
