@@ -3,7 +3,7 @@ Troubleshooting Guide
 
 # DataTorrent RTS Download
 
-#### Where can I download DataTorrent RTS software?**
+#### Where can I download DataTorrent RTS software?
 
 DataTorrent RTS software can be downloaded from [https://www.datatorrent.com/download/](https://www.datatorrent.com/download)
 
@@ -12,10 +12,10 @@ The following deployment options are available for downloading DataTorrent RTS:
 - **DataTorrent RTS - Installable Binary**
 - **DataTorrent RTS - Cloud Instance**
 
-#### What are the DT licenses that can be obtained with subscription?**
+#### What are the DT licenses that can be obtained with subscription?
 Refer to [http://docs.datatorrent.com/Licensing/#datatorrent-licensing](http://docs.datatorrent.com/Licensing/#datatorrent-licensing)
 
-#### How do I confirm whether the package has downloaded correctly?**
+#### How do I confirm whether the package has downloaded correctly?
 
 You can verify the downloaded DataTorrent RTS package by comparing with
 MD5 sum. The command to get md5 sum of the downloaded package:
